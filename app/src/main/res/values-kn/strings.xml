@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ShareConnect</string>
-    <string name="add_link">미디어 링크 추가</string>
+    <string name="add_link">매체 링크 추가</string>
     <string name="settings">설정</string>
     <string name="server_profiles">서버 프로필</string>
     <string name="add_profile">프로필 추가</string>
@@ -12,23 +12,23 @@
     <string name="delete">삭제</string>
     <string name="set_default">기본값으로 설정</string>
     <string name="default_profile">기본 프로필</string>
-    <string name="no_profiles_yet">아직 프로필이 설정되지 않았습니다</string>
+    <string name="no_profiles_yet">아직 구성된 프로필이 없습니다</string>
     <string name="sending_to_service">서비스로 전송 중…</string>
     <string name="sent_successfully">링크가 성공적으로 전송되었습니다!</string>
-    <string name="error_sending_link_custom">서비스로 링크 전송 중 오류 발생</string>
-    <string name="please_configure_profile_custom">먼저 서버 프로필을 설정하세요</string>
+    <string name="error_sending_link_custom">서비스로 링크를 보내는 중 오류가 발생했습니다</string>
+    <string name="please_configure_profile_custom">먼저 서버 프로필을 구성하십시오</string>
     <string name="invalid_url">잘못된 URL</string>
     <string name="profile_saved">프로필이 성공적으로 저장되었습니다</string>
     <string name="profile_deleted">프로필이 삭제되었습니다</string>
-    <string name="no_youtube_link">공유된 콘텐츠에서 미디어 링크를 찾을 수 없습니다</string>
+    <string name="no_youtube_link">공유된 콘텐츠에서 매체 링크를 찾을 수 없습니다</string>
     <string name="confirm_delete_profile">이 프로필을 삭제하시겠습니까?</string>
-    <string name="confirm_delete_profile_message">이 작업은 취소할 수 없습니다. 프로필이 영구적으로 삭제됩니다.</string>
+    <string name="confirm_delete_profile_message">이 작업은 되돌릴 수 없습니다. 프로필이 영구적으로 삭제됩니다.</string>
     <string name="yes">예</string>
     <string name="no">아니요</string>
     <string name="ok">확인</string>
     <string name="error">오류</string>
     <string name="warning">경고</string>
-    <string name="connection_error">서버 연결 중 오류 발생</string>
+    <string name="connection_error">서버 연결 오류</string>
     <string name="invalid_port">잘못된 포트 번호</string>
     <string name="port_must_be_between">포트는 1에서 65535 사이여야 합니다</string>
     <string name="url_required">URL이 필요합니다</string>

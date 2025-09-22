@@ -15,10 +15,24 @@
     <string name="no_profiles_yet">لم يتم تكوين ملفات تعريف حتى الآن</string>
     <string name="sending_to_service">إرسال إلى الخدمة…</string>
     <string name="sent_successfully">تم إرسال الرابط بنجاح!</string>
-    <string name="error_sending_link">خطأ في إرسال الرابط إلى الخدمة</string>
-    <string name="please_configure_profile">يرجى تكوين ملف تعريف الخادم أولاً</string>
+    <string name="error_sending_link_custom">خطأ في إرسال الرابط إلى الخدمة</string>
+    <string name="please_configure_profile_custom">يرجى تكوين ملف تعريف الخادم أولاً</string>
     <string name="invalid_url">عنوان URL غير صالح</string>
     <string name="profile_saved">تم حفظ ملف التعريف بنجاح</string>
     <string name="profile_deleted">تم حذف ملف التعريف</string>
     <string name="no_youtube_link">لم يتم العثور على رابط وسائط في المحتوى المشترك</string>
+    <string name="confirm_delete_profile">هل أنت متأكد من أنك تريد حذف هذا الملف؟</string>
+    <string name="confirm_delete_profile_message">لا يمكن التراجع عن هذا الإجراء. سيتم حذف الملف بشكل دائم.</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="ok">موافق</string>
+    <string name="error">خطأ</string>
+    <string name="warning">تحذير</string>
+    <string name="connection_error">خطأ في الاتصال بالخادم</string>
+    <string name="invalid_port">رقم المنفذ غير صالح</string>
+    <string name="port_must_be_between">يجب أن يكون المنفذ بين 1 و 65535</string>
+    <string name="url_required">عنوان URL مطلوب</string>
+    <string name="profile_name_required">اسم الملف مطلوب</string>
+    <string name="confirm_set_default">تعيين كملف تعريف افتراضي؟</string>
+    <string name="confirm_set_default_message">سيؤدي هذا إلى تعيين الملف المحدد كافتراضي لجميع الإرسالات.</string>
 </resources>

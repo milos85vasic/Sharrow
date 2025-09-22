@@ -21,4 +21,18 @@
     <string name="profile_saved">Profilo salvato con successo</string>
     <string name="profile_deleted">Profilo eliminato</string>
     <string name="no_youtube_link">Nessun link ai media trovato nel contenuto condiviso</string>
+    <string name="confirm_delete_profile">Sei sicuro di voler eliminare questo profilo?</string>
+    <string name="confirm_delete_profile_message">Questa azione non può essere annullata. Il profilo verrà eliminato definitivamente.</string>
+    <string name="yes">Sì</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="error">Errore</string>
+    <string name="warning">Avviso</string>
+    <string name="connection_error">Errore di connessione al server</string>
+    <string name="invalid_port">Numero di porta non valido</string>
+    <string name="port_must_be_between">La porta deve essere compresa tra 1 e 65535</string>
+    <string name="url_required">L URL è obbligatorio</string>
+    <string name="profile_name_required">Il nome del profilo è obbligatorio</string>
+    <string name="confirm_set_default">Impostare come profilo predefinito?</string>
+    <string name="confirm_set_default_message">Questo imposterà il profilo selezionato come predefinito per tutti gli invii.</string>
 </resources>

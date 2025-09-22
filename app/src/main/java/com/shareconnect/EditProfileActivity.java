@@ -171,30 +171,25 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void saveProfile() {
-        String name = editTextProfileName.getText().toString().trim();
-        String url = editTextServerUrl.getText().toString().trim();
-        String portStr = editTextServerPort.getText().toString().trim();
-        String serviceTypeStr = autoCompleteServiceType.getText().toString();
-        String torrentClientStr = autoCompleteTorrentClient.getText().toString();
-
+        // Validate inputs
         if (TextUtils.isEmpty(name)) {
-            editTextProfileName.setError("Profile name is required");
+            editTextProfileName.setError(getString(R.string.profile_name_required));
             return;
         }
-
+        
         if (TextUtils.isEmpty(url)) {
-            editTextServerUrl.setError("Server URL is required");
+            editTextServerUrl.setError(getString(R.string.url_required));
             return;
         }
-
+        
         // Validate URL format
         if (!isValidUrl(url)) {
-            editTextServerUrl.setError("Invalid URL format");
+            editTextServerUrl.setError(getString(R.string.invalid_url));
             return;
         }
 
         if (TextUtils.isEmpty(portStr)) {
-            editTextServerPort.setError("Server port is required");
+            editTextServerPort.setError(getString(R.string.invalid_port));
             return;
         }
 
@@ -202,11 +197,11 @@ public class EditProfileActivity extends AppCompatActivity {
         try {
             port = Integer.parseInt(portStr);
             if (port < 1 || port > 65535) {
-                editTextServerPort.setError("Port must be between 1 and 65535");
+                editTextServerPort.setError(getString(R.string.port_must_be_between));
                 return;
             }
         } catch (NumberFormatException e) {
-            editTextServerPort.setError("Invalid port number");
+            editTextServerPort.setError(getString(R.string.invalid_port));
             return;
         }
         
@@ -278,12 +273,12 @@ public class EditProfileActivity extends AppCompatActivity {
 
         // Validate URL format
         if (!isValidUrl(url)) {
-            editTextServerUrl.setError("Invalid URL format");
+            editTextServerUrl.setError(getString(R.string.invalid_url));
             return;
         }
 
         if (TextUtils.isEmpty(portStr)) {
-            editTextServerPort.setError("Server port is required");
+            editTextServerPort.setError(getString(R.string.invalid_port));
             return;
         }
 
@@ -291,11 +286,11 @@ public class EditProfileActivity extends AppCompatActivity {
         try {
             port = Integer.parseInt(portStr);
             if (port < 1 || port > 65535) {
-                editTextServerPort.setError("Port must be between 1 and 65535");
+                editTextServerPort.setError(getString(R.string.port_must_be_between));
                 return;
             }
         } catch (NumberFormatException e) {
-            editTextServerPort.setError("Invalid port number");
+            editTextServerPort.setError(getString(R.string.invalid_port));
             return;
         }
         
@@ -368,7 +363,10 @@ public class EditProfileActivity extends AppCompatActivity {
                     public void run() {
                         buttonTestConnection.setText("Test Connection");
                         buttonTestConnection.setEnabled(true);
-                        Toast.makeText(EditProfileActivity.this, "Connection failed: " + error, Toast.LENGTH_LONG).show();
+                        // Show error dialog instead of toast
+                        DialogUtils.showErrorDialog(EditProfileActivity.this, 
+                            R.string.connection_error, 
+                            error != null ? error : getString(R.string.error_sending_link_custom));
                     }
                 });
             }

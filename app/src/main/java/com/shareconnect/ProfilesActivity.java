@@ -90,14 +90,34 @@ public class ProfilesActivity extends AppCompatActivity implements ProfileAdapte
 
     @Override
     public void onSetDefaultClick(ServerProfile profile) {
-        profileManager.setDefaultProfile(profile);
-        loadProfiles(); // Refresh to show which is default
+        // Show confirmation dialog before setting default profile
+        DialogUtils.showConfirmDialog(
+            this,
+            R.string.confirm_set_default,
+            R.string.confirm_set_default_message,
+            (dialog, which) -> {
+                profileManager.setDefaultProfile(profile);
+                loadProfiles(); // Refresh to show which is default
+                dialog.dismiss();
+            },
+            null
+        );
     }
 
     @Override
     public void onDeleteClick(ServerProfile profile) {
-        profileManager.deleteProfile(profile);
-        loadProfiles();
+        // Show confirmation dialog before deleting profile
+        DialogUtils.showConfirmDialog(
+            this,
+            R.string.confirm_delete_profile,
+            R.string.confirm_delete_profile_message,
+            (dialog, which) -> {
+                profileManager.deleteProfile(profile);
+                loadProfiles();
+                dialog.dismiss();
+            },
+            null
+        );
     }
 
     @Override

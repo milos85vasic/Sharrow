@@ -15,10 +15,24 @@
     <string name="no_profiles_yet">Noch keine Profile konfiguriert</string>
     <string name="sending_to_service">Wird an den Dienst gesendet…</string>
     <string name="sent_successfully">Link erfolgreich gesendet!</string>
-    <string name="error_sending_link">Fehler beim Senden des Links an den Dienst</string>
-    <string name="please_configure_profile">Bitte konfigurieren Sie zuerst ein Serverprofil</string>
+    <string name="error_sending_link_custom">Fehler beim Senden des Links an den Dienst</string>
+    <string name="please_configure_profile_custom">Bitte konfigurieren Sie zuerst ein Serverprofil</string>
     <string name="invalid_url">Ungültige URL</string>
     <string name="profile_saved">Profil erfolgreich gespeichert</string>
     <string name="profile_deleted">Profil gelöscht</string>
     <string name="no_youtube_link">Kein Medienlink im freigegebenen Inhalt gefunden</string>
+    <string name="confirm_delete_profile">Sind Sie sicher, dass Sie dieses Profil löschen möchten?</string>
+    <string name="confirm_delete_profile_message">Diese Aktion kann nicht rückgängig gemacht werden. Das Profil wird dauerhaft gelöscht.</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="ok">OK</string>
+    <string name="error">Fehler</string>
+    <string name="warning">Warnung</string>
+    <string name="connection_error">Fehler bei der Verbindung zum Server</string>
+    <string name="invalid_port">Ungültige Portnummer</string>
+    <string name="port_must_be_between">Der Port muss zwischen 1 und 65535 liegen</string>
+    <string name="url_required">URL ist erforderlich</string>
+    <string name="profile_name_required">Profilname ist erforderlich</string>
+    <string name="confirm_set_default">Als Standardprofil festlegen?</string>
+    <string name="confirm_set_default_message">Dadurch wird das ausgewählte Profil als Standard für alle Sendungen festgelegt.</string>
 </resources>

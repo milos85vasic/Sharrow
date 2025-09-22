@@ -15,10 +15,24 @@
     <string name="no_profiles_yet">Nenhum perfil configurado ainda</string>
     <string name="sending_to_service">Enviando para o serviço…</string>
     <string name="sent_successfully">Link enviado com sucesso!</string>
-    <string name="error_sending_link">Erro ao enviar link para o serviço</string>
-    <string name="please_configure_profile">Por favor, configure um perfil de servidor primeiro</string>
+    <string name="error_sending_link_custom">Erro ao enviar link para o serviço</string>
+    <string name="please_configure_profile_custom">Por favor, configure um perfil de servidor primeiro</string>
     <string name="invalid_url">URL inválida</string>
     <string name="profile_saved">Perfil salvo com sucesso</string>
     <string name="profile_deleted">Perfil excluído</string>
     <string name="no_youtube_link">Nenhum link de mídia encontrado no conteúdo compartilhado</string>
+    <string name="confirm_delete_profile">Tem certeza de que deseja excluir este perfil?</string>
+    <string name="confirm_delete_profile_message">Esta ação não pode ser desfeita. O perfil será excluído permanentemente.</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="ok">OK</string>
+    <string name="error">Erro</string>
+    <string name="warning">Aviso</string>
+    <string name="connection_error">Erro ao conectar ao servidor</string>
+    <string name="invalid_port">Número de porta inválido</string>
+    <string name="port_must_be_between">A porta deve estar entre 1 e 65535</string>
+    <string name="url_required">URL é obrigatória</string>
+    <string name="profile_name_required">Nome do perfil é obrigatório</string>
+    <string name="confirm_set_default">Definir como perfil padrão?</string>
+    <string name="confirm_set_default_message">Isso definirá o perfil selecionado como padrão para todos os envios.</string>
 </resources>

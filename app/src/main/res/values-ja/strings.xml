@@ -15,10 +15,24 @@
     <string name="no_profiles_yet">プロファイルがまだ設定されていません</string>
     <string name="sending_to_service">サービスに送信中…</string>
     <string name="sent_successfully">リンクが正常に送信されました！</string>
-    <string name="error_sending_link">サービスへのリンク送信中にエラーが発生しました</string>
-    <string name="please_configure_profile">まずサーバープロファイルを設定してください</string>
+    <string name="error_sending_link_custom">サービスへのリンク送信中にエラーが発生しました</string>
+    <string name="please_configure_profile_custom">まずサーバープロファイルを設定してください</string>
     <string name="invalid_url">無効なURL</string>
     <string name="profile_saved">プロファイルが正常に保存されました</string>
     <string name="profile_deleted">プロファイルが削除されました</string>
     <string name="no_youtube_link">共有コンテンツにメディアリンクが見つかりません</string>
+    <string name="confirm_delete_profile">このプロファイルを削除してもよろしいですか？</string>
+    <string name="confirm_delete_profile_message">この操作は元に戻せません。プロファイルは完全に削除されます。</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="ok">OK</string>
+    <string name="error">エラー</string>
+    <string name="warning">警告</string>
+    <string name="connection_error">サーバーへの接続中にエラーが発生しました</string>
+    <string name="invalid_port">無効なポート番号</string>
+    <string name="port_must_be_between">ポートは1から65535の間でなければなりません</string>
+    <string name="url_required">URLが必要です</string>
+    <string name="profile_name_required">プロファイル名が必要です</string>
+    <string name="confirm_set_default">デフォルトプロファイルに設定しますか？</string>
+    <string name="confirm_set_default_message">これにより、選択したプロファイルがすべての送信のデフォルトとして設定されます。</string>
 </resources>

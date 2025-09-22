@@ -15,10 +15,24 @@
     <string name="no_profiles_yet">Профили еще не настроены</string>
     <string name="sending_to_service">Отправка в службу…</string>
     <string name="sent_successfully">Ссылка успешно отправлена!</string>
-    <string name="error_sending_link">Ошибка отправки ссылки в службу</string>
-    <string name="please_configure_profile">Сначала настройте профиль сервера</string>
+    <string name="error_sending_link_custom">Ошибка отправки ссылки в службу</string>
+    <string name="please_configure_profile_custom">Сначала настройте профиль сервера</string>
     <string name="invalid_url">Неверный URL</string>
     <string name="profile_saved">Профиль успешно сохранен</string>
     <string name="profile_deleted">Профиль удален</string>
     <string name="no_youtube_link">Ссылка на медиа не найдена в общем контенте</string>
+    <string name="confirm_delete_profile">Вы уверены, что хотите удалить этот профиль?</string>
+    <string name="confirm_delete_profile_message">Это действие нельзя отменить. Профиль будет удален навсегда.</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="ok">ОК</string>
+    <string name="error">Ошибка</string>
+    <string name="warning">Предупреждение</string>
+    <string name="connection_error">Ошибка подключения к серверу</string>
+    <string name="invalid_port">Неверный номер порта</string>
+    <string name="port_must_be_between">Порт должен быть между 1 и 65535</string>
+    <string name="url_required">URL обязателен</string>
+    <string name="profile_name_required">Имя профиля обязательно</string>
+    <string name="confirm_set_default">Установить как профиль по умолчанию?</string>
+    <string name="confirm_set_default_message">Это установит выбранный профиль как стандартный для всех отправок.</string>
 </resources>

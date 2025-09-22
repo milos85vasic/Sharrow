@@ -1,24 +1,43 @@
 # Changelog
 
-All notable changes to Sharrow will be documented in this file.
+All notable changes to ShareConnect will be documented in this file.
+
+## [1.1.0] - 2025-09-22
+
+### Added
+- Support for YT-DLP as an alternative to MeTube
+- Floating action button on main screen for clipboard URL sharing
+- URL validation for clipboard sharing to prevent invalid links
+- "Share to Apps" feature to share links to other installed applications
+- Visual app icons in the share chooser for better recognition
+- Translation support for 10 major world languages (Spanish, French, German, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic)
+- New SVG-based branding assets with light/dark theme support
+- Updated asset generation scripts for automatic icon creation
+
+### Changed
+- Renamed application from "Sharrow" to "ShareConnect"
+- Updated all UI references to use new branding
+- Enhanced share activity with "Share to Apps" button
+- Improved clipboard URL sharing with proper validation
+- Updated documentation to reflect new features and branding
 
 ## [1.0.0] - 2025-09-22
 
 ### Added
-- Initial release of Sharrow (formerly MeTube Share)
+- Initial release of ShareConnect (formerly MeTube Share)
 - Multi-service support for YouTube, Vimeo, Twitch, Reddit, Twitter, Instagram, Facebook, SoundCloud, and more
 - Multiple server profile management with default profile selection
 - Encrypted local storage using Room database with SQLCipher
 - Comprehensive sharing history with detailed metadata tracking
 - Theme customization system with 6 color schemes and light/dark variants
-- Professional branding with Sharrow logo and adaptive icons
+- Professional branding with ShareConnect logo and adaptive icons
 - Splash screen with theme support
 - Connection testing for server profiles
 - Quick access to MeTube interface from multiple locations
 - Bulk history cleanup options (individual items, by service, by type, or all)
 
 ### Changed
-- Renamed application from "MeTube Share" to "Sharrow"
+- Renamed application from "MeTube Share" to "ShareConnect"
 - Updated all UI references to use new branding
 - Enhanced Material Design 3 implementation
 - Improved user experience with better navigation and workflows
@@ -30,7 +49,7 @@ All notable changes to Sharrow will be documented in this file.
 ## Features by Category
 
 ### Core Functionality
-- Share media links from 10+ streaming services to MeTube
+- Share media links from 10+ streaming services to MeTube/YT-DLP
 - Multiple server profile support with default selection
 - Automatic browser redirection after sending links
 

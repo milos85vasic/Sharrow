@@ -18,8 +18,8 @@ public interface HistoryItemDao {
     @Query("SELECT * FROM history_items WHERE type = :type ORDER BY timestamp DESC")
     List<HistoryItem> getHistoryItemsByType(String type);
     
-    @Query("SELECT * FROM history_items WHERE profileId = :profileId ORDER BY timestamp DESC")
-    List<HistoryItem> getHistoryItemsByProfileId(String profileId);
+    @Query("SELECT * FROM history_items WHERE serviceType = :serviceType ORDER BY timestamp DESC")
+    List<HistoryItem> getHistoryItemsByServiceType(String serviceType);
     
     @Query("SELECT * FROM history_items WHERE serviceProvider = :serviceProvider AND type = :type ORDER BY timestamp DESC")
     List<HistoryItem> getHistoryItemsByServiceProviderAndType(String serviceProvider, String type);
@@ -29,6 +29,9 @@ public interface HistoryItemDao {
     
     @Query("SELECT DISTINCT type FROM history_items")
     List<String> getAllTypes();
+    
+    @Query("SELECT DISTINCT serviceType FROM history_items")
+    List<String> getAllServiceTypes();
     
     @Insert
     void insert(HistoryItem historyItem);
@@ -48,6 +51,6 @@ public interface HistoryItemDao {
     @Query("DELETE FROM history_items WHERE type = :type")
     void deleteByType(String type);
     
-    @Query("DELETE FROM history_items WHERE profileId = :profileId")
-    void deleteByProfileId(String profileId);
+    @Query("DELETE FROM history_items WHERE serviceType = :serviceType")
+    void deleteByServiceType(String serviceType);
 }

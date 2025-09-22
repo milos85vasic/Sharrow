@@ -2,8 +2,8 @@
 
 ## Core Features
 
-### 1. Multi-Service Media Sharing
-Share content from a wide variety of streaming platforms directly to your MeTube instance:
+### 1. Universal Media Sharing
+Share content from a vast array of streaming platforms directly to your local services:
 - YouTube (videos, playlists, channels)
 - Vimeo
 - Twitch
@@ -16,41 +16,51 @@ Share content from a wide variety of streaming platforms directly to your MeTube
 - Bandcamp
 - And any other service supported by yt-dlp
 
-### 2. Server Profile Management
-- Create and manage multiple MeTube server profiles
+### 2. Multi-Service Support
+Connect to multiple types of download services:
+- **MeTube Instances**: Traditional YouTube downloader support
+- **Torrent Clients**: qBittorrent, Transmission, uTorrent
+- **jDownloader Instances**: Advanced download manager support
+- **Magnet Links**: Direct sharing to torrent clients
+
+### 3. Service Profile Management
+- Create and manage multiple service profiles
 - Set a default profile for quick sharing
-- Test server connections before saving
+- Test service connections before saving
 - Edit or delete existing profiles
 - Profile validation for URL format and port ranges
 
-### 3. Encrypted Data Storage
+### 4. Encrypted Data Storage
 - All application data stored with SQLCipher encryption
 - History items, profiles, and settings secured at rest
-- No plaintext data stored on the device
 - Secure database implementation using Room
+- No plaintext data stored on the device
 
 ## Advanced Features
 
-### 4. Comprehensive Sharing History
+### 5. Comprehensive Sharing History
 - Detailed tracking of all shared links
 - Metadata including:
   - Service provider (YouTube, Vimeo, etc.)
   - Media type (single video, playlist, channel)
+  - Target service type (MeTube, Torrent, jDownloader)
   - Timestamp of sharing
   - Target profile information
   - Send success/failure status
 - Filtering capabilities:
   - By service provider
   - By media type
+  - By service type (MeTube, Torrent, jDownloader)
   - By target profile
 - Resend functionality for any history item
 - Flexible cleanup options:
   - Delete individual items
   - Delete by service provider
   - Delete by media type
+  - Delete by service type
   - Delete all history
 
-### 5. Theme Customization System
+### 6. Theme Customization System
 Six distinct color schemes with light and dark variants:
 1. **Warm Orange** - Energetic and vibrant
 2. **Crimson** - Bold and dramatic
@@ -59,14 +69,14 @@ Six distinct color schemes with light and dark variants:
 5. **Green** - Natural and soothing
 6. **Material** - Default Material Design theme
 
-### 6. Professional Branding
+### 7. Professional Branding
 - Custom-designed Sharrow logo combining "share" and "arrow" concepts
 - Adaptive icons for all Android versions
 - Splash screen with theme awareness
 - Consistent branding throughout the application
 - SVG source assets for scalability
 
-### 7. User Experience Enhancements
+### 8. User Experience Enhancements
 - Modern Material Design 3 implementation
 - Intuitive navigation with clear workflows
 - Responsive layouts for all screen sizes
@@ -74,23 +84,54 @@ Six distinct color schemes with light and dark variants:
 - Quick access to key features
 - Smooth transitions and animations
 
+## Service-Specific Features
+
+### 9. MeTube Integration
+- Direct API communication with MeTube instances
+- Support for all MeTube-supported media types
+- Automatic browser redirection after sharing
+- Error handling for network issues
+- Connection testing capabilities
+
+### 10. Torrent Client Integration
+Support for three major torrent clients:
+- **qBittorrent**: Full Web API integration
+- **Transmission**: RPC API integration
+- **uTorrent**: Web API integration
+- Magnet link support for all clients
+- Torrent file URL support
+- Automatic client detection and configuration
+
+### 11. jDownloader Integration
+- Direct URL sending to jDownloader instances
+- Support for hundreds of file hosting services
+- FlashGot API compatibility
+- Advanced download management capabilities
+
+### 12. Content Type Recognition
+Automatic detection of content types:
+- YouTube URLs → MeTube or jDownloader
+- Magnet Links → Torrent Clients or jDownloader
+- Torrent Files → Torrent Clients or jDownloader
+- Direct Downloads → jDownloader
+
 ## Technical Features
 
-### 8. Security Implementation
+### 13. Security Implementation
 - SQLCipher encryption for all local data
-- HTTPS support for server communications
+- HTTPS support for service communications
 - Input validation for all user data
 - Secure storage of sensitive information
 - No data collection or transmission without explicit user action
 
-### 9. Performance Optimization
+### 14. Performance Optimization
 - Efficient database queries with Room
 - Background processing for network operations
 - Memory-efficient data handling
 - Optimized layouts and resource usage
 - Fast theme switching
 
-### 10. Developer Features
+### 15. Developer Features
 - Well-structured codebase with clear separation of concerns
 - Comprehensive documentation
 - Standard Android development practices
@@ -99,16 +140,16 @@ Six distinct color schemes with light and dark variants:
 
 ## User Interface Components
 
-### 11. Main Screens
+### 16. Main Screens
 - **Splash Screen**: Branded loading screen with theme support
 - **Main Dashboard**: Quick access to key features
 - **Share Screen**: Media link sharing with profile selection
 - **History Screen**: Comprehensive sharing history with filtering
 - **Settings Screen**: Profile management and theme selection
-- **Profile Management**: Create, edit, and test server profiles
+- **Profile Management**: Create, edit, and test service profiles
 - **Theme Selection**: Choose from multiple color schemes
 
-### 12. UI Elements
+### 17. UI Elements
 - Material Design cards for content organization
 - Floating action buttons for key actions
 - Dropdown menus for profile and filter selection
@@ -116,26 +157,27 @@ Six distinct color schemes with light and dark variants:
 - Contextual buttons for item actions
 - Clear visual hierarchy and typography
 - Appropriate spacing and padding
+- Service type icons for visual identification
 
 ## Integration Features
 
-### 13. Android Integration
+### 18. Android Integration
 - Share intent receivers for direct URL handling
 - Proper Android lifecycle management
 - Support for both portrait and landscape orientations
 - Adaptive layouts for different screen sizes
 - System theme awareness (day/night mode)
 
-### 14. MeTube Integration
-- Direct API communication with MeTube instances
-- Support for all MeTube-supported media types
+### 19. Service Integration
+- Direct API communication with all supported services
+- Support for all service-supported media types
 - Automatic browser redirection after sharing
-- Error handling for network issues
+- Error handling for network issues and service errors
 - Connection testing capabilities
 
 ## Accessibility Features
 
-### 15. Usability Considerations
+### 20. Usability Considerations
 - High contrast color schemes
 - Large touch targets for easy interaction
 - Clear visual feedback for user actions
@@ -144,12 +186,14 @@ Six distinct color schemes with light and dark variants:
 
 ## Future Enhancement Opportunities
 
-### 16. Planned Features
+### 21. Planned Features
 - Export/import of profiles and history
 - Advanced filtering and search capabilities
 - Batch sharing of multiple links
 - Notification system for download completion
 - Widget support for quick access
 - Cloud sync for profiles and settings
+- Advanced service status monitoring
+- Enhanced error reporting with specific service diagnostics
 
-This comprehensive feature set makes Sharrow a powerful and user-friendly tool for managing media downloads through MeTube, with a focus on security, customization, and ease of use.
+This comprehensive feature set makes Sharrow a powerful and user-friendly tool for managing media downloads through multiple services, with a focus on security, customization, and ease of use.

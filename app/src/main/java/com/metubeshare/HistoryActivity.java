@@ -25,12 +25,14 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
     private TextView textViewEmptyHistory;
     private AutoCompleteTextView autoCompleteServiceFilter;
     private AutoCompleteTextView autoCompleteTypeFilter;
+    private AutoCompleteTextView autoCompleteServiceTypeFilter;
     private MaterialButton buttonClearFilters;
     
     private HistoryRepository historyRepository;
     private List<HistoryItem> allHistoryItems;
     private List<String> serviceProviders;
     private List<String> types;
+    private List<String> serviceTypes;
     private ThemeManager themeManager;
     
     @Override
@@ -56,6 +58,7 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         textViewEmptyHistory = findViewById(R.id.textViewEmptyHistory);
         autoCompleteServiceFilter = findViewById(R.id.autoCompleteServiceFilter);
         autoCompleteTypeFilter = findViewById(R.id.autoCompleteTypeFilter);
+        autoCompleteServiceTypeFilter = findViewById(R.id.autoCompleteServiceTypeFilter);
         buttonClearFilters = findViewById(R.id.buttonClearFilters);
     }
     
@@ -79,6 +82,7 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
             public void onClick(View v) {
                 autoCompleteServiceFilter.setText("");
                 autoCompleteTypeFilter.setText("");
+                autoCompleteServiceTypeFilter.setText("");
                 loadHistoryItems();
             }
         });
@@ -88,6 +92,7 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         allHistoryItems = historyRepository.getAllHistoryItems();
         serviceProviders = historyRepository.getAllServiceProviders();
         types = historyRepository.getAllTypes();
+        serviceTypes = historyRepository.getAllServiceTypes();
         
         // Setup filter adapters
         ArrayAdapter<String> serviceAdapter = new ArrayAdapter<>(this, 
@@ -98,9 +103,14 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
                 android.R.layout.simple_dropdown_item_1line, types);
         autoCompleteTypeFilter.setAdapter(typeAdapter);
         
+        ArrayAdapter<String> serviceTypeAdapter = new ArrayAdapter<>(this, 
+                android.R.layout.simple_dropdown_item_1line, serviceTypes);
+        autoCompleteServiceTypeFilter.setAdapter(serviceTypeAdapter);
+        
         // Apply filters if any
         String selectedService = autoCompleteServiceFilter.getText().toString();
         String selectedType = autoCompleteTypeFilter.getText().toString();
+        String selectedServiceType = autoCompleteServiceTypeFilter.getText().toString();
         
         List<HistoryItem> filteredItems = new ArrayList<>(allHistoryItems);
         
@@ -110,6 +120,16 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         
         if (!selectedType.isEmpty()) {
             filteredItems.removeIf(item -> !item.getType().equals(selectedType));
+        }
+        
+        if (!selectedServiceType.isEmpty()) {
+            filteredItems.removeIf(item -> {
+                String itemServiceType = item.getServiceType();
+                if (itemServiceType == null) {
+                    itemServiceType = "MeTube"; // Default for backward compatibility
+                }
+                return !itemServiceType.equals(selectedServiceType);
+            });
         }
         
         historyAdapter.updateHistoryItems(filteredItems);
@@ -152,7 +172,7 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         builder.setTitle("Cleanup History");
         builder.setMessage("Choose what to cleanup:");
         
-        String[] options = {"All History", "By Service Provider", "By Type"};
+        String[] options = {"All History", "By Service Provider", "By Type", "By Service Type"};
         builder.setItems(options, (dialog, which) -> {
             switch (which) {
                 case 0: // All History
@@ -163,6 +183,9 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
                     break;
                 case 2: // By Type
                     showCleanupByTypeDialog();
+                    break;
+                case 3: // By Service Type
+                    showCleanupByServiceTypeDialog();
                     break;
             }
         });
@@ -209,6 +232,22 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         builder.setItems(types.toArray(new String[0]), (dialog, which) -> {
             String type = types.get(which);
             historyRepository.deleteHistoryItemsByType(type);
+            loadHistoryItems();
+        });
+        builder.setNegativeButton("Cancel", null);
+        builder.show();
+    }
+    
+    private void showCleanupByServiceTypeDialog() {
+        if (serviceTypes.isEmpty()) {
+            return;
+        }
+        
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Delete by Service Type");
+        builder.setItems(serviceTypes.toArray(new String[0]), (dialog, which) -> {
+            String serviceType = serviceTypes.get(which);
+            historyRepository.deleteHistoryItemsByServiceType(serviceType);
             loadHistoryItems();
         });
         builder.setNegativeButton("Cancel", null);

@@ -63,6 +63,11 @@ public class ProfileManager {
             profile.setId(UUID.randomUUID().toString());
         }
         
+        // Set default service type if not set
+        if (profile.getServiceType() == null || profile.getServiceType().isEmpty()) {
+            profile.setServiceType(ServerProfile.TYPE_METUBE);
+        }
+        
         List<ServerProfile> profiles = getProfiles();
         profiles.add(profile);
         saveProfiles(profiles);
@@ -93,5 +98,57 @@ public class ProfileManager {
 
     public boolean hasProfiles() {
         return !getProfiles().isEmpty();
+    }
+    
+    /**
+     * Get profiles filtered by service type
+     */
+    public List<ServerProfile> getProfilesByServiceType(String serviceType) {
+        List<ServerProfile> allProfiles = getProfiles();
+        List<ServerProfile> filteredProfiles = new ArrayList<>();
+        
+        for (ServerProfile profile : allProfiles) {
+            if (serviceType.equals(profile.getServiceType())) {
+                filteredProfiles.add(profile);
+            }
+        }
+        
+        return filteredProfiles;
+    }
+    
+    /**
+     * Get all unique service types from existing profiles
+     */
+    public List<String> getAllServiceTypes() {
+        List<ServerProfile> allProfiles = getProfiles();
+        List<String> serviceTypes = new ArrayList<>();
+        
+        for (ServerProfile profile : allProfiles) {
+            String serviceType = profile.getServiceType();
+            if (serviceType != null && !serviceTypes.contains(serviceType)) {
+                serviceTypes.add(serviceType);
+            }
+        }
+        
+        return serviceTypes;
+    }
+    
+    /**
+     * Get all torrent client types from existing profiles
+     */
+    public List<String> getAllTorrentClientTypes() {
+        List<ServerProfile> allProfiles = getProfiles();
+        List<String> clientTypes = new ArrayList<>();
+        
+        for (ServerProfile profile : allProfiles) {
+            if (ServerProfile.TYPE_TORRENT.equals(profile.getServiceType())) {
+                String clientType = profile.getTorrentClientType();
+                if (clientType != null && !clientTypes.contains(clientType)) {
+                    clientTypes.add(clientType);
+                }
+            }
+        }
+        
+        return clientTypes;
     }
 }

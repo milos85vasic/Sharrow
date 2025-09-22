@@ -61,6 +61,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         private TextView textViewProfile;
         private TextView textViewTimestamp;
         private TextView textViewStatus;
+        private TextView textViewServiceType;
         private MaterialButton buttonResend;
         private MaterialButton buttonDelete;
         
@@ -73,6 +74,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             textViewProfile = itemView.findViewById(R.id.textViewProfile);
             textViewTimestamp = itemView.findViewById(R.id.textViewTimestamp);
             textViewStatus = itemView.findViewById(R.id.textViewStatus);
+            textViewServiceType = itemView.findViewById(R.id.textViewServiceType);
             buttonResend = itemView.findViewById(R.id.buttonResend);
             buttonDelete = itemView.findViewById(R.id.buttonDelete);
         }
@@ -82,6 +84,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             textViewUrl.setText(item.getUrl());
             textViewServiceProvider.setText(item.getServiceProvider());
             textViewType.setText(item.getType());
+            textViewServiceType.setText(item.getServiceType() != null ? item.getServiceType() : "MeTube");
             
             if (item.getProfileName() != null && !item.getProfileName().isEmpty()) {
                 textViewProfile.setText(item.getProfileName());

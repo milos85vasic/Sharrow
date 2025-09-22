@@ -73,10 +73,10 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="24dp"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-                <AutoCompleteTextView
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/autoCompleteProfiles"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -86,19 +86,10 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonOpenMeTube"
-                style="@style/Widget.Material3.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:text="Open MeTube Interface"
-                app:icon="@android:drawable/ic_menu_view" />
-
-            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonSendToMeTube"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Send to MeTube"
+                android:text="Send to Service"
                 android:layout_marginBottom="16dp"
                 android:padding="16dp"
                 style="@style/Widget.Material3.Button" />

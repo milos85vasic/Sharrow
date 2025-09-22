@@ -1,26 +1,28 @@
 # Sharrow
 
-An Android application that allows you to share media links from various streaming services directly to your local MeTube instance.
+An Android application that allows you to share media links from various streaming services and download sources directly to your local services including MeTube, torrent clients, and jDownloader.
 
 Sharrow combines the words "share" and "arrow" to represent the core functionality of the app - sharing content through a directional arrow metaphor.
 
 ## Features
 
-- **Multi-Service Support**: Share media links from YouTube, Vimeo, Twitch, Reddit, Twitter, Instagram, Facebook, SoundCloud and more
-- **Multiple Server Profiles**: Support for multiple MeTube server profiles with default profile selection
+- **Multi-Service Support**: Share to MeTube, qBittorrent, Transmission, uTorrent, and jDownloader
+- **Universal Media Sharing**: Share content from YouTube, Vimeo, Twitch, Reddit, Twitter, Instagram, Facebook, SoundCloud and more
+- **Magnet Link Support**: Directly add magnet links to torrent clients
+- **Multiple Server Profiles**: Support for multiple service profiles with default profile selection
 - **Customizable Themes**: 6 color schemes with light/dark variants (Warm Orange, Crimson, Light Blue, Purple, Green, Material)
 - **Encrypted Storage**: All data including history and profiles stored with SQLCipher encryption
 - **Comprehensive History**: Detailed sharing history with filtering by service, type, and profile
 - **Modern Material Design**: Beautiful UI following Material Design 3 guidelines
-- **Connection Testing**: Built-in server connection testing
-- **Splash Screen**: Professional branded splash screen with theme support
-- **Quick Access**: Direct access to MeTube interface from multiple locations
+- **Connection Testing**: Built-in service connection testing
+- **Quick Access**: Direct access to service interfaces from multiple locations
 - **Bulk Cleanup**: Flexible history cleanup options (individual items, by service, by type, or all)
 
 ## Supported Services
 
-Sharrow works with all streaming services supported by MeTube, which uses yt-dlp as its backend. This includes:
+Sharrow works with all streaming services and download sources supported by your target services:
 
+### For MeTube:
 - YouTube
 - Vimeo
 - Dailymotion
@@ -33,14 +35,26 @@ Sharrow works with all streaming services supported by MeTube, which uses yt-dlp
 - Bandcamp
 - And dozens of other sites supported by yt-dlp
 
+### For Torrent Clients:
+- Magnet Links
+- Torrent Files
+- HTTP(S) links to torrent files
+
+### For jDownloader:
+- Direct download links
+- File hosting services (MediaFire, RapidGator, etc.)
+- One-click hosting services
+
 ## Setup
 
 1. Install the app on your Android device
-2. Open the app and configure your MeTube server profiles:
+2. Open the app and configure your service profiles:
    - Go to Settings > Server Profiles
-   - Add a new profile with your server's URL and port
+   - Add new profiles for each service you want to use
+   - Select the appropriate service type (MeTube, Torrent Client, jDownloader)
+   - For Torrent Clients, specify which client you're using
    - Set one profile as default for quick sharing
-3. Test your connection to ensure the server is reachable
+3. Test your connections to ensure services are reachable
 4. (Optional) Customize the app theme in Settings > Theme
 
 ## Usage
@@ -48,12 +62,12 @@ Sharrow works with all streaming services supported by MeTube, which uses yt-dlp
 ### Sharing Content
 
 1. Open any supported media app or website (YouTube, Vimeo, Twitch, etc.)
-2. Find a video or audio content you want to download
+2. Find content you want to download
 3. Tap the share button
 4. Select "Sharrow" from the sharing options
-5. Choose your server profile (if you have multiple)
-6. Tap "Send to MeTube"
-7. The app will automatically open your MeTube instance in the browser
+5. Choose your service profile (if you have multiple)
+6. Tap "Send to Service"
+7. The app will automatically open your service interface in the browser
 
 ### Managing History
 
@@ -72,7 +86,10 @@ Sharrow works with all streaming services supported by MeTube, which uses yt-dlp
 ## Requirements
 
 - Android 8.0 (API level 26) or higher
-- A running MeTube instance accessible from your device
+- Running service instances accessible from your device:
+  - MeTube (optional)
+  - Torrent Client with Web UI (qBittorrent, Transmission, or uTorrent)
+  - jDownloader with Web UI (optional)
 
 ## Building
 
@@ -102,12 +119,12 @@ All branding assets are available in the `branding/` directory.
 - **Room Database**: Local data storage with SQLCipher encryption
 - **History Items**: Complete tracking of shared links with metadata
 - **Themes**: Persistent theme preferences
-- **Profiles**: Server profile management
+- **Profiles**: Service profile management
 
 ### Security
 
 - **Encrypted Storage**: All sensitive data encrypted at rest
-- **Secure Networking**: HTTPS support for server communications
+- **Secure Networking**: HTTPS support for service communications
 - **Data Privacy**: No data leaves the device without user action
 
 ### UI Components
@@ -129,5 +146,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - [MeTube](https://github.com/alexta69/metube) - Self-hosted YouTube downloader
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - Media download engine
+- [qBittorrent](https://www.qbittorrent.org/) - Free BitTorrent client
+- [Transmission](https://transmissionbt.com/) - Fast, easy, free BitTorrent client
+- [uTorrent](https://www.utorrent.com/) - Proprietary BitTorrent client
+- [jDownloader](https://jdownloader.org/) - Free download manager
 - [Android Jetpack](https://developer.android.com/jetpack) - Android development components
 - [Material Design](https://m3.material.io/) - Design system by Google

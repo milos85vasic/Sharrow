@@ -37,14 +37,9 @@ public class HistoryRepository {
         return historyItemDao.getHistoryItemsByType(type);
     }
     
-    // Get history items by profile ID
-    public List<HistoryItem> getHistoryItemsByProfileId(String profileId) {
-        return historyItemDao.getHistoryItemsByProfileId(profileId);
-    }
-    
-    // Get history items by service provider and type
-    public List<HistoryItem> getHistoryItemsByServiceProviderAndType(String serviceProvider, String type) {
-        return historyItemDao.getHistoryItemsByServiceProviderAndType(serviceProvider, type);
+    // Get history items by service type
+    public List<HistoryItem> getHistoryItemsByServiceType(String serviceType) {
+        return historyItemDao.getHistoryItemsByServiceType(serviceType);
     }
     
     // Get all service providers
@@ -55,6 +50,11 @@ public class HistoryRepository {
     // Get all types
     public List<String> getAllTypes() {
         return historyItemDao.getAllTypes();
+    }
+    
+    // Get all service types
+    public List<String> getAllServiceTypes() {
+        return historyItemDao.getAllServiceTypes();
     }
     
     // Delete a specific history item
@@ -77,8 +77,8 @@ public class HistoryRepository {
         historyItemDao.deleteByType(type);
     }
     
-    // Delete history items by profile ID
-    public void deleteHistoryItemsByProfileId(String profileId) {
-        historyItemDao.deleteByProfileId(profileId);
+    // Delete history items by service type
+    public void deleteHistoryItemsByServiceType(String serviceType) {
+        historyItemDao.deleteByServiceType(serviceType);
     }
 }

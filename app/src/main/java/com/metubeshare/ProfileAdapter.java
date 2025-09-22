@@ -3,6 +3,7 @@ package com.metubeshare;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,6 +50,8 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
         private TextView textViewProfileName;
         private TextView textViewProfileUrl;
         private TextView textViewDefault;
+        private ImageView imageViewServiceType;
+        private TextView textViewServiceType;
         private MaterialButton buttonSetDefault;
         private MaterialButton buttonDelete;
 
@@ -57,6 +60,8 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
             textViewProfileName = itemView.findViewById(R.id.textViewProfileName);
             textViewProfileUrl = itemView.findViewById(R.id.textViewProfileUrl);
             textViewDefault = itemView.findViewById(R.id.textViewDefault);
+            imageViewServiceType = itemView.findViewById(R.id.imageViewServiceType);
+            textViewServiceType = itemView.findViewById(R.id.textViewServiceType);
             buttonSetDefault = itemView.findViewById(R.id.buttonSetDefault);
             buttonDelete = itemView.findViewById(R.id.buttonDelete);
         }
@@ -64,6 +69,10 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
         public void bind(ServerProfile profile) {
             textViewProfileName.setText(profile.getName());
             textViewProfileUrl.setText(profile.getUrl() + ":" + profile.getPort());
+            
+            // Set service type icon and text
+            setServiceTypeIcon(profile);
+            textViewServiceType.setText(profile.getServiceTypeName());
             
             // Check if this is the default profile
             ServerProfile defaultProfile = profileManager.getDefaultProfile();
@@ -96,6 +105,23 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
                     }
                 }
             });
+        }
+        
+        private void setServiceTypeIcon(ServerProfile profile) {
+            switch (profile.getServiceType()) {
+                case ServerProfile.TYPE_METUBE:
+                    imageViewServiceType.setImageResource(R.drawable.ic_service_metube);
+                    break;
+                case ServerProfile.TYPE_TORRENT:
+                    imageViewServiceType.setImageResource(R.drawable.ic_service_torrent);
+                    break;
+                case ServerProfile.TYPE_JDOWNLOADER:
+                    imageViewServiceType.setImageResource(R.drawable.ic_service_jdownloader);
+                    break;
+                default:
+                    imageViewServiceType.setImageResource(R.drawable.ic_service_metube);
+                    break;
+            }
         }
     }
 }

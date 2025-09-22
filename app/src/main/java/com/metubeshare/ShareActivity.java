@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShareActivity extends AppCompatActivity {
-    private TextView textViewYouTubeLink;
+    private TextView textViewMediaLink;
     private AutoCompleteTextView autoCompleteProfiles;
-    private MaterialButton buttonSendToMeTube;
-    private MaterialButton buttonOpenMeTube;
+    private MaterialButton buttonSendToService;
+    private MaterialButton buttonOpenService;
     private ProgressBar progressBar;
     private List<ServerProfile> profiles;
     private String mediaLink;
-    private MeTubeApiClient apiClient;
+    private ServiceApiClient serviceApiClient;
     private ProfileManager profileManager;
     private ThemeManager themeManager;
 
@@ -52,14 +52,14 @@ public class ShareActivity extends AppCompatActivity {
         handleIntent();
         loadProfiles();
         setupListeners();
-        apiClient = new MeTubeApiClient();
+        serviceApiClient = new ServiceApiClient();
     }
 
     private void initViews() {
-        textViewYouTubeLink = findViewById(R.id.textViewYouTubeLink);
+        textViewMediaLink = findViewById(R.id.textViewYouTubeLink);
         autoCompleteProfiles = findViewById(R.id.autoCompleteProfiles);
-        buttonSendToMeTube = findViewById(R.id.buttonSendToMeTube);
-        buttonOpenMeTube = findViewById(R.id.buttonOpenMeTube);
+        buttonSendToService = findViewById(R.id.buttonSendToMeTube);
+        buttonOpenService = findViewById(R.id.buttonOpenMeTube);
         progressBar = findViewById(R.id.progressBar);
     }
 
@@ -73,16 +73,16 @@ public class ShareActivity extends AppCompatActivity {
             // Handle shared text (URL)
             mediaLink = intent.getStringExtra(Intent.EXTRA_TEXT);
             if (mediaLink != null) {
-                textViewYouTubeLink.setText(mediaLink);
+                textViewMediaLink.setText(mediaLink);
             }
         } else if (Intent.ACTION_VIEW.equals(action) && data != null) {
             // Handle direct URL intent
             mediaLink = data.toString();
-            textViewYouTubeLink.setText(mediaLink);
+            textViewMediaLink.setText(mediaLink);
         } else {
             // No valid link received
             mediaLink = null;
-            textViewYouTubeLink.setText("No media link received");
+            textViewMediaLink.setText("No media link received");
         }
     }
 
@@ -101,7 +101,7 @@ public class ShareActivity extends AppCompatActivity {
         // Create adapter for AutoCompleteTextView
         List<String> profileNames = new ArrayList<>();
         for (ServerProfile profile : profiles) {
-            profileNames.add(profile.getName());
+            profileNames.add(profile.getName() + " (" + profile.getServiceTypeName() + ")");
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, profileNames);
@@ -110,7 +110,7 @@ public class ShareActivity extends AppCompatActivity {
         // Set default selection if there's a default profile
         ServerProfile defaultProfile = profileManager.getDefaultProfile();
         if (defaultProfile != null) {
-            autoCompleteProfiles.setText(defaultProfile.getName(), false);
+            autoCompleteProfiles.setText(defaultProfile.getName() + " (" + defaultProfile.getServiceTypeName() + ")", false);
         } else if (!profileNames.isEmpty()) {
             // If no default, select the first one
             autoCompleteProfiles.setText(profileNames.get(0), false);
@@ -118,17 +118,17 @@ public class ShareActivity extends AppCompatActivity {
     }
 
     private void setupListeners() {
-        buttonSendToMeTube.setOnClickListener(new View.OnClickListener() {
+        buttonSendToService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendToMeTube();
+                sendToService();
             }
         });
         
-        buttonOpenMeTube.setOnClickListener(new View.OnClickListener() {
+        buttonOpenService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMeTubeInterface();
+                openServiceInterface();
             }
         });
     }
@@ -148,7 +148,7 @@ public class ShareActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.action_open_metube) {
-            openMeTubeInterface();
+            openServiceInterface();
             return true;
         } else if (id == R.id.action_history) {
             Intent intent = new Intent(this, HistoryActivity.class);
@@ -162,7 +162,7 @@ public class ShareActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void sendToMeTube() {
+    private void sendToService() {
         if (mediaLink == null || mediaLink.isEmpty()) {
             Toast.makeText(this, R.string.no_youtube_link, Toast.LENGTH_SHORT).show();
             return;
@@ -173,11 +173,18 @@ public class ShareActivity extends AppCompatActivity {
             return;
         }
 
-        String selectedProfileName = autoCompleteProfiles.getText().toString();
+        String selectedProfileText = autoCompleteProfiles.getText().toString();
         ServerProfile selectedProfile = null;
         
+        // Extract the profile name from the displayed text (name + service type)
+        String profileName = selectedProfileText;
+        int parenIndex = selectedProfileText.indexOf(" (");
+        if (parenIndex > 0) {
+            profileName = selectedProfileText.substring(0, parenIndex);
+        }
+        
         for (ServerProfile profile : profiles) {
-            if (profile.getName().equals(selectedProfileName)) {
+            if (profile.getName().equals(profileName)) {
                 selectedProfile = profile;
                 break;
             }
@@ -192,29 +199,32 @@ public class ShareActivity extends AppCompatActivity {
         final String profileUrl = selectedProfile.getUrl();
         final int profilePort = selectedProfile.getPort();
         final String profileId = selectedProfile.getId();
-        final String profileName = selectedProfile.getName();
+        final String profileNameFinal = selectedProfile.getName();
+        final String serviceTypeName = selectedProfile.getServiceTypeName();
         
         // Show progress
         progressBar.setVisibility(View.VISIBLE);
-        buttonSendToMeTube.setEnabled(false);
+        buttonSendToService.setEnabled(false);
+        buttonSendToService.setText("Sending to " + serviceTypeName + "...");
         
-        // Call the MeTube API
-        apiClient.sendUrlToMeTube(selectedProfile, mediaLink, new MeTubeApiClient.MeTubeApiCallback() {
+        // Call the service API
+        serviceApiClient.sendUrlToService(selectedProfile, mediaLink, new ServiceApiClient.ServiceApiCallback() {
             @Override
             public void onSuccess() {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         progressBar.setVisibility(View.GONE);
-                        buttonSendToMeTube.setEnabled(true);
+                        buttonSendToService.setEnabled(true);
+                        buttonSendToService.setText("Send to " + serviceTypeName);
                         
-                        Toast.makeText(ShareActivity.this, R.string.sent_successfully, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ShareActivity.this, "Link sent successfully to " + serviceTypeName + "!", Toast.LENGTH_SHORT).show();
                         
                         // Save to history
-                        saveToHistory(mediaLink, profileId, profileName, true);
+                        saveToHistory(mediaLink, profileId, profileNameFinal, serviceTypeName, true);
                         
-                        // Open browser with the MeTube instance
-                        openMeTubeInBrowser(profileUrl, profilePort);
+                        // Open browser with the service instance
+                        openServiceInBrowser(profileUrl, profilePort);
                     }
                 });
             }
@@ -225,19 +235,62 @@ public class ShareActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         progressBar.setVisibility(View.GONE);
-                        buttonSendToMeTube.setEnabled(true);
+                        buttonSendToService.setEnabled(true);
+                        buttonSendToService.setText("Send to " + serviceTypeName);
                         
-                        Toast.makeText(ShareActivity.this, R.string.error_sending_link + ": " + error, Toast.LENGTH_LONG).show();
+                        Toast.makeText(ShareActivity.this, "Error sending link to " + serviceTypeName + ": " + error, Toast.LENGTH_LONG).show();
                         
                         // Save to history with error status
-                        saveToHistory(mediaLink, profileId, profileName, false);
+                        saveToHistory(mediaLink, profileId, profileNameFinal, serviceTypeName, false);
                     }
                 });
             }
         });
     }
     
-    private void saveToHistory(String url, String profileId, String profileName, boolean success) {
+    private void openServiceInterface() {
+        if (profiles.isEmpty()) {
+            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String selectedProfileText = autoCompleteProfiles.getText().toString();
+        ServerProfile selectedProfile = null;
+        
+        // Extract the profile name from the displayed text (name + service type)
+        String profileName = selectedProfileText;
+        int parenIndex = selectedProfileText.indexOf(" (");
+        if (parenIndex > 0) {
+            profileName = selectedProfileText.substring(0, parenIndex);
+        }
+        
+        for (ServerProfile profile : profiles) {
+            if (profile.getName().equals(profileName)) {
+                selectedProfile = profile;
+                break;
+            }
+        }
+        
+        if (selectedProfile == null) {
+            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
+        // Store the profile URL and port for use in the callback
+        final String profileUrl = selectedProfile.getUrl();
+        final int profilePort = selectedProfile.getPort();
+        final String profileId = selectedProfile.getId();
+        final String profileNameFinal = selectedProfile.getName();
+        final String serviceTypeName = selectedProfile.getServiceTypeName();
+        
+        // Save to history
+        saveToHistory(mediaLink, profileId, profileNameFinal, serviceTypeName, true);
+        
+        // Open browser with the service instance
+        openServiceInBrowser(profileUrl, profilePort);
+    }
+
+    private void saveToHistory(String url, String profileId, String profileName, String serviceType, boolean success) {
         // Create history item
         HistoryItem historyItem = new HistoryItem();
         historyItem.setUrl(url);
@@ -248,6 +301,7 @@ public class ShareActivity extends AppCompatActivity {
         historyItem.setProfileId(profileId);
         historyItem.setProfileName(profileName);
         historyItem.setSentSuccessfully(success);
+        historyItem.setServiceType(serviceType); // Add service type to history
         
         // Save to database
         HistoryRepository repository = new HistoryRepository(this);
@@ -280,6 +334,8 @@ public class ShareActivity extends AppCompatActivity {
             return "Dailymotion";
         } else if (url.contains("bandcamp.com")) {
             return "Bandcamp";
+        } else if (url.startsWith("magnet:")) {
+            return "Magnet Link";
         } else {
             return "Unknown";
         }
@@ -291,44 +347,14 @@ public class ShareActivity extends AppCompatActivity {
             return "playlist";
         } else if (url.contains("/channel/") || url.contains("/user/")) {
             return "channel";
+        } else if (url.startsWith("magnet:")) {
+            return "torrent";
         } else {
             return "single_video";
         }
     }
     
-    private void openMeTubeInterface() {
-        if (profiles.isEmpty()) {
-            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String selectedProfileName = autoCompleteProfiles.getText().toString();
-        ServerProfile selectedProfile = null;
-        
-        for (ServerProfile profile : profiles) {
-            if (profile.getName().equals(selectedProfileName)) {
-                selectedProfile = profile;
-                break;
-            }
-        }
-        
-        if (selectedProfile == null) {
-            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
-            return;
-        }
-        
-        // Store the profile URL and port for use in the callback
-        final String profileUrl = selectedProfile.getUrl();
-        final int profilePort = selectedProfile.getPort();
-        
-        // Save to history
-        saveToHistory(mediaLink, selectedProfile.getId(), selectedProfile.getName(), true);
-        
-        // Open browser with the MeTube instance
-        openMeTubeInBrowser(profileUrl, profilePort);
-    }
-
-    private void openMeTubeInBrowser(String url, int port) {
+    private void openServiceInBrowser(String url, int port) {
         String fullUrl = url + ":" + port;
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(fullUrl));
         startActivity(browserIntent);

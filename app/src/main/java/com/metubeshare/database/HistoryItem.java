@@ -18,12 +18,14 @@ public class HistoryItem {
     private String profileId;
     private String profileName;
     private boolean sentSuccessfully;
+    private String serviceType; // MeTube, Torrent, jDownloader
     
     // Constructors
     public HistoryItem() {}
     
     public HistoryItem(String url, String title, String serviceProvider, String type, 
-                      long timestamp, String profileId, String profileName, boolean sentSuccessfully) {
+                      long timestamp, String profileId, String profileName, boolean sentSuccessfully,
+                      String serviceType) {
         this.url = url;
         this.title = title;
         this.serviceProvider = serviceProvider;
@@ -32,6 +34,7 @@ public class HistoryItem {
         this.profileId = profileId;
         this.profileName = profileName;
         this.sentSuccessfully = sentSuccessfully;
+        this.serviceType = serviceType;
     }
     
     // Getters and setters
@@ -105,5 +108,13 @@ public class HistoryItem {
     
     public void setSentSuccessfully(boolean sentSuccessfully) {
         this.sentSuccessfully = sentSuccessfully;
+    }
+    
+    public String getServiceType() {
+        return serviceType;
+    }
+    
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
     }
 }

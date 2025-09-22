@@ -1,0 +1,15 @@
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-full-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3EC9D6"/>
+      <stop offset="100%" stop-color="#3A7BD5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="50" fill="url(#grad-full-dark)" />
+  <circle cx="40" cy="60" r="8" fill="#FFFFFF"/>
+  <circle cx="80" cy="40" r="8" fill="#FFFFFF"/>
+  <circle cx="80" cy="80" r="8" fill="#FFFFFF"/>
+  <line x1="40" y1="60" x2="80" y2="40" stroke="#FFFFFF" stroke-width="4"/>
+  <line x1="40" y1="60" x2="80" y2="80" stroke="#FFFFFF" stroke-width="4"/>
+  <text x="130" y="70" font-family="Segoe UI, sans-serif" font-size="32" fill="#FFFFFF">ShareConnect</text>
+</svg>

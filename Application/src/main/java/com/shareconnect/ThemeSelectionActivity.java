@@ -59,6 +59,7 @@ public class ThemeSelectionActivity extends AppCompatActivity implements ThemeAd
     @Override
     public void onThemeSelected(Theme theme) {
         // Set this theme as default
+        android.util.Log.d("ThemeSelection", "onThemeSelected() called with theme: " + theme.getName() + " (ID: " + theme.getId() + ", isDefault: " + theme.isDefault() + ")");
         themeRepository.setDefaultTheme(theme.getId());
         
         // Debug: Log the selected theme
@@ -74,8 +75,14 @@ public class ThemeSelectionActivity extends AppCompatActivity implements ThemeAd
         // Set result to indicate theme was changed
         setResult(RESULT_OK);
         
-        // Finish the activity
-        finish();
+        // Give the system a moment to process the theme change before finishing
+        new android.os.Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Finish the activity
+                finish();
+            }
+        }, 100); // Small delay to ensure the theme change is processed
     }
     
     @Override

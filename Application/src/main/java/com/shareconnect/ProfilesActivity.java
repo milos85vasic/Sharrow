@@ -35,6 +35,19 @@ public class ProfilesActivity extends AppCompatActivity implements ProfileAdapte
         initViews();
         setupRecyclerView();
         loadProfiles();
+        
+        // Handle window insets for proper positioning
+        handleWindowInsets();
+    }
+    
+    private void handleWindowInsets() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            // For Android 11 and above, use WindowInsetsController
+            getWindow().setDecorFitsSystemWindows(false);
+        } else {
+            // For older versions, we can use fitsSystemWindows in the layout
+            // which is already set in the XML
+        }
     }
 
     private void initViews() {

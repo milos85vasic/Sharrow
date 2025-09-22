@@ -29,7 +29,7 @@ public class ThemeManager {
     
     public void applyTheme(Activity activity) {
         Theme defaultTheme = themeRepository.getDefaultTheme();
-        android.util.Log.d("ThemeManager", "getDefaultTheme() returned: " + (defaultTheme != null ? defaultTheme.getName() + " (ID: " + defaultTheme.getId() + ")" : "null"));
+        android.util.Log.d("ThemeManager", "getDefaultTheme() returned: " + (defaultTheme != null ? defaultTheme.getName() + " (ID: " + defaultTheme.getId() + ", isDefault: " + defaultTheme.isDefault() + ")" : "null"));
         if (defaultTheme != null) {
             applyTheme(activity, defaultTheme);
         } else {
@@ -43,12 +43,14 @@ public class ThemeManager {
         String colorScheme = theme.getColorScheme();
         boolean isDarkMode = theme.isDarkMode();
         
-        String currentTheme = colorScheme + (isDarkMode ? "_DARK" : "_LIGHT");
+        String currentTheme = colorScheme.toUpperCase() + (isDarkMode ? "_DARK" : "_LIGHT");
         
         android.util.Log.d("ThemeManager", "Applying theme: " + theme.getName() + ", colorScheme: " + colorScheme + ", isDarkMode: " + isDarkMode + ", currentTheme: " + currentTheme);
         
         // Check if activity uses Toolbar (requires NoActionBar theme)
         boolean usesToolbar = activity instanceof ThemeSelectionActivity || activity instanceof SettingsActivity || activity instanceof SplashActivity || activity instanceof ProfilesActivity || activity instanceof ShareActivity || activity instanceof EditProfileActivity || activity instanceof HistoryActivity;
+        
+        android.util.Log.d("ThemeManager", "Activity " + activity.getClass().getSimpleName() + " usesToolbar: " + usesToolbar);
         
         switch (currentTheme) {
             case "WARM_ORANGE_DARK":
@@ -116,8 +118,10 @@ public class ThemeManager {
         
         // Apply day/night mode
         if (isDarkMode) {
+            android.util.Log.d("ThemeManager", "Setting night mode to YES");
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
+            android.util.Log.d("ThemeManager", "Setting night mode to NO");
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
     }
@@ -132,6 +136,7 @@ public class ThemeManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_THEME_CHANGED, true);
         editor.commit();
+        android.util.Log.d("ThemeManager", "notifyThemeChanged() completed, SharedPreferences updated");
     }
     
     // Method to reset theme changed flag
@@ -140,6 +145,7 @@ public class ThemeManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_THEME_CHANGED, false);
         editor.commit();
+        android.util.Log.d("ThemeManager", "resetThemeChangedFlag() completed, SharedPreferences updated");
     }
     
     // Method to check if theme has changed

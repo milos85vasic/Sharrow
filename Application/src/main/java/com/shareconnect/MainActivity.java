@@ -201,8 +201,11 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         // Check if theme has changed and recreate activity if needed
         themeManager = ThemeManager.getInstance(this);
-        if (themeManager.hasThemeChanged()) {
+        boolean themeChanged = themeManager.hasThemeChanged();
+        android.util.Log.d("MainActivity", "onResume() called, themeChanged: " + themeChanged);
+        if (themeChanged) {
             themeManager.resetThemeChangedFlag();
+            android.util.Log.d("MainActivity", "Recreating activity due to theme change");
             recreate();
         }
     }

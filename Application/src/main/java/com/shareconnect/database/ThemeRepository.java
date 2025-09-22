@@ -22,7 +22,9 @@ public class ThemeRepository {
     
     // Get default theme
     public Theme getDefaultTheme() {
-        return themeDao.getDefaultTheme();
+        Theme theme = themeDao.getDefaultTheme();
+        android.util.Log.d("ThemeRepository", "getDefaultTheme() returned: " + (theme != null ? theme.getName() + " (ID: " + theme.getId() + ", isDefault: " + theme.isDefault() + ")" : "null"));
+        return theme;
     }
     
     // Get theme by color scheme and mode
@@ -42,13 +44,25 @@ public class ThemeRepository {
     
     // Set default theme
     public void setDefaultTheme(int themeId) {
+        android.util.Log.d("ThemeRepository", "setDefaultTheme() called with themeId: " + themeId);
         themeDao.clearDefaultThemes();
         themeDao.setDefaultTheme(themeId);
+        android.util.Log.d("ThemeRepository", "setDefaultTheme() completed");
+        
+        // Verify the theme was set correctly
+        Theme newDefaultTheme = getDefaultTheme();
+        if (newDefaultTheme != null) {
+            android.util.Log.d("ThemeRepository", "Verified new default theme: " + newDefaultTheme.getName() + " (ID: " + newDefaultTheme.getId() + ", isDefault: " + newDefaultTheme.isDefault() + ")");
+        } else {
+            android.util.Log.d("ThemeRepository", "Failed to verify new default theme - getDefaultTheme() returned null");
+        }
     }
     
     // Initialize default themes if none exist
     public void initializeDefaultThemes() {
+        android.util.Log.d("ThemeRepository", "initializeDefaultThemes() called");
         if (getAllThemes().isEmpty()) {
+            android.util.Log.d("ThemeRepository", "No existing themes found, creating default themes");
             // Warm Orange theme
             themeDao.insert(new Theme(1, "Warm Orange Light", "warm_orange", false, true));
             themeDao.insert(new Theme(2, "Warm Orange Dark", "warm_orange", true, false));
@@ -72,6 +86,13 @@ public class ThemeRepository {
             // Default Material theme
             themeDao.insert(new Theme(11, "Material Light", "material", false, false));
             themeDao.insert(new Theme(12, "Material Dark", "material", true, false));
+            android.util.Log.d("ThemeRepository", "Default themes created");
+        } else {
+            android.util.Log.d("ThemeRepository", "Themes already exist, not creating defaults");
+            List<Theme> themes = getAllThemes();
+            for (Theme theme : themes) {
+                android.util.Log.d("ThemeRepository", "Existing theme: " + theme.getName() + " (ID: " + theme.getId() + ", isDefault: " + theme.isDefault() + ")");
+            }
         }
     }
 }

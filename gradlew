@@ -15,6 +15,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# SPDX-License-Identifier: Apache-2.0
+#
 
 ##############################################################################
 #
@@ -51,11 +53,11 @@
 #       and GRADLE_OPTS) rely on word-splitting, this is performed explicitly;
 #       see the in-line comments for details.
 #
-#       There are tweaks for specific operating systems such as AIX, Cygwin,
+#       There are tweaks for specific operating systems such as AIX, CygWin,
 #       Darwin, MinGW, and NonStop.
 #
 #   (3) This script is generated from the Groovy template
-#       https://github.com/gradle/gradle/blob/HEAD/subprojects/plugins/src/main/resources/org/gradle/api/internal/plugins/unixStartScript.txt
+#       https://github.com/gradle/gradle/blob/HEAD/platforms/jvm/plugins-application/src/main/resources/org/gradle/api/internal/plugins/unixStartScript.txt
 #       within the Gradle project.
 #
 #       You can find Gradle at https://github.com/gradle/gradle/.
@@ -84,7 +86,7 @@ done
 # shellcheck disable=SC2034
 APP_BASE_NAME=${0##*/}
 # Discard cd standard output in case $CDPATH is set (https://github.com/gradle/gradle/issues/25036)
-APP_HOME=$( cd "${APP_HOME:-./}" > /dev/null && pwd -P ) || exit
+APP_HOME=$( cd -P "${APP_HOME:-./}" > /dev/null && printf '%s\n' "$PWD" ) || exit
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD=maximum
@@ -112,7 +114,7 @@ case "$( uname )" in                #(
   NONSTOP* )        nonstop=true ;;
 esac
 
-CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
+CLASSPATH="\\\"\\\""
 
 
 # Determine the Java command to use to start the JVM.
@@ -180,7 +182,7 @@ if "$cygwin" || "$msys" ; then
             case $arg in                                #(
               -*)   false ;;                            # don't mess with options #(
               /?*)  t=${arg#/} t=/${t%%/*}              # looks like a POSIX filepath
-                    [ -d "$t" ] ;;                      #(
+                    [ -e "$t" ] ;;                      #(
               *)    false ;;
             esac
         then
@@ -200,10 +202,10 @@ fi
 
 
 # Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS=""
+DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
 
 # Collect all arguments for the java command:
-#   * DEFAULT_JVM_OPTS, JAVA_OPTS, JAVA_OPTS, and optsEnvironmentVar are not allowed to contain shell fragments,
+#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and optsEnvironmentVar are not allowed to contain shell fragments,
 #     and any embedded shellness will be escaped.
 #   * For example: A user cannot expect ${Hostname} to be expanded, as it is an environment variable and will be
 #     treated as '${Hostname}' itself on the command line.
@@ -211,7 +213,7 @@ DEFAULT_JVM_OPTS=""
 set -- \
         "-Dorg.gradle.appname=$APP_BASE_NAME" \
         -classpath "$CLASSPATH" \
-        org.gradle.wrapper.GradleWrapperMain \
+        -jar "$APP_HOME/gradle/wrapper/gradle-wrapper.jar" \
         "$@"
 
 # Stop when "xargs" is not available.
@@ -233,24 +235,17 @@ fi
 # post-process each arg (as a line of input to sed) to backslash-escape any
 # character that might be a shell metacharacter, then use eval to reverse
 # that process (while maintaining the separation between arguments), and wrap
-# the whole thing up in a second eval to run the resulting command.
+# the whole thing up as a single "set" statement.
 #
-# This will successfully parse any command line arguments that do not contain
-# newlines or null bytes (which would break xargs anyway):
+# This will of course break if any of these variables contains a newline or
+# an unmatched quote.
 #
-#   >>> eval "set -- $( xargs -n1 < /dev/null | sed 's/[[\.*^$()+{}?|/]/\\&/g' )"
-#   >>> echo $#
-#   0
-#
-#   >>> eval "set -- $( xargs -n1 <<< 'hello world' | sed 's/[[\.*^$()+{}?|/]/\\&/g' )"
-#   >>> echo $#
-#   2
-#   >>> echo $1
-#   hello
-#   >>> echo $2
-#   world
-#
-# The shell metacharacters that we must backslash-escape are: [  ]  \  .  *  ^  $  (  )  +  {  }  ?  |
-eval "set -- $( xargs -n1 <<<"$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" | sed 's/[[\.*^$()+{}?|/]/\\&/g' )" || die "xargs failed - could not parse DEFAULT_JVM_OPTS, JAVA_OPTS and/or GRADLE_OPTS"
+
+eval "set -- $(
+        printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
+        xargs -n1 |
+        sed ' s~[^-[:alnum:]+,./:=@_]~\\&~g; ' |
+        tr '\n' ' '
+    )" '"$@"'
 
 exec "$JAVACMD" "$@"

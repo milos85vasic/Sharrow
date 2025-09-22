@@ -44,7 +44,7 @@ public class ThemeManager {
         String currentTheme = colorScheme + (isDarkMode ? "_DARK" : "_LIGHT");
         
         // Check if activity uses Toolbar (requires NoActionBar theme)
-        boolean usesToolbar = activity instanceof ThemeSelectionActivity;
+        boolean usesToolbar = activity instanceof ThemeSelectionActivity || activity instanceof SettingsActivity || activity instanceof SplashActivity || activity instanceof ProfilesActivity;
         
         switch (currentTheme) {
             case "WARM_ORANGE_DARK":
@@ -126,14 +126,14 @@ public class ThemeManager {
     public void notifyThemeChanged() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_THEME_CHANGED, true);
-        editor.apply();
+        editor.commit();
     }
     
     // Method to reset theme changed flag
     public void resetThemeChangedFlag() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_THEME_CHANGED, false);
-        editor.apply();
+        editor.commit();
     }
     
     // Method to check if theme has changed

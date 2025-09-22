@@ -81,14 +81,9 @@ public class MainActivity extends AppCompatActivity {
     private void showSetupWizard() {
         // For now, we'll just redirect to settings
         // In a more complete implementation, we could show a guided setup wizard
-        new Handler().post(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override

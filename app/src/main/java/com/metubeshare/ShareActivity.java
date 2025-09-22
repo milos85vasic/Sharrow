@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.button.MaterialButton;
+import com.metubeshare.database.HistoryItem;
+import com.metubeshare.database.HistoryRepository;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -143,6 +145,10 @@ public class ShareActivity extends AppCompatActivity {
         } else if (id == R.id.action_open_metube) {
             openMeTubeInterface();
             return true;
+        } else if (id == R.id.action_history) {
+            Intent intent = new Intent(this, HistoryActivity.class);
+            startActivity(intent);
+            return true;
         } else if (id == android.R.id.home) {
             onBackPressed();
             return true;
@@ -180,6 +186,8 @@ public class ShareActivity extends AppCompatActivity {
         // Store the profile URL and port for use in the callback
         final String profileUrl = selectedProfile.getUrl();
         final int profilePort = selectedProfile.getPort();
+        final String profileId = selectedProfile.getId();
+        final String profileName = selectedProfile.getName();
         
         // Show progress
         progressBar.setVisibility(View.VISIBLE);
@@ -197,6 +205,9 @@ public class ShareActivity extends AppCompatActivity {
                         
                         Toast.makeText(ShareActivity.this, R.string.sent_successfully, Toast.LENGTH_SHORT).show();
                         
+                        // Save to history
+                        saveToHistory(mediaLink, profileId, profileName, true);
+                        
                         // Open browser with the MeTube instance
                         openMeTubeInBrowser(profileUrl, profilePort);
                     }
@@ -212,12 +223,74 @@ public class ShareActivity extends AppCompatActivity {
                         buttonSendToMeTube.setEnabled(true);
                         
                         Toast.makeText(ShareActivity.this, R.string.error_sending_link + ": " + error, Toast.LENGTH_LONG).show();
+                        
+                        // Save to history with error status
+                        saveToHistory(mediaLink, profileId, profileName, false);
                     }
                 });
             }
         });
     }
-
+    
+    private void saveToHistory(String url, String profileId, String profileName, boolean success) {
+        // Create history item
+        HistoryItem historyItem = new HistoryItem();
+        historyItem.setUrl(url);
+        historyItem.setTitle(extractTitleFromUrl(url)); // Simple title extraction
+        historyItem.setServiceProvider(extractServiceProviderFromUrl(url));
+        historyItem.setType(determineMediaType(url));
+        historyItem.setTimestamp(System.currentTimeMillis());
+        historyItem.setProfileId(profileId);
+        historyItem.setProfileName(profileName);
+        historyItem.setSentSuccessfully(success);
+        
+        // Save to database
+        HistoryRepository repository = new HistoryRepository(this);
+        repository.insertHistoryItem(historyItem);
+    }
+    
+    private String extractTitleFromUrl(String url) {
+        // Simple title extraction - in a real app, you might fetch the actual title
+        return url.replace("https://", "").replace("http://", "").replace("www.", "");
+    }
+    
+    private String extractServiceProviderFromUrl(String url) {
+        if (url.contains("youtube.com") || url.contains("youtu.be")) {
+            return "YouTube";
+        } else if (url.contains("vimeo.com")) {
+            return "Vimeo";
+        } else if (url.contains("twitch.tv")) {
+            return "Twitch";
+        } else if (url.contains("reddit.com")) {
+            return "Reddit";
+        } else if (url.contains("twitter.com") || url.contains("x.com")) {
+            return "Twitter";
+        } else if (url.contains("instagram.com")) {
+            return "Instagram";
+        } else if (url.contains("facebook.com")) {
+            return "Facebook";
+        } else if (url.contains("soundcloud.com")) {
+            return "SoundCloud";
+        } else if (url.contains("dailymotion.com")) {
+            return "Dailymotion";
+        } else if (url.contains("bandcamp.com")) {
+            return "Bandcamp";
+        } else {
+            return "Unknown";
+        }
+    }
+    
+    private String determineMediaType(String url) {
+        // Simple media type determination
+        if (url.contains("/playlist") || url.contains("&list=")) {
+            return "playlist";
+        } else if (url.contains("/channel/") || url.contains("/user/")) {
+            return "channel";
+        } else {
+            return "single_video";
+        }
+    }
+    
     private void openMeTubeInterface() {
         if (profiles.isEmpty()) {
             Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
@@ -242,6 +315,9 @@ public class ShareActivity extends AppCompatActivity {
         // Store the profile URL and port for use in the callback
         final String profileUrl = selectedProfile.getUrl();
         final int profilePort = selectedProfile.getPort();
+        
+        // Save to history
+        saveToHistory(mediaLink, selectedProfile.getId(), selectedProfile.getName(), true);
         
         // Open browser with the MeTube instance
         openMeTubeInBrowser(profileUrl, profilePort);

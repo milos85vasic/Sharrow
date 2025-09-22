@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonSettings = findViewById(R.id.buttonSettings);
         buttonOpenMeTube = findViewById(R.id.buttonOpenMeTube);
+        MaterialButton buttonHistory = findViewById(R.id.buttonHistory);
         
         buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openMeTubeInterface();
+            }
+        });
+        
+        buttonHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHistory();
             }
         });
     }
@@ -82,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.action_open_metube) {
             openMeTubeInterface();
             return true;
+        } else if (id == R.id.action_history) {
+            openHistory();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -89,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void openSettings() {
         Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+    
+    private void openHistory() {
+        Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
     }
     

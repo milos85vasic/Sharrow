@@ -61,9 +61,15 @@ public class ThemeSelectionActivity extends AppCompatActivity implements ThemeAd
         // Set this theme as default
         themeRepository.setDefaultTheme(theme.getId());
         
+        // Debug: Log the selected theme
+        android.util.Log.d("ThemeSelection", "Selected theme: " + theme.getName() + " (ID: " + theme.getId() + ")");
+        
         // Notify that theme has changed
         ThemeManager themeManager = ThemeManager.getInstance(this);
         themeManager.notifyThemeChanged();
+        
+        // Debug: Log that theme change was notified
+        android.util.Log.d("ThemeSelection", "Theme change notified");
         
         // Set result to indicate theme was changed
         setResult(RESULT_OK);

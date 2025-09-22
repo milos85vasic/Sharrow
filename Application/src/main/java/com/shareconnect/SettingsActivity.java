@@ -46,6 +46,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onResume();
         // Check if theme has changed and recreate activity if needed
         if (themeManager != null && themeManager.hasThemeChanged()) {
+            android.util.Log.d("SettingsActivity", "Theme change detected in onResume, recreating activity");
             themeManager.resetThemeChangedFlag();
             recreate();
         }
@@ -56,6 +57,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         // If theme was changed, recreate this activity to apply the new theme
         if (requestCode == THEME_SELECTION_REQUEST && resultCode == RESULT_OK) {
+            android.util.Log.d("SettingsActivity", "Theme change detected in onActivityResult, recreating activity");
             recreate();
         }
     }

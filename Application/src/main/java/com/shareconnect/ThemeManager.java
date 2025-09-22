@@ -29,10 +29,12 @@ public class ThemeManager {
     
     public void applyTheme(Activity activity) {
         Theme defaultTheme = themeRepository.getDefaultTheme();
+        android.util.Log.d("ThemeManager", "getDefaultTheme() returned: " + (defaultTheme != null ? defaultTheme.getName() + " (ID: " + defaultTheme.getId() + ")" : "null"));
         if (defaultTheme != null) {
             applyTheme(activity, defaultTheme);
         } else {
             // Apply default material theme
+            android.util.Log.d("ThemeManager", "Applying default material theme");
             activity.setTheme(R.style.Theme_ShareConnect_Material_Light);
         }
     }
@@ -43,8 +45,10 @@ public class ThemeManager {
         
         String currentTheme = colorScheme + (isDarkMode ? "_DARK" : "_LIGHT");
         
+        android.util.Log.d("ThemeManager", "Applying theme: " + theme.getName() + ", colorScheme: " + colorScheme + ", isDarkMode: " + isDarkMode + ", currentTheme: " + currentTheme);
+        
         // Check if activity uses Toolbar (requires NoActionBar theme)
-        boolean usesToolbar = activity instanceof ThemeSelectionActivity || activity instanceof SettingsActivity || activity instanceof SplashActivity || activity instanceof ProfilesActivity;
+        boolean usesToolbar = activity instanceof ThemeSelectionActivity || activity instanceof SettingsActivity || activity instanceof SplashActivity || activity instanceof ProfilesActivity || activity instanceof ShareActivity || activity instanceof EditProfileActivity || activity instanceof HistoryActivity;
         
         switch (currentTheme) {
             case "WARM_ORANGE_DARK":
@@ -124,6 +128,7 @@ public class ThemeManager {
     
     // Method to notify that theme has changed
     public void notifyThemeChanged() {
+        android.util.Log.d("ThemeManager", "notifyThemeChanged() called");
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_THEME_CHANGED, true);
         editor.commit();
@@ -131,6 +136,7 @@ public class ThemeManager {
     
     // Method to reset theme changed flag
     public void resetThemeChangedFlag() {
+        android.util.Log.d("ThemeManager", "resetThemeChangedFlag() called");
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_THEME_CHANGED, false);
         editor.commit();
@@ -138,6 +144,8 @@ public class ThemeManager {
     
     // Method to check if theme has changed
     public boolean hasThemeChanged() {
-        return sharedPreferences.getBoolean(KEY_THEME_CHANGED, false);
+        boolean changed = sharedPreferences.getBoolean(KEY_THEME_CHANGED, false);
+        android.util.Log.d("ThemeManager", "hasThemeChanged() returned: " + changed);
+        return changed;
     }
 }

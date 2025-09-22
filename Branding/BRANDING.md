@@ -24,24 +24,6 @@ The Sharrow logo combines the concepts of "share" and "arrow" into a single, mem
 - **Versatility**: Works on both light and dark backgrounds
 - **Meaningful**: Clearly represents the sharing functionality
 
-## Asset Organization
-
-```
-branding/
-├── assets/
-│   ├── sharrow_logo.svg          # Full logo in SVG format
-│   ├── sharrow_icon.svg          # App icon in SVG format
-│   ├── sharrow_icon_mono.svg     # Monochrome version
-│   └── png/                      # Generated PNG assets
-│       ├── mdpi/
-│       ├── hdpi/
-│       ├── xhdpi/
-│       ├── xxhdpi/
-│       └── xxxhdpi/
-├── BRANDING_GUIDE.md             # This document
-└── generate_icons.sh             # Icon generation script
-```
-
 ## Android Icon Assets
 
 The app icon is provided in multiple resolutions to support all Android devices:

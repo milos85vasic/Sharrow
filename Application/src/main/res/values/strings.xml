@@ -58,4 +58,6 @@
     <string name="qbittorrent">qBittorrent</string>
     <string name="transmission">Transmission</string>
     <string name="utorrent">uTorrent</string>
+    <string name="not_sent">Not sent</string>
+    <string name="no_media_link_received">No media link received</string>
 </resources>

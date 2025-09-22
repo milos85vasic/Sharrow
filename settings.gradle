@@ -3,22 +3,44 @@ pluginManagement {
     repositories {
 
         gradlePluginPortal()
-        google()
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jetbrains' }
+        maven { url 'https://mirrors.ustc.edu.cn/jetbrains/' }
+        maven { url 'https://mirrors.tuna.tsinghua.edu.cn/jetbrains/' }
+        maven { url "https://jitpack.io" }
         mavenCentral()
+        google()
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
     }
 }
 
 dependencyResolutionManagement {
 
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
 
     repositories {
 
-        google()
+        mavenLocal()
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jetbrains' }
+        maven { url 'https://mirrors.ustc.edu.cn/jetbrains/' }
+        maven { url 'https://mirrors.tuna.tsinghua.edu.cn/jetbrains/' }
+        maven { url "https://jitpack.io" }
         mavenCentral()
+        google()
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
     }
 }
 
 rootProject.name = "ShareConnect"
+
+// Temporarily exclude Toolkit module to focus on Application module conversion
+// include ':Toolkit:Main'
+// include ':Toolkit:Test'
+// include ':Toolkit:JCommons'
 
 include ':Application'

@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -33,6 +35,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
     buildFeatures {
 
         viewBinding true
@@ -52,9 +58,12 @@ dependencies {
     // Room database with SQLCipher
     implementation "androidx.room:room-runtime:2.8.0"
     implementation "androidx.room:room-ktx:2.8.0"
-    annotationProcessor "androidx.room:room-compiler:2.8.0"
+    kapt "androidx.room:room-compiler:2.8.0"
     implementation "net.zetetic:android-database-sqlcipher:4.5.4"
     implementation "androidx.sqlite:sqlite:2.6.0"
+    
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
+    implementation "androidx.core:core-ktx:1.15.0"
     
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.3.0'

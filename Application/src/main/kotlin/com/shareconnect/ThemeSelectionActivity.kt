@@ -1,0 +1,86 @@
+package com.shareconnect
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.shareconnect.database.Theme
+
+class ThemeSelectionActivity : AppCompatActivity(), ThemeAdapter.OnThemeSelectListener {
+    private var recyclerViewThemes: RecyclerView? = null
+    private var themeAdapter: ThemeAdapter? = null
+    private var themeRepository: com.shareconnect.database.ThemeRepository? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        // Apply current theme before setting content and calling super.onCreate()
+        val themeManager = ThemeManager.getInstance(this)
+        themeManager.applyTheme(this)
+
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_theme_selection)
+
+        initViews()
+        setupToolbar()
+        setupRecyclerView()
+
+        themeRepository = themeManager.themeRepositoryVal
+        loadThemes()
+    }
+
+    private fun initViews() {
+        recyclerViewThemes = findViewById(R.id.recyclerViewThemes)
+    }
+
+    private fun setupToolbar() {
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        if (supportActionBar != null) {
+            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        }
+    }
+
+    private fun setupRecyclerView() {
+        themeAdapter = ThemeAdapter(this)
+        recyclerViewThemes!!.layoutManager = LinearLayoutManager(this)
+        recyclerViewThemes!!.adapter = themeAdapter
+    }
+
+    private fun loadThemes() {
+        val themes = themeRepository!!.allThemes
+        themeAdapter!!.updateThemes(themes)
+    }
+
+    override fun onThemeSelected(theme: Theme) {
+        // Set this theme as default
+        android.util.Log.d(
+            "ThemeSelection", "onThemeSelected() called with theme: " + theme.name + " (ID: " + theme.id + ", isDefault: " + theme.isDefault + ")"
+        )
+        themeRepository!!.setDefaultTheme(theme.id)
+
+        // Debug: Log the selected theme
+        android.util.Log.d("ThemeSelection", "Selected theme: " + theme.name + " (ID: " + theme.id + ")")
+
+        // Notify that theme has changed
+        val themeManager = ThemeManager.getInstance(this)
+        themeManager.notifyThemeChanged()
+
+        // Debug: Log that theme change was notified
+        android.util.Log.d("ThemeSelection", "Theme change notified")
+
+        // Set result to indicate theme was changed
+        setResult(RESULT_OK)
+
+        // Give the system a moment to process the theme change before finishing
+        android.os.Handler().postDelayed({
+            // Finish the activity
+            finish()
+        }, 100) // Small delay to ensure the theme change is processed
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+}

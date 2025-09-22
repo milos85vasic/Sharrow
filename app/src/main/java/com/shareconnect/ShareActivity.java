@@ -1,6 +1,10 @@
 package com.shareconnect;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +27,7 @@ public class ShareActivity extends AppCompatActivity {
     private TextView textViewMediaLink;
     private AutoCompleteTextView autoCompleteProfiles;
     private MaterialButton buttonSendToService;
+    private MaterialButton buttonShareToApps;
     private MaterialButton buttonOpenService;
     private ProgressBar progressBar;
     private List<ServerProfile> profiles;
@@ -59,7 +64,7 @@ public class ShareActivity extends AppCompatActivity {
         textViewMediaLink = findViewById(R.id.textViewYouTubeLink);
         autoCompleteProfiles = findViewById(R.id.autoCompleteProfiles);
         buttonSendToService = findViewById(R.id.buttonSendToMeTube);
-        buttonOpenService = findViewById(R.id.buttonOpenMeTube);
+        buttonShareToApps = findViewById(R.id.buttonShareToApps);
         progressBar = findViewById(R.id.progressBar);
     }
 
@@ -125,10 +130,10 @@ public class ShareActivity extends AppCompatActivity {
             }
         });
         
-        buttonOpenService.setOnClickListener(new View.OnClickListener() {
+        buttonShareToApps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openServiceInterface();
+                shareToApps();
             }
         });
     }
@@ -246,6 +251,29 @@ public class ShareActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+    
+    /**
+     * Share the link to other installed apps
+     */
+    private void shareToApps() {
+        if (mediaLink == null || mediaLink.isEmpty()) {
+            Toast.makeText(this, R.string.no_youtube_link, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
+        // Create a chooser intent to share the link
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, mediaLink);
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Shared Media Link");
+        
+        // Show chooser with app icons
+        Intent chooserIntent = Intent.createChooser(shareIntent, "Share to Apps");
+        startActivity(chooserIntent);
+        
+        // Save to history as shared to apps
+        saveToHistory(mediaLink, "apps", "Other Apps", "Apps", true);
     }
     
     private void openServiceInterface() {

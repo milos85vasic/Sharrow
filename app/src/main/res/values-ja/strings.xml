@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ShareConnect</string>
+    <string name="add_link">メディアリンクを追加</string>
+    <string name="settings">設定</string>
+    <string name="server_profiles">サーバープロファイル</string>
+    <string name="add_profile">プロファイルを追加</string>
+    <string name="profile_name">プロファイル名</string>
+    <string name="server_url">サーバーURL</string>
+    <string name="server_port">サーバーポート</string>
+    <string name="save">保存</string>
+    <string name="cancel">キャンセル</string>
+    <string name="delete">削除</string>
+    <string name="set_default">デフォルトに設定</string>
+    <string name="default_profile">デフォルトプロファイル</string>
+    <string name="no_profiles_yet">プロファイルがまだ設定されていません</string>
+    <string name="sending_to_service">サービスに送信中…</string>
+    <string name="sent_successfully">リンクが正常に送信されました！</string>
+    <string name="error_sending_link">サービスへのリンク送信中にエラーが発生しました</string>
+    <string name="please_configure_profile">まずサーバープロファイルを設定してください</string>
+    <string name="invalid_url">無効なURL</string>
+    <string name="profile_saved">プロファイルが正常に保存されました</string>
+    <string name="profile_deleted">プロファイルが削除されました</string>
+    <string name="no_youtube_link">共有コンテンツにメディアリンクが見つかりません</string>
+</resources>

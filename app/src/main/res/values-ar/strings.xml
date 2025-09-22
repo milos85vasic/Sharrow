@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ShareConnect</string>
+    <string name="add_link">إضافة رابط الوسائط</string>
+    <string name="settings">الإعدادات</string>
+    <string name="server_profiles">ملفات تعريف الخادم</string>
+    <string name="add_profile">إضافة ملف تعريف</string>
+    <string name="profile_name">اسم ملف التعريف</string>
+    <string name="server_url">عنوان URL للخادم</string>
+    <string name="server_port">منفذ الخادم</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">حذف</string>
+    <string name="set_default">تعيين كافتراضي</string>
+    <string name="default_profile">ملف التعريف الافتراضي</string>
+    <string name="no_profiles_yet">لم يتم تكوين ملفات تعريف حتى الآن</string>
+    <string name="sending_to_service">إرسال إلى الخدمة…</string>
+    <string name="sent_successfully">تم إرسال الرابط بنجاح!</string>
+    <string name="error_sending_link">خطأ في إرسال الرابط إلى الخدمة</string>
+    <string name="please_configure_profile">يرجى تكوين ملف تعريف الخادم أولاً</string>
+    <string name="invalid_url">عنوان URL غير صالح</string>
+    <string name="profile_saved">تم حفظ ملف التعريف بنجاح</string>
+    <string name="profile_deleted">تم حذف ملف التعريف</string>
+    <string name="no_youtube_link">لم يتم العثور على رابط وسائط في المحتوى المشترك</string>
+</resources>

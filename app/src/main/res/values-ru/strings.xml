@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ShareConnect</string>
+    <string name="add_link">Добавить ссылку на медиа</string>
+    <string name="settings">Настройки</string>
+    <string name="server_profiles">Профили сервера</string>
+    <string name="add_profile">Добавить профиль</string>
+    <string name="profile_name">Имя профиля</string>
+    <string name="server_url">URL сервера</string>
+    <string name="server_port">Порт сервера</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="set_default">Установить по умолчанию</string>
+    <string name="default_profile">Профиль по умолчанию</string>
+    <string name="no_profiles_yet">Профили еще не настроены</string>
+    <string name="sending_to_service">Отправка в службу…</string>
+    <string name="sent_successfully">Ссылка успешно отправлена!</string>
+    <string name="error_sending_link">Ошибка отправки ссылки в службу</string>
+    <string name="please_configure_profile">Сначала настройте профиль сервера</string>
+    <string name="invalid_url">Неверный URL</string>
+    <string name="profile_saved">Профиль успешно сохранен</string>
+    <string name="profile_deleted">Профиль удален</string>
+    <string name="no_youtube_link">Ссылка на медиа не найдена в общем контенте</string>
+</resources>

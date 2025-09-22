@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ShareConnect</string>
+    <string name="add_link">添加媒体链接</string>
+    <string name="settings">设置</string>
+    <string name="server_profiles">服务器配置文件</string>
+    <string name="add_profile">添加配置文件</string>
+    <string name="profile_name">配置文件名称</string>
+    <string name="server_url">服务器URL</string>
+    <string name="server_port">服务器端口</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="set_default">设为默认</string>
+    <string name="default_profile">默认配置文件</string>
+    <string name="no_profiles_yet">尚未配置配置文件</string>
+    <string name="sending_to_service">正在发送到服务…</string>
+    <string name="sent_successfully">链接发送成功！</string>
+    <string name="error_sending_link">发送链接到服务时出错</string>
+    <string name="please_configure_profile">请先配置服务器配置文件</string>
+    <string name="invalid_url">无效的URL</string>
+    <string name="profile_saved">配置文件保存成功</string>
+    <string name="profile_deleted">配置文件已删除</string>
+    <string name="no_youtube_link">在共享内容中未找到媒体链接</string>
+</resources>

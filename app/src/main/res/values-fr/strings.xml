@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ShareConnect</string>
+    <string name="add_link">Ajouter un Lien Média</string>
+    <string name="settings">Paramètres</string>
+    <string name="server_profiles">Profils de Serveur</string>
+    <string name="add_profile">Ajouter un Profil</string>
+    <string name="profile_name">Nom du Profil</string>
+    <string name="server_url">URL du Serveur</string>
+    <string name="server_port">Port du Serveur</string>
+    <string name="save">Enregistrer</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete">Supprimer</string>
+    <string name="set_default">Définir par Défaut</string>
+    <string name="default_profile">Profil par Défaut</string>
+    <string name="no_profiles_yet">Aucun profil configuré pour le moment</string>
+    <string name="sending_to_service">Envoi au service…</string>
+    <string name="sent_successfully">Lien envoyé avec succès !</string>
+    <string name="error_sending_link">Erreur lors de l'envoi du lien au service</string>
+    <string name="please_configure_profile">Veuillez d'abord configurer un profil de serveur</string>
+    <string name="invalid_url">URL invalide</string>
+    <string name="profile_saved">Profil enregistré avec succès</string>
+    <string name="profile_deleted">Profil supprimé</string>
+    <string name="no_youtube_link">Aucun lien média trouvé dans le contenu partagé</string>
+</resources>

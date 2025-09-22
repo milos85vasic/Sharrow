@@ -11,12 +11,12 @@
         android:layout_height="120dp"
         android:layout_marginBottom="24dp"
         android:src="@drawable/ic_sharrow_foreground"
-        android:contentDescription="Sharrow Logo" />
+        android:contentDescription="ShareConnect Logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sharrow"
+        android:text="ShareConnect"
         android:textSize="32sp"
         android:textStyle="bold"
         android:textColor="@android:color/white" />
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Share with Arrow"
+        android:text="Share with Connect"
         android:textSize="16sp"
         android:textColor="@android:color/white" />
 

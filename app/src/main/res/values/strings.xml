@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sharrow</string>
+    <string name="app_name">ShareConnect</string>
     <string name="add_link">Add Media Link</string>
     <string name="settings">Settings</string>
     <string name="server_profiles">Server Profiles</string>
@@ -13,9 +13,9 @@
     <string name="set_default">Set as Default</string>
     <string name="default_profile">Default Profile</string>
     <string name="no_profiles_yet">No profiles configured yet</string>
-    <string name="sending_to_metube">Sending to MeTube…</string>
+    <string name="sending_to_service">Sending to service…</string>
     <string name="sent_successfully">Link sent successfully!</string>
-    <string name="error_sending_link">Error sending link to MeTube</string>
+    <string name="error_sending_link">Error sending link to service</string>
     <string name="please_configure_profile">Please configure a server profile first</string>
     <string name="invalid_url">Invalid URL</string>
     <string name="profile_saved">Profile saved successfully</string>

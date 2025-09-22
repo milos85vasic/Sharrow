@@ -2,7 +2,7 @@
     <!-- Base application themes -->
     
     <!-- Warm Orange Light -->
-    <style name="Theme.MeTubeShare.WarmOrange.Light" parent="Theme.Material3.Light">
+    <style name="Theme.ShareConnect.WarmOrange.Light" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/warm_orange_primary</item>
         <item name="colorPrimaryVariant">@color/warm_orange_primary_variant</item>
         <item name="colorOnPrimary">@color/warm_orange_on_primary</item>
@@ -13,7 +13,7 @@
     </style>
     
     <!-- Warm Orange Dark -->
-    <style name="Theme.MeTubeShare.WarmOrange.Dark" parent="Theme.Material3.Dark">
+    <style name="Theme.ShareConnect.WarmOrange.Dark" parent="Theme.Material3.Dark">
         <item name="colorPrimary">@color/warm_orange_primary</item>
         <item name="colorPrimaryVariant">@color/warm_orange_primary_variant</item>
         <item name="colorOnPrimary">@color/warm_orange_on_primary</item>
@@ -24,7 +24,7 @@
     </style>
     
     <!-- Crimson Light -->
-    <style name="Theme.MeTubeShare.Crimson.Light" parent="Theme.Material3.Light">
+    <style name="Theme.ShareConnect.Crimson.Light" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/crimson_primary</item>
         <item name="colorPrimaryVariant">@color/crimson_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -35,7 +35,7 @@
     </style>
     
     <!-- Crimson Dark -->
-    <style name="Theme.MeTubeShare.Crimson.Dark" parent="Theme.Material3.Dark">
+    <style name="Theme.ShareConnect.Crimson.Dark" parent="Theme.Material3.Dark">
         <item name="colorPrimary">@color/crimson_primary</item>
         <item name="colorPrimaryVariant">@color/crimson_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -46,7 +46,7 @@
     </style>
     
     <!-- Light Blue Light -->
-    <style name="Theme.MeTubeShare.LightBlue.Light" parent="Theme.Material3.Light">
+    <style name="Theme.ShareConnect.LightBlue.Light" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/light_blue_primary</item>
         <item name="colorPrimaryVariant">@color/light_blue_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -57,7 +57,7 @@
     </style>
     
     <!-- Light Blue Dark -->
-    <style name="Theme.MeTubeShare.LightBlue.Dark" parent="Theme.Material3.Dark">
+    <style name="Theme.ShareConnect.LightBlue.Dark" parent="Theme.Material3.Dark">
         <item name="colorPrimary">@color/light_blue_primary</item>
         <item name="colorPrimaryVariant">@color/light_blue_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -68,7 +68,7 @@
     </style>
     
     <!-- Purple Light -->
-    <style name="Theme.MeTubeShare.Purple.Light" parent="Theme.Material3.Light">
+    <style name="Theme.ShareConnect.Purple.Light" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/purple_theme_primary</item>
         <item name="colorPrimaryVariant">@color/purple_theme_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -79,7 +79,7 @@
     </style>
     
     <!-- Purple Dark -->
-    <style name="Theme.MeTubeShare.Purple.Dark" parent="Theme.Material3.Dark">
+    <style name="Theme.ShareConnect.Purple.Dark" parent="Theme.Material3.Dark">
         <item name="colorPrimary">@color/purple_theme_primary</item>
         <item name="colorPrimaryVariant">@color/purple_theme_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -90,7 +90,7 @@
     </style>
     
     <!-- Green Light -->
-    <style name="Theme.MeTubeShare.Green.Light" parent="Theme.Material3.Light">
+    <style name="Theme.ShareConnect.Green.Light" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/green_primary</item>
         <item name="colorPrimaryVariant">@color/green_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -101,7 +101,7 @@
     </style>
     
     <!-- Green Dark -->
-    <style name="Theme.MeTubeShare.Green.Dark" parent="Theme.Material3.Dark">
+    <style name="Theme.ShareConnect.Green.Dark" parent="Theme.Material3.Dark">
         <item name="colorPrimary">@color/green_primary</item>
         <item name="colorPrimaryVariant">@color/green_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -112,7 +112,7 @@
     </style>
     
     <!-- Material Light (default) -->
-    <style name="Theme.MeTubeShare.Material.Light" parent="Theme.Material3.Light">
+    <style name="Theme.ShareConnect.Material.Light" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -123,7 +123,7 @@
     </style>
     
     <!-- Material Dark (default) -->
-    <style name="Theme.MeTubeShare.Material.Dark" parent="Theme.Material3.Dark">
+    <style name="Theme.ShareConnect.Material.Dark" parent="Theme.Material3.Dark">
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>

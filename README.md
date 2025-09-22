@@ -1,15 +1,19 @@
-# Sharrow
+![ShareConnect](assets/Dark_Banner.jpg)
 
-An Android application that allows you to share media links from various streaming services and download sources directly to your local services including MeTube, torrent clients, and jDownloader.
+# ShareConnect
 
-Sharrow combines the words "share" and "arrow" to represent the core functionality of the app - sharing content through a directional arrow metaphor.
+An Android application that allows you to share media links from various streaming services and download sources directly to your local services including MeTube, YT-DLP, torrent clients, and jDownloader.
+
+ShareConnect combines the words "share" and "connect" to represent the core functionality of the app - connecting content discovery with local download services.
 
 ## Features
 
-- **Multi-Service Support**: Share to MeTube, qBittorrent, Transmission, uTorrent, and jDownloader
+- **Multi-Service Support**: Share to MeTube, YT-DLP, qBittorrent, Transmission, uTorrent, and jDownloader
 - **Universal Media Sharing**: Share content from YouTube, Vimeo, Twitch, Reddit, Twitter, Instagram, Facebook, SoundCloud and more
 - **Magnet Link Support**: Directly add magnet links to torrent clients
-- **Multiple Server Profiles**: Support for multiple service profiles with default profile selection
+- **Multiple Service Profiles**: Support for multiple service profiles with default profile selection
+- **Clipboard URL Sharing**: Share URLs directly from clipboard
+- **System App Integration**: Share links to compatible installed applications
 - **Customizable Themes**: 6 color schemes with light/dark variants (Warm Orange, Crimson, Light Blue, Purple, Green, Material)
 - **Encrypted Storage**: All data including history and profiles stored with SQLCipher encryption
 - **Comprehensive History**: Detailed sharing history with filtering by service, type, and profile
@@ -20,9 +24,9 @@ Sharrow combines the words "share" and "arrow" to represent the core functionali
 
 ## Supported Services
 
-Sharrow works with all streaming services and download sources supported by your target services:
+ShareConnect works with all streaming services and download sources supported by your target services:
 
-### For MeTube:
+### For MeTube and YT-DLP:
 - YouTube
 - Vimeo
 - Dailymotion
@@ -51,7 +55,7 @@ Sharrow works with all streaming services and download sources supported by your
 2. Open the app and configure your service profiles:
    - Go to Settings > Server Profiles
    - Add new profiles for each service you want to use
-   - Select the appropriate service type (MeTube, Torrent Client, jDownloader)
+   - Select the appropriate service type (MeTube, YT-DLP, Torrent Client, jDownloader)
    - For Torrent Clients, specify which client you're using
    - Set one profile as default for quick sharing
 3. Test your connections to ensure services are reachable
@@ -64,16 +68,36 @@ Sharrow works with all streaming services and download sources supported by your
 1. Open any supported media app or website (YouTube, Vimeo, Twitch, etc.)
 2. Find content you want to download
 3. Tap the share button
-4. Select "Sharrow" from the sharing options
+4. Select "ShareConnect" from the sharing options
 5. Choose your service profile (if you have multiple)
 6. Tap "Send to Service"
 7. The app will automatically open your service interface in the browser
+
+### Sharing from Clipboard
+
+1. Copy any supported URL to clipboard
+2. Open ShareConnect app
+3. Tap the "Add" button (floating action button)
+4. The URL from clipboard will be automatically detected
+5. Choose your service profile
+6. Tap "Send to Service"
+7. The app will automatically open your service interface in the browser
+
+### Sharing to System Apps
+
+1. Open any supported media app or website
+2. Find content you want to download
+3. Tap the share button
+4. Select "ShareConnect" from the sharing options
+5. Instead of selecting a ShareConnect profile, tap "Share to Apps"
+6. Choose from the list of compatible installed applications
+7. The link will be sent directly to the selected application
 
 ### Managing History
 
 1. Access history through the main menu or toolbar
 2. Filter by service provider or media type
-3. Resend any item to any profile
+3. Resend any item to any profile or system app
 4. Delete individual items or use bulk cleanup options
 
 ### Theme Customization
@@ -87,7 +111,7 @@ Sharrow works with all streaming services and download sources supported by your
 
 - Android 8.0 (API level 26) or higher
 - Running service instances accessible from your device:
-  - MeTube (optional)
+  - MeTube or YT-DLP (optional)
   - Torrent Client with Web UI (qBittorrent, Transmission, or uTorrent)
   - jDownloader with Web UI (optional)
 
@@ -103,7 +127,7 @@ The APK will be generated in `app/build/outputs/apk/debug/`
 
 ## Branding
 
-Sharrow features a professionally designed logo combining the concepts of "share" and "arrow":
+ShareConnect features a professionally designed logo combining the concepts of "share" and "connect":
 
 - **Primary Colors**: Warm Orange (#FF9800) and Carmine Red (#C62828)
 - **Supporting Colors**: Blue (#2196F3) and White (#FFFFFF)

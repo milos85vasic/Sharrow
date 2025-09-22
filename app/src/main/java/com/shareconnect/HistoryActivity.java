@@ -1,4 +1,4 @@
-package com.metubeshare;
+package com.shareconnect;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.button.MaterialButton;
-import com.metubeshare.database.HistoryItem;
-import com.metubeshare.database.HistoryRepository;
+import com.shareconnect.database.HistoryItem;
+import com.shareconnect.database.HistoryRepository;
 import java.util.ArrayList;
 import java.util.List;
 

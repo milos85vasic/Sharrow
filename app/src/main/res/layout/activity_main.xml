@@ -121,7 +121,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="All services supported by yt-dlp are compatible with Sharrow"
+                    android:text="All services supported by yt-dlp are compatible with ShareConnect"
                     android:textStyle="italic"
                     android:textSize="12sp" />
 
@@ -213,7 +213,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="3. Select 'Sharrow' from the sharing options" />
+                    android:text="3. Select 'ShareConnect' from the sharing options" />
 
             </LinearLayout>
 

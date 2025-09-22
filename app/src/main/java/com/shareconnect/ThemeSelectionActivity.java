@@ -1,12 +1,12 @@
-package com.metubeshare;
+package com.shareconnect;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.metubeshare.database.Theme;
-import com.metubeshare.database.ThemeRepository;
+import com.shareconnect.database.Theme;
+import com.shareconnect.database.ThemeRepository;
 import java.util.List;
 
 public class ThemeSelectionActivity extends AppCompatActivity implements ThemeAdapter.OnThemeSelectListener {

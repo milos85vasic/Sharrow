@@ -1,10 +1,10 @@
-package com.metubeshare;
+package com.shareconnect;
 
 import android.app.Activity;
 import android.content.Context;
 import androidx.appcompat.app.AppCompatDelegate;
-import com.metubeshare.database.Theme;
-import com.metubeshare.database.ThemeRepository;
+import com.shareconnect.database.Theme;
+import com.shareconnect.database.ThemeRepository;
 
 public class ThemeManager {
     private static ThemeManager instance;

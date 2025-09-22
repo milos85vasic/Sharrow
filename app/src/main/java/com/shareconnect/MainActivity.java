@@ -1,4 +1,4 @@
-package com.metubeshare;
+package com.shareconnect;
 
 import android.content.Intent;
 import android.net.Uri;

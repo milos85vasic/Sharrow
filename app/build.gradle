@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.metubeshare'
+    namespace 'com.shareconnect'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.metubeshare"
+        applicationId "com.shareconnect"
         minSdk 26
         targetSdk 34
         versionCode 1

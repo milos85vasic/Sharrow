@@ -1,8 +1,8 @@
-# Sharrow Branding Guide
+# ShareConnect Branding Guide
 
 ## Logo Design
 
-The Sharrow logo combines the concepts of "share" and "arrow" into a single, memorable icon. The design represents the core function of the application - sharing content through a directional arrow metaphor.
+The ShareConnect logo combines the concepts of "share" and "connect" into a single, memorable icon. The design represents the core function of the application - connecting content discovery with local download services.
 
 ### Color Palette
 
@@ -13,8 +13,8 @@ The Sharrow logo combines the concepts of "share" and "arrow" into a single, mem
 
 ### Logo Variations
 
-1. **Full Logo**: Contains the arrow icon with abstract share elements
-2. **Icon Only**: Simplified arrow icon for app icons and small spaces
+1. **Full Logo**: Contains the connect icon with abstract share elements
+2. **Icon Only**: Simplified connect icon for app icons and small spaces
 3. **Monochrome**: Single-color version for use on different backgrounds
 
 ## Design Principles

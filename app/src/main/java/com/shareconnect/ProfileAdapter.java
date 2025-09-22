@@ -1,4 +1,4 @@
-package com.metubeshare;
+package com.shareconnect;
 
 import android.view.LayoutInflater;
 import android.view.View;

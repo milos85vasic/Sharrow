@@ -1,4 +1,4 @@
-package com.metubeshare;
+package com.shareconnect;
 
 import android.content.Context;
 import android.content.SharedPreferences;

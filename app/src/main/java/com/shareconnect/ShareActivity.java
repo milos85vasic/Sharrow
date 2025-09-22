@@ -1,4 +1,4 @@
-package com.metubeshare;
+package com.shareconnect;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,8 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.button.MaterialButton;
-import com.metubeshare.database.HistoryItem;
-import com.metubeshare.database.HistoryRepository;
+import com.shareconnect.database.HistoryItem;
+import com.shareconnect.database.HistoryRepository;
 import java.util.ArrayList;
 import java.util.List;
 

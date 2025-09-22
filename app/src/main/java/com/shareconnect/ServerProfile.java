@@ -1,4 +1,4 @@
-package com.metubeshare;
+package com.shareconnect;
 
 public class ServerProfile {
     public static final String TYPE_METUBE = "metube";

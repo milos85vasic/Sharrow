@@ -1,4 +1,4 @@
-package com.metubeshare.database;
+package com.shareconnect.database;
 
 import android.content.Context;
 import androidx.room.Room;

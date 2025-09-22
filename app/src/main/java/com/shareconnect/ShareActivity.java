@@ -243,7 +243,10 @@ public class ShareActivity extends AppCompatActivity {
                         buttonSendToService.setEnabled(true);
                         buttonSendToService.setText("Send to " + serviceTypeName);
                         
-                        Toast.makeText(ShareActivity.this, "Error sending link to " + serviceTypeName + ": " + error, Toast.LENGTH_LONG).show();
+                        // Show error dialog instead of toast
+                        DialogUtils.showErrorDialog(ShareActivity.this, 
+                            R.string.error_sending_link_custom, 
+                            error != null ? error : getString(R.string.error_sending_link_custom));
                         
                         // Save to history with error status
                         saveToHistory(mediaLink, profileId, profileNameFinal, serviceTypeName, false);

@@ -171,6 +171,13 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void saveProfile() {
+        // Get input values
+        String name = editTextProfileName.getText().toString().trim();
+        String url = editTextServerUrl.getText().toString().trim();
+        String portStr = editTextServerPort.getText().toString().trim();
+        String serviceTypeStr = autoCompleteServiceType.getText().toString();
+        String torrentClientStr = autoCompleteTorrentClient.getText().toString();
+        
         // Validate inputs
         if (TextUtils.isEmpty(name)) {
             editTextProfileName.setError(getString(R.string.profile_name_required));

@@ -19,9 +19,9 @@ then
     exit 1
 fi
 
-# Generate adaptive icon foreground
+# Generate adaptive icon foreground (PNG format)
 echo "Generating adaptive icon foreground..."
-inkscape -w 108 -h 108 -o ../app/src/main/res/drawable/ic_foreground.xml assets/icon_light.svg
+inkscape -w 108 -h 108 -o ../app/src/main/res/drawable/ic_foreground.png assets/icon_light.svg
 
 # Generate mipmap icons for different densities
 echo "Generating mipmap icons..."
@@ -55,9 +55,9 @@ inkscape -w 360 -h 360 -o ../app/src/main/res/drawable/splash_logo_light.png ass
 # Dark theme splash logo (360x360)
 inkscape -w 360 -h 360 -o ../app/src/main/res/drawable/splash_logo_dark.png assets/logo_dark.svg
 
-# Generate adaptive icon background (solid color)
+# Generate adaptive icon background (solid color) using magick instead of convert
 echo "Generating adaptive icon background..."
-convert -size 108x108 xc:"#FF9800" ../app/src/main/res/drawable/ic_background.xml
+magick -size 108x108 xc:"#FF9800" ../app/src/main/res/drawable/ic_background.png
 
 # Create adaptive icon XML
 echo "Creating adaptive icon XML..."

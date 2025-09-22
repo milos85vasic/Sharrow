@@ -43,7 +43,7 @@
                     android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="16dp"
-                    android:src="@drawable/ic_sharrow_foreground"
+                    android:src="@drawable/ic_foreground"
                     android:contentDescription="App Icon" />
 
                 <TextView

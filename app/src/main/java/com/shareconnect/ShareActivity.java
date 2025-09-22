@@ -96,7 +96,7 @@ public class ShareActivity extends AppCompatActivity {
         
         if (profiles.isEmpty()) {
             // Show a message and redirect to settings
-            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
             finish();
@@ -174,7 +174,7 @@ public class ShareActivity extends AppCompatActivity {
         }
 
         if (profiles.isEmpty()) {
-            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -196,7 +196,7 @@ public class ShareActivity extends AppCompatActivity {
         }
         
         if (selectedProfile == null) {
-            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_SHORT).show();
             return;
         }
         
@@ -278,7 +278,7 @@ public class ShareActivity extends AppCompatActivity {
     
     private void openServiceInterface() {
         if (profiles.isEmpty()) {
-            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -300,7 +300,7 @@ public class ShareActivity extends AppCompatActivity {
         }
         
         if (selectedProfile == null) {
-            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_SHORT).show();
             return;
         }
         

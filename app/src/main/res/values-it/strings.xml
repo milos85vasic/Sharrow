@@ -15,8 +15,8 @@
     <string name="no_profiles_yet">Nessun profilo ancora configurato</string>
     <string name="sending_to_service">Invio al servizio…</string>
     <string name="sent_successfully">Link inviato con successo!</string>
-    <string name="error_sending_link">Errore nell'invio del link al servizio</string>
-    <string name="please_configure_profile">Configura prima un profilo server</string>
+    <string name="error_sending_link_custom">Errore nell'invio del link al servizio</string>
+    <string name="please_configure_profile_custom">Configura prima un profilo server</string>
     <string name="invalid_url">URL non valida</string>
     <string name="profile_saved">Profilo salvato con successo</string>
     <string name="profile_deleted">Profilo eliminato</string>

@@ -1,4 +1,4 @@
-# Sharrow
+# ShareConnect
 
 An Android application that allows you to share media links from various streaming services directly to your local MeTube instance.
 

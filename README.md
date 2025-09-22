@@ -126,11 +126,23 @@ To build the application:
 ./gradlew assembleDebug
 ```
 
-The APK will be generated in `app/build/outputs/apk/debug/`
+The APK will be generated in `app/build/outputs/apk/debug/app-debug.apk`
+
+Alternatively, you can use the provided build script:
+
+```bash
+./build_app.sh
+```
+
+This script will clean the project, build the debug APK, and provide useful information about the build.
+
+You can also build directly with Gradle if installed:
+
+```bash
+gradle assembleDebug
+```
 
 ## Branding
-
-ShareConnect features a professionally designed logo combining the concepts of "share" and "connect":
 
 - **Supporting Colors**: Blue (#2196F3) and White (#FFFFFF)
 - **Adaptive Icons**: Properly scaled for all Android devices

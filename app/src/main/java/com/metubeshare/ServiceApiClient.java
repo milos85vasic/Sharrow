@@ -28,6 +28,9 @@ public class ServiceApiClient {
             case ServerProfile.TYPE_METUBE:
                 sendUrlToMeTube(profile, url, callback);
                 break;
+            case ServerProfile.TYPE_YTDL:
+                sendUrlToYtdl(profile, url, callback);
+                break;
             case ServerProfile.TYPE_TORRENT:
                 sendUrlToTorrentClient(profile, url, callback);
                 break;
@@ -85,6 +88,55 @@ public class ServiceApiClient {
             });
         } catch (Exception e) {
             Log.e(TAG, "Error preparing MeTube API request", e);
+            callback.onError(e.getMessage());
+        }
+    }
+    
+    /**
+     * Send URL to YT-DLP service
+     */
+    private void sendUrlToYtdl(ServerProfile profile, String url, ServiceApiCallback callback) {
+        try {
+            // Construct the YT-DLP API endpoint (similar to MeTube)
+            String apiUrl = profile.getUrl() + ":" + profile.getPort() + "/add";
+            
+            // Create the JSON payload
+            JSONObject json = new JSONObject();
+            json.put("url", url);
+            json.put("quality", "best"); // Default to best quality
+            
+            RequestBody body = RequestBody.create(json.toString(), JSON);
+            Request request = new Request.Builder()
+                    .url(apiUrl)
+                    .post(body)
+                    .build();
+            
+            client.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    Log.e(TAG, "Failed to send URL to YT-DLP", e);
+                    callback.onError(e.getMessage());
+                }
+                
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+                    try {
+                        if (response.isSuccessful()) {
+                            callback.onSuccess();
+                        } else {
+                            String errorBody = response.body() != null ? response.body().string() : "Unknown error";
+                            Log.e(TAG, "YT-DLP API error: " + errorBody);
+                            callback.onError("API Error: " + response.code() + " - " + errorBody);
+                        }
+                    } finally {
+                        if (response.body() != null) {
+                            response.body().close();
+                        }
+                    }
+                }
+            });
+        } catch (Exception e) {
+            Log.e(TAG, "Error preparing YT-DLP API request", e);
             callback.onError(e.getMessage());
         }
     }

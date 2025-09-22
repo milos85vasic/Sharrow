@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +19,9 @@ public class EditProfileActivity extends AppCompatActivity {
     private TextInputEditText editTextProfileName;
     private TextInputEditText editTextServerUrl;
     private TextInputEditText editTextServerPort;
-    private com.google.android.material.textfield.MaterialAutoCompleteTextView autoCompleteServiceType;
-    private com.google.android.material.textfield.MaterialAutoCompleteTextView autoCompleteTorrentClient;
-    private TextInputLayout layoutTorrentClient;
+    private MaterialAutoCompleteTextView autoCompleteServiceType;
+    private MaterialAutoCompleteTextView autoCompleteTorrentClient;
+    private com.google.android.material.textfield.TextInputLayout layoutTorrentClient;
     private MaterialButton buttonCancel;
     private MaterialButton buttonSave;
     private MaterialButton buttonTestConnection;
@@ -96,6 +96,7 @@ public class EditProfileActivity extends AppCompatActivity {
         // Setup service type spinner
         List<String> serviceTypes = new ArrayList<>();
         serviceTypes.add("MeTube");
+        serviceTypes.add("YT-DLP");
         serviceTypes.add("Torrent Client");
         serviceTypes.add("jDownloader");
         
@@ -142,6 +143,9 @@ public class EditProfileActivity extends AppCompatActivity {
             switch (existingProfile.getServiceType()) {
                 case ServerProfile.TYPE_METUBE:
                     autoCompleteServiceType.setText("MeTube", false);
+                    break;
+                case ServerProfile.TYPE_YTDL:
+                    autoCompleteServiceType.setText("YT-DLP", false);
                     break;
                 case ServerProfile.TYPE_TORRENT:
                     autoCompleteServiceType.setText("Torrent Client", false);
@@ -213,6 +217,9 @@ public class EditProfileActivity extends AppCompatActivity {
         switch (serviceTypeStr) {
             case "MeTube":
                 serviceType = ServerProfile.TYPE_METUBE;
+                break;
+            case "YT-DLP":
+                serviceType = ServerProfile.TYPE_YTDL;
                 break;
             case "Torrent Client":
                 serviceType = ServerProfile.TYPE_TORRENT;
@@ -299,6 +306,9 @@ public class EditProfileActivity extends AppCompatActivity {
         switch (serviceTypeStr) {
             case "MeTube":
                 serviceType = ServerProfile.TYPE_METUBE;
+                break;
+            case "YT-DLP":
+                serviceType = ServerProfile.TYPE_YTDL;
                 break;
             case "Torrent Client":
                 serviceType = ServerProfile.TYPE_TORRENT;

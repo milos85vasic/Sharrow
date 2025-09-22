@@ -2,6 +2,7 @@ package com.metubeshare;
 
 public class ServerProfile {
     public static final String TYPE_METUBE = "metube";
+    public static final String TYPE_YTDL = "ytdl";
     public static final String TYPE_TORRENT = "torrent";
     public static final String TYPE_JDOWNLOADER = "jdownloader";
     
@@ -14,7 +15,7 @@ public class ServerProfile {
     private String url;
     private int port;
     private boolean isDefault;
-    private String serviceType; // metube, torrent, jdownloader
+    private String serviceType; // metube, ytdl, torrent, jdownloader
     private String torrentClientType; // qbittorrent, transmission, utorrent (only for torrent type)
     
     public ServerProfile() {
@@ -103,6 +104,10 @@ public class ServerProfile {
         return TYPE_METUBE.equals(serviceType);
     }
     
+    public boolean isYtDl() {
+        return TYPE_YTDL.equals(serviceType);
+    }
+    
     public boolean isTorrent() {
         return TYPE_TORRENT.equals(serviceType);
     }
@@ -115,6 +120,8 @@ public class ServerProfile {
         switch (serviceType) {
             case TYPE_METUBE:
                 return "MeTube";
+            case TYPE_YTDL:
+                return "YT-DLP";
             case TYPE_TORRENT:
                 return "Torrent (" + getTorrentClientName() + ")";
             case TYPE_JDOWNLOADER:

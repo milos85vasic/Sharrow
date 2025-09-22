@@ -1,4 +1,4 @@
-![ShareConnect](assets/Dark_Banner.jpg)
+![ShareConnect](Assets/Dark_Banner.jpg)
 
 # ShareConnect
 
@@ -136,7 +136,7 @@ ShareConnect features a professionally designed logo combining the concepts of "
 - **Adaptive Icons**: Properly scaled for all Android devices
 - **Splash Screen**: Themed loading screen with logo
 
-All branding assets are available in the `branding/` directory.
+All branding assets are available in the [Branding](./Branding/) directory.
 
 ## Architecture
 

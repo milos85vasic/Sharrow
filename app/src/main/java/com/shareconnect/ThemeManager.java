@@ -36,51 +36,45 @@ public class ThemeManager {
         String colorScheme = theme.getColorScheme();
         boolean isDarkMode = theme.isDarkMode();
         
-        switch (colorScheme) {
-            case "warm_orange":
-                if (isDarkMode) {
-                    activity.setTheme(R.style.Theme_MeTubeShare_WarmOrange_Dark);
-                } else {
-                    activity.setTheme(R.style.Theme_MeTubeShare_WarmOrange_Light);
-                }
-                break;
-            case "crimson":
-                if (isDarkMode) {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Crimson_Dark);
-                } else {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Crimson_Light);
-                }
-                break;
-            case "light_blue":
-                if (isDarkMode) {
-                    activity.setTheme(R.style.Theme_MeTubeShare_LightBlue_Dark);
-                } else {
-                    activity.setTheme(R.style.Theme_MeTubeShare_LightBlue_Light);
-                }
-                break;
-            case "purple":
-                if (isDarkMode) {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Purple_Dark);
-                } else {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Purple_Light);
-                }
-                break;
-            case "green":
-                if (isDarkMode) {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Green_Dark);
-                } else {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Green_Light);
-                }
-                break;
-            case "material":
-            default:
-                if (isDarkMode) {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Material_Dark);
-                } else {
-                    activity.setTheme(R.style.Theme_MeTubeShare_Material_Light);
-                }
-                break;
-        }
+        switch (currentTheme) {
+                case THEME_WARM_ORANGE_DARK:
+                    activity.setTheme(R.style.Theme_ShareConnect_WarmOrange_Dark);
+                    break;
+                case THEME_WARM_ORANGE_LIGHT:
+                    activity.setTheme(R.style.Theme_ShareConnect_WarmOrange_Light);
+                    break;
+                case THEME_CRIMSON_DARK:
+                    activity.setTheme(R.style.Theme_ShareConnect_Crimson_Dark);
+                    break;
+                case THEME_CRIMSON_LIGHT:
+                    activity.setTheme(R.style.Theme_ShareConnect_Crimson_Light);
+                    break;
+                case THEME_LIGHT_BLUE_DARK:
+                    activity.setTheme(R.style.Theme_ShareConnect_LightBlue_Dark);
+                    break;
+                case THEME_LIGHT_BLUE_LIGHT:
+                    activity.setTheme(R.style.Theme_ShareConnect_LightBlue_Light);
+                    break;
+                case THEME_PURPLE_DARK:
+                    activity.setTheme(R.style.Theme_ShareConnect_Purple_Dark);
+                    break;
+                case THEME_PURPLE_LIGHT:
+                    activity.setTheme(R.style.Theme_ShareConnect_Purple_Light);
+                    break;
+                case THEME_GREEN_DARK:
+                    activity.setTheme(R.style.Theme_ShareConnect_Green_Dark);
+                    break;
+                case THEME_GREEN_LIGHT:
+                    activity.setTheme(R.style.Theme_ShareConnect_Green_Light);
+                    break;
+                case THEME_MATERIAL_DARK:
+                    activity.setTheme(R.style.Theme_ShareConnect_Material_Dark);
+                    break;
+                case THEME_MATERIAL_LIGHT:
+                default:
+                    activity.setTheme(R.style.Theme_ShareConnect_Material_Light);
+                    break;
+            }
         
         // Apply day/night mode
         if (isDarkMode) {

@@ -1,17 +1,20 @@
 package com.metubeshare;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
     private MaterialButton buttonSettings;
+    private MaterialButton buttonOpenMeTube;
     private ProfileManager profileManager;
 
     @Override
@@ -33,10 +36,19 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         buttonSettings = findViewById(R.id.buttonSettings);
+        buttonOpenMeTube = findViewById(R.id.buttonOpenMeTube);
+        
         buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSettings();
+            }
+        });
+        
+        buttonOpenMeTube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMeTubeInterface();
             }
         });
     }
@@ -67,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             openSettings();
             return true;
+        } else if (id == R.id.action_open_metube) {
+            openMeTubeInterface();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -75,5 +90,18 @@ public class MainActivity extends AppCompatActivity {
     private void openSettings() {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+    
+    private void openMeTubeInterface() {
+        ServerProfile defaultProfile = profileManager.getDefaultProfile();
+        
+        if (defaultProfile == null) {
+            Toast.makeText(this, "Please set a default profile in Settings", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
+        String url = defaultProfile.getUrl() + ":" + defaultProfile.getPort();
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent);
     }
 }

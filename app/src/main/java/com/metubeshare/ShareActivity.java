@@ -3,6 +3,8 @@ package com.metubeshare;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -19,6 +21,7 @@ public class ShareActivity extends AppCompatActivity {
     private TextView textViewYouTubeLink;
     private AutoCompleteTextView autoCompleteProfiles;
     private MaterialButton buttonSendToMeTube;
+    private MaterialButton buttonOpenMeTube;
     private ProgressBar progressBar;
     private List<ServerProfile> profiles;
     private String mediaLink;
@@ -34,6 +37,9 @@ public class ShareActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         initViews();
         handleIntent();
@@ -46,6 +52,7 @@ public class ShareActivity extends AppCompatActivity {
         textViewYouTubeLink = findViewById(R.id.textViewYouTubeLink);
         autoCompleteProfiles = findViewById(R.id.autoCompleteProfiles);
         buttonSendToMeTube = findViewById(R.id.buttonSendToMeTube);
+        buttonOpenMeTube = findViewById(R.id.buttonOpenMeTube);
         progressBar = findViewById(R.id.progressBar);
     }
 
@@ -110,6 +117,38 @@ public class ShareActivity extends AppCompatActivity {
                 sendToMeTube();
             }
         });
+        
+        buttonOpenMeTube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMeTubeInterface();
+            }
+        });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.share_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_open_metube) {
+            openMeTubeInterface();
+            return true;
+        } else if (id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void sendToMeTube() {
@@ -179,12 +218,44 @@ public class ShareActivity extends AppCompatActivity {
         });
     }
 
+    private void openMeTubeInterface() {
+        if (profiles.isEmpty()) {
+            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String selectedProfileName = autoCompleteProfiles.getText().toString();
+        ServerProfile selectedProfile = null;
+        
+        for (ServerProfile profile : profiles) {
+            if (profile.getName().equals(selectedProfileName)) {
+                selectedProfile = profile;
+                break;
+            }
+        }
+        
+        if (selectedProfile == null) {
+            Toast.makeText(this, R.string.please_configure_profile, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
+        // Store the profile URL and port for use in the callback
+        final String profileUrl = selectedProfile.getUrl();
+        final int profilePort = selectedProfile.getPort();
+        
+        // Open browser with the MeTube instance
+        openMeTubeInBrowser(profileUrl, profilePort);
+    }
+
     private void openMeTubeInBrowser(String url, int port) {
         String fullUrl = url + ":" + port;
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(fullUrl));
         startActivity(browserIntent);
-        
-        // Finish this activity
-        finish();
+    }
+    
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

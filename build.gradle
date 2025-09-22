@@ -1,6 +1,60 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    id 'com.android.application' version '8.13.0' apply false
-    id 'com.android.library' version '8.13.0' apply false
-    id 'org.jetbrains.kotlin.android' version '2.2.0' apply false
+buildscript {
+
+    ext {
+
+        kotlin_version = '2.2.20'
+        common_obfuscator_version = '1.0.0'
+
+        shareconnect_version = '1.0.0'
+        shareconnect_version_code = 1
+        shareconnect_application_name = "com.shareconnect"
+
+        toolkit_version = '2.0.3'
+        toolkit_context = ':Toolkit'
+        toolkit_project_name = 'ShareConnect'
+    }
+
+    repositories {
+
+        mavenLocal()
+
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jetbrains' }
+        maven { url 'https://mirrors.ustc.edu.cn/jetbrains/' }
+        maven { url 'https://mirrors.tuna.tsinghua.edu.cn/jetbrains/' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        google()
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
+    }
+
+    dependencies {
+
+        classpath 'com.android.tools.build:gradle:8.13.0'
+        classpath "com.google.gms:google-services:4.4.3"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:3.0.6"
+        classpath "com.google.firebase:firebase-appdistribution-gradle:5.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+
+    repositories {
+
+        mavenLocal()
+
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jetbrains' }
+        maven { url 'https://mirrors.ustc.edu.cn/jetbrains/' }
+        maven { url 'https://mirrors.tuna.tsinghua.edu.cn/jetbrains/' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        google()
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
+    }
 }

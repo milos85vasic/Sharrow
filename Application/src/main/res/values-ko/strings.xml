@@ -58,4 +58,13 @@
     <string name="qbittorrent">qBittorrent</string>
     <string name="transmission">Transmission</string>
     <string name="utorrent">uTorrent</string>
+    <string name="service_type_metube">MeTube</string>
+    <string name="service_type_ytdlp">YT-DLP</string>
+    <string name="service_type_torrent">토렌트 클라이언트</string>
+    <string name="service_type_jdownloader">jDownloader</string>
+    <string name="torrent_client_qbittorrent">qBittorrent</string>
+    <string name="torrent_client_transmission">Transmission</string>
+    <string name="torrent_client_utorrent">uTorrent</string>
+    <string name="testing">테스트 중...</string>
+    <string name="test_connection">연결 테스트</string>
 </resources>

@@ -55,7 +55,7 @@ class EditProfileActivity : AppCompatActivity() {
             loadProfile(profileId)
         } else {
             // Set default values for new profile
-            autoCompleteServiceType!!.setText("MeTube", false)
+            autoCompleteServiceType!!.setText(getString(R.string.service_type_metube), false)
             layoutTorrentClient!!.visibility = View.GONE
         }
     }
@@ -100,10 +100,10 @@ class EditProfileActivity : AppCompatActivity() {
     private fun setupSpinners() {
         // Setup service type spinner
         val serviceTypes: MutableList<String> = ArrayList()
-        serviceTypes.add("MeTube")
-        serviceTypes.add("YT-DLP")
-        serviceTypes.add("Torrent Client")
-        serviceTypes.add("jDownloader")
+        serviceTypes.add(getString(R.string.service_type_metube))
+        serviceTypes.add(getString(R.string.service_type_ytdlp))
+        serviceTypes.add(getString(R.string.service_type_torrent))
+        serviceTypes.add(getString(R.string.service_type_jdownloader))
 
         val serviceTypeAdapter = ArrayAdapter(
             this,
@@ -113,9 +113,9 @@ class EditProfileActivity : AppCompatActivity() {
 
         // Setup torrent client spinner
         val torrentClients: MutableList<String> = ArrayList()
-        torrentClients.add("qBittorrent")
-        torrentClients.add("Transmission")
-        torrentClients.add("uTorrent")
+        torrentClients.add(getString(R.string.torrent_client_qbittorrent))
+        torrentClients.add(getString(R.string.torrent_client_transmission))
+        torrentClients.add(getString(R.string.torrent_client_utorrent))
 
         val torrentClientAdapter = ArrayAdapter(
             this,
@@ -125,10 +125,10 @@ class EditProfileActivity : AppCompatActivity() {
     }
 
     private fun handleServiceTypeChange(serviceType: String) {
-        if ("Torrent Client" == serviceType) {
+        if (getString(R.string.service_type_torrent) == serviceType) {
             layoutTorrentClient!!.visibility = View.VISIBLE
             // Set default torrent client
-            autoCompleteTorrentClient!!.setText("qBittorrent", false)
+            autoCompleteTorrentClient!!.setText(getString(R.string.torrent_client_qbittorrent), false)
         } else {
             layoutTorrentClient!!.visibility = View.GONE
         }
@@ -150,28 +150,28 @@ class EditProfileActivity : AppCompatActivity() {
 
             // Set service type
             when (existingProfile!!.serviceType) {
-                ServerProfile.TYPE_METUBE -> autoCompleteServiceType!!.setText("MeTube", false)
-                ServerProfile.TYPE_YTDL -> autoCompleteServiceType!!.setText("YT-DLP", false)
+                ServerProfile.TYPE_METUBE -> autoCompleteServiceType!!.setText(getString(R.string.service_type_metube), false)
+                ServerProfile.TYPE_YTDL -> autoCompleteServiceType!!.setText(getString(R.string.service_type_ytdlp), false)
                 ServerProfile.TYPE_TORRENT -> {
-                    autoCompleteServiceType!!.setText("Torrent Client", false)
+                    autoCompleteServiceType!!.setText(getString(R.string.service_type_torrent), false)
                     layoutTorrentClient!!.visibility = View.VISIBLE
                     // Set torrent client type
                     when (existingProfile!!.torrentClientType) {
                         ServerProfile.TORRENT_CLIENT_QBITTORRENT -> autoCompleteTorrentClient!!.setText(
-                            "qBittorrent",
+                            getString(R.string.torrent_client_qbittorrent),
                             false
                         )
                         ServerProfile.TORRENT_CLIENT_TRANSMISSION -> autoCompleteTorrentClient!!.setText(
-                            "Transmission",
+                            getString(R.string.torrent_client_transmission),
                             false
                         )
                         ServerProfile.TORRENT_CLIENTUTORRENT -> autoCompleteTorrentClient!!.setText(
-                            "uTorrent",
+                            getString(R.string.torrent_client_utorrent),
                             false
                         )
                     }
                 }
-                ServerProfile.TYPE_JDOWNLOADER -> autoCompleteServiceType!!.setText("jDownloader", false)
+                ServerProfile.TYPE_JDOWNLOADER -> autoCompleteServiceType!!.setText(getString(R.string.service_type_jdownloader), false)
             }
         }
     }
@@ -223,19 +223,19 @@ class EditProfileActivity : AppCompatActivity() {
         var torrentClientType: String? = null
 
         when (serviceTypeStr) {
-            "MeTube" -> serviceType = ServerProfile.TYPE_METUBE
-            "YT-DLP" -> serviceType = ServerProfile.TYPE_YTDL
-            "Torrent Client" -> {
+            getString(R.string.service_type_metube) -> serviceType = ServerProfile.TYPE_METUBE
+            getString(R.string.service_type_ytdlp) -> serviceType = ServerProfile.TYPE_YTDL
+            getString(R.string.service_type_torrent) -> {
                 serviceType = ServerProfile.TYPE_TORRENT
                 // Determine torrent client type
                 when (torrentClientStr) {
-                    "qBittorrent" -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
-                    "Transmission" -> torrentClientType = ServerProfile.TORRENT_CLIENT_TRANSMISSION
-                    "uTorrent" -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
+                    getString(R.string.torrent_client_qbittorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
+                    getString(R.string.torrent_client_transmission) -> torrentClientType = ServerProfile.TORRENT_CLIENT_TRANSMISSION
+                    getString(R.string.torrent_client_utorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
                     else -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT // Default
                 }
             }
-            "jDownloader" -> serviceType = ServerProfile.TYPE_JDOWNLOADER
+            getString(R.string.service_type_jdownloader) -> serviceType = ServerProfile.TYPE_JDOWNLOADER
             else -> serviceType = ServerProfile.TYPE_METUBE // Default fallback
         }
 
@@ -296,19 +296,19 @@ class EditProfileActivity : AppCompatActivity() {
         var torrentClientType: String? = null
 
         when (serviceTypeStr) {
-            "MeTube" -> serviceType = ServerProfile.TYPE_METUBE
-            "YT-DLP" -> serviceType = ServerProfile.TYPE_YTDL
-            "Torrent Client" -> {
+            getString(R.string.service_type_metube) -> serviceType = ServerProfile.TYPE_METUBE
+            getString(R.string.service_type_ytdlp) -> serviceType = ServerProfile.TYPE_YTDL
+            getString(R.string.service_type_torrent) -> {
                 serviceType = ServerProfile.TYPE_TORRENT
                 // Determine torrent client type
                 when (torrentClientStr) {
-                    "qBittorrent" -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
-                    "Transmission" -> torrentClientType = ServerProfile.TORRENT_CLIENT_TRANSMISSION
-                    "uTorrent" -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
+                    getString(R.string.torrent_client_qbittorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
+                    getString(R.string.torrent_client_transmission) -> torrentClientType = ServerProfile.TORRENT_CLIENT_TRANSMISSION
+                    getString(R.string.torrent_client_utorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
                     else -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT // Default
                 }
             }
-            "jDownloader" -> serviceType = ServerProfile.TYPE_JDOWNLOADER
+            getString(R.string.service_type_jdownloader) -> serviceType = ServerProfile.TYPE_JDOWNLOADER
             else -> serviceType = ServerProfile.TYPE_METUBE // Default fallback
         }
 
@@ -320,7 +320,7 @@ class EditProfileActivity : AppCompatActivity() {
         testProfile.torrentClientType = torrentClientType
 
         // Show progress
-        buttonTestConnection!!.text = "Testing..."
+        buttonTestConnection!!.text = getString(R.string.testing)
         buttonTestConnection!!.isEnabled = false
 
         // Test with a simple URL (we'll use the root URL for testing)
@@ -329,7 +329,7 @@ class EditProfileActivity : AppCompatActivity() {
             object : ServiceApiClient.ServiceApiCallback {
                 override fun onSuccess() {
                     runOnUiThread {
-                        buttonTestConnection!!.text = "Test Connection"
+                        buttonTestConnection!!.text = getString(R.string.test_connection)
                         buttonTestConnection!!.isEnabled = true
                         Toast.makeText(
                             this@EditProfileActivity,
@@ -341,7 +341,7 @@ class EditProfileActivity : AppCompatActivity() {
 
                 override fun onError(error: String?) {
                     runOnUiThread {
-                        buttonTestConnection!!.text = "Test Connection"
+                        buttonTestConnection!!.text = getString(R.string.test_connection)
                         buttonTestConnection!!.isEnabled = true
                         // Show error dialog instead of toast
                         DialogUtils.showErrorDialog(

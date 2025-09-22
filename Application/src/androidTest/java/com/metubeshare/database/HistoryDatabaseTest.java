@@ -11,6 +11,10 @@ import java.io.IOException;
 import java.util.List;
 import static org.junit.Assert.*;
 
+import com.shareconnect.database.HistoryDatabase;
+import com.shareconnect.database.HistoryItem;
+import com.shareconnect.database.HistoryItemDao;
+
 @RunWith(AndroidJUnit4.class)
 public class HistoryDatabaseTest {
     private HistoryDatabase database;

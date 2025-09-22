@@ -38,9 +38,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "ShareConnect"
 
-// Temporarily exclude Toolkit module to focus on Application module conversion
-// include ':Toolkit:Main'
-// include ':Toolkit:Test'
-// include ':Toolkit:JCommons'
+include ':Toolkit:Main'
+include ':Toolkit:Test'
+include ':Toolkit:JCommons'
+include ':Toolkit:Analytics'
 
 include ':Application'

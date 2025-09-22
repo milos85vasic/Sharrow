@@ -1,22 +1,24 @@
 plugins {
+
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id("com.google.devtools.ksp") version "2.2.20-2.0.2"
 }
 
 android {
 
-    namespace 'com.shareconnect'
     compileSdk 36
+    namespace "${shareconnect_application_name}"
 
     defaultConfig {
 
-        applicationId "com.shareconnect"
-        minSdk 26
+        minSdk 28
         targetSdk 36
-        versionCode 1
-        versionName "1.0"
+        versionName "$shareconnect_version"
+        versionCode shareconnect_version_code
+        applicationId "$shareconnect_application_name"
 
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -36,36 +38,43 @@ android {
     }
 
     kotlinOptions {
+
         jvmTarget = '1.8'
     }
 
-    buildFeatures {
+    packagingOptions {
 
-        viewBinding true
+        jniLibs {
+
+            excludes += ['META-INF/*']
+        }
+
+        resources {
+
+            excludes += ['META-INF/*', 'LICENSE-2.0.txt', 'META-INF/DEPENDENCIES',
+                         'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/NOTICE',
+                         'META-INF/NOTICE.txt']
+        }
+    }
+
+    sourceSets {
+
+        main {
+
+            java.srcDirs += "build/generated/ksp"
+        }
     }
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.13.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    implementation 'androidx.preference:preference:1.2.1'
-    implementation 'androidx.recyclerview:recyclerview:1.4.0'
-    implementation 'com.squareup.okhttp3:okhttp:5.1.0'
-    implementation 'com.google.code.gson:gson:2.13.2'
-    
-    // Room database with SQLCipher
-    implementation "androidx.room:room-runtime:2.8.0"
-    implementation "androidx.room:room-ktx:2.8.0"
-    kapt "androidx.room:room-compiler:2.8.0"
-    implementation "net.zetetic:android-database-sqlcipher:4.5.4"
-    implementation "androidx.sqlite:sqlite:2.6.0"
-    
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
-    implementation "androidx.core:core-ktx:1.15.0"
-    
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    implementation project("${toolkit_context}:Main")
+    implementation project("${toolkit_context}:Test")
+    implementation project("${toolkit_context}:Analytics")
+
+    testImplementation project("${toolkit_context}:Main")
+    testImplementation project("${toolkit_context}:Test")
+
+    androidTestImplementation project("${toolkit_context}:Main")
+    androidTestImplementation project("${toolkit_context}:Test")
 }

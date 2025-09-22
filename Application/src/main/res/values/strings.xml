@@ -60,4 +60,13 @@
     <string name="utorrent">uTorrent</string>
     <string name="not_sent">Not sent</string>
     <string name="no_media_link_received">No media link received</string>
+    <string name="service_type_metube">MeTube</string>
+    <string name="service_type_ytdlp">YT-DLP</string>
+    <string name="service_type_torrent">Torrent Client</string>
+    <string name="service_type_jdownloader">jDownloader</string>
+    <string name="torrent_client_qbittorrent">qBittorrent</string>
+    <string name="torrent_client_transmission">Transmission</string>
+    <string name="torrent_client_utorrent">uTorrent</string>
+    <string name="testing">Testing...</string>
+    <string name="test_connection">Test Connection</string>
 </resources>

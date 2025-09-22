@@ -1,4 +1,4 @@
-# MeTube Share
+# Sharrow
 
 An Android application that allows you to share media links from various streaming services directly to your local MeTube instance.
 
@@ -7,14 +7,16 @@ An Android application that allows you to share media links from various streami
 - Share media links from YouTube, Vimeo, Twitch, Reddit, Twitter, Instagram, Facebook, SoundCloud and more
 - Support for multiple MeTube server profiles
 - Set a default server for quick sharing
-- Modern Material Design UI
+- Modern Material Design UI with customizable themes
 - Connection testing for server profiles
 - Automatic redirection to browser after sending link
 - Supports all services compatible with yt-dlp
+- Comprehensive sharing history with search and filter capabilities
+- Encrypted local storage for all data
 
 ## Supported Services
 
-MeTube Share works with all streaming services supported by MeTube, which uses yt-dlp as its backend. This includes:
+Sharrow works with all streaming services supported by MeTube, which uses yt-dlp as its backend. This includes:
 
 - YouTube
 - Vimeo
@@ -39,10 +41,10 @@ MeTube Share works with all streaming services supported by MeTube, which uses y
 
 ## Usage
 
-1. Open any supported media app or website
+1. Open any supported media app or website (YouTube, Vimeo, Twitch, etc.)
 2. Find a video or audio content you want to download
 3. Tap the share button
-4. Select "MeTube Share" from the sharing options
+4. Select "Sharrow" from the sharing options
 5. Choose your server profile (if you have multiple)
 6. Tap "Send to MeTube"
 7. The app will automatically open your MeTube instance in the browser

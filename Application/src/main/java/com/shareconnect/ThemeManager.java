@@ -22,7 +22,7 @@ public class ThemeManager {
     
     public static synchronized ThemeManager getInstance(Context context) {
         if (instance == null) {
-            instance = new ThemeManager(context);
+            instance = new ThemeManager(context.getApplicationContext());
         }
         return instance;
     }

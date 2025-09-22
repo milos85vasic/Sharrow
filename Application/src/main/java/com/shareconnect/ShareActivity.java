@@ -60,6 +60,17 @@ public class ShareActivity extends AppCompatActivity {
         serviceApiClient = new ServiceApiClient();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Check if theme has changed and recreate activity if needed
+        themeManager = ThemeManager.getInstance(this);
+        if (themeManager.hasThemeChanged()) {
+            themeManager.resetThemeChangedFlag();
+            recreate();
+        }
+    }
+
     private void initViews() {
         textViewMediaLink = findViewById(R.id.textViewYouTubeLink);
         autoCompleteProfiles = findViewById(R.id.autoCompleteProfiles);
@@ -106,7 +117,7 @@ public class ShareActivity extends AppCompatActivity {
         // Create adapter for AutoCompleteTextView
         List<String> profileNames = new ArrayList<>();
         for (ServerProfile profile : profiles) {
-            profileNames.add(profile.getName() + " (" + profile.getServiceTypeName() + ")");
+            profileNames.add(profile.getName() + " (" + profile.getServiceTypeName(this) + ")");
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, profileNames);
@@ -115,7 +126,7 @@ public class ShareActivity extends AppCompatActivity {
         // Set default selection if there's a default profile
         ServerProfile defaultProfile = profileManager.getDefaultProfile();
         if (defaultProfile != null) {
-            autoCompleteProfiles.setText(defaultProfile.getName() + " (" + defaultProfile.getServiceTypeName() + ")", false);
+            autoCompleteProfiles.setText(defaultProfile.getName() + " (" + defaultProfile.getServiceTypeName(this) + ")", false);
         } else if (!profileNames.isEmpty()) {
             // If no default, select the first one
             autoCompleteProfiles.setText(profileNames.get(0), false);
@@ -205,7 +216,7 @@ public class ShareActivity extends AppCompatActivity {
         final int profilePort = selectedProfile.getPort();
         final String profileId = selectedProfile.getId();
         final String profileNameFinal = selectedProfile.getName();
-        final String serviceTypeName = selectedProfile.getServiceTypeName();
+        final String serviceTypeName = selectedProfile.getServiceTypeName(this);
         
         // Show progress
         progressBar.setVisibility(View.VISIBLE);
@@ -312,7 +323,7 @@ public class ShareActivity extends AppCompatActivity {
         final int profilePort = selectedProfile.getPort();
         final String profileId = selectedProfile.getId();
         final String profileNameFinal = selectedProfile.getName();
-        final String serviceTypeName = selectedProfile.getServiceTypeName();
+        final String serviceTypeName = selectedProfile.getServiceTypeName(this);
         
         // Save to history
         saveToHistory(mediaLink, profileId, profileNameFinal, serviceTypeName, true);

@@ -1,6 +1,7 @@
 package com.shareconnect;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.appcompat.app.ActionBar;
@@ -9,14 +10,16 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 public class SettingsActivity extends AppCompatActivity {
+    private static final int THEME_SELECTION_REQUEST = 1001;
+    private ThemeManager themeManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-        // Apply current theme
-        ThemeManager themeManager = ThemeManager.getInstance(this);
+        // Apply current theme before calling super.onCreate()
+        themeManager = ThemeManager.getInstance(this);
         themeManager.applyTheme(this);
+        
+        super.onCreate(savedInstanceState);
         
         setContentView(R.layout.settings_activity);
         getSupportFragmentManager()
@@ -36,6 +39,25 @@ public class SettingsActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Check if theme has changed and recreate activity if needed
+        if (themeManager != null && themeManager.hasThemeChanged()) {
+            themeManager.resetThemeChangedFlag();
+            recreate();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // If theme was changed, recreate this activity to apply the new theme
+        if (requestCode == THEME_SELECTION_REQUEST && resultCode == RESULT_OK) {
+            recreate();
+        }
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
@@ -61,7 +83,8 @@ public class SettingsActivity extends AppCompatActivity {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         Intent intent = new Intent(getContext(), ThemeSelectionActivity.class);
-                        startActivity(intent);
+                        // Start for result to know when theme changes
+                        startActivityForResult(intent, THEME_SELECTION_REQUEST);
                         return true;
                     }
                 });

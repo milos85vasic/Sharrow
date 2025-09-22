@@ -5,40 +5,54 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ShareConnect.Material.Light"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.ShareConnect.Material.Light"
+    >
         
         <activity
+
             android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true"
+        >
+
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         
         <activity
+
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+        />
         
         <activity
+
             android:name=".ShareActivity"
-            android:exported="true">
+            android:exported="true"
+        >
+
             <!-- Generic URL sharing -->
             <intent-filter>
+
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="text/plain" />
+
             </intent-filter>
             
             <!-- YouTube URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -46,37 +60,45 @@
                 <data android:scheme="https" android:host="www.youtube.com" />
                 <data android:scheme="https" android:host="m.youtube.com" />
                 <data android:scheme="https" android:host="youtu.be" />
+
             </intent-filter>
             
             <!-- Vimeo URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="vimeo.com" />
                 <data android:scheme="https" android:host="www.vimeo.com" />
+
             </intent-filter>
             
             <!-- Twitch URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="twitch.tv" />
                 <data android:scheme="https" android:host="www.twitch.tv" />
+
             </intent-filter>
             
             <!-- Reddit URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="reddit.com" />
                 <data android:scheme="https" android:host="www.reddit.com" />
+
             </intent-filter>
             
             <!-- Twitter/X URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -84,52 +106,64 @@
                 <data android:scheme="https" android:host="www.twitter.com" />
                 <data android:scheme="https" android:host="x.com" />
                 <data android:scheme="https" android:host="www.x.com" />
+
             </intent-filter>
             
             <!-- Instagram URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="instagram.com" />
                 <data android:scheme="https" android:host="www.instagram.com" />
+
             </intent-filter>
             
             <!-- Facebook URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="facebook.com" />
                 <data android:scheme="https" android:host="www.facebook.com" />
+
             </intent-filter>
             
             <!-- SoundCloud URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="soundcloud.com" />
                 <data android:scheme="https" android:host="www.soundcloud.com" />
+
             </intent-filter>
             
             <!-- Dailymotion URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="dailymotion.com" />
                 <data android:scheme="https" android:host="www.dailymotion.com" />
+
             </intent-filter>
             
             <!-- Bandcamp URLs -->
             <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https" android:host="bandcamp.com" />
                 <data android:scheme="https" android:host="www.bandcamp.com" />
+
             </intent-filter>
+
         </activity>
         
         <activity
@@ -151,6 +185,7 @@
         <activity
             android:name=".ThemeSelectionActivity"
             android:exported="false" />
+
 </application>
 
 </manifest>

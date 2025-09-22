@@ -63,6 +63,17 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Check if theme has changed and recreate activity if needed
+        themeManager = ThemeManager.getInstance(this);
+        if (themeManager.hasThemeChanged()) {
+            themeManager.resetThemeChangedFlag();
+            recreate();
+        }
+    }
+
     private void initViews() {
         editTextProfileName = findViewById(R.id.editTextProfileName);
         editTextServerUrl = findViewById(R.id.editTextServerUrl);
@@ -358,7 +369,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     public void run() {
                         buttonTestConnection.setText("Test Connection");
                         buttonTestConnection.setEnabled(true);
-                        Toast.makeText(EditProfileActivity.this, "Connection successful!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProfileActivity.this, R.string.connection_successful, Toast.LENGTH_SHORT).show();
                     }
                 });
             }

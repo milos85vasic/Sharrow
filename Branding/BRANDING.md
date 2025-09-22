@@ -1,8 +1,8 @@
-# Sharrow Branding Documentation
+# ShareConnect Branding Documentation
 
 ## Logo Design
 
-The Sharrow logo combines the concepts of "share" and "arrow" into a single, memorable icon. The design represents the core function of the application - sharing content through a directional arrow metaphor.
+The ShareConnect logo combines the concepts of "share" and "arrow" into a single, memorable icon. The design represents the core function of the application - sharing content through a directional arrow metaphor.
 
 ### Color Palette
 
@@ -56,7 +56,7 @@ Android 8.0+ supports adaptive icons with separate background and foreground lay
 
 ## Splash Screen
 
-The splash screen features the Sharrow logo with the app name, using appropriate colors for both light and dark themes:
+The splash screen features the ShareConnect logo with the app name, using appropriate colors for both light and dark themes:
 
 - **Light Theme**: Orange background (#FF9800)
 - **Dark Theme**: Darker orange background (#F57C00)

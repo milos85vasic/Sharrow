@@ -116,6 +116,22 @@ public class ServerProfile {
         return TYPE_JDOWNLOADER.equals(serviceType);
     }
     
+    public String getServiceTypeName(android.content.Context context) {
+        switch (serviceType) {
+            case TYPE_METUBE:
+                return context.getString(R.string.metube);
+            case TYPE_YTDL:
+                return context.getString(R.string.ytdlp);
+            case TYPE_TORRENT:
+                return context.getString(R.string.torrent) + " (" + getTorrentClientName(context) + ")";
+            case TYPE_JDOWNLOADER:
+                return context.getString(R.string.jdownloader);
+            default:
+                return context.getString(R.string.unknown);
+        }
+    }
+    
+    // Deprecated method for backward compatibility
     public String getServiceTypeName() {
         switch (serviceType) {
             case TYPE_METUBE:
@@ -131,6 +147,24 @@ public class ServerProfile {
         }
     }
     
+    public String getTorrentClientName(android.content.Context context) {
+        if (torrentClientType == null) {
+            return context.getString(R.string.unknown);
+        }
+        
+        switch (torrentClientType) {
+            case TORRENT_CLIENT_QBITTORRENT:
+                return context.getString(R.string.qbittorrent);
+            case TORRENT_CLIENT_TRANSMISSION:
+                return context.getString(R.string.transmission);
+            case TORRENT_CLIENTUTORRENT:
+                return context.getString(R.string.utorrent);
+            default:
+                return torrentClientType;
+        }
+    }
+    
+    // Deprecated method for backward compatibility
     public String getTorrentClientName() {
         if (torrentClientType == null) {
             return "Unknown";

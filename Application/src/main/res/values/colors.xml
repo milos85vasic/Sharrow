@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- Default Material colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -60,4 +61,5 @@
     <color name="green_secondary">#8BC34A</color>
     <color name="green_secondary_variant">#689F38</color>
     <color name="green_on_secondary">#FFFFFF</color>
+
 </resources>

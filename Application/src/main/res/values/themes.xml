@@ -132,4 +132,65 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
+    
+    <!-- No Action Bar variants for activities using Toolbar -->
+    <style name="Theme.ShareConnect.WarmOrange.Light.NoActionBar" parent="Theme.ShareConnect.WarmOrange.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.WarmOrange.Dark.NoActionBar" parent="Theme.ShareConnect.WarmOrange.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Crimson.Light.NoActionBar" parent="Theme.ShareConnect.Crimson.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Crimson.Dark.NoActionBar" parent="Theme.ShareConnect.Crimson.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.LightBlue.Light.NoActionBar" parent="Theme.ShareConnect.LightBlue.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.LightBlue.Dark.NoActionBar" parent="Theme.ShareConnect.LightBlue.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Purple.Light.NoActionBar" parent="Theme.ShareConnect.Purple.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Purple.Dark.NoActionBar" parent="Theme.ShareConnect.Purple.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Green.Light.NoActionBar" parent="Theme.ShareConnect.Green.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Green.Dark.NoActionBar" parent="Theme.ShareConnect.Green.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Material.Light.NoActionBar" parent="Theme.ShareConnect.Material.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.ShareConnect.Material.Dark.NoActionBar" parent="Theme.ShareConnect.Material.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

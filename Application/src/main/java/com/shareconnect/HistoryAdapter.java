@@ -84,7 +84,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             textViewUrl.setText(item.getUrl());
             textViewServiceProvider.setText(item.getServiceProvider());
             textViewType.setText(item.getType());
-            textViewServiceType.setText(item.getServiceType() != null ? item.getServiceType() : "MeTube");
+            textViewServiceType.setText(item.getServiceType() != null ? item.getServiceType() : itemView.getContext().getString(R.string.metube));
             
             if (item.getProfileName() != null && !item.getProfileName().isEmpty()) {
                 textViewProfile.setText(item.getProfileName());

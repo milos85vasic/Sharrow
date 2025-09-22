@@ -1,6 +1,7 @@
 package com.shareconnect;
 
 import android.os.Bundle;
+import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,11 +17,11 @@ public class ThemeSelectionActivity extends AppCompatActivity implements ThemeAd
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-        // Apply current theme before setting content
+        // Apply current theme before setting content and calling super.onCreate()
         ThemeManager themeManager = ThemeManager.getInstance(this);
         themeManager.applyTheme(this);
+        
+        super.onCreate(savedInstanceState);
         
         setContentView(R.layout.activity_theme_selection);
         
@@ -60,12 +61,12 @@ public class ThemeSelectionActivity extends AppCompatActivity implements ThemeAd
         // Set this theme as default
         themeRepository.setDefaultTheme(theme.getId());
         
-        // Apply the theme
+        // Notify that theme has changed
         ThemeManager themeManager = ThemeManager.getInstance(this);
-        themeManager.applyTheme(this, theme);
+        themeManager.notifyThemeChanged();
         
-        // Recreate the activity to apply the new theme
-        recreate();
+        // Set result to indicate theme was changed
+        setResult(RESULT_OK);
         
         // Finish the activity
         finish();

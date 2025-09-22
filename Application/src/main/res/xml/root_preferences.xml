@@ -9,12 +9,12 @@
 
     </PreferenceCategory>
     
-    <PreferenceCategory app:title="Appearance">
+    <PreferenceCategory app:title="@string/appearance">
 
         <Preference
             app:key="theme_selection"
-            app:title="Theme"
-            app:summary="Select application theme and color scheme" />
+            app:title="@string/theme"
+            app:summary="@string/theme_summary" />
 
     </PreferenceCategory>
 

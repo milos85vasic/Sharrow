@@ -63,7 +63,9 @@ public class ThemeAdapter extends RecyclerView.Adapter<ThemeAdapter.ThemeViewHol
         
         public void bind(Theme theme) {
             textViewThemeName.setText(theme.getName());
-            textViewThemeVariant.setText(theme.isDarkMode() ? "Dark" : "Light");
+            textViewThemeVariant.setText(theme.isDarkMode() ? 
+                itemView.getContext().getString(R.string.dark) : 
+                itemView.getContext().getString(R.string.light));
             
             buttonSelectTheme.setOnClickListener(new View.OnClickListener() {
                 @Override

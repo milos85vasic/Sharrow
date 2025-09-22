@@ -123,6 +123,12 @@ public class ProfilesActivity extends AppCompatActivity implements ProfileAdapte
     @Override
     protected void onResume() {
         super.onResume();
+        // Check if theme has changed and recreate activity if needed
+        themeManager = ThemeManager.getInstance(this);
+        if (themeManager.hasThemeChanged()) {
+            themeManager.resetThemeChangedFlag();
+            recreate();
+        }
         // Refresh the list when returning from EditProfileActivity
         loadProfiles();
     }

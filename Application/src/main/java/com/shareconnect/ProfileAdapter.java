@@ -72,7 +72,7 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
             
             // Set service type icon and text
             setServiceTypeIcon(profile);
-            textViewServiceType.setText(profile.getServiceTypeName());
+            textViewServiceType.setText(profile.getServiceTypeName(itemView.getContext()));
             
             // Check if this is the default profile
             ServerProfile defaultProfile = profileManager.getDefaultProfile();

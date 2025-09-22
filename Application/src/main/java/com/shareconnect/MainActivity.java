@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Apply theme before setting content
+        // Apply theme before setting content and calling super.onCreate()
         themeManager = ThemeManager.getInstance(this);
         themeManager.applyTheme(this);
         
@@ -198,6 +198,17 @@ public class MainActivity extends AppCompatActivity {
             return uri.getHost() != null && !uri.getHost().isEmpty();
         } catch (Exception e) {
             return false;
+        }
+    }
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Check if theme has changed and recreate activity if needed
+        themeManager = ThemeManager.getInstance(this);
+        if (themeManager.hasThemeChanged()) {
+            themeManager.resetThemeChangedFlag();
+            recreate();
         }
     }
 }

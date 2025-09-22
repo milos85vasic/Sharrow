@@ -172,7 +172,12 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         builder.setTitle("Cleanup History");
         builder.setMessage("Choose what to cleanup:");
         
-        String[] options = {"All History", "By Service Provider", "By Type", "By Service Type"};
+        String[] options = {
+                getString(R.string.all_history), 
+                getString(R.string.by_service_provider), 
+                getString(R.string.by_type), 
+                getString(R.string.by_service_type)
+            };
         builder.setItems(options, (dialog, which) -> {
             switch (which) {
                 case 0: // All History
@@ -280,6 +285,12 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
     @Override
     protected void onResume() {
         super.onResume();
+        // Check if theme has changed and recreate activity if needed
+        themeManager = ThemeManager.getInstance(this);
+        if (themeManager.hasThemeChanged()) {
+            themeManager.resetThemeChangedFlag();
+            recreate();
+        }
         // Refresh the history when returning to this activity
         loadHistoryItems();
     }

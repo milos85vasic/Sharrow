@@ -35,4 +35,27 @@
     <string name="profile_name_required">Profile name is required</string>
     <string name="confirm_set_default">Set as default profile?</string>
     <string name="confirm_set_default_message">This will set the selected profile as default for all sends.</string>
+    <string name="select">Select</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme">Theme</string>
+    <string name="theme_summary">Select application theme and color scheme</string>
+    <string name="all_history">All History</string>
+    <string name="by_service_provider">By Service Provider</string>
+    <string name="by_type">By Type</string>
+    <string name="by_service_type">By Service Type</string>
+    <string name="connection_successful">Connection successful!</string>
+    <string name="please_set_default_profile">Please set a default profile in Settings</string>
+    <string name="invalid_url_clipboard">Invalid URL in clipboard</string>
+    <string name="no_text_clipboard">No text found in clipboard</string>
+    <string name="clipboard_empty">Clipboard is empty</string>
+    <string name="metube">MeTube</string>
+    <string name="ytdlp">YT-DLP</string>
+    <string name="torrent">Torrent</string>
+    <string name="jdownloader">jDownloader</string>
+    <string name="unknown">Unknown</string>
+    <string name="qbittorrent">qBittorrent</string>
+    <string name="transmission">Transmission</string>
+    <string name="utorrent">uTorrent</string>
 </resources>

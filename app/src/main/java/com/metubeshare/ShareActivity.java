@@ -21,7 +21,7 @@ public class ShareActivity extends AppCompatActivity {
     private MaterialButton buttonSendToMeTube;
     private ProgressBar progressBar;
     private List<ServerProfile> profiles;
-    private String youtubeLink;
+    private String mediaLink;
     private MeTubeApiClient apiClient;
     private ProfileManager profileManager;
 
@@ -53,12 +53,22 @@ public class ShareActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
+        Uri data = intent.getData();
 
         if (Intent.ACTION_SEND.equals(action) && "text/plain".equals(type)) {
-            youtubeLink = intent.getStringExtra(Intent.EXTRA_TEXT);
-            if (youtubeLink != null) {
-                textViewYouTubeLink.setText(youtubeLink);
+            // Handle shared text (URL)
+            mediaLink = intent.getStringExtra(Intent.EXTRA_TEXT);
+            if (mediaLink != null) {
+                textViewYouTubeLink.setText(mediaLink);
             }
+        } else if (Intent.ACTION_VIEW.equals(action) && data != null) {
+            // Handle direct URL intent
+            mediaLink = data.toString();
+            textViewYouTubeLink.setText(mediaLink);
+        } else {
+            // No valid link received
+            mediaLink = null;
+            textViewYouTubeLink.setText("No media link received");
         }
     }
 
@@ -103,7 +113,7 @@ public class ShareActivity extends AppCompatActivity {
     }
 
     private void sendToMeTube() {
-        if (youtubeLink == null || youtubeLink.isEmpty()) {
+        if (mediaLink == null || mediaLink.isEmpty()) {
             Toast.makeText(this, R.string.no_youtube_link, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -137,7 +147,7 @@ public class ShareActivity extends AppCompatActivity {
         buttonSendToMeTube.setEnabled(false);
         
         // Call the MeTube API
-        apiClient.sendUrlToMeTube(selectedProfile, youtubeLink, new MeTubeApiClient.MeTubeApiCallback() {
+        apiClient.sendUrlToMeTube(selectedProfile, mediaLink, new MeTubeApiClient.MeTubeApiCallback() {
             @Override
             public void onSuccess() {
                 runOnUiThread(new Runnable() {

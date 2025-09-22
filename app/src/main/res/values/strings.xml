@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MeTube Share</string>
-    <string name="add_link">Add YouTube Link</string>
+    <string name="add_link">Add Media Link</string>
     <string name="settings">Settings</string>
     <string name="server_profiles">Server Profiles</string>
     <string name="add_profile">Add Profile</string>
@@ -20,5 +20,5 @@
     <string name="invalid_url">Invalid URL</string>
     <string name="profile_saved">Profile saved successfully</string>
     <string name="profile_deleted">Profile deleted</string>
-    <string name="no_youtube_link">No YouTube link found in the shared content</string>
+    <string name="no_youtube_link">No media link found in the shared content</string>
 </resources>

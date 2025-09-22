@@ -1,15 +1,32 @@
 # MeTube Share
 
-An Android application that allows you to share YouTube links directly to your local MeTube instance.
+An Android application that allows you to share media links from various streaming services directly to your local MeTube instance.
 
 ## Features
 
-- Share YouTube links from any app directly to your MeTube server
+- Share media links from YouTube, Vimeo, Twitch, Reddit, Twitter, Instagram, Facebook, SoundCloud and more
 - Support for multiple MeTube server profiles
 - Set a default server for quick sharing
 - Modern Material Design UI
 - Connection testing for server profiles
 - Automatic redirection to browser after sending link
+- Supports all services compatible with yt-dlp
+
+## Supported Services
+
+MeTube Share works with all streaming services supported by MeTube, which uses yt-dlp as its backend. This includes:
+
+- YouTube
+- Vimeo
+- Dailymotion
+- Twitch
+- Reddit
+- Twitter/X
+- Instagram
+- Facebook
+- SoundCloud
+- Bandcamp
+- And dozens of other sites supported by yt-dlp
 
 ## Setup
 
@@ -22,16 +39,17 @@ An Android application that allows you to share YouTube links directly to your l
 
 ## Usage
 
-1. Open any YouTube video in the YouTube app or website
-2. Tap the share button
-3. Select "MeTube Share" from the sharing options
-4. Choose your server profile (if you have multiple)
-5. Tap "Send to MeTube"
-6. The app will automatically open your MeTube instance in the browser
+1. Open any supported media app or website
+2. Find a video or audio content you want to download
+3. Tap the share button
+4. Select "MeTube Share" from the sharing options
+5. Choose your server profile (if you have multiple)
+6. Tap "Send to MeTube"
+7. The app will automatically open your MeTube instance in the browser
 
 ## Requirements
 
-- Android 7.0 (API level 24) or higher
+- Android 8.0 (API level 26) or higher
 - A running MeTube instance accessible from your device
 
 ## Building

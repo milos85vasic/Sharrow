@@ -29,9 +29,14 @@ public class ShareActivity extends AppCompatActivity {
     private String mediaLink;
     private MeTubeApiClient apiClient;
     private ProfileManager profileManager;
+    private ThemeManager themeManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Apply theme before setting content
+        themeManager = ThemeManager.getInstance(this);
+        themeManager.applyTheme(this);
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
 

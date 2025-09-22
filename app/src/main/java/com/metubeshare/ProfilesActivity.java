@@ -19,9 +19,14 @@ public class ProfilesActivity extends AppCompatActivity implements ProfileAdapte
     private FloatingActionButton fabAddProfile;
     private TextView textViewNoProfiles;
     private ProfileManager profileManager;
+    private ThemeManager themeManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Apply theme before setting content
+        themeManager = ThemeManager.getInstance(this);
+        themeManager.applyTheme(this);
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profiles);
 

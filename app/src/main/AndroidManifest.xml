@@ -10,14 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MeTubeShare"
+        android:theme="@style/Theme.MeTubeShare.Material.Light"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.MeTubeShare">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,8 +25,7 @@
         
         <activity
             android:name=".ShareActivity"
-            android:exported="true"
-            android:theme="@style/Theme.MeTubeShare">
+            android:exported="true">
             <!-- Generic URL sharing -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -132,8 +130,23 @@
         
         <activity
             android:name=".SettingsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MeTubeShare" />
+            android:exported="false" />
+            
+        <activity
+            android:name=".ProfilesActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".ThemeSelectionActivity"
+            android:exported="false" />
 </application>
 
 </manifest>

@@ -20,9 +20,14 @@ public class EditProfileActivity extends AppCompatActivity {
     private ProfileManager profileManager;
     private ServerProfile existingProfile;
     private MeTubeApiClient apiClient;
+    private ThemeManager themeManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Apply theme before setting content
+        themeManager = ThemeManager.getInstance(this);
+        themeManager.applyTheme(this);
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 

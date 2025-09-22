@@ -13,6 +13,11 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Apply current theme
+        ThemeManager themeManager = ThemeManager.getInstance(this);
+        themeManager.applyTheme(this);
+        
         setContentView(R.layout.settings_activity);
         getSupportFragmentManager()
                 .beginTransaction()
@@ -44,6 +49,18 @@ public class SettingsActivity extends AppCompatActivity {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         Intent intent = new Intent(getContext(), ProfilesActivity.class);
+                        startActivity(intent);
+                        return true;
+                    }
+                });
+            }
+            
+            Preference themePreference = findPreference("theme_selection");
+            if (themePreference != null) {
+                themePreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick(Preference preference) {
+                        Intent intent = new Intent(getContext(), ThemeSelectionActivity.class);
                         startActivity(intent);
                         return true;
                     }

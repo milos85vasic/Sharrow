@@ -8,5 +8,14 @@
             app:summary="Manage your MeTube server profiles" />
 
     </PreferenceCategory>
+    
+    <PreferenceCategory app:title="Appearance">
+
+        <Preference
+            app:key="theme_selection"
+            app:title="Theme"
+            app:summary="Select application theme and color scheme" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

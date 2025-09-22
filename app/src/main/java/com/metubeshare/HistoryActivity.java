@@ -31,9 +31,14 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
     private List<HistoryItem> allHistoryItems;
     private List<String> serviceProviders;
     private List<String> types;
+    private ThemeManager themeManager;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Apply theme before setting content
+        themeManager = ThemeManager.getInstance(this);
+        themeManager.applyTheme(this);
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
         

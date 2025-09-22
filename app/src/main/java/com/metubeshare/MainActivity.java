@@ -16,9 +16,14 @@ public class MainActivity extends AppCompatActivity {
     private MaterialButton buttonSettings;
     private MaterialButton buttonOpenMeTube;
     private ProfileManager profileManager;
+    private ThemeManager themeManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Apply theme before setting content
+        themeManager = ThemeManager.getInstance(this);
+        themeManager.applyTheme(this);
+        
         super.onCreate(savedInstanceState);
         
         profileManager = new ProfileManager(this);

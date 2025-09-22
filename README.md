@@ -26,7 +26,8 @@ ShareConnect combines the words "share" and "connect" to represent the core func
 
 ShareConnect works with all streaming services and download sources supported by your target services:
 
-### For MeTube and YT-DLP:
+### For MeTube and YT-DLP
+
 - YouTube
 - Vimeo
 - Dailymotion
@@ -39,12 +40,14 @@ ShareConnect works with all streaming services and download sources supported by
 - Bandcamp
 - And dozens of other sites supported by yt-dlp
 
-### For Torrent Clients:
+### For Torrent Clients
+
 - Magnet Links
 - Torrent Files
 - HTTP(S) links to torrent files
 
-### For jDownloader:
+### For jDownloader
+
 - Direct download links
 - File hosting services (MediaFire, RapidGator, etc.)
 - One-click hosting services
@@ -129,7 +132,6 @@ The APK will be generated in `app/build/outputs/apk/debug/`
 
 ShareConnect features a professionally designed logo combining the concepts of "share" and "connect":
 
-- **Primary Colors**: Warm Orange (#FF9800) and Carmine Red (#C62828)
 - **Supporting Colors**: Blue (#2196F3) and White (#FFFFFF)
 - **Adaptive Icons**: Properly scaled for all Android devices
 - **Splash Screen**: Themed loading screen with logo

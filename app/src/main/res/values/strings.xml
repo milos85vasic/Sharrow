@@ -15,8 +15,6 @@
     <string name="no_profiles_yet">No profiles configured yet</string>
     <string name="sending_to_service">Sending to service…</string>
     <string name="sent_successfully">Link sent successfully!</string>
-    <string name="error_sending_link_custom">Error sending link to service</string>
-    <string name="please_configure_profile_custom">Please configure a server profile first</string>
     <string name="invalid_url">Invalid URL</string>
     <string name="profile_saved">Profile saved successfully</string>
     <string name="profile_deleted">Profile deleted</string>

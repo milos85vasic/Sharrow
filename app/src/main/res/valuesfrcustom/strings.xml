@@ -1,4 +1,0 @@
-<resources>
-    <string name="error_sending_link_custom">Erreur lors de l'envoi du lien au service</string>
-    <string name="please_configure_profile_custom">Veuillez d'abord configurer un profil de serveur</string>
-</resources>

@@ -1,4 +1,4 @@
-# Sharrow Feature Documentation
+# ShareConnect Feature Documentation
 
 ## Core Features
 
@@ -30,15 +30,21 @@ Connect to multiple types of download services:
 - Edit or delete existing profiles
 - Profile validation for URL format and port ranges
 
-### 4. Encrypted Data Storage
-- All application data stored with SQLCipher encryption
-- History items, profiles, and settings secured at rest
-- Secure database implementation using Room
-- No plaintext data stored on the device
+### 4. Clipboard URL Sharing
+- Share URLs directly from clipboard using the floating action button
+- Automatic URL validation to prevent sharing invalid links
+- Quick access to sharing without needing to open another app first
+- Seamless integration with existing sharing workflows
+
+### 5. System App Integration
+- Share links to other installed applications with proper app icons
+- Access to all compatible apps through Android's share chooser
+- History tracking for shared links even when sent to other apps
+- Visual app icons for better recognition and selection
 
 ## Advanced Features
 
-### 5. Comprehensive Sharing History
+### 6. Comprehensive Sharing History
 - Detailed tracking of all shared links
 - Metadata including:
   - Service provider (YouTube, Vimeo, etc.)
@@ -60,7 +66,7 @@ Connect to multiple types of download services:
   - Delete by service type
   - Delete all history
 
-### 6. Theme Customization System
+### 7. Theme Customization System
 Six distinct color schemes with light and dark variants:
 1. **Warm Orange** - Energetic and vibrant
 2. **Crimson** - Bold and dramatic
@@ -69,14 +75,14 @@ Six distinct color schemes with light and dark variants:
 5. **Green** - Natural and soothing
 6. **Material** - Default Material Design theme
 
-### 7. Professional Branding
-- Custom-designed Sharrow logo combining "share" and "arrow" concepts
+### 8. Professional Branding
+- Custom-designed ShareConnect logo combining "share" and "connect" concepts
 - Adaptive icons for all Android versions
 - Splash screen with theme awareness
 - Consistent branding throughout the application
 - SVG source assets for scalability
 
-### 8. User Experience Enhancements
+### 9. User Experience Enhancements
 - Modern Material Design 3 implementation
 - Intuitive navigation with clear workflows
 - Responsive layouts for all screen sizes
@@ -86,14 +92,14 @@ Six distinct color schemes with light and dark variants:
 
 ## Service-Specific Features
 
-### 9. MeTube Integration
+### 10. MeTube Integration
 - Direct API communication with MeTube instances
 - Support for all MeTube-supported media types
 - Automatic browser redirection after sharing
 - Error handling for network issues
 - Connection testing capabilities
 
-### 10. Torrent Client Integration
+### 11. Torrent Client Integration
 Support for three major torrent clients:
 - **qBittorrent**: Full Web API integration
 - **Transmission**: RPC API integration
@@ -102,13 +108,13 @@ Support for three major torrent clients:
 - Torrent file URL support
 - Automatic client detection and configuration
 
-### 11. jDownloader Integration
+### 12. jDownloader Integration
 - Direct URL sending to jDownloader instances
 - Support for hundreds of file hosting services
 - FlashGot API compatibility
 - Advanced download management capabilities
 
-### 12. Content Type Recognition
+### 13. Content Type Recognition
 Automatic detection of content types:
 - YouTube URLs → MeTube or jDownloader
 - Magnet Links → Torrent Clients or jDownloader
@@ -117,21 +123,21 @@ Automatic detection of content types:
 
 ## Technical Features
 
-### 13. Security Implementation
+### 14. Security Implementation
 - SQLCipher encryption for all local data
 - HTTPS support for service communications
 - Input validation for all user data
 - Secure storage of sensitive information
 - No data collection or transmission without explicit user action
 
-### 14. Performance Optimization
+### 15. Performance Optimization
 - Efficient database queries with Room
 - Background processing for network operations
 - Memory-efficient data handling
 - Optimized layouts and resource usage
 - Fast theme switching
 
-### 15. Developer Features
+### 16. Developer Features
 - Well-structured codebase with clear separation of concerns
 - Comprehensive documentation
 - Standard Android development practices
@@ -140,7 +146,7 @@ Automatic detection of content types:
 
 ## User Interface Components
 
-### 16. Main Screens
+### 17. Main Screens
 - **Splash Screen**: Branded loading screen with theme support
 - **Main Dashboard**: Quick access to key features
 - **Share Screen**: Media link sharing with profile selection
@@ -149,7 +155,7 @@ Automatic detection of content types:
 - **Profile Management**: Create, edit, and test service profiles
 - **Theme Selection**: Choose from multiple color schemes
 
-### 17. UI Elements
+### 18. UI Elements
 - Material Design cards for content organization
 - Floating action buttons for key actions
 - Dropdown menus for profile and filter selection
@@ -161,14 +167,14 @@ Automatic detection of content types:
 
 ## Integration Features
 
-### 18. Android Integration
+### 19. Android Integration
 - Share intent receivers for direct URL handling
 - Proper Android lifecycle management
 - Support for both portrait and landscape orientations
 - Adaptive layouts for different screen sizes
 - System theme awareness (day/night mode)
 
-### 19. Service Integration
+### 20. Service Integration
 - Direct API communication with all supported services
 - Support for all service-supported media types
 - Automatic browser redirection after sharing
@@ -177,7 +183,7 @@ Automatic detection of content types:
 
 ## Accessibility Features
 
-### 20. Usability Considerations
+### 21. Usability Considerations
 - High contrast color schemes
 - Large touch targets for easy interaction
 - Clear visual feedback for user actions
@@ -186,7 +192,7 @@ Automatic detection of content types:
 
 ## Future Enhancement Opportunities
 
-### 21. Planned Features
+### 22. Planned Features
 - Export/import of profiles and history
 - Advanced filtering and search capabilities
 - Batch sharing of multiple links
@@ -196,4 +202,4 @@ Automatic detection of content types:
 - Advanced service status monitoring
 - Enhanced error reporting with specific service diagnostics
 
-This comprehensive feature set makes Sharrow a powerful and user-friendly tool for managing media downloads through multiple services, with a focus on security, customization, and ease of use.
+This comprehensive feature set makes ShareConnect a powerful and user-friendly tool for managing media downloads through multiple services, with a focus on security, customization, and ease of use.

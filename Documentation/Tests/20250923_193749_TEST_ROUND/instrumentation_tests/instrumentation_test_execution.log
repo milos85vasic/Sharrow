@@ -5544,3 +5544,71 @@ com.shareconnect.automation.FullAppFlowAutomationTest > testCompleteProfileManag
 	
 
 Pixel_7_Pro(AVD) - 13 Tests 30/98 completed. (0 skipped) (20 failed)
+
+> Task :Application:connectedDebugAndroidTest
+
+com.shareconnect.automation.FullAppFlowAutomationTest > testCompleteFirstRunFlow[Pixel_7_Pro(AVD) - 13] [31mFAILED [0m
+	androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+	
+
+Pixel_7_Pro(AVD) - 13 Tests 31/98 completed. (0 skipped) (21 failed)
+
+> Task :Application:connectedDebugAndroidTest
+
+com.shareconnect.automation.FullAppFlowAutomationTest > testCompleteThemeChangeFlow[Pixel_7_Pro(AVD) - 13] [31mFAILED [0m
+	androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+	
+
+Pixel_7_Pro(AVD) - 13 Tests 32/98 completed. (0 skipped) (22 failed)
+
+> Task :Application:connectedDebugAndroidTest
+
+com.shareconnect.automation.FullAppFlowAutomationTest > testCompleteHistoryFlow[Pixel_7_Pro(AVD) - 13] [31mFAILED [0m
+	androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: view.getId() is <2131230851/com.shareconnect:id/buttonHistory>
+	
+
+Pixel_7_Pro(AVD) - 13 Tests 33/98 completed. (0 skipped) (23 failed)
+
+> Task :Application:connectedDebugAndroidTest
+
+com.shareconnect.automation.FullAppFlowAutomationTest > testCompleteShareIntentFlow[Pixel_7_Pro(AVD) - 13] [31mFAILED [0m
+	androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+	
+
+Pixel_7_Pro(AVD) - 13 Tests 34/98 completed. (0 skipped) (24 failed)
+
+> Task :Application:connectedDebugAndroidTest
+
+com.shareconnect.automation.FullAppFlowAutomationTest > testCompleteAppNavigationFlow[Pixel_7_Pro(AVD) - 13] [31mFAILED [0m
+	androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+	
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testDeleteAllHistoryItems[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testDeleteHistoryItem[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testGetHistoryItemsByProfile[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testGetSuccessfulHistoryItems[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testInsertAndRetrieveHistoryItem[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testGetAllHistoryItems[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testGetFailedHistoryItems[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.HistoryRepositoryInstrumentationTest > testUpdateHistoryItem[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.ThemeRepositoryInstrumentationTest > testInsertAndRetrieveTheme[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.ThemeRepositoryInstrumentationTest > testDeleteTheme[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.ThemeRepositoryInstrumentationTest > testUpdateTheme[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.ThemeRepositoryInstrumentationTest > testGetAllThemes[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.ThemeRepositoryInstrumentationTest > testGetDefaultTheme[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+com.shareconnect.database.ThemeRepositoryInstrumentationTest > testSetDefaultTheme[Pixel_7_Pro(AVD) - 13] [32mSUCCESS [0m
+
+Pixel_7_Pro(AVD) - 13 Tests 49/98 completed. (0 skipped) (25 failed)

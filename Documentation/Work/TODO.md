@@ -1,5 +1,6 @@
 # TODO
 
+- https://android-developers.googleblog.com/2025/05/prepare-play-apps-for-devices-with-16kb-page-size.html
 - Connect the Toolkit
 - Onboarding flow
 - Prod signing

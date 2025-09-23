@@ -12,6 +12,7 @@ class ThemeRepository(context: Context) {
             HistoryDatabase::class.java, "history_database"
         )
             .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
             .build()
         themeDao = database.themeDao()
     }

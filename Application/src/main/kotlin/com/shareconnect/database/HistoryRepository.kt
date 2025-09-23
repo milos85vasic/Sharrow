@@ -14,6 +14,7 @@ class HistoryRepository(context: Context) {
             HistoryDatabase::class.java, "history_database"
         )
             .allowMainThreadQueries() // For simplicity, allow main thread queries
+            .fallbackToDestructiveMigration()
             .build()
         historyItemDao = database.historyItemDao()
     }

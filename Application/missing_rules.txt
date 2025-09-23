@@ -1,0 +1,6 @@
+-dontwarn com.sun.jna.**
+-dontwarn edu.umd.cs.findbugs.annotations.**
+-dontwarn java.beans.**
+-dontwarn java.lang.instrument.**
+-dontwarn java.lang.**
+-dontwarn org.slf4j.impl.**

@@ -22,12 +22,43 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+
+        DEVELOPMENT {
+
+            keyAlias ""
+            keyPassword ""
+            storePassword ""
+            storeFile file("Signing/.jks")
+        }
+
+        CLOUD {
+
+            keyAlias ""
+            keyPassword ""
+            storePassword ""
+            storeFile file("Signing/.jks")
+        }
+    }
+
     buildTypes {
 
         release {
 
+            minifyEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.CLOUD
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'missing_rules.txt'
+        }
+
+        debug {
+
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.DEVELOPMENT
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 

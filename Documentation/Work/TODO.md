@@ -14,11 +14,7 @@
   - Google Play Store
   - RuStore
   - AppGallery
-  - Samsung Store
-  - Xiaomi
   - RuMarket
-  - F-Droid
-  - APKPure
 
 ## For 1.0.1
 
@@ -28,6 +24,12 @@
   - Extra theme packs
   - Additional Providers support
   - Tbd
+- Publishing
+  - Samsung Store
+  - Xiaomi
+  - F-Droid
+  - APKPure
+- Support the project / Donations
 
 # For 1.0.2
 

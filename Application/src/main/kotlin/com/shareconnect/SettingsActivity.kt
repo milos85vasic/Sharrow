@@ -37,23 +37,26 @@ class SettingsActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onResume() {
-        super.onResume()
-        // Check if theme has changed and recreate activity if needed
-        if (themeManager != null && themeManager!!.hasThemeChanged()) {
-            android.util.Log.d("SettingsActivity", "Theme change detected in onResume, recreating activity")
-            themeManager!!.resetThemeChangedFlag()
-            recreate()
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        // If theme was changed, restart this activity to apply the new theme
+        if (requestCode == THEME_SELECTION_REQUEST && resultCode == RESULT_OK) {
+            android.util.Log.d("SettingsActivity", "Theme change detected, restarting activity")
+            // Create a new intent for this activity
+            val intent = Intent(this, SettingsActivity::class.java)
+            // Clear the current activity from the stack and start fresh
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            // Finish the current instance
+            finish()
+            // Override the transition to make it seamless
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        // If theme was changed, recreate this activity to apply the new theme
-        if (requestCode == THEME_SELECTION_REQUEST && resultCode == RESULT_OK) {
-            android.util.Log.d("SettingsActivity", "Theme change detected in onActivityResult, recreating activity")
-            recreate()
-        }
+    fun startThemeSelection() {
+        val intent = Intent(this, ThemeSelectionActivity::class.java)
+        startActivityForResult(intent, THEME_SELECTION_REQUEST)
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
@@ -72,9 +75,8 @@ class SettingsActivity : AppCompatActivity() {
             val themePreference = findPreference<Preference>("theme_selection")
             if (themePreference != null) {
                 themePreference.onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                    val intent = Intent(context, ThemeSelectionActivity::class.java)
-                    // Start for result to know when theme changes
-                    startActivityForResult(intent, THEME_SELECTION_REQUEST)
+                    // Call the parent activity's method to start theme selection
+                    (activity as? SettingsActivity)?.startThemeSelection()
                     true
                 }
             }

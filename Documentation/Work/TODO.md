@@ -14,6 +14,7 @@
 ## In progress
 
 - Tests
+- Distribution
 
 ## Completed
 

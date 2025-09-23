@@ -62,21 +62,11 @@ class ThemeSelectionActivity : AppCompatActivity(), ThemeAdapter.OnThemeSelectLi
         // Debug: Log the selected theme
         android.util.Log.d("ThemeSelection", "Selected theme: " + theme.name + " (ID: " + theme.id + ")")
 
-        // Notify that theme has changed
-        val themeManager = ThemeManager.getInstance(this)
-        themeManager.notifyThemeChanged()
-
-        // Debug: Log that theme change was notified
-        android.util.Log.d("ThemeSelection", "Theme change notified")
-
         // Set result to indicate theme was changed
         setResult(RESULT_OK)
 
-        // Give the system a moment to process the theme change before finishing
-        android.os.Handler().postDelayed({
-            // Finish the activity
-            finish()
-        }, 100) // Small delay to ensure the theme change is processed
+        // Finish the activity immediately
+        finish()
     }
 
     override fun onSupportNavigateUp(): Boolean {

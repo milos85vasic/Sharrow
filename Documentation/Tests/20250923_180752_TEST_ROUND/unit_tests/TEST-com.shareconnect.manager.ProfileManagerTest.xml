@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shareconnect.manager.ProfileManagerTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-09-23T15:08:01.340Z" hostname="Mistborn.local" time="0.199">
+  <properties/>
+  <testcase name="testHasProfilesWithEmptyProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.142"/>
+  <testcase name="testHasProfilesWithExistingProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.007"/>
+  <testcase name="testProfileManagerInitialization" classname="com.shareconnect.manager.ProfileManagerTest" time="0.004"/>
+  <testcase name="testGetProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.003"/>
+  <testcase name="testDefaultProfile" classname="com.shareconnect.manager.ProfileManagerTest" time="0.004"/>
+  <testcase name="testGetProfilesByServiceType" classname="com.shareconnect.manager.ProfileManagerTest" time="0.006"/>
+  <testcase name="testGetProfilesEmpty" classname="com.shareconnect.manager.ProfileManagerTest" time="0.003"/>
+  <testcase name="testHasProfilesWithEmptyProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.004"/>
+  <testcase name="testHasProfilesWithExistingProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <testcase name="testProfileManagerInitialization" classname="com.shareconnect.manager.ProfileManagerTest" time="0.003"/>
+  <testcase name="testGetProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <testcase name="testDefaultProfile" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <testcase name="testGetProfilesByServiceType" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <testcase name="testGetProfilesEmpty" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

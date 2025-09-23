@@ -1,0 +1,765 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.shareconnect"
+    test_package: "com.shareconnect.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.shareconnect/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/debug/Application-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/androidTest/debug/Application-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+instrumentation_target_package_id: "com.shareconnect"
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/debug/Application-debug.apk] on device emulator-5554.
+INFO: Installing [/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/androidTest/debug/Application-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/com.shareconnect/additional_test_output to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.shareconnect for device emulator-5554.
+INFO: Uninstalling com.shareconnect.test for device emulator-5554.
+INFO: Execute com.metubeshare.database.HistoryDatabaseTest.testInsertAndRetrieve: PASSED
+SEVERE: Execute com.metubeshare.database.HistoryDatabaseTest.testDelete: FAILED
+java.lang.AssertionError: java.lang.AssertionError: expected:<0> but was:<1>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at com.metubeshare.database.HistoryDatabaseTest.testDelete(HistoryDatabaseTest.java:94)
+
+java.lang.AssertionError: expected:<0> but was:<1>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at com.metubeshare.database.HistoryDatabaseTest.testDelete(HistoryDatabaseTest.java:94)
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testSettingsButtonClick: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testSettingsButtonClick(MainActivityInstrumentationTest.kt:56)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testSettingsButtonClick(MainActivityInstrumentationTest.kt:56)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testOpenMeTubeButtonClick: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testOpenMeTubeButtonClick(MainActivityInstrumentationTest.kt:66)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testOpenMeTubeButtonClick(MainActivityInstrumentationTest.kt:66)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testMainActivityLaunches: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testMainActivityLaunches(MainActivityInstrumentationTest.kt:41)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testMainActivityLaunches(MainActivityInstrumentationTest.kt:41)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testFabAddButtonClick: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testFabAddButtonClick(MainActivityInstrumentationTest.kt:89)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testFabAddButtonClick(MainActivityInstrumentationTest.kt:89)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testMainContentIsScrollable: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testMainContentIsScrollable(MainActivityInstrumentationTest.kt:113)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testMainContentIsScrollable(MainActivityInstrumentationTest.kt:113)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testAppNameIsDisplayed: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testAppNameIsDisplayed(MainActivityInstrumentationTest.kt:106)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testAppNameIsDisplayed(MainActivityInstrumentationTest.kt:106)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testHistoryButtonClick: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testHistoryButtonClick(MainActivityInstrumentationTest.kt:76)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testHistoryButtonClick(MainActivityInstrumentationTest.kt:76)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testToolbarIsDisplayed: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testToolbarIsDisplayed(MainActivityInstrumentationTest.kt:99)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testToolbarIsDisplayed(MainActivityInstrumentationTest.kt:99)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testButtonIcons: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testButtonIcons(MainActivityInstrumentationTest.kt:139)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testButtonIcons(MainActivityInstrumentationTest.kt:139)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testButtonTexts: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testButtonTexts(MainActivityInstrumentationTest.kt:123)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.MainActivityInstrumentationTest.testButtonTexts(MainActivityInstrumentationTest.kt:123)
+... 44 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 47 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testBackButtonNavigatesUp: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withContentDescription(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testBackButtonNavigatesUp(SettingsActivityInstrumentationTest.kt:86)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withContentDescription(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testBackButtonNavigatesUp(SettingsActivityInstrumentationTest.kt:86)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceIcons: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceIcons(SettingsActivityInstrumentationTest.kt:117)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceIcons(SettingsActivityInstrumentationTest.kt:117)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceClickable: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceClickable(SettingsActivityInstrumentationTest.kt:76)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceClickable(SettingsActivityInstrumentationTest.kt:76)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceClickable: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceClickable(SettingsActivityInstrumentationTest.kt:66)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceClickable(SettingsActivityInstrumentationTest.kt:66)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceExists: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceExists(SettingsActivityInstrumentationTest.kt:52)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceExists(SettingsActivityInstrumentationTest.kt:52)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsActivityLaunches: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsActivityLaunches(SettingsActivityInstrumentationTest.kt:38)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsActivityLaunches(SettingsActivityInstrumentationTest.kt:38)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsFragmentIsLoaded: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsFragmentIsLoaded(SettingsActivityInstrumentationTest.kt:94)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsFragmentIsLoaded(SettingsActivityInstrumentationTest.kt:94)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testActivityTitle: PASSED
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testToolbarIsDisplayed: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testToolbarIsDisplayed(SettingsActivityInstrumentationTest.kt:45)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testToolbarIsDisplayed(SettingsActivityInstrumentationTest.kt:45)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceCategories: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceCategories(SettingsActivityInstrumentationTest.kt:106)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceCategories(SettingsActivityInstrumentationTest.kt:106)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceExists: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceExists(SettingsActivityInstrumentationTest.kt:59)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withText(ViewMatchers.java:2)
+at com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceExists(SettingsActivityInstrumentationTest.kt:59)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.AccessibilityAutomationTest.testAccessibilityLabels: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testAccessibilityLabels(AccessibilityAutomationTest.kt:35)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testAccessibilityLabels(AccessibilityAutomationTest.kt:35)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.AccessibilityAutomationTest.testStateDescriptions: FAILED
+java.lang.NullPointerException: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.view.View.isEnabled()' on a null object reference
+at com.shareconnect.automation.AccessibilityAutomationTest.testStateDescriptions$lambda$0(AccessibilityAutomationTest.kt:163)
+at com.shareconnect.automation.AccessibilityAutomationTest.$r8$lambda$UZDz-2ZK8LnEJF36JAwnFqS9YgM(Unknown Source:0)
+at com.shareconnect.automation.AccessibilityAutomationTest$$ExternalSyntheticLambda0.perform(D8$$SyntheticClass:0)
+at androidx.test.core.app.ActivityScenario.lambda$onActivity$2$androidx-test-core-app-ActivityScenario(ActivityScenario.java:794)
+at androidx.test.core.app.ActivityScenario$$ExternalSyntheticLambda2.run(D8$$SyntheticClass:0)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:463)
+at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2379)
+at android.os.Handler.handleCallback(Handler.java:942)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7924)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+
+java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.view.View.isEnabled()' on a null object reference
+at com.shareconnect.automation.AccessibilityAutomationTest.testStateDescriptions$lambda$0(AccessibilityAutomationTest.kt:163)
+at com.shareconnect.automation.AccessibilityAutomationTest.$r8$lambda$UZDz-2ZK8LnEJF36JAwnFqS9YgM(Unknown Source:0)
+at com.shareconnect.automation.AccessibilityAutomationTest$$ExternalSyntheticLambda0.perform(D8$$SyntheticClass:0)
+at androidx.test.core.app.ActivityScenario.lambda$onActivity$2$androidx-test-core-app-ActivityScenario(ActivityScenario.java:794)
+at androidx.test.core.app.ActivityScenario$$ExternalSyntheticLambda2.run(D8$$SyntheticClass:0)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:463)
+at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2379)
+at android.os.Handler.handleCallback(Handler.java:942)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7924)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+SEVERE: Execute com.shareconnect.automation.AccessibilityAutomationTest.testTextContrast: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testTextContrast(AccessibilityAutomationTest.kt:80)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testTextContrast(AccessibilityAutomationTest.kt:80)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.AccessibilityAutomationTest.testContentLabeling: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testContentLabeling(AccessibilityAutomationTest.kt:139)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testContentLabeling(AccessibilityAutomationTest.kt:139)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.AccessibilityAutomationTest.testKeyboardNavigation: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testKeyboardNavigation(AccessibilityAutomationTest.kt:97)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testKeyboardNavigation(AccessibilityAutomationTest.kt:97)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.AccessibilityAutomationTest.testMinimumTouchTargetSize: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testMinimumTouchTargetSize(AccessibilityAutomationTest.kt:59)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testMinimumTouchTargetSize(AccessibilityAutomationTest.kt:59)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.AccessibilityAutomationTest.testScreenReaderSupport: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testScreenReaderSupport(AccessibilityAutomationTest.kt:114)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.AccessibilityAutomationTest.testScreenReaderSupport(AccessibilityAutomationTest.kt:114)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testAppStressTest: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testAppStressTest(FullAppFlowAutomationTest.kt:269)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testAppStressTest(FullAppFlowAutomationTest.kt:269)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteProfileManagementFlow: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteProfileManagementFlow(FullAppFlowAutomationTest.kt:117)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteProfileManagementFlow(FullAppFlowAutomationTest.kt:117)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteFirstRunFlow: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteFirstRunFlow(FullAppFlowAutomationTest.kt:40)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteFirstRunFlow(FullAppFlowAutomationTest.kt:40)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteThemeChangeFlow: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteThemeChangeFlow(FullAppFlowAutomationTest.kt:78)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteThemeChangeFlow(FullAppFlowAutomationTest.kt:78)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteHistoryFlow: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteHistoryFlow(FullAppFlowAutomationTest.kt:161)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteHistoryFlow(FullAppFlowAutomationTest.kt:161)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteShareIntentFlow: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteShareIntentFlow(FullAppFlowAutomationTest.kt:192)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteShareIntentFlow(FullAppFlowAutomationTest.kt:192)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+SEVERE: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteAppNavigationFlow: FAILED
+java.lang.ClassNotFoundException: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteAppNavigationFlow(FullAppFlowAutomationTest.kt:215)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+
+java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteAppNavigationFlow(FullAppFlowAutomationTest.kt:215)
+... 43 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+... 46 more
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testDeleteAllHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testDeleteHistoryItem: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetHistoryItemsByProfile: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetSuccessfulHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testInsertAndRetrieveHistoryItem: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetAllHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetFailedHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testUpdateHistoryItem: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testInsertAndRetrieveTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testDeleteTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testUpdateTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testGetAllThemes: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testGetDefaultTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testSetDefaultTheme: PASSED

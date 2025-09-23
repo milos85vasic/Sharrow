@@ -1,0 +1,180 @@
+09-23 18:18:31.494 17293 17370 I TestRunner: started: testToolbarIsDisplayed(com.shareconnect.activities.MainActivityInstrumentationTest)
+09-23 18:18:31.497 17293 17370 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 18:18:31.503   779   868 W Parcel  : Expecting binder but got null!
+09-23 18:18:31.511 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@262e366 in: PRE_ON_CREATE
+09-23 18:18:31.511 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 18:18:31.512 17293 17293 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:18:31.512 17293 17293 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:18:31.512   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:18:31.512 17293 17293 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:18:31.512 17293 17293 D Console : Activity MainActivity usesToolbar: true
+09-23 18:18:31.513 17293 17293 D Console : Setting night mode to NO
+09-23 18:18:31.519 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@262e366 in: CREATED
+09-23 18:18:31.519 17293 17293 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.MainActivity@262e366
+09-23 18:18:31.521 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@262e366 in: STARTED
+09-23 18:18:31.521 17293 17293 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@262e366
+09-23 18:18:31.522 17293 17293 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:18:31.524 17293 17293 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 18:18:31.524 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:18:31.524 17293 17293 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:18:31.525 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:18:31.525 17293 17293 D Console : hasThemeChanged() returned: false
+09-23 18:18:31.525 17293 17293 D Console : onResume() called, themeChanged: false
+09-23 18:18:31.525 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@262e366 in: RESUMED
+09-23 18:18:31.525 17293 17293 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@262e366
+09-23 18:18:31.525 17293 17293 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 18:18:31.526 17293 17386 W Parcel  : Expecting binder but got null!
+09-23 18:18:31.530 17293 17293 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 18:18:31.530 17293 17293 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 18:18:31.530 17293 17293 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 18:18:31.532 17293 17293 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 18:18:31.532 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 18:18:31.533 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@262e366 in: PAUSED
+09-23 18:18:31.533 17293 17293 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@262e366
+09-23 18:18:31.547 17293 17386 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:18:31.553 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@2594d68 in: PRE_ON_CREATE
+09-23 18:18:31.553 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@2594d68
+09-23 18:18:31.554 17293 17293 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:18:31.554 17293 17293 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:18:31.554 17293 17293 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:18:31.554 17293 17293 D Console : Activity SettingsActivity usesToolbar: true
+09-23 18:18:31.555 17293 17293 D Console : Setting night mode to NO
+09-23 18:18:31.561 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@2594d68 in: CREATED
+09-23 18:18:31.562 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@2594d68
+09-23 18:18:31.565 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@2594d68 in: STARTED
+09-23 18:18:31.565 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@2594d68
+09-23 18:18:31.566 17293 17293 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:18:31.567 17293 17293 V Console : Activity lifecycle :: RESUMED :: SettingsActivity
+09-23 18:18:31.567 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:18:31.567 17293 17293 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:18:31.567 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:18:31.568 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@2594d68 in: RESUMED
+09-23 18:18:31.568 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@2594d68
+09-23 18:18:31.569 17293 17293 V Console : Activity lifecycle :: POST-RESUMED :: SettingsActivity
+09-23 18:18:31.570 17293 17386 W Parcel  : Expecting binder but got null!
+09-23 18:18:31.584 17293 17386 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:18:31.592   779   868 D EGL_emulation: app_time_stats: avg=455.68ms min=2.10ms max=5782.99ms count=13
+09-23 18:18:31.598   488   503 W ziparchive: Unable to open '/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.dm': No such file or directory
+09-23 18:18:31.599   488   503 I ActivityTaskManager: Displayed com.shareconnect/.SettingsActivity: +99ms
+09-23 18:18:31.609  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 18:18:31.609  1581  2232 I HwDetectorWithState: (REDACTED) a: %d
+09-23 18:18:31.613 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 18:18:31.613 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 18:18:31.613 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=2131231190 fieldName=null extras=null}, false)
+09-23 18:18:31.613 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 18:18:31.613 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 18:18:31.793   779   868 D EGL_emulation: app_time_stats: avg=989.95ms min=47.64ms max=4549.64ms count=5
+09-23 18:18:31.811 17293 17293 V Console : Activity lifecycle :: PRE-STOPPED :: MainActivity
+09-23 18:18:31.812 17293 17293 V Console : Activity lifecycle :: STOPPED :: MainActivity
+09-23 18:18:31.812 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@262e366 in: STOPPED
+09-23 18:18:31.813 17293 17293 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.MainActivity@262e366
+09-23 18:18:31.813 17293 17293 V Console : Activity lifecycle :: POST-STOPPED :: MainActivity
+09-23 18:18:31.814  1581  2227 I AssistantForeground: (REDACTED) Get launcher package: %s
+09-23 18:18:31.827   998  1945 D OneSearchSuggestProvider: Shut down the binder channel
+09-23 18:18:31.828   998  1037 I s.nexuslauncher: oneway function results for code 2 on binder at 0xb400007a39489850 will be dropped but finished with status UNKNOWN_TRANSACTION
+09-23 18:18:31.877   488  4122 W InputManager-JNI: Input channel object 'ffcfde6 Splash Screen com.shareconnect (client)' was disposed without first being removed with the input manager!
+09-23 18:18:31.926   779   850 W FrameTracker: Missing HWUI jank callback for vsyncId: 495969, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+09-23 18:18:31.926   779   850 W FrameTracker: Missing HWUI jank callback for vsyncId: 496112, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+09-23 18:18:31.926   779   850 W FrameTracker: Missing HWUI jank callback for vsyncId: 496322, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+09-23 18:18:31.926   779   850 W FrameTracker: Missing HWUI jank callback for vsyncId: 496381, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+09-23 18:18:31.926   779   850 W FrameTracker: Missing HWUI jank callback for vsyncId: 496467, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+09-23 18:18:32.033 17293 17505 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 1
+09-23 18:18:32.824   779   868 D EGL_emulation: app_time_stats: avg=36.55ms min=12.48ms max=114.23ms count=28
+09-23 18:18:33.198 17293 17386 D EGL_emulation: app_time_stats: avg=148.69ms min=0.66ms max=1456.27ms count=10
+09-23 18:18:36.614 17293 17293 V Console : Activity lifecycle :: PRE-PAUSED :: SettingsActivity
+09-23 18:18:36.614 17293 17293 D Console : Activity lifecycle :: Top activity: SettingsActivity
+09-23 18:18:36.614 17293 17293 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 18:18:36.616 17293 17293 V Console : Activity lifecycle :: PAUSED :: SettingsActivity
+09-23 18:18:36.616 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 18:18:36.616 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@2594d68 in: PAUSED
+09-23 18:18:36.617 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@2594d68
+09-23 18:18:36.620 17293 17293 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83 in: PRE_ON_CREATE
+09-23 18:18:36.620 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83
+09-23 18:18:36.624 17293 17293 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83 in: CREATED
+09-23 18:18:36.624 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83
+09-23 18:18:36.626 17293 17293 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83 in: STARTED
+09-23 18:18:36.626 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83
+09-23 18:18:36.632 17293 17293 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:18:36.633 17293 17293 V Console : Activity lifecycle :: RESUMED :: EmptyActivity
+09-23 18:18:36.633 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:18:36.634 17293 17293 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:18:36.634 17293 17293 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:18:36.634 17293 17293 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83 in: RESUMED
+09-23 18:18:36.634 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@242d83
+09-23 18:18:36.634 17293 17293 V Console : Activity lifecycle :: POST-RESUMED :: EmptyActivity
+09-23 18:18:36.636 17293 17386 W Parcel  : Expecting binder but got null!
+09-23 18:18:36.654 17293 17386 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:18:36.660   488   503 I ActivityTaskManager: Displayed com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +50ms
+09-23 18:18:36.676 17293 17293 V Console : Activity lifecycle :: PRE-DESTROYED :: MainActivity
+09-23 18:18:36.676 17293 17293 V Console : Activity lifecycle :: DESTROYED :: MainActivity
+09-23 18:18:36.676 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@262e366 in: DESTROYED
+09-23 18:18:36.676 17293 17293 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+09-23 18:18:36.678 17293 17386 D EGL_emulation: app_time_stats: avg=217.41ms min=12.11ms max=3237.18ms count=16
+09-23 18:18:36.678   488  4122 W InputManager-JNI: Input channel object 'eb00c1f com.shareconnect/com.shareconnect.MainActivity (client)' was disposed without first being removed with the input manager!
+09-23 18:18:36.679 17293 17293 V Console : Activity lifecycle :: PRE-STOPPED :: SettingsActivity
+09-23 18:18:36.680 17293 17293 V Console : Activity lifecycle :: STOPPED :: SettingsActivity
+09-23 18:18:36.680 17293 17293 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@2594d68 in: STOPPED
+09-23 18:18:36.680 17293 17293 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@2594d68
+09-23 18:18:36.680 17293 17293 V Console : Activity lifecycle :: POST-STOPPED :: SettingsActivity
+09-23 18:18:36.684 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 18:18:36.684 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 18:18:36.684 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 18:18:36.684 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 18:18:36.685 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 18:18:36.693 17293 17370 E TestRunner: failed: testToolbarIsDisplayed(com.shareconnect.activities.MainActivityInstrumentationTest)
+09-23 18:18:36.693 17293 17370 E TestRunner: ----- begin exception -----
+09-23 18:18:36.693 17293 17370 E TestRunner: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at com.shareconnect.activities.MainActivityInstrumentationTest.testToolbarIsDisplayed(MainActivityInstrumentationTest.kt:99)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunAfters.evaluate(RunAfters.java:61)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:522)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2361)
+09-23 18:18:36.693 17293 17370 E TestRunner: Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk", zip file "/data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk"],nativeLibraryDirectories=[/data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/lib/arm64, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/lib/arm64, /data/app/~~EY2JRd0t-prCVNzEIntACQ==/com.shareconnect.test-mhfFQ_M8O7SEugdeZhJoEA==/base.apk!/lib/arm64-v8a, /data/app/~~G-kfL5nj0oNF6JbwT3gClg==/com.shareconnect-kmovnR8A3kHYD3ju2YodYg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+09-23 18:18:36.693 17293 17370 E TestRunner: 	... 47 more
+09-23 18:18:36.693 17293 17370 E TestRunner: ----- end exception -----
+09-23 18:18:36.694 17293 17370 I TestRunner: finished: testToolbarIsDisplayed(com.shareconnect.activities.MainActivityInstrumentationTest)

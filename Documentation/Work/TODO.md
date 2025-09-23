@@ -1,12 +1,13 @@
 # TODO
 
-- Onboarding flow
+- [Onboarding flow](./Tasks/002%20Onboarding/TASK.md)
 - Regular HTTP downloads/urls support
 - Sync the user data (WebDAV)
 - Contacts flow
   - Report problem
   - Request a feature
   - Misc
+- Connect with auto-discovery profiles systems (integrate on the back side as well)
 
 ## FIXME
 
@@ -14,7 +15,7 @@
 
 ## In progress
 
-- Enable RAG for AIs and fine tuning
+- [Enable RAG for AIs and fine tuning](./Tasks/002%20Onboarding/TASK.md)
 
 ## Completed
 

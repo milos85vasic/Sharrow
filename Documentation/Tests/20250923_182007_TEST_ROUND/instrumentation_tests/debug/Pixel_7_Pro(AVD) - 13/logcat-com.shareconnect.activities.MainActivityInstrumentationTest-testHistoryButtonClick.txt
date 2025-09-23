@@ -1,0 +1,448 @@
+09-23 18:25:37.851 19052 19129 I TestRunner: started: testHistoryButtonClick(com.shareconnect.activities.MainActivityInstrumentationTest)
+09-23 18:25:37.854 19052 19129 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 18:25:37.868   779   868 W Parcel  : Expecting binder but got null!
+09-23 18:25:37.876 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9e6a092 in: PRE_ON_CREATE
+09-23 18:25:37.876 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 18:25:37.878 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:25:37.878 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:25:37.878 19052 19052 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:25:37.878 19052 19052 D Console : Activity MainActivity usesToolbar: true
+09-23 18:25:37.879 19052 19052 D Console : Setting night mode to NO
+09-23 18:25:37.880   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:25:37.904 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9e6a092 in: CREATED
+09-23 18:25:37.905 19052 19052 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.MainActivity@9e6a092
+09-23 18:25:37.910 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9e6a092 in: STARTED
+09-23 18:25:37.911 19052 19052 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@9e6a092
+09-23 18:25:37.915 19052 19052 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:25:37.920 19052 19052 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 18:25:37.920 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:25:37.920 19052 19052 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:25:37.920 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:25:37.920 19052 19052 D Console : hasThemeChanged() returned: false
+09-23 18:25:37.920 19052 19052 D Console : onResume() called, themeChanged: false
+09-23 18:25:37.920 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9e6a092 in: RESUMED
+09-23 18:25:37.921 19052 19052 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@9e6a092
+09-23 18:25:37.922 19052 19052 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 18:25:37.932 19052 19146 W Parcel  : Expecting binder but got null!
+09-23 18:25:37.938 19052 19052 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 18:25:37.938 19052 19052 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 18:25:37.938 19052 19052 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 18:25:37.946 19052 19052 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 18:25:37.946 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 18:25:37.946 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9e6a092 in: PAUSED
+09-23 18:25:37.947 19052 19052 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@9e6a092
+09-23 18:25:37.974  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 18:25:37.976 19052 19146 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:25:37.978  1581  2233 I HwDetectorWithState: (REDACTED) a: %d
+09-23 18:25:37.987 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@e416925 in: PRE_ON_CREATE
+09-23 18:25:37.987 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@e416925
+09-23 18:25:37.988 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:25:37.988 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:25:37.988 19052 19052 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:25:37.988 19052 19052 D Console : Activity SettingsActivity usesToolbar: true
+09-23 18:25:37.989 19052 19052 D Console : Setting night mode to NO
+09-23 18:25:37.995 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@e416925 in: CREATED
+09-23 18:25:37.995 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@e416925
+09-23 18:25:37.998 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@e416925 in: STARTED
+09-23 18:25:37.998 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@e416925
+09-23 18:25:37.999 19052 19052 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:25:38.000 19052 19052 V Console : Activity lifecycle :: RESUMED :: SettingsActivity
+09-23 18:25:38.001 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:25:38.001 19052 19052 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:25:38.001 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:25:38.001 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@e416925 in: RESUMED
+09-23 18:25:38.001 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@e416925
+09-23 18:25:38.002 19052 19052 V Console : Activity lifecycle :: POST-RESUMED :: SettingsActivity
+09-23 18:25:38.004 19052 19146 W Parcel  : Expecting binder but got null!
+09-23 18:25:38.016 19052 19146 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:25:38.027   779   868 D EGL_emulation: app_time_stats: avg=4581.12ms min=4581.12ms max=4581.12ms count=1
+09-23 18:25:38.028 19875 20344 I Bugle   : CountryCodeDetector: updateMainDeviceCountry from default subscription network country. detected country: us
+09-23 18:25:38.032 19875 20344 I BugleDataModel: ParticipantRefresh: ContactContentObserver created
+09-23 18:25:38.040   488   503 W ziparchive: Unable to open '/data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/base.dm': No such file or directory
+09-23 18:25:38.041 19875 20344 I BugleDataModel: ParticipantFullRefresh: Start participant refresh. refreshMode: SELF_ONLY
+09-23 18:25:38.042   488   503 I ActivityTaskManager: Displayed com.shareconnect/.SettingsActivity: +183ms
+09-23 18:25:38.061 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 18:25:38.062 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 18:25:38.062 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=2131231190 fieldName=null extras=null}, false)
+09-23 18:25:38.062 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 18:25:38.062 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 18:25:38.081 19875 20344 I Bugle   : CountryCodeDetector: updateMainDeviceCountry from default subscription network country. detected country: us
+09-23 18:25:38.104 19875 20344 W BugleDataModel: SelfParticipantsData: Failed to update self participants' subscription info. updateCount: 0
+09-23 18:25:38.117 19875 20344 W BugleDataModel: SelfParticipantsData: Failed to update self participants' subscription info. updateCount: 0
+09-23 18:25:38.156   300   300 D Zygote  : Forked child process 20345
+09-23 18:25:38.185 20345 20345 I d.process.acore: Using CollectorTypeCC GC.
+09-23 18:25:38.199 20345 20345 E d.process.acore: Not starting debugger since process cannot load the jdwp agent.
+09-23 18:25:38.213 20345 20345 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10072; state: ENABLED
+09-23 18:25:38.214  1581  2228 I AssistantForeground: (REDACTED) Get launcher package: %s
+09-23 18:25:38.222 20345 20345 D nativeloader: Configuring classloader-namespace-shared for other apk /system/priv-app/ContactsProvider/ContactsProvider.apk. target_sdk_version=33, uses_libraries=, library_path=/system/priv-app/ContactsProvider/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.providers.contacts:/system/priv-app/ContactsProvider:/system/lib64:/system_ext/lib64
+09-23 18:25:38.227 19052 19052 V Console : Activity lifecycle :: PRE-STOPPED :: MainActivity
+09-23 18:25:38.228 19052 19052 V Console : Activity lifecycle :: STOPPED :: MainActivity
+09-23 18:25:38.228 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9e6a092 in: STOPPED
+09-23 18:25:38.228 19052 19052 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.MainActivity@9e6a092
+09-23 18:25:38.228 19052 19052 V Console : Activity lifecycle :: POST-STOPPED :: MainActivity
+09-23 18:25:38.230   779   868 D EGL_emulation: app_time_stats: avg=1044.46ms min=52.11ms max=4810.23ms count=5
+09-23 18:25:38.231 20345 20345 V GraphicsEnvironment: ANGLE Developer option for 'com.android.providers.contacts' set to: 'default'
+09-23 18:25:38.232 20345 20345 V GraphicsEnvironment: ANGLE GameManagerService for com.android.providers.contacts: false
+09-23 18:25:38.232 20345 20345 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+09-23 18:25:38.234 20345 20345 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-23 18:25:38.234 20345 20345 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-23 18:25:38.244 20345 20345 D nativeloader: Configuring classloader-namespace-shared for other apk /system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk. target_sdk_version=33, uses_libraries=, library_path=/system/priv-app/UserDictionaryProvider/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.providers.userdictionary:/system/priv-app/UserDictionaryProvider:/system/lib64:/system_ext/lib64
+09-23 18:25:38.245   998  1945 D OneSearchSuggestProvider: Shut down the binder channel
+09-23 18:25:38.246   998  1604 I s.nexuslauncher: oneway function results for code 2 on binder at 0xb400007a39484e70 will be dropped but finished with status UNKNOWN_TRANSACTION
+09-23 18:25:38.271 20345 20345 D nativeloader: Configuring classloader-namespace-shared for other apk /system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk. target_sdk_version=33, uses_libraries=, library_path=/system/priv-app/BlockedNumberProvider/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user_de/0/com.android.providers.blockednumber:/system/priv-app/BlockedNumberProvider:/system/lib64:/system_ext/lib64
+09-23 18:25:38.280 20345 20345 I ContactsPerf: VoicemailContentProvider.onCreate start
+09-23 18:25:38.285 20345 20345 I ContactsPerf: VoicemailContentProvider.onCreate finish
+09-23 18:25:38.288 20345 20363 I PhoneAccountHandleMigrationUtils_CallLogDatabaseHelper: updatePhoneAccountHandleMigrationPendingStatus false
+09-23 18:25:38.288 20345 20365 I PhoneAccountHandleMigrationUtils_CallLogDatabaseHelper: updatePhoneAccountHandleMigrationPendingStatus false
+09-23 18:25:38.291 20345 20363 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10072; state: ENABLED
+09-23 18:25:38.300 20345 20345 I ContactsDatabaseHelper: updateUseStrictPhoneNumberComparison: US
+09-23 18:25:38.305 20345 20363 I CallLogProvider: Syncing call composer pics -- source user=0, isShadow=true, forAllUser=false
+09-23 18:25:38.305 20345 20363 I CallLogProvider: Fetching list of Uris to sync
+09-23 18:25:38.308 20345 20363 I CallLogProvider: Will sync following Uris:[]
+09-23 18:25:38.308 20345 20363 I CallLogProvider: Syncing call composer pics -- got []
+09-23 18:25:38.311 20345 20367 D ContactsDatabaseHelper: WAL enabled for contacts2.db: true
+09-23 18:25:38.316 20345 20367 I PhoneAccountHandleMigrationUtils_ContactsDatabaseHelper: updatePhoneAccountHandleMigrationPendingStatus false
+09-23 18:25:38.328   488  1100 W InputManager-JNI: Input channel object '59c588a Splash Screen com.shareconnect (client)' was disposed without first being removed with the input manager!
+09-23 18:25:38.346 20345 20367 I ContactLocale: AddressBook Labels [[en_US]]: […, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω, …, А, Б, В, Г, Д, Ђ, Е, Є, Ж, З, И, І, Й, Ј, К, Л, Љ, М, Н, Њ, О, П, Р, С, Т, Ћ, У, Ф, Х, Ц, Ч, Џ, Ш, Щ, Ю, Я, …, א, ב, ג, ד, ה, ו, ז, ח, ט, י, כ, ל, מ, נ, ס, ע, פ, צ, ק, ר, ש, ת, …, ا, ب, ت, ث, ج, ح, خ, د, ذ, ر, ز, س, ش, ص, ض, ط, ظ, ع, غ, ف, ق, ك, ل, م, ن, ه, و, ي, …, ก, ข, ฃ, ค, ฅ, ฆ, ง, จ, ฉ, ช, ซ, ฌ, ญ, ฎ, ฏ, ฐ, ฑ, ฒ, ณ, ด, ต, ถ, ท, ธ, น, บ, ป, ผ, ฝ, พ, ฟ, ภ, ม, ย, ร, ฤ, ล, ฦ, ว, ศ, ษ, ส, ห, ฬ, อ, ฮ, …, ㄱ, ㄴ, ㄷ, ㄹ, ㅁ, ㅂ, ㅅ, ㅇ, ㅈ, ㅊ, ㅋ, ㅌ, ㅍ, ㅎ, …, あ, か, さ, た, な, は, ま, や, ら, わ, #, …]
+09-23 18:25:38.350 20345 20367 D ContactsDatabaseHelper: WAL enabled for profile.db: false
+09-23 18:25:38.368   300   300 D Zygote  : Forked child process 20368
+09-23 18:25:38.378 20368 20368 I ndroid.contacts: Using CollectorTypeCC GC.
+09-23 18:25:38.380 19875 20344 I BugleDataModel: ParticipantFullRefresh: Number of participants refreshed: 0
+09-23 18:25:38.385  1792  1806 I adbd    : jdwp connection from 20368
+09-23 18:25:38.392 20368 20368 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10144; state: ENABLED
+09-23 18:25:38.398 20368 20368 D nativeloader: Configuring classloader-namespace for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/app/GoogleContacts/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.contacts
+09-23 18:25:38.398 20368 20368 D nativeloader: Configuring classloader-namespace for other apk /system_ext/framework/androidx.window.extensions.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/app/GoogleContacts/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.contacts
+09-23 18:25:38.399 20368 20368 D nativeloader: Configuring classloader-namespace for other apk /system_ext/framework/androidx.window.sidecar.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/app/GoogleContacts/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.contacts
+09-23 18:25:38.412 20368 20368 D nativeloader: Configuring vendor-classloader-namespace for unbundled product apk /product/app/GoogleContacts/GoogleContacts.apk. target_sdk_version=33, uses_libraries=, library_path=/product/app/GoogleContacts/lib/arm64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.contacts:/product/lib64:/system/product/lib64
+09-23 18:25:38.448 19052 19209 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 1
+09-23 18:25:38.452 20368 20368 V GraphicsEnvironment: ANGLE Developer option for 'com.google.android.contacts' set to: 'default'
+09-23 18:25:38.452 20368 20368 V GraphicsEnvironment: ANGLE GameManagerService for com.google.android.contacts: false
+09-23 18:25:38.452 20368 20368 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+09-23 18:25:38.453 20368 20368 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-23 18:25:38.453 20368 20368 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-23 18:25:38.520   300   300 D Zygote  : Forked child process 20387
+09-23 18:25:38.528 20387 20387 I ogle.android.gm: Using CollectorTypeCC GC.
+09-23 18:25:38.533 20368 20389 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10144; state: ENABLED
+09-23 18:25:38.535  1792  1806 I adbd    : jdwp connection from 20387
+09-23 18:25:38.551 20387 20387 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10145; state: ENABLED
+09-23 18:25:38.558 11307 11307 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.people.contactssync.service.START pkg=com.google.android.gms }
+09-23 18:25:38.558 11307 11307 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.people.contactssync.service.START pkg=com.google.android.gms }
+09-23 18:25:38.561 20387 20387 D nativeloader: Configuring classloader-namespace for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/app/PrebuiltGmail/lib/arm64:/product/app/PrebuiltGmail/PrebuiltGmail.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gm
+09-23 18:25:38.563 20387 20387 D nativeloader: Configuring classloader-namespace for other apk /system_ext/framework/androidx.window.extensions.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/app/PrebuiltGmail/lib/arm64:/product/app/PrebuiltGmail/PrebuiltGmail.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gm
+09-23 18:25:38.565 20387 20387 D nativeloader: Configuring classloader-namespace for other apk /system_ext/framework/androidx.window.sidecar.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/app/PrebuiltGmail/lib/arm64:/product/app/PrebuiltGmail/PrebuiltGmail.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gm
+09-23 18:25:38.570 20368 20413 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10144; state: ENABLED
+09-23 18:25:38.585 20387 20387 D nativeloader: Configuring vendor-classloader-namespace for unbundled product apk /product/app/PrebuiltGmail/PrebuiltGmail.apk. target_sdk_version=33, uses_libraries=, library_path=/product/app/PrebuiltGmail/lib/arm64:/product/app/PrebuiltGmail/PrebuiltGmail.apk!/lib/arm64-v8a:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gm:/product/lib64:/system/product/lib64
+09-23 18:25:38.587 11307 12302 I PeopleChimeraService: onService. callbacks = cjzh@87b11da, request = com.google.android.gms.common.internal.GetServiceRequest@473360b
+09-23 18:25:38.595 20368 20412 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10144; state: ENABLED
+09-23 18:25:38.597 11307 12302 I PeopleChimeraService: onService. callbacks = cjzh@7078ce8, request = com.google.android.gms.common.internal.GetServiceRequest@e95df01
+09-23 18:25:38.599 11307 12302 I PeopleChimeraService: onService. callbacks = cjzh@b8871a6, request = com.google.android.gms.common.internal.GetServiceRequest@81d27e7
+09-23 18:25:38.624 20368 20414 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10144; state: ENABLED
+09-23 18:25:38.631 20387 20387 V GraphicsEnvironment: ANGLE Developer option for 'com.google.android.gm' set to: 'default'
+09-23 18:25:38.631 20387 20387 V GraphicsEnvironment: ANGLE GameManagerService for com.google.android.gm: false
+09-23 18:25:38.631 20387 20387 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+09-23 18:25:38.633 20387 20387 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+09-23 18:25:38.635 20387 20387 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+09-23 18:25:38.638 11307 11307 D BoundBrokerSvc: onBind: Intent { act=com.google.android.mobstore.service.START pkg=com.google.android.gms }
+09-23 18:25:38.638 11307 11307 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.mobstore.service.START pkg=com.google.android.gms }
+09-23 18:25:38.834 20387 20425 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10145; state: ENABLED
+09-23 18:25:38.888 11307 12302 I PeopleGalProvider: Gal directories started.
+09-23 18:25:38.888 11307 12302 I PeopleGalProvider: Method 1 completed.
+09-23 18:25:38.888 11307 12302 I PeopleGalProvider: Method 1 finished successfully.
+09-23 18:25:38.892 20345 20367 I ContactDirectoryManager: deleted 0 stale rows which don't have any relevant directory
+09-23 18:25:38.894 20345 20367 I ContactDirectoryManager: Discovered 0 contact directories in 533ms
+09-23 18:25:38.897 20368 20382 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10144; state: ENABLED
+09-23 18:25:38.897   961   961 D BluetoothPbapService:  onChange on contact uri
+09-23 18:25:38.897 20345 20357 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10072; state: ENABLED
+09-23 18:25:38.903 20345 20367 V ContactsProvider: 0 Dangling Contacts have been cleaned up.
+09-23 18:25:38.905 12330 12373 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+09-23 18:25:38.907 20387 20435 W ogle.android.gm: Accessing hidden field Ljava/util/Collections$SynchronizedCollection;->mutex:Ljava/lang/Object; (max-target-o, reflection, denied)
+09-23 18:25:38.907 20387 20435 W ogle.android.gm: Accessing hidden method Ljava/util/Collections$SynchronizedSet;-><init>(Ljava/util/Set;Ljava/lang/Object;)V (max-target-o, reflection, denied)
+09-23 18:25:38.907 20387 20435 W ogle.android.gm: Accessing hidden method Ljava/util/Collections$SynchronizedCollection;-><init>(Ljava/util/Collection;Ljava/lang/Object;)V (max-target-o, reflection, denied)
+09-23 18:25:38.911   961 20433 D BluetoothPbapUtils: primaryVersionCounter = 0, secondaryVersionCounter=0
+09-23 18:25:39.240   779   868 D EGL_emulation: app_time_stats: avg=41.92ms min=10.74ms max=294.28ms count=24
+09-23 18:25:39.462 12330 20287 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+09-23 18:25:39.472 12330 19971 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+09-23 18:25:39.477 12330 20251 I TapAndPay: deviceSupportsHce has detected emulator [CONTEXT service_id=79 ]
+09-23 18:25:39.480 12330 20251 I TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+09-23 18:25:39.494 12330 19971 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+09-23 18:25:39.497 12330 19971 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+09-23 18:25:39.508 11307 11307 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.notifications.registration.service.NotificationsRegistrationTaskBoundService.ACTION_TASK_READY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+09-23 18:25:39.508 11307 11307 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.notifications.registration.service.NotificationsRegistrationTaskBoundService.ACTION_TASK_READY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+09-23 18:25:39.513 11307 11307 I GmsCoreXrpcWrapper: (REDACTED) Returning a channel provider with trafficStatsTag=%d trafficStatsUid=%d
+09-23 18:25:39.518 12330 20287 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+09-23 18:25:39.523 12330 12330 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.auth.aang.events.services.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+09-23 18:25:39.537 20387 20446 I org.webrtc.Logging: CrashStartupListener: Checking conference crashes for 0 account(s).
+09-23 18:25:39.538 20387 20442 W CacheStorage: cache doesn't exist
+09-23 18:25:39.548 11307 11307 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+09-23 18:25:39.548 11307 11307 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+09-23 18:25:39.554 12330 12343 W GLSUser : [DeviceKeyStore] Cannot load key: Device key file not found.
+09-23 18:25:39.565 15832 15832 W ThreadPoolForeg: type=1400 audit(0.0:546): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=647 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+09-23 18:25:39.574 20387 20387 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10145; state: ENABLED
+09-23 18:25:39.576 20387 20387 W iss     : AccountUtils: For b/73513912, load account content://com.google.android.gm.sapi/account.-2137146394 from MailAppProvider. Is account valid result: 1. [CONTEXT android_log_tag="AccountUtils" ]
+09-23 18:25:39.577 20387 20387 W iss     : AccountUtils: For b/73513912, load account content://com.google.android.gm.email.provider/account.-437561172?suppress_combined%3Dtrue from MailAppProvider. Is account valid result: 1. [CONTEXT android_log_tag="AccountUtils" ]
+09-23 18:25:39.578 20387 20387 W iss     : [Gmail] PhenotypeManagerImpl: Account is null, skip calling setAccount.
+09-23 18:25:39.587 20387 20476 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10145; state: ENABLED
+09-23 18:25:39.593 12330 12361 W PhBaseOp: Phenotype API error. Event: # hmrq@dd0b399d, EventCode: COMMIT_CONFIG [CONTEXT service_id=51 ]
+09-23 18:25:39.593 12330 12361 W PhBaseOp: ejdy: 29538: Stale snapshot for com.google.android.libraries.communications.conference.device#com.google.android.gm(change count changed - expected 16  but was 12)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at ejfw.d(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1498)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at ejfw.b(:com.google.android.gms@253562029@25.35.62 (190400-804666989):43)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at ejfv.i(:com.google.android.gms@253562029@25.35.62 (190400-804666989):3)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at ejfr.h(:com.google.android.gms@253562029@25.35.62 (190400-804666989):35)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at ejfr.f(:com.google.android.gms@253562029@25.35.62 (190400-804666989):17)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at cjzg.fA(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at cjzk.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):128)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at geoo.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):21)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at bbnt.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):50)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at bbnt.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):70)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at bbtm.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):8)
+09-23 18:25:39.593 12330 12361 W PhBaseOp: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: operation=CommitToConfigurationOperationCall, opStatusCode=29538 [CONTEXT service_id=51 ]
+09-23 18:25:39.595 12330 12361 W AsyncOperation: OperationException[Status{statusCode=Stale snapshot for com.google.android.libraries.communications.conference.device#com.google.android.gm(change count changed - expected 16  but was 12), resolution=null}]
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at ejfr.h(:com.google.android.gms@253562029@25.35.62 (190400-804666989):65)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at ejfr.f(:com.google.android.gms@253562029@25.35.62 (190400-804666989):17)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at cjzg.fA(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at cjzk.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):128)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at geoo.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):21)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at bbnt.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):50)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at bbnt.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):70)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at bbtm.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):8)
+09-23 18:25:39.595 12330 12361 W AsyncOperation: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:25:39.596 20387 20443 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10145; state: ENABLED
+09-23 18:25:39.599 12330 12423 W PhBaseOp: Phenotype API error. Event: # hmrq@c3b1a8a8, EventCode: COMMIT_CONFIG [CONTEXT service_id=51 ]
+09-23 18:25:39.599 12330 12423 W PhBaseOp: ejdy: 29538: Stale snapshot for hub_android.device#com.google.android.gm(change count changed - expected 12  but was 11)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at ejfw.d(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1498)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at ejfw.b(:com.google.android.gms@253562029@25.35.62 (190400-804666989):43)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at ejfv.i(:com.google.android.gms@253562029@25.35.62 (190400-804666989):3)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at ejfr.h(:com.google.android.gms@253562029@25.35.62 (190400-804666989):35)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at ejfr.f(:com.google.android.gms@253562029@25.35.62 (190400-804666989):17)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at cjzg.fA(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at cjzk.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):128)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at geoo.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):21)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at bbnt.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):50)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at bbnt.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):70)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at bbtm.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):8)
+09-23 18:25:39.599 12330 12423 W PhBaseOp: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: operation=CommitToConfigurationOperationCall, opStatusCode=29538 [CONTEXT service_id=51 ]
+09-23 18:25:39.599 12330 12423 W AsyncOperation: OperationException[Status{statusCode=Stale snapshot for hub_android.device#com.google.android.gm(change count changed - expected 12  but was 11), resolution=null}]
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at ejfr.h(:com.google.android.gms@253562029@25.35.62 (190400-804666989):65)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at ejfr.f(:com.google.android.gms@253562029@25.35.62 (190400-804666989):17)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at cjzg.fA(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at cjzk.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):128)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at geoo.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):21)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at bbnt.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):50)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at bbnt.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):70)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at bbtm.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):8)
+09-23 18:25:39.599 12330 12423 W AsyncOperation: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:25:39.605 20387 20450 W MobStoreFlagStore: Failed to commit due to stale snapshot for hub_android.device#com.google.android.gm, triggering flag update. Experiments may be delayed til next app start.
+09-23 18:25:39.609 12330 12776 W Auth    : [GaiaServicesFlagManager] Services not available! [CONTEXT service_id=343 ]
+09-23 18:25:39.610 20387 20465 W ymo     : Toggling Chat components off.
+09-23 18:25:39.613 12330 12413 W Auth    : [GaiaServicesFlagManager] Services not available! [CONTEXT service_id=343 ]
+09-23 18:25:39.628 19052 19146 D EGL_emulation: app_time_stats: avg=134.06ms min=0.91ms max=1436.72ms count=11
+09-23 18:25:39.653 15832 15832 W binder:15832_3: type=1400 audit(0.0:547): avc: denied { read } for name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=259 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+09-23 18:25:39.657 15832 15848 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+09-23 18:25:39.673 15832 15848 D TrafficStats: tagSocket(76) with statsTag=0x1809, statsUid=-1
+09-23 18:25:39.681 12330 12330 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+09-23 18:25:39.686 12330 12343 W GmsUrlRequestImpl: [https://android.googleapis.com/auth/devicekey] Content-Type header is overwritten.
+09-23 18:25:39.733 12330 12508 D TrafficStats: tagSocket(193) with statsTag=0x4000407, statsUid=-1
+09-23 18:25:39.822 12330 12508 D TrafficStats: tagSocket(219) with statsTag=0x4000401, statsUid=10120
+09-23 18:25:40.043 12330 12343 W GLSUser : [AppCertManager] Exception while requesting key:
+09-23 18:25:40.043 12330 12343 W GLSUser : java.util.concurrent.ExecutionException: clhu: Parse Proto Exception with response code 400
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at gmwx.j(:com.google.android.gms@253562029@25.35.62 (190400-804666989):21)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at gmxg.u(:com.google.android.gms@253562029@25.35.62 (190400-804666989):71)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at aiii.b(:com.google.android.gms@253562029@25.35.62 (190400-804666989):439)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at aiig.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):67)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at aiig.fj(:com.google.android.gms@253562029@25.35.62 (190400-804666989):16)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at wdk.onTransact(:com.google.android.gms@253562029@25.35.62 (190400-804666989):97)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at android.os.Binder.transact(Binder.java:1164)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at ccqt.onTransact(:com.google.android.gms@253562029@25.35.62 (190400-804666989):10)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at android.os.Binder.transact(Binder.java:1164)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at bsgz.onTransact(:com.google.android.gms@253562029@25.35.62 (190400-804666989):157)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at android.os.Binder.execTransactInternal(Binder.java:1280)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at android.os.Binder.execTransact(Binder.java:1244)
+09-23 18:25:40.043 12330 12343 W GLSUser : Caused by: clhu: Parse Proto Exception with response code 400
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at clix.b(:com.google.android.gms@253562029@25.35.62 (190400-804666989):71)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at clln.d(:com.google.android.gms@253562029@25.35.62 (190400-804666989):18)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at clme.onSucceeded(:com.google.android.gms@253562029@25.35.62 (190400-804666989):9)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at m1.my.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@253562029@25.35.62 (190400-0):3)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at m1.lu.run(:com.google.android.gms.dynamite_cronetdynamite@253562029@25.35.62 (190400-0):21)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at m1.lo.run(:com.google.android.gms.dynamite_cronetdynamite@253562029@25.35.62 (190400-0):31)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at bbnt.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):50)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at bbnt.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):70)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at bbtm.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):8)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:25:40.043 12330 12343 W GLSUser : Caused by: hgtl: Protocol message contained an invalid tag (zero).
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hgqj.k(:com.google.android.gms@253562029@25.35.62 (190400-804666989):43)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hguj.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):399)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hguj.i(:com.google.android.gms@253562029@25.35.62 (190400-804666989):8)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hgsp.y(:com.google.android.gms@253562029@25.35.62 (190400-804666989):23)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hgsk.g(:com.google.android.gms@253562029@25.35.62 (190400-804666989):3)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hgqf.e(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hgqf.d(:com.google.android.gms@253562029@25.35.62 (190400-804666989):3)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at hgqf.p(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at clix.g(:com.google.android.gms@253562029@25.35.62 (190400-804666989):69)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	at clix.b(:com.google.android.gms@253562029@25.35.62 (190400-804666989):11)
+09-23 18:25:40.043 12330 12343 W GLSUser : 	... 11 more
+09-23 18:25:40.043 12330 12343 W GLSUser : [DeviceKeyStore] Cannot load key: Device key file not found.
+09-23 18:25:40.059 11307 18790 E icbf    : *~*~*~ Previous channel {0} was garbage collected without being shut down! ~*~*~*
+09-23 18:25:40.059 11307 18790 E icbf    :     Make sure to call shutdown()/shutdownNow()
+09-23 18:25:40.059 11307 18790 E icbf    : java.lang.RuntimeException: ManagedChannel allocation site
+09-23 18:25:40.059 11307 18790 E icbf    : 	at icbe.<init>(:com.google.android.gms@253562029@25.35.62 (190400-804666989):21)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at icbf.<init>(:com.google.android.gms@253562029@25.35.62 (190400-804666989):10)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at icbd.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):250)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at iblp.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):5)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at cmsb.h(:com.google.android.gms@253562029@25.35.62 (190400-804666989):121)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at gqio.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):158)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at geoj.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):13)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at gnbh.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):3)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at gnai.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):19)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at gnbj.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):5)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at bbnt.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):50)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at bbnt.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):70)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at bbtm.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):8)
+09-23 18:25:40.059 11307 18790 E icbf    : 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:25:40.164 11307 12188 D TrafficStats: tagSocket(5) with statsTag=0xc010301, statsUid=-1
+09-23 18:25:40.465 11307 12188 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@fe31551
+09-23 18:25:40.471 11307 15384 I NotificationsModuleTask: (REDACTED) Registering accounts to Chime Failed & Rescheduled for later. registration reason = %s
+09-23 18:25:40.474 11307 11307 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.notifications.registration.service.NotificationsRegistrationTaskBoundService.ACTION_TASK_READY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+09-23 18:25:40.474 12330 20251 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+09-23 18:25:40.620   961   961 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+09-23 18:25:40.620   961   961 D MediaPlayerList: Name of package changed: com.google.android.gm
+09-23 18:25:40.624 19875 19915 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of atsi@2f93014
+09-23 18:25:40.628   488   573 I RoleService: Granting default roles...
+09-23 18:25:40.631   779   779 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+09-23 18:25:40.636   488   513 E system_server: No package ID 7f found for ID 0x7f0805a7.
+09-23 18:25:40.636   488   513 E system_server: No package ID 7f found for ID 0x7f150421.
+09-23 18:25:40.638  4855  4978 I PermissionControllerServiceImpl: Updating user sensitive for uid 10145
+09-23 18:25:40.644   994   994 D CarrierSvcBindHelper: onPackageModified: com.google.android.gm
+09-23 18:25:40.645   994   994 D CarrierSvcBindHelper: No carrier app for: 0
+09-23 18:25:40.646   488   582 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS |
+09-23 18:25:40.647   994   994 D ImsResolver: maybeAddedImsService, packageName: com.google.android.gm
+09-23 18:25:40.655 15075 20504 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+09-23 18:25:40.668  4855 20508 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+09-23 18:25:40.668  4855 20508 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+09-23 18:25:40.799  1581  2154 W native  : W0000 00:00:1758641140.798940    2154 input-utils.cc:142] Failed to get value for update inducing feature |latitude| due to INVALID_ARGUMENT: No feature generators for feature "latitude"
+09-23 18:25:40.799  1581  2154 W native  : === Source Location Trace: ===
+09-23 18:25:40.799  1581  2154 W native  : ./speech/service/context/features/feature-dictionary-provider.h:99
+09-23 18:25:40.799  1581  2154 W native  :  Subgraphs depending on this feature will not have a new revision.
+09-23 18:25:40.799  1581  2154 W native  : W0000 00:00:1758641140.799900    2154 input-utils.cc:142] Failed to get value for update inducing feature |longitude| due to INVALID_ARGUMENT: No feature generators for feature "longitude"
+09-23 18:25:40.799  1581  2154 W native  : === Source Location Trace: ===
+09-23 18:25:40.799  1581  2154 W native  : ./speech/service/context/features/feature-dictionary-provider.h:99
+09-23 18:25:40.799  1581  2154 W native  :  Subgraphs depending on this feature will not have a new revision.
+09-23 18:25:40.802  1581  2154 W native  : W0000 00:00:1758641140.801998    2154 input-utils.cc:142] Failed to get value for update inducing feature |latitude| due to INVALID_ARGUMENT: No feature generators for feature "latitude"
+09-23 18:25:40.802  1581  2154 W native  : === Source Location Trace: ===
+09-23 18:25:40.802  1581  2154 W native  : ./speech/service/context/features/feature-dictionary-provider.h:99
+09-23 18:25:40.802  1581  2154 W native  :  Subgraphs depending on this feature will not have a new revision.
+09-23 18:25:40.802  1581  2154 W native  : W0000 00:00:1758641140.802061    2154 input-utils.cc:142] Failed to get value for update inducing feature |longitude| due to INVALID_ARGUMENT: No feature generators for feature "longitude"
+09-23 18:25:40.802  1581  2154 W native  : === Source Location Trace: ===
+09-23 18:25:40.802  1581  2154 W native  : ./speech/service/context/features/feature-dictionary-provider.h:99
+09-23 18:25:40.802  1581  2154 W native  :  Subgraphs depending on this feature will not have a new revision.
+09-23 18:25:41.909 11307 11307 W ThreadPoolForeg: type=1400 audit(0.0:548): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=647 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+09-23 18:25:42.149   939   948 I rkstack.process: Background concurrent copying GC freed 17484(1387KB) AllocSpace objects, 76(1520KB) LOS objects, 49% free, 2798KB/5596KB, paused 133us,4us total 168.508ms
+09-23 18:25:43.120 19052 19052 V Console : Activity lifecycle :: PRE-PAUSED :: SettingsActivity
+09-23 18:25:43.120 19052 19052 D Console : Activity lifecycle :: Top activity: SettingsActivity
+09-23 18:25:43.129 19052 19052 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 18:25:43.139 19052 19052 V Console : Activity lifecycle :: PAUSED :: SettingsActivity
+09-23 18:25:43.145 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 18:25:43.149 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@e416925 in: PAUSED
+09-23 18:25:43.150 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@e416925
+09-23 18:25:43.197 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246 in: PRE_ON_CREATE
+09-23 18:25:43.200 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246
+09-23 18:25:43.227 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246 in: CREATED
+09-23 18:25:43.227 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246
+09-23 18:25:43.229 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246 in: STARTED
+09-23 18:25:43.229 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246
+09-23 18:25:43.231 19052 19052 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:25:43.236 19052 19052 V Console : Activity lifecycle :: RESUMED :: EmptyActivity
+09-23 18:25:43.236 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:25:43.236 19052 19052 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:25:43.236 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:25:43.239 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246 in: RESUMED
+09-23 18:25:43.239 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3fe9246
+09-23 18:25:43.240 19052 19052 V Console : Activity lifecycle :: POST-RESUMED :: EmptyActivity
+09-23 18:25:43.246 19052 19146 W Parcel  : Expecting binder but got null!
+09-23 18:25:43.280 19052 19146 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:25:43.294   488   503 I ActivityTaskManager: Displayed com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +202ms
+09-23 18:25:43.306 11307 19133 D AdvertisingIdClient: AdvertisingIdClient already created.
+09-23 18:25:43.311 19052 19052 V Console : Activity lifecycle :: PRE-DESTROYED :: MainActivity
+09-23 18:25:43.313 19052 19052 V Console : Activity lifecycle :: DESTROYED :: MainActivity
+09-23 18:25:43.315 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9e6a092 in: DESTROYED
+09-23 18:25:43.315 19052 19052 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+09-23 18:25:43.318 11307 19133 I AdvertisingIdClient: shouldSendLog 1481099
+09-23 18:25:43.318 11307 19133 I AdvertisingIdClient: GetInfoInternal elapse 13ms
+09-23 18:25:43.325 19052 19146 D EGL_emulation: app_time_stats: avg=246.35ms min=13.01ms max=3383.62ms count=15
+09-23 18:25:43.327   488  1911 W InputManager-JNI: Input channel object 'c876ee2 com.shareconnect/com.shareconnect.MainActivity (client)' was disposed without first being removed with the input manager!
+09-23 18:25:43.328 19052 19052 V Console : Activity lifecycle :: PRE-STOPPED :: SettingsActivity
+09-23 18:25:43.332 19052 19052 V Console : Activity lifecycle :: STOPPED :: SettingsActivity
+09-23 18:25:43.333 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@e416925 in: STOPPED
+09-23 18:25:43.333 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@e416925
+09-23 18:25:43.333 19052 19052 V Console : Activity lifecycle :: POST-STOPPED :: SettingsActivity
+09-23 18:25:43.344 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 18:25:43.346 19052 19129 E TestRunner: failed: testHistoryButtonClick(com.shareconnect.activities.MainActivityInstrumentationTest)
+09-23 18:25:43.347 19052 19129 E TestRunner: ----- begin exception -----
+09-23 18:25:43.347 19052 19129 E TestRunner: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at com.shareconnect.activities.MainActivityInstrumentationTest.testHistoryButtonClick(MainActivityInstrumentationTest.kt:76)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunAfters.evaluate(RunAfters.java:61)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:522)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2361)
+09-23 18:25:43.347 19052 19129 E TestRunner: Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~9eIeSJpGNwuKEpS6UddecA==/com.shareconnect.test-GmDo4qJJgaAObNT6V__lHw==/base.apk", zip file "/data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/base.apk"],nativeLibraryDirectories=[/data/app/~~9eIeSJpGNwuKEpS6UddecA==/com.shareconnect.test-GmDo4qJJgaAObNT6V__lHw==/lib/arm64, /data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/lib/arm64, /data/app/~~9eIeSJpGNwuKEpS6UddecA==/com.shareconnect.test-GmDo4qJJgaAObNT6V__lHw==/base.apk!/lib/arm64-v8a, /data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+09-23 18:25:43.347 19052 19129 E TestRunner: 	... 47 more
+09-23 18:25:43.347 19052 19129 E TestRunner: ----- end exception -----
+09-23 18:25:43.348 19052 19129 I TestRunner: finished: testHistoryButtonClick(com.shareconnect.activities.MainActivityInstrumentationTest)

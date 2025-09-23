@@ -1,0 +1,2 @@
+09-23 18:24:59.228 19052 19129 I TestRunner: started: testInsertAndRetrieveHistoryItem(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 18:24:59.231 19052 19129 I TestRunner: finished: testInsertAndRetrieveHistoryItem(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

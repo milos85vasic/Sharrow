@@ -1,0 +1,596 @@
+09-23 18:23:35.222 19052 19129 I TestRunner: started: testCompleteProfileManagementFlow(com.shareconnect.automation.FullAppFlowAutomationTest)
+09-23 18:23:35.227 19052 19129 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 18:23:35.236   779   868 W Parcel  : Expecting binder but got null!
+09-23 18:23:35.245 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@73b6311 in: PRE_ON_CREATE
+09-23 18:23:35.245 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 18:23:35.247 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:23:35.247 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:23:35.247 19052 19052 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:23:35.247 19052 19052 D Console : Activity MainActivity usesToolbar: true
+09-23 18:23:35.249 19052 19052 D Console : Setting night mode to NO
+09-23 18:23:35.252   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:23:35.261 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@73b6311 in: CREATED
+09-23 18:23:35.261 19052 19052 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.MainActivity@73b6311
+09-23 18:23:35.261 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@73b6311 in: STARTED
+09-23 18:23:35.262 19052 19052 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@73b6311
+09-23 18:23:35.270 19052 19052 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:23:35.279 19052 19052 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 18:23:35.279 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:23:35.279 19052 19052 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:23:35.279 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:23:35.279 19052 19052 D Console : hasThemeChanged() returned: false
+09-23 18:23:35.280 19052 19052 D Console : onResume() called, themeChanged: false
+09-23 18:23:35.280 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@73b6311 in: RESUMED
+09-23 18:23:35.280 19052 19052 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@73b6311
+09-23 18:23:35.280 19052 19052 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 18:23:35.282 19052 19146 W Parcel  : Expecting binder but got null!
+09-23 18:23:35.286 19052 19052 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 18:23:35.286 19052 19052 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 18:23:35.286 19052 19052 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 18:23:35.294 19052 19052 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 18:23:35.294 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 18:23:35.295 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@73b6311 in: PAUSED
+09-23 18:23:35.295 19052 19052 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@73b6311
+09-23 18:23:35.824 19052 19603 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:23:35.825  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 18:23:35.825 19052 19603 I Console : Activity lifecycle :: Main state :: Background
+09-23 18:23:35.826  1581  2234 I HwDetectorWithState: (REDACTED) a: %d
+09-23 18:23:35.877   998   998 I Choreographer: Skipped 34 frames!  The application may be doing too much work on its main thread.
+09-23 18:23:35.918 19052 19052 I Choreographer: Skipped 37 frames!  The application may be doing too much work on its main thread.
+09-23 18:23:35.896   488   507 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+09-23 18:23:35.985   998  1661 D EGL_emulation: app_time_stats: avg=35.24ms min=9.54ms max=690.96ms count=41
+09-23 18:23:36.003 19052 19146 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:23:36.016 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@21308d1 in: PRE_ON_CREATE
+09-23 18:23:36.016 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@21308d1
+09-23 18:23:36.018 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:23:36.018 19052 19052 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:23:36.018 19052 19052 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:23:36.018 19052 19052 D Console : Activity SettingsActivity usesToolbar: true
+09-23 18:23:36.019 19052 19052 D Console : Setting night mode to NO
+09-23 18:23:36.032 19052 19065 I OpenGLRenderer: Davey! duration=722ms; Flags=1, FrameTimelineVsyncId=589586, IntendedVsync=2820685840735, Vsync=2821302507377, InputEventId=0, HandleInputStart=2821315285343, AnimationStart=2821315287926, PerformTraversalsStart=2821315288343, DrawStart=2821400647968, FrameDeadline=2820702507401, FrameInterval=2821310853551, FrameStartTime=16666666, SyncQueued=2821400970884, SyncStart=2821401286093, IssueDrawCommandsStart=2821401349509, SwapBuffers=2821401806968, FrameCompleted=2821408499676, DequeueBufferDuration=4625, QueueBufferDuration=720667, GpuCompleted=2821408461134, SwapBuffersCompleted=2821408499676, DisplayPresentTime=2802072264333, CommandSubmissionCompleted=2821401806968,
+09-23 18:23:36.034   779   868 D EGL_emulation: app_time_stats: avg=923.56ms min=17.65ms max=5140.61ms count=6
+09-23 18:23:36.036 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@21308d1 in: CREATED
+09-23 18:23:36.036 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@21308d1
+09-23 18:23:36.045 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@21308d1 in: STARTED
+09-23 18:23:36.045 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@21308d1
+09-23 18:23:36.046 19052 19052 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:23:36.050 19052 19052 V Console : Activity lifecycle :: RESUMED :: SettingsActivity
+09-23 18:23:36.050 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:23:36.050 19052 19052 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:23:36.050 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:23:36.050 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@21308d1 in: RESUMED
+09-23 18:23:36.050 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@21308d1
+09-23 18:23:36.051 19052 19052 V Console : Activity lifecycle :: POST-RESUMED :: SettingsActivity
+09-23 18:23:36.052 19052 19146 W Parcel  : Expecting binder but got null!
+09-23 18:23:36.065 19052 19146 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:23:36.076   779   868 D EGL_emulation: app_time_stats: avg=604.28ms min=2.80ms max=6602.52ms count=11
+09-23 18:23:36.083   488   503 W ziparchive: Unable to open '/data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/base.dm': No such file or directory
+09-23 18:23:36.084   488   503 I ActivityTaskManager: Displayed com.shareconnect/.SettingsActivity: +854ms
+09-23 18:23:36.086   998  1945 D OneSearchSuggestProvider: Shut down the binder channel
+09-23 18:23:36.087 19052 19052 V Console : Activity lifecycle :: PRE-STOPPED :: MainActivity
+09-23 18:23:36.088   998  1150 I s.nexuslauncher: oneway function results for code 2 on binder at 0xb400007a39487540 will be dropped but finished with status UNKNOWN_TRANSACTION
+09-23 18:23:36.093  1581  2228 I AssistantForeground: (REDACTED) Get launcher package: %s
+09-23 18:23:36.093 19052 19052 V Console : Activity lifecycle :: STOPPED :: MainActivity
+09-23 18:23:36.093 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@73b6311 in: STOPPED
+09-23 18:23:36.093 19052 19052 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.MainActivity@73b6311
+09-23 18:23:36.097 19052 19052 V Console : Activity lifecycle :: POST-STOPPED :: MainActivity
+09-23 18:23:36.116 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 18:23:36.117 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 18:23:36.118 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=2131231190 fieldName=null extras=null}, false)
+09-23 18:23:36.118 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 18:23:36.118 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 18:23:36.363   488   776 W InputManager-JNI: Input channel object 'fbcbc27 Splash Screen com.shareconnect (client)' was disposed without first being removed with the input manager!
+09-23 18:23:37.041   779   868 D EGL_emulation: app_time_stats: avg=17.90ms min=8.99ms max=35.62ms count=55
+09-23 18:23:37.693 19052 19146 D EGL_emulation: app_time_stats: avg=150.36ms min=0.62ms max=1468.57ms count=10
+09-23 18:23:37.953 19875 19908 I Bugle   : BugleStartup: Registering SIM change receiver...
+09-23 18:23:37.955 19875 19908 I Bugle   : BugleStartup: Updating app config...
+09-23 18:23:37.961 19875 19908 I Bugle   : BugleStartup: Done with SIM change receiver & app config.
+09-23 18:23:37.961 19875 19908 I Bugle   : BugleStartup: Handling shared prefs upgrade & Load MMS Configuration...
+09-23 18:23:37.977 19875 19914 I Bugle   : BugleStartup: Initializing RCS availability...
+09-23 18:23:37.978 19875 19914 I Bugle   : RcsAvailabilityUtilForProvisioningEngineV2: updateAvailabilityAsync, hint: NO_HINT
+09-23 18:23:37.978 19875 19914 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateAvailabilityAsync: scheduling updateRcsAvailability call, hint: NO_HINT, enableWelcomePopupWithoutGoogleTos: false, reshowSuccessPopup: false
+09-23 18:23:37.978 19875 19914 I Bugle   : BugleStartup: Done with RCS availability.
+09-23 18:23:37.978 19875 19914 I Bugle   : BugleStartup: Done initializing with enabled individual init failures.
+09-23 18:23:37.979 19875 19893 I BugleRcsEngine: [46] bgvy.c: do not delay first event
+09-23 18:23:37.979 19875 19893 W BugleRcsEngine: [46] bgvu.a: (Sim): process intent: android.intent.action.SIM_STATE_CHANGED
+09-23 18:23:37.979 19875 19967 I BugleRcsEngine: [77] bgvy.c: SIM state event delay enabled: attempts 0, maxAttempts 3, delaySeconds 90 MSIM delayseconds 90, effective delay seconds 90
+09-23 18:23:37.979 19875 19967 I BugleRcsEngine: [77] bgvy.c: posted simEventProcessTask to handler with delay 90
+09-23 18:23:37.980 19875 19893 W BugleRcsEngine: [46] bgvu.d: (Sim): Unexpected action: android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED
+09-23 18:23:37.980 19875 19893 W BugleRcsEngine: [46] bgvu.d: (Sim): Unexpected action: android.intent.action.ACTION_DEFAULT_VOICE_SUBSCRIPTION_CHANGED
+09-23 18:23:37.981 19875 19908 W Bugle   : BuglePhoneNumberUtils: canonicalizeMccMnc: invalid mccmnc. mcc: null, mnc: null
+09-23 18:23:37.981 19875 19894 W BugleRcsEngine: [47] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+09-23 18:23:37.983 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:20,last3:897], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+09-23 18:23:37.986 19875 19967 I BugleRcsEngine: [77] bgvu.o: (Sim): Processing an intent
+09-23 18:23:37.986 19875 19967 I BugleRcsEngine: [77] bgvu.z: (Sim): SIM state LOADED
+09-23 18:23:37.989 11699 19827 I GsaConfigFlagsSyncer: Flags already sync'ed.
+09-23 18:23:37.995 19875 19967 I BugleRcsEngine: [77] bgvu.z: (Sim): SIM changed: false. current id: redacted-pii:sim_id[chars:20,last3:897]; stored id: redacted-pii:sim_id[chars:20,last3:897]; isFiDevice: false; subId: 1; slotIndex: 0
+09-23 18:23:38.015 19875 19967 I BugleRcsEngine: [77] bgvu.z: (Sim): Skipping writing subId because this is main bugle process.
+09-23 18:23:38.016 19875 19967 I BugleRcsEngine: [77] bgvu.z: (Sim): Updated SIM info: currentSimId: redacted-pii:sim_id[chars:20,last3:897]; imsi: redacted-pii:imsi[chars:15]; rawMsisdn: redacted-pii:phone_number[chars:12,last2:67]; formattedMsisdn: redacted-pii:phone_number[chars:0,last2:]; mccmnc: redacted-pii:sim_operator[chars:6] isFiDevice: false; subId: 1; slotIndex: 0
+09-23 18:23:38.366 19875 19896 I BugleJobs: Icing index repair service is not scheduled. [CONTEXT class_name="IcingMonitoringUtils" ]
+09-23 18:23:38.431 19875 19967 I BugleRcsEngine: [77] bgvu.I: (Sim): Broadcasting Intent { act=com.google.android.ims.SIM_LOADED (has extras) }
+09-23 18:23:38.502 19875 19875 I Bugle   : SimChangeReceiver: action: com.google.android.ims.SIM_LOADED
+09-23 18:23:38.504 19875 19894 I BugleRcsEngine: [47] bghl.b: Using config server URL from beqz
+09-23 18:23:38.509 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability subscription{id:1}, simId: redacted-pii:sim_id[chars:20,last3:897], sipConnectionType: DUAL_REG, isRcsAvailable: false
+09-23 18:23:38.509 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateRcsAvailability, currentAvailability: 9, newAvailability: 10, hint: NO_HINT
+09-23 18:23:38.529 19875 19908 I Bugle   : RcsAvailabilityUtilForProvisioningEngineV2: updateAvailabilityAsync, hint: NO_HINT
+09-23 18:23:38.539 19875 19908 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateAvailabilityAsync: scheduling updateRcsAvailability call, hint: NO_HINT, enableWelcomePopupWithoutGoogleTos: false, reshowSuccessPopup: false
+09-23 18:23:38.624 19875 19894 W BugleRcsEngine: [47] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+09-23 18:23:38.630 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:20,last3:897], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+09-23 18:23:38.631 19875 19894 I BugleRcsEngine: [47] bghl.b: Using config server URL from beqz
+09-23 18:23:38.640 19875 19898 I BugleJobs: Starts to observe table change.
+09-23 18:23:38.646 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability subscription{id:1}, simId: redacted-pii:sim_id[chars:20,last3:897], sipConnectionType: DUAL_REG, isRcsAvailable: false
+09-23 18:23:38.646 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateRcsAvailability, currentAvailability: 10, newAvailability: 10, hint: NO_HINT
+09-23 18:23:38.658 19875 19914 V AssistantIntegClient: #getAssistantConfig()
+09-23 18:23:38.662 19875 19875 W BugleRcsEngine: [2] benk.i: Unable to send RCS extension log
+09-23 18:23:38.665 19875 19970 W AssistantConfig: appIntegrationDataInBase64 is null
+09-23 18:23:38.666 19875 19966 W AssistantConfig: appIntegrationDataInBase64 is null
+09-23 18:23:38.666 19875 19896 W Bugle   : AssistantIntegrationStartupTask: Error getting assistant availability.
+09-23 18:23:38.666 19875 19896 W Bugle   : java.lang.IllegalStateException: Failed to query AGSA value. This is most likely caused by a Google signature check failure. Please make sure both of the AGSA app and the client app are either release or dev builds.
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at bhtw.call(PG:17)
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at byyi.call(PG:3)
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at ceby.a(PG:1)
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at ceav.run(PG:4)
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at cebz.run(PG:1)
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:23:38.666 19875 19896 W Bugle   : 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: Couldn't read whether gRPC is supported from public value
+09-23 18:23:38.666 19875 19966 E AssistantConnector: java.lang.IllegalStateException: Failed to query AGSA value. This is most likely caused by a Google signature check failure. Please make sure both of the AGSA app and the client app are either release or dev builds.
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at bhtw.call(PG:17)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at byyi.call(PG:3)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at ceby.a(PG:1)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at ceav.run(PG:4)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at cebz.run(PG:1)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:23:38.666 19875 19966 E AssistantConnector: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:23:38.678 19875 19915 I Forking : Starting analysis.
+09-23 18:23:38.680 19875 19915 I Misthreading: Starting analysis.
+09-23 18:23:38.695 19875 19887 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10116; state: ENABLED
+09-23 18:23:38.695 19875 19896 I Bugle   : RcsAvailabilityUtilForProvisioningEngineV2: onCsLibPhenotypeUpdated
+09-23 18:23:38.700 19875 19914 W BugleRcsEngine: [60] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.700 19875 19896 I BugleRcsEngine: [49] bejl.run: SystemBindingManager: SystemBinding enabled: true
+09-23 18:23:38.700 19875 19896 I BugleRcsEngine: [49] bejm.b: System Binding updated
+09-23 18:23:38.700 19875 19914 W BugleRcsEngine: [60] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.701 19875 19898 W BugleAction: Empty msisdn in BugleSharedPrefs
+09-23 18:23:38.701 19875 19898 W BugleAction: Failed to get msisdn from Bugle
+09-23 18:23:38.701 19875 19898 W BugleAction: Failed to get msisdn from RcsProfileService
+09-23 18:23:38.702 19875 19898 W BugleAction: bwbx: Jibe SDK Service not available. Is the Jibe SDK service running? Did you call connect() and wait for the notification before calling an API function?
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at bwbp.b(PG:2)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at com.google.android.rcs.client.profile.RcsProfileService.g(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at com.google.android.rcs.client.profile.RcsProfileService.getMsisdn(PG:3)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at andn.aC(PG:16)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at andn.D(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at alcw.e(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at alcw.d(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at afwn.e(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at afwg.run(PG:4)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at byyc.run(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:463)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at ceby.a(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at ceav.run(PG:4)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at cebz.run(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at bkac.run(PG:1)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at bjzg.run(PG:2)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:23:38.702 19875 19898 W BugleAction: 	at bkam.run(PG:5)
+09-23 18:23:38.702 19875 19898 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.702 19875 19898 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.702 19875 19898 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.702 19875 19898 W Bugle   : SubscriptionUtilsAsOfLMR1: getSelfRawNumber: subInfo is null for subscription{id:-1}
+09-23 18:23:38.703 19875 19898 W BugleAction: No default number, returning empty msisdn
+09-23 18:23:38.703 19875 19898 W BugleEtouffee: E2eeStartupTask: Skip prekey checking because MSISDN is empty.
+09-23 18:23:38.712 19875 19893 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10116; state: ENABLED
+09-23 18:23:38.712 19875 19893 I FirebaseApp: Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+09-23 18:23:38.714 19875 19894 I BugleNetwork: FirebaseRegistrationStartupTask: Enabling Firebase component
+09-23 18:23:38.718  3335 13054 W CarrierServices: [73] dta.w: Unable to send diagnostic log
+09-23 18:23:38.720  3335 13054 I CarrierServices: [73] fdh.s: ProvisioningEngineManager: onCsLibPhenotypeUpdated, provisioningTaskInBugleEnabled = true, currentProvisioningStrategy = fhl
+09-23 18:23:38.721 12330 12330 D WearableService: Creating wearable service asynchronously.
+09-23 18:23:38.723 12330 12413 D WearableService: onGetService: waiting for onCreate to be completed.
+09-23 18:23:38.729 12330 12358 I Wear_Controller: Wearable module requires a companion app to be installed.
+09-23 18:23:38.729 12330 12358 I WearableService: onCreate: Wearable Services not starting. Wear is not available on this device.
+09-23 18:23:38.730 19875 19898 I BugleRcsProvisioning: RcsProvisioningTrigger: Schedule provisioning on app startup
+09-23 18:23:38.731 19875 19898 W BugleRcsEngine: [51] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+09-23 18:23:38.732 19875 19898 I BugleRcsProvisioning: RcsProvisioningTrigger: DR is active, initializing DR provisioning. DUAL_REG
+09-23 18:23:38.732 19875 19894 W BugleRcsEngine: [47] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+09-23 18:23:38.732 12330 12413 W WearableService: onGetService: Wear is not available on this device.
+09-23 18:23:38.732 19875 19914 I BugleNetwork: Startup: registering tachyon.
+09-23 18:23:38.733 19875 19908 I BugleMDD: MddBackgroundStartupTask: Scheduled MDD periodic tasks.
+09-23 18:23:38.734 19875 19914 I BugleNetwork: Startup: registering tachyon for phone.
+09-23 18:23:38.734 19875 19914 I BugleNetwork: Profile service is not connected at startup task.
+09-23 18:23:38.736 19875 19898 I Bugle   : VerifiedSmsEnabledCheckerImpl: VSMS is disabled via Phenotype flag.
+09-23 18:23:38.737 19875 19893 I Bugle   : VerifiedSmsStartupTask: Checking if Verified SMS tasks should be enqueued. feature supported: false, feature enabled: false, eligible / has registered key: false, C11N: false
+09-23 18:23:38.737 19875 19893 I Bugle   : VerifiedSmsStartupTask: Not enqueuing VSMS periodic task, VSMS is disabled or not supported.
+09-23 18:23:38.737 19875 19915 I Bugle   : VerifiedSmsStartupTask: Not calling C11N to get phone numbers.
+09-23 18:23:38.746 19875 19894 I BugleRcsEngine: [47] vfa.k: Scheduled provisioning task with 0 seconds delay, KEEP policy
+09-23 18:23:38.753 19875 19898 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10116; state: ENABLED
+09-23 18:23:38.754 12330 12423 W BpBinder: Large outgoing transaction of 354340 bytes, interface descriptor <uncached descriptor>, code 4
+09-23 18:23:38.760   488  1100 D ConnectivityService: requestNetwork for uid/pid:10116/19875 activeRequest: null callbackRequest: 306 [NetworkRequest [ REQUEST id=307, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10116 RequestorUid: 10116 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+09-23 18:23:38.761   488   717 D ConnectivityService: NetReassign [307 : null → 102] [c 0] [a 0] [i 1]
+09-23 18:23:38.761   488   710 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=307, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10116 RequestorUid: 10116 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+09-23 18:23:38.761   488   710 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=307, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10116 RequestorUid: 10116 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+09-23 18:23:38.761   488   710 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=307, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10116 RequestorUid: 10116 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+09-23 18:23:38.761   488   710 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=307, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10116 RequestorUid: 10116 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+09-23 18:23:38.764 19875 19908 D MddListenableWorkerFactory: createWorker for class: com.google.android.apps.messaging.rcsprovisioning.RcsProvisioningListenableWorker
+09-23 18:23:38.765 19875 19875 I BugleRcsWorker: [seqId=1] RCS provisioning task has started
+09-23 18:23:38.767 19875 19898 I BugleRcsEngine: [51] bfyb.d: (PEv2-SM-Bugle-99490594): start PEv2 [null]
+09-23 18:23:38.767 19875 19898 I BugleRcsEngine: [51] bghb.g: Created new RcsProvisioningProtoDataStorage for sim redacted-pii:sim_id[chars:20,last3:897]
+09-23 18:23:38.768 19875 19898 I BugleRcsEngine: [51] bfyb.d: (PEv2-SM-Bugle-99490594): start [null]
+09-23 18:23:38.768 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Enter EnabledState [null]
+09-23 18:23:38.770 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.776 19875 19985 I BugleRcsEngine: [94] bfwp.c: Sending ProvisioningEvent to Bugle [Send Provisioning Session ID (18)], redacted-pii:[chars:65]
+09-23 18:23:38.776 19875 19985 I BugleRcsEngine: [94] bhdm.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:223] from source PROVISIONING_EVENT
+09-23 18:23:38.777 19875 19898 I BugleRcsProvisioning: BugleSystemBindingManager: onBuglePhenotypeFlagChanged
+09-23 18:23:38.778 19875 19894 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Send Provisioning Session ID
+09-23 18:23:38.778 19875 19894 W BugleRcsEngine: [47] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.778 19875 19911 I BugleTransport: isChatAvailable: RcsAvailability is CARRIER_SETUP_PENDING (Carrier RCS is not set up)
+09-23 18:23:38.778 19875 19915 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@9280e9c
+09-23 18:23:38.779 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Start a new provisioning session [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.779 19875 19896 I BugleRcsEngine: [49] bejl.run: SystemBindingManager: SystemBinding enabled: true
+09-23 18:23:38.779 19875 19896 I BugleRcsEngine: [49] bejm.b: System Binding updated
+09-23 18:23:38.780 19875 19914 W BugleRcsEngine: [60] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.780 19875 19985 I BugleRcsEngine: [94] bgck.b: RcsAvailabilityManager: Calculating Rcs Availability
+09-23 18:23:38.781 19875 19985 I BugleRcsEngine: [94] bgfx.B: Bugle is default SMS app: true
+09-23 18:23:38.781 19875 19985 I BugleRcsEngine: [94] bgck.b: Bugle has minimum required RCS permissions: true
+09-23 18:23:38.782 19875 19985 I BugleRcsEngine: [94] bgfx.A: Rcs is enabled from user settings: true
+09-23 18:23:38.782 19875 19985 I BugleRcsEngine: [94] bghl.b: Using config server URL from beqz
+09-23 18:23:38.784 19875 19985 I BugleRcsEngine: [94] bgck.b: Config state is not ACCEPTED, provisioning still in progress
+09-23 18:23:38.784 19875 19985 I BugleRcsEngine: [94] bgck.b: RcsAvailabilityManager: Updating Rcs Availability to CARRIER_SETUP_PENDING (Carrier RCS is not set up), sim id changed: false
+09-23 18:23:38.784 19875 19985 I BugleRcsEngine: [94] bghl.b: Using config server URL from beqz
+09-23 18:23:38.784 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.784 19875 19985 I BugleRcsEngine: [94] bfwp.c: Sending ProvisioningEvent to Bugle [Availability updated (12)], redacted-pii:[chars:145]
+09-23 18:23:38.784 19875 19985 I BugleRcsEngine: [94] bhdm.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:303] from source PROVISIONING_EVENT
+09-23 18:23:38.785 19875 19985 I BugleRcsEngine: [94] bgck.b: Sending ProvisioningEvent Internal [Availability updated (12)], redacted-pii:[chars:145]
+09-23 18:23:38.785 19875 19908 W BugleAction: Empty msisdn in BugleSharedPrefs
+09-23 18:23:38.786 19875 19908 W BugleAction: Failed to get msisdn from Bugle
+09-23 18:23:38.786 19875 19908 W BugleAction: Failed to get msisdn from RcsProfileService
+09-23 18:23:38.786 19875 19908 W BugleAction: bwbx: Jibe SDK Service not available. Is the Jibe SDK service running? Did you call connect() and wait for the notification before calling an API function?
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at bwbp.b(PG:2)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at com.google.android.rcs.client.profile.RcsProfileService.g(PG:1)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at com.google.android.rcs.client.profile.RcsProfileService.getMsisdn(PG:3)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at andn.aC(PG:16)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at andn.M(PG:2)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at alcw.h(PG:1)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at alcs.call(Unknown Source:2)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at bzat.a(PG:1)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at byyd.a(PG:3)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at cebx.a(PG:1)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at ceav.run(PG:4)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at cebz.run(PG:1)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at bkac.run(PG:1)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at bjzg.run(PG:2)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:23:38.786 19875 19908 W BugleAction: 	at bkam.run(PG:5)
+09-23 18:23:38.786 19875 19908 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.786 19875 19908 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.786 19875 19908 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.786 19875 19908 W Bugle   : SubscriptionUtilsAsOfLMR1: getSelfRawNumber: subInfo is null for subscription{id:-1}
+09-23 18:23:38.786 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionViaMessage, srcState=EnabledState, destState = CheckPreconditionsState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.787 19875 19985 I BugleRcsEngine: [94] bfwp.c: Sending ProvisioningEvent to Bugle [Update provisioning status (11)], redacted-pii:[chars:85]
+09-23 18:23:38.787 19875 19985 I BugleRcsEngine: [94] bhdm.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:243] from source PROVISIONING_EVENT
+09-23 18:23:38.787 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): EnabledState: Transition to check preconditions [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.788 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionTo: destState=CheckPreconditionsState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.788 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): onTransitionRequested EnabledState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.788 19875 19894 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Availability updated
+09-23 18:23:38.788 19875 19894 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Bugle receives rcs availability update to: 10
+09-23 18:23:38.788 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Enter CheckPreconditionsState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.788 19875 19908 W BugleAction: No default number, returning empty msisdn
+09-23 18:23:38.789 19875 19911 I BugleTransport: Not using Tachygram because it is disabled by RCS Configuration
+09-23 18:23:38.789 19875 19911 I BugleTransport: isChatAvailable: false, enabledTransport: 1
+09-23 18:23:38.789 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.790 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Battery optimization is not required. [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.790 19875 19898 I RcsClientLib: Connecting RcsEngineLifecycleService
+09-23 18:23:38.790 19875 19898 I RcsClientLib: shouldUseCarrierServicesJibeService: true, CarrierServices rcs service found: true
+09-23 18:23:38.791 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionViaMessage, srcState=CheckPreconditionsState, destState = ReadyState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.791 19875 19908 I RcsClientLib: com.google.android.rcs.client.lifecycle.RcsEngineLifecycleService connected
+09-23 18:23:38.791 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): CheckPreconditionsState: Transition to ready [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.791 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionTo: destState=ReadyState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.791 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): onTransitionRequested CheckPreconditionsState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.791 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Exit CheckPreconditionsState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.791 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Exit EnabledState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.791 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.791 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Enter InProgressState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.792  3335  4161 I CarrierServices: [64] RcsEngineImpl.triggerStopRcsStack: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]: triggerStopRcsStack for msisdn:redacted-pii:phone_number[chars:0,last2:]
+09-23 18:23:38.792 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.793  3335  3864 I CarrierServices: [56] fne.handleMessage: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]>Handler: handleMessage processing message:[STOP_RCS_STACK] with [non-null]:RcsEngineImpl reference
+09-23 18:23:38.793  3335  3864 I CarrierServices: [56] fne.handleMessage: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]>Handler: RCS engine STOP RCS stack
+09-23 18:23:38.793  3335  3864 W CarrierServices: [56] RcsEngineImpl.e: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]: imsModule is null, shutdown not required
+09-23 18:23:38.793  3335  3864 I CarrierServices: [56] RcsEngineImpl.stopRcsStackInternal: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]: skipping imsModule.stop
+09-23 18:23:38.793  3335  3864 I CarrierServices: [56] fne.handleMessage: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]>Handler: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference
+09-23 18:23:38.793 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Enter ReadyState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.794 19875 19894 W BugleRcsEngine: [47] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+09-23 18:23:38.794 19875 19915 I RcsClientLib: Disconnecting RcsEngineLifecycleService
+09-23 18:23:38.795 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.796 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:20,last3:897], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+09-23 18:23:38.796 19875 19894 I BugleRcsEngine: [47] bghl.b: Using config server URL from beqz
+09-23 18:23:38.797 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability subscription{id:1}, simId: redacted-pii:sim_id[chars:20,last3:897], sipConnectionType: DUAL_REG, isRcsAvailable: false
+09-23 18:23:38.797 19875 19894 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateRcsAvailability, currentAvailability: 10, newAvailability: 10, hint: NO_HINT
+09-23 18:23:38.797 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionViaMessage, srcState=ReadyState, destState = RequestWithImsiState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.797 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): ReadyState: Transition to request with imsi [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.797 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionTo: destState=RequestWithImsiState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.797 19875 19915 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@945e183
+09-23 18:23:38.797 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): onTransitionRequested ReadyState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.797 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Exit ReadyState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.797 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.797 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Enter RequestWithImsiState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.798 19875 19908 I BugleRcsProvisioning: RcsProvisioningTrigger: onRcsAvailabilityUpdate : availability is updated to Carrier RCS is not set up, lastAvailability is null, simId hash = 7490097680662561805, isPev3Enabled = true
+09-23 18:23:38.799 19875 19908 I BugleRcsEngine: [56] bgdi.f: RcsProvisioningManager: Receive onRcsAvailabilityUpdate, SIM = redacted-pii:sim_id[chars:20,last3:897], availability = RcsAvailability{mAvailability=CARRIER_SETUP_PENDING (Carrier RCS is not set up)}
+09-23 18:23:38.799 19875 19908 I BugleRcsProvisioning: RcsProvisioningTrigger: onRcsAvailabilityUpdate : isPreviousDisabled = true, isCurrentDisabled = false
+09-23 18:23:38.799 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.799 19875 19908 I BugleRcsProvisioning: RcsProvisioningTrigger: Schedule KEEP provision when trigger configuration not valid
+09-23 18:23:38.799 19875 19908 W BugleRcsEngine: [56] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+09-23 18:23:38.799 19875 19985 I BugleRcsEngine: [94] bgfx.z: ProvisioningConsent from user settings: false
+09-23 18:23:38.799 19875 19908 I BugleRcsProvisioning: RcsProvisioningTrigger: DR is active, initializing DR provisioning. DUAL_REG
+09-23 18:23:38.800 19875 19894 W BugleRcsEngine: [47] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+09-23 18:23:38.800 19875 19914 I BugleRcsEngine: [60] bgde.a: RcsProvisioningManager: AvailabilityObserver.onUpdate : Notify RcsAvailabilityListener arkx@f047b66 onRcsAvailabilityUpdate, SIM = redacted-pii:sim_id[chars:20,last3:897], availability = 10
+09-23 18:23:38.800 19875 19913 W BugleAction: Empty msisdn in BugleSharedPrefs
+09-23 18:23:38.800 19875 19913 W BugleAction: Failed to get msisdn from Bugle
+09-23 18:23:38.800 19875 19913 W BugleAction: Failed to get msisdn from RcsProfileService
+09-23 18:23:38.800 19875 19913 W BugleAction: bwbx: Jibe SDK Service not available. Is the Jibe SDK service running? Did you call connect() and wait for the notification before calling an API function?
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at bwbp.b(PG:2)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at com.google.android.rcs.client.profile.RcsProfileService.g(PG:1)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at com.google.android.rcs.client.profile.RcsProfileService.getMsisdn(PG:3)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at andn.aC(PG:16)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at andn.M(PG:2)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at alcw.h(PG:1)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at alcs.call(Unknown Source:2)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at bzat.a(PG:1)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at byyd.a(PG:3)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at cebx.a(PG:1)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at ceav.run(PG:4)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at cebz.run(PG:1)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at bkac.run(PG:1)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at bjzg.run(PG:2)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 18:23:38.800 19875 19913 W BugleAction: 	at bkam.run(PG:5)
+09-23 18:23:38.800 19875 19913 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.800 19875 19893 W BugleRcsEngine: [46] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.800 19875 19913 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.801 19875 19913 W Bugle   : SubscriptionMetadataUtils get: invalid subId = -2
+09-23 18:23:38.801 19875 19913 W Bugle   : SubscriptionUtilsAsOfLMR1: getSelfRawNumber: subInfo is null for subscription{id:-1}
+09-23 18:23:38.801 19875 19908 I BugleTransport: isChatAvailable: RcsAvailability is CARRIER_SETUP_PENDING (Carrier RCS is not set up)
+09-23 18:23:38.803 19875 19894 I BugleRcsEngine: [47] vfa.k: Scheduled provisioning task with 0 seconds delay, KEEP policy
+09-23 18:23:38.803 19875 19913 W BugleAction: No default number, returning empty msisdn
+09-23 18:23:38.803 19875 19985 I BugleRcsEngine: [94] bghl.b: Using config server URL from beqz
+09-23 18:23:38.804 19875 19985 I BugleRcsEngine: [94] bgfx.z: ProvisioningConsent from user settings: false
+09-23 18:23:38.805 19875 19913 I BugleTransport: Not using Tachygram because it is disabled by RCS Configuration
+09-23 18:23:38.805 19875 19913 I BugleTransport: isChatAvailable: false, enabledTransport: 1
+09-23 18:23:38.806 19875 19913 I RcsClientLib: Connecting RcsEngineLifecycleService
+09-23 18:23:38.806 19875 19913 I RcsClientLib: shouldUseCarrierServicesJibeService: true, CarrierServices rcs service found: true
+09-23 18:23:38.807 19875 19893 W BugleRcsEngine: [46] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.807 19875 19986 I RcsClientLib: com.google.android.rcs.client.lifecycle.RcsEngineLifecycleService connected
+09-23 18:23:38.807 19875 19985 I BugleRcsEngine: [94] bgfx.z: ProvisioningConsent from user settings: false
+09-23 18:23:38.807  3335  4161 I CarrierServices: [64] RcsEngineImpl.triggerStopRcsStack: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]: triggerStopRcsStack for msisdn:redacted-pii:phone_number[chars:0,last2:]
+09-23 18:23:38.807  3335  3864 I CarrierServices: [56] fne.handleMessage: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]>Handler: handleMessage processing message:[STOP_RCS_STACK] with [non-null]:RcsEngineImpl reference
+09-23 18:23:38.807  3335  3864 I CarrierServices: [56] fne.handleMessage: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]>Handler: RCS engine STOP RCS stack
+09-23 18:23:38.807  3335  3864 W CarrierServices: [56] RcsEngineImpl.e: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]: imsModule is null, shutdown not required
+09-23 18:23:38.807  3335  3864 I CarrierServices: [56] RcsEngineImpl.stopRcsStackInternal: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]: skipping imsModule.stop
+09-23 18:23:38.807  3335  3864 I CarrierServices: [56] fne.handleMessage: RcsEngineImpl[DUAL_REG]:[6a55fce1-c8c1]>Handler: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference
+09-23 18:23:38.807 19875 19915 I RcsClientLib: Disconnecting RcsEngineLifecycleService
+09-23 18:23:38.809 19875 19986 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Update provisioning status
+09-23 18:23:38.810 19875 19915 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@904cb51
+09-23 18:23:38.810 19875 19985 W BugleRcsEngine: [94] bfyb.e: (PEv2-SM-Bugle-99490594): Could not retrieve MSISDN from configuration. Configuration is empty. [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.810 19875 19985 W BugleRcsEngine: [94] bfyb.e: (PEv2-SM-Bugle-99490594): Skipping adding Tachyon identity key to request. Null/empty RCS msisdn from configuration for sim ID: 89860318640220133897. [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.810 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): RequestWithImsiState: event Send config request [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.810 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): InProgressState: event Send config request [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:38.811 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.812 19875 19987 W BugleRcsEngine: [96] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.814 19875 19893 W BugleRcsEngine: [46] bemz.x: Unable to send diagnostic log
+09-23 18:23:38.912 19875 19987 D TrafficStats: tagSocket(96) with statsTag=0x4da3, statsUid=-1
+09-23 18:23:38.982 19875 19987 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+09-23 18:23:38.985 12330 12776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+09-23 18:23:38.986 19875 19987 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+09-23 18:23:38.986 19875 19987 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+09-23 18:23:38.988 19875 19987 D nativeloader: Configuring classloader-namespace for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~ipO2renLOTyOXmpjo9f-EQ==/com.google.android.gms-BXadSo8dWqhvcmdSujaGAA==/lib/arm64:/data/app/~~ipO2renLOTyOXmpjo9f-EQ==/com.google.android.gms-BXadSo8dWqhvcmdSujaGAA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+09-23 18:23:38.990 19875 19987 D nativeloader: Configuring classloader-namespace for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~ipO2renLOTyOXmpjo9f-EQ==/com.google.android.gms-BXadSo8dWqhvcmdSujaGAA==/lib/arm64:/data/app/~~ipO2renLOTyOXmpjo9f-EQ==/com.google.android.gms-BXadSo8dWqhvcmdSujaGAA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+09-23 18:23:38.999 19875 19987 D nativeloader: Configuring classloader-namespace for other apk /data/app/~~ipO2renLOTyOXmpjo9f-EQ==/com.google.android.gms-BXadSo8dWqhvcmdSujaGAA==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~ipO2renLOTyOXmpjo9f-EQ==/com.google.android.gms-BXadSo8dWqhvcmdSujaGAA==/lib/arm64:/data/app/~~ipO2renLOTyOXmpjo9f-EQ==/com.google.android.gms-BXadSo8dWqhvcmdSujaGAA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+09-23 18:23:39.021 19875 19987 W ProviderInstaller: Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: Failed to get service from broker.
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3011)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Parcel.createException(Parcel.java:2995)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:2978)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:2920)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at baun.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):36)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at basu.z(:com.google.android.gms@253562029@25.35.62 (190400-804666989):143)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at azzp.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):42)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Handler.handleCallback(Handler.java:942)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at clnr.mF(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at clnr.dispatchMessage(:com.google.android.gms@253562029@25.35.62 (190400-804666989):5)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Looper.loopOnce(Looper.java:201)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.Looper.loop(Looper.java:288)
+09-23 18:23:39.051 19875 19993 E GoogleApiManager: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+09-23 18:23:39.052 19875 19994 I fqdj    : Unable to retrieve flag snapshot for com.google.android.gms.providerinstaller#com.google.android.apps.messaging, using defaults.
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: Failed to register com.google.android.gms.providerinstaller#com.google.android.apps.messaging
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: fqdv: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null}
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at fqdx.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):13)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at gmwn.d(:com.google.android.gms@253562029@25.35.62 (190400-804666989):3)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at gmwp.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):130)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at gmyw.execute(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at gmwx.f(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at gmwx.m(:com.google.android.gms@253562029@25.35.62 (190400-804666989):99)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at gmwx.r(:com.google.android.gms@253562029@25.35.62 (190400-804666989):17)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at fikf.hI(:com.google.android.gms@253562029@25.35.62 (190400-804666989):35)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at ewih.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):12)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at gmyw.execute(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at ewii.b(:com.google.android.gms@253562029@25.35.62 (190400-804666989):18)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at ewix.b(:com.google.android.gms@253562029@25.35.62 (190400-804666989):36)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at ewiz.d(:com.google.android.gms@253562029@25.35.62 (190400-804666989):25)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azwy.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):9)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azzn.q(:com.google.android.gms@253562029@25.35.62 (190400-804666989):48)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azzn.d(:com.google.android.gms@253562029@25.35.62 (190400-804666989):10)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azzn.g(:com.google.android.gms@253562029@25.35.62 (190400-804666989):185)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azzn.onConnectionFailed(:com.google.android.gms@253562029@25.35.62 (190400-804666989):2)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azzp.run(:com.google.android.gms@253562029@25.35.62 (190400-804666989):70)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at android.os.Handler.handleCallback(Handler.java:942)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at clnr.mF(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at clnr.dispatchMessage(:com.google.android.gms@253562029@25.35.62 (190400-804666989):5)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at android.os.Looper.loopOnce(Looper.java:201)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at android.os.Looper.loop(Looper.java:288)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: Caused by: azvg: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null}
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at basg.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):15)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azxb.a(:com.google.android.gms@253562029@25.35.62 (190400-804666989):1)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	at azwy.c(:com.google.android.gms@253562029@25.35.62 (190400-804666989):5)
+09-23 18:23:39.053 19875 19992 W FlagRegistrar: 	... 12 more
+09-23 18:23:39.058 19875 19987 V NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 319 native methods...
+09-23 18:23:39.068 19875 19987 I ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+09-23 18:23:39.989 19875 19987 W BugleRcsEngine: [96] bemz.x: Unable to send diagnostic log
+09-23 18:23:39.990 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): RequestWithImsiState: event HTTP Response [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:39.991 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): InProgressState: event HTTP Response [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:39.992 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:39.992 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): RequestWithImsiState: event HTTP 200 (OK) [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:39.992 19875 19985 W BugleRcsEngine: [94] bfyw.d: Couldn't find cookies
+09-23 18:23:39.994 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionTo: destState=ProcessConfigurationState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:39.994 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): onTransitionRequested RequestWithImsiState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:39.994 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Exit RequestWithImsiState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:39.994 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:39.994 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Enter ProcessConfigurationState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.000 19875 19900 W BugleRcsEngine: [52] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.000 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.001 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): ProcessConfigurationState: event Config document received [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.004 19875 19985 I BugleRcsEngine: [94] bfyj.d: Configuration update received. Updating
+09-23 18:23:40.004 19875 19985 I BugleRcsEngine: from [Type: 0, Version: -1, Validity: -1, Last updated: 1758638249, Remaining validity: 0, Reconfiguration requested: false, Messaging technology: SIMPLE_IM]
+09-23 18:23:40.004 19875 19985 I BugleRcsEngine: to [Type: 2, Version: -1, Validity: -1, Last updated: 0, Remaining validity: 0, Reconfiguration requested: false, Messaging technology: SIMPLE_IM]
+09-23 18:23:40.004 19875 19985 W BugleRcsEngine: [94] bfyj.d: Received configuration with no token or invalid token during refresh.
+09-23 18:23:40.011 19875 19985 I BugleRcsEngine: [94] bgfx.s: Rcs Configuration was updated
+09-23 18:23:40.011 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.011 19875 19985 I BugleRcsEngine: [94] bfyj.d: Provisioning refreshed with partial configuration.
+09-23 18:23:40.013 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.014 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.014 19875 19985 I BugleRcsEngine: [94] bghl.b: Using config server URL from beqz
+09-23 18:23:40.017 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): transitionTo: destState=ConfiguredState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.017 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): onTransitionRequested ProcessConfigurationState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.018 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.018 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Exit ProcessConfigurationState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.018 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.018 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Exit InProgressState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.018 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.018 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Enter ConfiguredState [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.021 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.024 19875 19985 I BugleRcsEngine: [94] bgck.b: RcsAvailabilityManager: Calculating Rcs Availability
+09-23 18:23:40.024 19875 19985 I BugleRcsEngine: [94] bgfx.B: Bugle is default SMS app: true
+09-23 18:23:40.025 19875 19985 I BugleRcsEngine: [94] bgck.b: Bugle has minimum required RCS permissions: true
+09-23 18:23:40.025 19875 19985 I BugleRcsEngine: [94] bgfx.A: Rcs is enabled from user settings: true
+09-23 18:23:40.025 19875 19985 I BugleRcsEngine: [94] bghl.b: Using config server URL from beqz
+09-23 18:23:40.028 19875 19985 I BugleRcsEngine: [94] bgck.b: Config state is not ACCEPTED, provisioning still in progress
+09-23 18:23:40.028 19875 19985 I BugleRcsEngine: [94] bgck.b: RcsAvailabilityManager: Rcs Availability still CARRIER_SETUP_PENDING (Carrier RCS is not set up)
+09-23 18:23:40.029 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.029 19875 19985 I BugleRcsEngine: [94] bfyb.d: (PEv2-SM-Bugle-99490594): Provisioned with invalid config. Invoke failure [ac4d07f7-3339-483e-af4b-853eb64352c0]
+09-23 18:23:40.029 19875 19985 W BugleRcsEngine: [94] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.029 19875 19985 I BugleRcsEngine: [94] bfwp.c: Sending ProvisioningEvent to Bugle [Update provisioning status (11)], redacted-pii:[chars:85]
+09-23 18:23:40.029 19875 19985 I BugleRcsEngine: [94] bhdm.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:243] from source PROVISIONING_EVENT
+09-23 18:23:40.030 19875 19985 I BugleRcsEngine: [94] bgck.b: RcsAvailabilityManager: Calculating Rcs Availability
+09-23 18:23:40.031 19875 19985 I BugleRcsEngine: [94] bgfx.B: Bugle is default SMS app: true
+09-23 18:23:40.031 19875 19985 I BugleRcsEngine: [94] bgck.b: Bugle has minimum required RCS permissions: true
+09-23 18:23:40.031 19875 19985 I BugleRcsEngine: [94] bgfx.A: Rcs is enabled from user settings: true
+09-23 18:23:40.031 19875 19985 I BugleRcsEngine: [94] bghl.b: Using config server URL from beqz
+09-23 18:23:40.034 19875 19898 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Update provisioning status
+09-23 18:23:40.034 19875 19924 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@508de8a
+09-23 18:23:40.035 19875 19985 I BugleRcsEngine: [94] bgck.b: Config state is not ACCEPTED, provisioning still in progress
+09-23 18:23:40.035 19875 19985 I BugleRcsEngine: [94] bgck.b: RcsAvailabilityManager: Rcs Availability still CARRIER_SETUP_PENDING (Carrier RCS is not set up)
+09-23 18:23:40.041 19875 19895 W BugleRcsEngine: [48] bemz.x: Unable to send diagnostic log
+09-23 18:23:40.041 19875 19895 W BugleRcsEngine: [48] bemz.x: Unable to send diagnostic log
+09-23 18:23:41.141 19052 19052 V Console : Activity lifecycle :: PRE-PAUSED :: SettingsActivity
+09-23 18:23:41.143 19052 19052 D Console : Activity lifecycle :: Top activity: SettingsActivity
+09-23 18:23:41.143 19052 19052 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 18:23:41.159 19052 19052 V Console : Activity lifecycle :: PAUSED :: SettingsActivity
+09-23 18:23:41.161 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 18:23:41.162 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@21308d1 in: PAUSED
+09-23 18:23:41.162 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@21308d1
+09-23 18:23:41.188 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89 in: PRE_ON_CREATE
+09-23 18:23:41.202 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89
+09-23 18:23:41.223 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89 in: CREATED
+09-23 18:23:41.224 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89
+09-23 18:23:41.228 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89 in: STARTED
+09-23 18:23:41.228 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89
+09-23 18:23:41.233 19052 19052 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:23:41.243 19052 19052 V Console : Activity lifecycle :: RESUMED :: EmptyActivity
+09-23 18:23:41.244 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:23:41.244 19052 19052 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:23:41.245 19052 19052 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:23:41.246 19052 19052 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89 in: RESUMED
+09-23 18:23:41.246 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@3657c89
+09-23 18:23:41.248 19052 19052 V Console : Activity lifecycle :: POST-RESUMED :: EmptyActivity
+09-23 18:23:41.254 19052 19146 W Parcel  : Expecting binder but got null!
+09-23 18:23:41.295 19052 19146 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:23:41.301   488   503 I ActivityTaskManager: Displayed com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +184ms
+09-23 18:23:41.304 19052 19052 V Console : Activity lifecycle :: PRE-STOPPED :: SettingsActivity
+09-23 18:23:41.305 19052 19052 V Console : Activity lifecycle :: STOPPED :: SettingsActivity
+09-23 18:23:41.305 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@21308d1 in: STOPPED
+09-23 18:23:41.305 19052 19052 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@21308d1
+09-23 18:23:41.305 19052 19052 V Console : Activity lifecycle :: POST-STOPPED :: SettingsActivity
+09-23 18:23:41.311 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 18:23:41.312 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 18:23:41.312 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 18:23:41.312 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 18:23:41.312 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 18:23:41.312 19052 19052 V Console : Activity lifecycle :: PRE-DESTROYED :: MainActivity
+09-23 18:23:41.313 19052 19052 V Console : Activity lifecycle :: DESTROYED :: MainActivity
+09-23 18:23:41.313 19052 19052 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@73b6311 in: DESTROYED
+09-23 18:23:41.313 19052 19052 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+09-23 18:23:41.314   488   591 W InputManager-JNI: Input channel object '303091f com.shareconnect/com.shareconnect.MainActivity (client)' was disposed without first being removed with the input manager!
+09-23 18:23:41.317 19052 19129 E TestRunner: failed: testCompleteProfileManagementFlow(com.shareconnect.automation.FullAppFlowAutomationTest)
+09-23 18:23:41.317 19052 19129 E TestRunner: ----- begin exception -----
+09-23 18:23:41.317 19052 19129 E TestRunner: java.lang.NoClassDefFoundError: Failed resolution of: Lorg/hamcrest/Matchers;
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at androidx.test.espresso.matcher.ViewMatchers.withId(ViewMatchers.java:1)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteProfileManagementFlow(FullAppFlowAutomationTest.kt:117)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunAfters.evaluate(RunAfters.java:61)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2361)
+09-23 18:23:41.317 19052 19129 E TestRunner: Caused by: java.lang.ClassNotFoundException: Didn't find class "org.hamcrest.Matchers" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~9eIeSJpGNwuKEpS6UddecA==/com.shareconnect.test-GmDo4qJJgaAObNT6V__lHw==/base.apk", zip file "/data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/base.apk"],nativeLibraryDirectories=[/data/app/~~9eIeSJpGNwuKEpS6UddecA==/com.shareconnect.test-GmDo4qJJgaAObNT6V__lHw==/lib/arm64, /data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/lib/arm64, /data/app/~~9eIeSJpGNwuKEpS6UddecA==/com.shareconnect.test-GmDo4qJJgaAObNT6V__lHw==/base.apk!/lib/arm64-v8a, /data/app/~~V1RMhJ4uRSUintQOLN924A==/com.shareconnect-Mtf-9DBQqrPAhiVsnmCAWA==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+09-23 18:23:41.317 19052 19129 E TestRunner: 	... 46 more
+09-23 18:23:41.317 19052 19129 E TestRunner: ----- end exception -----
+09-23 18:23:41.318 19052 19129 I TestRunner: finished: testCompleteProfileManagementFlow(com.shareconnect.automation.FullAppFlowAutomationTest)

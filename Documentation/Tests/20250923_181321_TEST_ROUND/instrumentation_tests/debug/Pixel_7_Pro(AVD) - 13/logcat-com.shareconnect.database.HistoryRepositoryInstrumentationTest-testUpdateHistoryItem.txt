@@ -1,0 +1,2 @@
+09-23 18:17:49.453 17293 17370 I TestRunner: started: testUpdateHistoryItem(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 18:17:49.456 17293 17370 I TestRunner: finished: testUpdateHistoryItem(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

@@ -1,0 +1,2 @@
+09-23 18:24:59.178 19052 19129 I TestRunner: started: testInsertAndRetrieveTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)
+09-23 18:24:59.185 19052 19129 I TestRunner: finished: testInsertAndRetrieveTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)

@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private var buttonOpenMeTube: MaterialButton? = null
     private var profileManager: ProfileManager? = null
     private var themeManager: ThemeManager? = null
+    private var isContentViewSet = false
 
     companion object {
         private const val SETUP_WIZARD_REQUEST_CODE = 1001
@@ -46,6 +47,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupMainView() {
+        // Only set up the view once
+        if (isContentViewSet) {
+            return
+        }
+        isContentViewSet = true
+
         setContentView(R.layout.activity_main)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)

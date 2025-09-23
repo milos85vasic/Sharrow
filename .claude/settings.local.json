@@ -5,7 +5,9 @@
       "WebSearch",
       "Bash(chmod:*)",
       "Bash(./run_unit_tests.sh:*)",
-      "Bash(adb:*)"
+      "Bash(adb:*)",
+      "Bash(./run_instrumentation_tests.sh)",
+      "Bash(./run_automation_tests.sh:*)"
     ],
     "deny": [],
     "ask": []

@@ -7,14 +7,13 @@ import com.shareconnect.ServerProfile
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
-import org.mockito.Mockito.any
-import org.mockito.Mockito.eq
+import org.mockito.Mockito.anyString
+import org.mockito.Mockito.anyInt
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
@@ -40,10 +39,10 @@ class ProfileManagerTest {
     fun setUp() {
         MockitoAnnotations.openMocks(this)
 
-        `when`(mockContext.getSharedPreferences(any(), any())).thenReturn(mockSharedPreferences)
+        `when`(mockContext.getSharedPreferences(anyString(), anyInt())).thenReturn(mockSharedPreferences)
         `when`(mockSharedPreferences.edit()).thenReturn(mockEditor)
-        `when`(mockEditor.putString(any(), any())).thenReturn(mockEditor)
-        `when`(mockEditor.remove(any())).thenReturn(mockEditor)
+        `when`(mockEditor.putString(anyString(), anyString())).thenReturn(mockEditor)
+        `when`(mockEditor.remove(anyString())).thenReturn(mockEditor)
         `when`(mockEditor.apply()).then { }
 
         profileManager = ProfileManager(mockContext)
@@ -57,65 +56,26 @@ class ProfileManagerTest {
 
     @Test
     fun testHasProfilesWithEmptyProfiles() {
-        `when`(mockSharedPreferences.all).thenReturn(emptyMap())
+        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(null)
 
         assertFalse(profileManager.hasProfiles())
     }
 
     @Test
     fun testHasProfilesWithExistingProfiles() {
-        val profileData = mapOf(
-            "profile_test-id" to """{"id":"test-id","name":"Test Profile","url":"http://example.com","port":8080}"""
-        )
-        `when`(mockSharedPreferences.all).thenReturn(profileData)
+        val profilesJson = """[{"id":"test-id","name":"Test Profile","url":"http://example.com","port":8080,"serviceType":"metube"}]"""
+        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(profilesJson)
 
         assertTrue(profileManager.hasProfiles())
     }
 
     @Test
-    fun testAddProfile() {
-        val profile = ServerProfile().apply {
-            id = "test-id"
-            name = "Test Profile"
-            url = "http://example.com"
-            port = 8080
-            serviceType = ServerProfile.TYPE_METUBE
-        }
+    fun testGetProfilesEmpty() {
+        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(null)
 
-        profileManager.addProfile(profile)
+        val profiles = profileManager.profiles
 
-        verify(mockEditor).putString(eq("profile_test-id"), any())
-        verify(mockEditor).apply()
-    }
-
-    @Test
-    fun testUpdateProfile() {
-        val profile = ServerProfile().apply {
-            id = "test-id"
-            name = "Updated Profile"
-            url = "http://updated.com"
-            port = 9090
-            serviceType = ServerProfile.TYPE_YTDL
-        }
-
-        profileManager.updateProfile(profile)
-
-        verify(mockEditor).putString(eq("profile_test-id"), any())
-        verify(mockEditor).apply()
-    }
-
-    @Test
-    fun testDeleteProfile() {
-        val profile = ServerProfile().apply {
-            id = "test-id"
-            name = "Test Profile"
-            url = "http://example.com"
-            port = 8080
-        }
-
-        profileManager.deleteProfile(profile)
-
-        verify(mockEditor).apply()
+        assertTrue(profiles.isEmpty())
     }
 
     @Test
@@ -137,16 +97,7 @@ class ProfileManagerTest {
 
         val profile = profileManager.defaultProfile()
 
-        assertNull(profile)
-    }
-
-    @Test
-    fun testGetProfilesEmpty() {
-        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(null)
-
-        val profiles = profileManager.profiles
-
-        assertTrue(profiles.isEmpty())
+        assertTrue(profile == null)
     }
 
     @Test

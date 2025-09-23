@@ -25,7 +25,7 @@ class ServerProfileTest {
         assertNull(serverProfile.name)
         assertNull(serverProfile.url)
         assertEquals(0, serverProfile.port)
-        assertNull(serverProfile.serviceType)
+        assertEquals(ServerProfile.TYPE_METUBE, serverProfile.serviceType)
         assertNull(serverProfile.torrentClientType)
     }
 

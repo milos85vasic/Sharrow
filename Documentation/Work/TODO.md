@@ -1,6 +1,5 @@
 # TODO
 
-- Connect the Toolkit
 - Onboarding flow
 - Regular HTTP downloads/urls support
 - Sync the user data (WebDAV)
@@ -23,4 +22,5 @@
 - Crashlytics and general Firebase support
 - Tests
 - Distribution
+- Connect the Toolkit
 - Replace use of Android Log with Toolkit Console equivalent

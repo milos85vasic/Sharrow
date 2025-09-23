@@ -44,6 +44,7 @@
 
 - [Enable RAG for AIs and fine tuning](./Tasks/002%20Onboarding/TASK.md)
 - Upstreams
+- Exclude form the IDE indexing Tests directory and RAG materials
 
 ## Completed
 

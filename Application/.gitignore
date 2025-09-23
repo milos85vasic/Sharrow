@@ -2,11 +2,8 @@ Signing
 Signing/*
 Signing/*.*
 
-debug
 release
-
-debug/*
 release/*
-
-debug/*.*
 release/*.*
+
+google-services.json

@@ -4,12 +4,12 @@ import com.redelf.commons.application.BaseApplication
 
 class SCApplication : BaseApplication() {
 
-    override val firebaseEnabled = false
-    override val firebaseAnalyticsEnabled = false
+    override val firebaseEnabled = isProduction()
+    override val firebaseAnalyticsEnabled = isProduction()
 
     override fun isProduction(): Boolean {
 
-        return false
+        return resources.getBoolean(R.bool.is_production)
     }
 
     override fun takeSalt(): String {

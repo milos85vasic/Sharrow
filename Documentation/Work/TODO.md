@@ -15,6 +15,7 @@
 ## In progress
 
 - Prod signing
+- Debug build app name suffix
 - Crashlytics and general Firebase support
 
 ## Completed

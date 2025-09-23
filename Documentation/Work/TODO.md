@@ -43,6 +43,7 @@
 ## In progress
 
 - [Enable RAG for AIs and fine tuning](./Tasks/002%20Onboarding/TASK.md)
+  - Move RAG materials into separate Git submodule
 - Upstreams
 - Exclude form the IDE indexing Tests directory and RAG materials
 

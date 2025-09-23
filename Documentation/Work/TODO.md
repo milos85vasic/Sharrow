@@ -44,6 +44,7 @@
 
 - [Enable RAG for AIs and fine tuning](./Tasks/002%20Onboarding/TASK.md)
   - Move RAG materials into separate Git submodule
+  - Obtain Android development documentation
 - Upstreams
 - Exclude form the IDE indexing Tests directory and RAG materials
 

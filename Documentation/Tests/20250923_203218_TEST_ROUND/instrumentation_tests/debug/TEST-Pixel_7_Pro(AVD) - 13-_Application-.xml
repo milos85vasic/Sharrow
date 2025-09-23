@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.shareconnect.activities.MainActivityInstrumentationTest" tests="35" failures="0" errors="0" skipped="0" time="125.119" timestamp="2025-09-23T17:34:50" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_7_Pro(AVD) - 13" />
+    <property name="flavor" value="" />
+    <property name="project" value=":Application" />
+  </properties>
+  <testcase name="testSettingsButtonClick" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="6.82" />
+  <testcase name="testOpenMeTubeButtonClick" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="5.768" />
+  <testcase name="testMainActivityLaunches" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="5.809" />
+  <testcase name="testFabAddButtonClick" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="5.936" />
+  <testcase name="testActivityLifecycle" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="6.821" />
+  <testcase name="testMainContentIsScrollable" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="6.884" />
+  <testcase name="testAppNameIsDisplayed" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="5.954" />
+  <testcase name="testHistoryButtonClick" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="5.951" />
+  <testcase name="testToolbarIsDisplayed" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="5.682" />
+  <testcase name="testButtonTexts" classname="com.shareconnect.activities.MainActivityInstrumentationTest" time="5.844" />
+  <testcase name="testBackButtonNavigatesUp" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="3.965" />
+  <testcase name="testPreferenceIcons" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="3.76" />
+  <testcase name="testThemeSelectionPreferenceClickable" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="3.776" />
+  <testcase name="testServerProfilesPreferenceClickable" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="3.978" />
+  <testcase name="testServerProfilesPreferenceExists" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="4.872" />
+  <testcase name="testSettingsActivityLaunches" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="2.628" />
+  <testcase name="testSettingsFragmentIsLoaded" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="3.969" />
+  <testcase name="testActivityTitle" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="3.03" />
+  <testcase name="testToolbarIsDisplayed" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="2.904" />
+  <testcase name="testPreferenceCategories" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="3.987" />
+  <testcase name="testThemeSelectionPreferenceExists" classname="com.shareconnect.activities.SettingsActivityInstrumentationTest" time="4.931" />
+  <testcase name="testDeleteAllHistoryItems" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.065" />
+  <testcase name="testDeleteHistoryItem" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.038" />
+  <testcase name="testGetHistoryItemsByProfile" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.009" />
+  <testcase name="testGetSuccessfulHistoryItems" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.078" />
+  <testcase name="testInsertAndRetrieveHistoryItem" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.004" />
+  <testcase name="testGetAllHistoryItems" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.033" />
+  <testcase name="testGetFailedHistoryItems" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.003" />
+  <testcase name="testUpdateHistoryItem" classname="com.shareconnect.database.HistoryRepositoryInstrumentationTest" time="0.003" />
+  <testcase name="testInsertAndRetrieveTheme" classname="com.shareconnect.database.ThemeRepositoryInstrumentationTest" time="0.002" />
+  <testcase name="testDeleteTheme" classname="com.shareconnect.database.ThemeRepositoryInstrumentationTest" time="0.04" />
+  <testcase name="testUpdateTheme" classname="com.shareconnect.database.ThemeRepositoryInstrumentationTest" time="0.003" />
+  <testcase name="testGetAllThemes" classname="com.shareconnect.database.ThemeRepositoryInstrumentationTest" time="0.003" />
+  <testcase name="testGetDefaultTheme" classname="com.shareconnect.database.ThemeRepositoryInstrumentationTest" time="0.035" />
+  <testcase name="testSetDefaultTheme" classname="com.shareconnect.database.ThemeRepositoryInstrumentationTest" time="0.039" />
+</testsuite>

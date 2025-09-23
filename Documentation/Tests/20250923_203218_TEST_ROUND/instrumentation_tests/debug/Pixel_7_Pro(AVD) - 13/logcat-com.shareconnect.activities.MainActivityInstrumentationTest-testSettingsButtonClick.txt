@@ -1,0 +1,209 @@
+09-23 20:32:44.295 14451 14529 I TestRunner: started: testSettingsButtonClick(com.shareconnect.activities.MainActivityInstrumentationTest)
+09-23 20:32:44.296 12330 12330 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.presencemanager.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+09-23 20:32:44.301 12330 12330 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.presencemanager.service.INTERNAL_IDENTITY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+09-23 20:32:44.331 11563 12319 I Finsky  : [120] Package com.google.android.gms is verified.
+09-23 20:32:44.348 11307 14538 W FA-SVC  : Service response is missing Install Referrer install timestamp
+09-23 20:32:44.349 14451 14529 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 20:32:44.432   779   868 W Parcel  : Expecting binder but got null!
+09-23 20:32:44.464   998  1661 D EGL_emulation: app_time_stats: avg=184.50ms min=3.24ms max=3034.69ms count=17
+09-23 20:32:44.502   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:32:44.528 14451 14451 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+09-23 20:32:44.570   488  3569 W Binder  : Caught a RuntimeException from the binder stub implementation.
+09-23 20:32:44.570   488  3569 W Binder  : java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0
+09-23 20:32:44.570   488  3569 W Binder  : 	at android.util.ArraySet.valueAt(ArraySet.java:422)
+09-23 20:32:44.570   488  3569 W Binder  : 	at com.android.server.contentcapture.ContentCapturePerUserService$ContentCaptureServiceRemoteCallback.updateContentCaptureOptions(ContentCapturePerUserService.java:733)
+09-23 20:32:44.570   488  3569 W Binder  : 	at com.android.server.contentcapture.ContentCapturePerUserService$ContentCaptureServiceRemoteCallback.setContentCaptureWhitelist(ContentCapturePerUserService.java:646)
+09-23 20:32:44.570   488  3569 W Binder  : 	at android.service.contentcapture.IContentCaptureServiceCallback$Stub.onTransact(IContentCaptureServiceCallback.java:115)
+09-23 20:32:44.570   488  3569 W Binder  : 	at android.os.Binder.execTransactInternal(Binder.java:1285)
+09-23 20:32:44.570   488  3569 W Binder  : 	at android.os.Binder.execTransact(Binder.java:1244)
+09-23 20:32:44.598  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 20:32:44.614 14451 14546 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+09-23 20:32:44.620 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@5187175 in: PRE_ON_CREATE
+09-23 20:32:44.621 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 20:32:44.601  1581  2234 I HwDetectorWithState: (REDACTED) a: %d
+09-23 20:32:44.628 14451 14546 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+09-23 20:32:44.637 14451 14546 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+09-23 20:32:44.654 14451 14451 D Console : initializeDefaultThemes() called
+09-23 20:32:44.695 14451 14451 D Console : No existing themes found, creating default themes
+09-23 20:32:44.768 14451 14451 D Console : Default themes created
+09-23 20:32:44.771 14451 14451 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:32:44.772 14451 14451 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:32:44.772 14451 14451 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 20:32:44.772 14451 14451 D Console : Activity MainActivity usesToolbar: true
+09-23 20:32:44.778 14451 14451 D Console : Setting night mode to NO
+09-23 20:32:44.850 14451 14451 W om.shareconnect: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+09-23 20:32:44.903 14451 14451 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10210; state: ENABLED
+09-23 20:32:44.938   779   868 D EGL_emulation: app_time_stats: avg=53779.31ms min=49.18ms max=268514.00ms count=5
+09-23 20:32:44.946 11307 12188 D TrafficStats: tagSocket(117) with statsTag=0x4003300, statsUid=10210
+09-23 20:32:44.978 14451 14506 W AnalyticsUserIDStore: initStore should have been called before calling setUserID
+09-23 20:32:44.979 14451 14502 W om.shareconnect: Accessing hidden method Landroid/adservices/measurement/MeasurementManager;->get(Landroid/content/Context;)Landroid/adservices/measurement/MeasurementManager; (blocked, linking, denied)
+09-23 20:32:45.001 14451 14451 D CompatibilityChangeReporter: Compat change id reported: 171228096; UID 10210; state: ENABLED
+09-23 20:32:45.126 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@5187175 in: CREATED
+09-23 20:32:45.127 14451 14451 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.MainActivity@5187175
+09-23 20:32:45.130 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@5187175 in: STARTED
+09-23 20:32:45.130 14451 14451 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@5187175
+09-23 20:32:45.136 14451 14451 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:32:45.136 14451 14451 D FirebaseSessions: Session 2222c6e89cc44e27b4d950c9438959d8 has not backgrounded yet
+09-23 20:32:45.136 14451 14451 D FirebaseSessions: No process data for com.shareconnect
+09-23 20:32:45.145 14451 14473 D FirebaseSessions: Session 33a59503d45d475faaedad9405e5cf6a has not backgrounded yet
+09-23 20:32:45.145 14451 14473 D FirebaseSessions: No process data map
+09-23 20:32:45.145 14451 14473 D FirebaseSessions: No process data for com.shareconnect
+09-23 20:32:45.195 14451 14451 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 20:32:45.195 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:32:45.195 14451 14451 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:32:45.196 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:32:45.199 14451 14451 D Console : hasThemeChanged() returned: false
+09-23 20:32:45.199 14451 14451 D Console : onResume() called, themeChanged: false
+09-23 20:32:45.199 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@5187175 in: RESUMED
+09-23 20:32:45.199 14451 14451 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@5187175
+09-23 20:32:45.205 14451 14451 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 20:32:45.212 14451 14451 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10210; state: DISABLED
+09-23 20:32:45.213 14451 14475 D FirebaseSessions: Fetching settings from server.
+09-23 20:32:45.250 14451 14470 D TrafficStats: tagSocket(73) with statsTag=0xffffffff, statsUid=-1
+09-23 20:32:45.260 14451 14544 W Parcel  : Expecting binder but got null!
+09-23 20:32:45.269 14451 14470 D StrictMode: StrictMode policy violation: android.os.strictmode.UntaggedSocketViolation: Untagged socket detected; use TrafficStats.setTrafficStatsTag() to track all network usage
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at android.os.StrictMode.onUntaggedSocket(StrictMode.java:2250)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at android.os.StrictMode.noteUntaggedSocket(StrictMode.java:2699)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at android.net.TrafficStats$SocketTagger.tag(TrafficStats.java:255)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at libcore.io.BlockGuardOs.tagSocket(BlockGuardOs.java:55)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at libcore.io.BlockGuardOs.socket(BlockGuardOs.java:404)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at libcore.io.ForwardingOs.socket(ForwardingOs.java:821)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at libcore.io.IoBridge.socket(IoBridge.java:840)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.net.PlainSocketImpl.socketCreate(PlainSocketImpl.java:128)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.net.AbstractPlainSocketImpl.create(AbstractPlainSocketImpl.java:128)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.net.Socket.createImpl(Socket.java:514)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.net.Socket.getImpl(Socket.java:577)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.net.Socket.setSoTimeout(Socket.java:1203)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.io.RealConnection.connectSocket(RealConnection.java:143)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.io.RealConnection.connect(RealConnection.java:116)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:186)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getResponseCode(DelegatingHttpsURLConnection.java:106)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:30)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.google.firebase.sessions.settings.RemoteSettingsFetcher$doConfigFetch$2.invokeSuspend(RemoteSettingsFetcher.kt:60)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+09-23 20:32:45.269 14451 14470 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 20:32:45.285 14451 14473 D FirebaseSessions: Notified CRASHLYTICS of new session 0bbce99df84f49428bb1cb95af03bf38
+09-23 20:32:45.300 14451 14524 I FA      : Tag Manager is not found and thus will not be used
+09-23 20:32:45.362   338   441 W ServiceManager: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10210 pid=0
+09-23 20:32:45.362   338   441 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10210 => denied (173 us)
+09-23 20:32:45.362   338   441 W ServiceManager: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10210 pid=0
+09-23 20:32:45.362   338   441 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10210 => denied (240 us)
+09-23 20:32:45.363   338   441 W ServiceManager: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10210 pid=0
+09-23 20:32:45.363   338   441 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10210 => denied (493 us)
+09-23 20:32:45.380 14451 14544 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+09-23 20:32:45.388 14451 14544 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+09-23 20:32:45.389 14451 14544 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+09-23 20:32:45.394 14451 14544 D EGL_emulation: eglCreateContext: 0xb400007aa943e710: maj 3 min 0 rcv 3
+09-23 20:32:45.398 14451 14544 D EGL_emulation: eglMakeCurrent: 0xb400007aa943e710: ver 3 0 (tinfo 0x7cc32bf080) (first time)
+09-23 20:32:45.411   779   868 D EGL_emulation: app_time_stats: avg=28740.01ms min=28740.01ms max=28740.01ms count=1
+09-23 20:32:45.435   147   147 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+09-23 20:32:45.436 14451 14544 I Gralloc4: mapper 4.x is not supported
+09-23 20:32:45.442   147   147 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+09-23 20:32:45.445   146   146 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+09-23 20:32:45.445 14451 14544 W Gralloc4: allocator 4.x is not supported
+09-23 20:32:45.461 14451 14544 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+09-23 20:32:45.462 14451 14544 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:32:45.687   488   503 W ziparchive: Unable to open '/data/app/~~oupOlfVo85VjjJjgKudTNQ==/com.shareconnect-EH_RpdXvH7n6ovraMpysgA==/base.dm': No such file or directory
+09-23 20:32:45.687   488   503 I ActivityTaskManager: Displayed com.shareconnect/.MainActivity: +1s321ms
+09-23 20:32:45.780 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:32:45.787 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:32:45.787 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 20:32:45.787 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:32:45.787 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:32:45.834   998  1945 D OneSearchSuggestProvider: Shut down the binder channel
+09-23 20:32:45.838   998 11368 I s.nexuslauncher: oneway function results for code 2 on binder at 0xb400007a39479470 will be dropped but finished with status UNKNOWN_TRANSACTION
+09-23 20:32:45.838 12330 12508 D TrafficStats: tagSocket(182) with statsTag=0x4000407, statsUid=-1
+09-23 20:32:45.862  1581  2228 I AssistantForeground: (REDACTED) Get launcher package: %s
+09-23 20:32:45.883 12330 12414 I FontLog : (REDACTED) Received query %s, URI %s
+09-23 20:32:45.883 12330 12414 I FontLog : (REDACTED) Query [%s] resolved to %s
+09-23 20:32:45.889 12330 12414 I FontLog : (REDACTED) Fetch %s end status %s
+09-23 20:32:45.898 12330 12414 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+09-23 20:32:45.908 12330 12414 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+09-23 20:32:45.948   779   868 D EGL_emulation: app_time_stats: avg=10.14ms min=1.56ms max=53.94ms count=50
+09-23 20:32:45.983   488  3829 W InputManager-JNI: Input channel object '9bf6f4f Splash Screen com.shareconnect (client)' was disposed without first being removed with the input manager!
+09-23 20:32:46.013 14451 14470 D FirebaseSessions: Fetched settings: {"settings_version":3,"cache_duration":155921,"features":{"collect_logged_exceptions":true,"collect_reports":true,"collect_analytics":false,"prompt_enabled":false,"push_enabled":false,"firebase_crashlytics_enabled":false,"collect_anrs":true,"collect_metric_kit":false,"collect_build_ids":true},"app":{"status":"activated","update_required":false,"report_upload_variant":2,"native_report_upload_variant":2},"fabric":{"org_id":"68d289c4086b6002f8cb956f","bundle_id":"com.shareconnect"},"on_demand_upload_rate_per_minute":10,"on_demand_backoff_base":1.2,"on_demand_backoff_step_duration_seconds":60,"app_quality":{"sessions_enabled":true,"sampling_rate":1,"session_timeout_seconds":1800},"on_demand_thread_recording_suspension_enabled":true}
+09-23 20:32:46.028 14451 14475 D FirebaseSessions: Remote settings cache not expired. Using cached values.
+09-23 20:32:46.036 14451 14475 D FirebaseSessions: Session Event Type: SESSION_START
+09-23 20:32:46.037 14451 14475 D FirebaseSessions: Successfully logged Session Start event.
+09-23 20:32:46.055 14451 14497 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10210; state: ENABLED
+09-23 20:32:46.058   488   591 D ConnectivityService: requestNetwork for uid/pid:1000/488 asUid: 10210 activeRequest: null callbackRequest: 385 [NetworkRequest [ REQUEST id=386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10210 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+09-23 20:32:46.063   488   710 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10210 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+09-23 20:32:46.063   488   710 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10210 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+09-23 20:32:46.063   488   710 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10210 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+09-23 20:32:46.064   488   717 D ConnectivityService: NetReassign [386 : null → 102] [c 0] [a 1] [i 1]
+09-23 20:32:46.065   488   710 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10210 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+09-23 20:32:46.963   779   868 D EGL_emulation: app_time_stats: avg=16.69ms min=6.64ms max=35.38ms count=58
+09-23 20:32:47.315 14451 14451 V Console : onCreate()
+09-23 20:32:47.320 14451 14577 I Console : New token available: cLf1dpZeQwaWWmifrU7HMG:APA91bGotmkpAYZT45K7sxEzZwzoMa_c2Vxi1mUXHt6PTaWVpJST0e5jPYyDiZVfyQIRGyX681KJsf7vRaM80o0IQxlifDd-HrWmiqDAxGBTrCfMKKx2bpA
+09-23 20:32:48.329 11307 11307 W ThreadPoolForeg: type=1400 audit(0.0:2029): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=647 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+09-23 20:32:49.125 14451 14579 D ProfileInstaller: Installing profile for com.shareconnect
+09-23 20:32:49.303 12330 12330 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+09-23 20:32:50.854 14451 14529 W FileTestStorage: Output properties is not supported.
+09-23 20:32:50.854 14451 14529 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+09-23 20:32:50.865 14451 14529 D EventInjectionStrategy: Creating injection strategy with input manager.
+09-23 20:32:50.865 14451 14529 W om.shareconnect: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+09-23 20:32:50.866 14451 14529 W om.shareconnect: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+09-23 20:32:50.866 14451 14529 W om.shareconnect: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+09-23 20:32:50.897 14451 14451 W om.shareconnect: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+09-23 20:32:50.897 14451 14451 W om.shareconnect: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+09-23 20:32:50.897 14451 14451 W om.shareconnect: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+09-23 20:32:50.901 14451 14451 W om.shareconnect: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (unsupported, reflection, allowed)
+09-23 20:32:50.901 14451 14451 W om.shareconnect: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+09-23 20:32:50.901 14451 14451 W om.shareconnect: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+09-23 20:32:50.905 14451 14451 I ViewInteraction: Performing 'scroll to' action on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:32:50.908 14451 14451 I ScrollToAction: View is already displayed. Returning.
+09-23 20:32:50.912 14451 14451 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:32:50.917 14451 14451 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=view.isClickable() is <true>}' assertion on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:32:50.939 14451 14451 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 20:32:50.939 14451 14451 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 20:32:50.941 14451 14451 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 20:32:50.957 14451 14451 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 20:32:50.959 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 20:32:50.959 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@5187175 in: PAUSED
+09-23 20:32:50.960 14451 14451 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@5187175
+09-23 20:32:50.976 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24 in: PRE_ON_CREATE
+09-23 20:32:50.977 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24
+09-23 20:32:50.987 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24 in: CREATED
+09-23 20:32:50.987 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24
+09-23 20:32:50.989 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24 in: STARTED
+09-23 20:32:50.990 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24
+09-23 20:32:50.991 14451 14451 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:32:50.997 14451 14451 V Console : Activity lifecycle :: RESUMED :: EmptyActivity
+09-23 20:32:50.997 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:32:50.997 14451 14451 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:32:50.998 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:32:50.999 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24 in: RESUMED
+09-23 20:32:50.999 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@7d3de24
+09-23 20:32:51.000 14451 14451 V Console : Activity lifecycle :: POST-RESUMED :: EmptyActivity
+09-23 20:32:51.005 14451 14544 W Parcel  : Expecting binder but got null!
+09-23 20:32:51.047 14451 14544 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:32:51.070   488   503 I ActivityTaskManager: Displayed com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +143ms
+09-23 20:32:51.116 14451 14544 D EGL_emulation: app_time_stats: avg=600.25ms min=7.15ms max=5219.27ms count=9
+09-23 20:32:51.119 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:32:51.122 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:32:51.122 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 20:32:51.122 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:32:51.123 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:32:51.139 14451 14451 V Console : Activity lifecycle :: PRE-STOPPED :: MainActivity
+09-23 20:32:51.143 14451 14451 V Console : Activity lifecycle :: STOPPED :: MainActivity
+09-23 20:32:51.144 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@5187175 in: STOPPED
+09-23 20:32:51.144 14451 14451 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.MainActivity@5187175
+09-23 20:32:51.145 14451 14451 V Console : Activity lifecycle :: POST-STOPPED :: MainActivity
+09-23 20:32:51.146 14451 14451 V Console : Activity lifecycle :: PRE-DESTROYED :: MainActivity
+09-23 20:32:51.148 14451 14451 V Console : Activity lifecycle :: DESTROYED :: MainActivity
+09-23 20:32:51.151 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@5187175 in: DESTROYED
+09-23 20:32:51.152 14451 14451 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+09-23 20:32:51.155   488  3829 W InputManager-JNI: Input channel object '8ac65e6 com.shareconnect/com.shareconnect.MainActivity (client)' was disposed without first being removed with the input manager!
+09-23 20:32:51.166 14451 14529 I TestRunner: finished: testSettingsButtonClick(com.shareconnect.activities.MainActivityInstrumentationTest)

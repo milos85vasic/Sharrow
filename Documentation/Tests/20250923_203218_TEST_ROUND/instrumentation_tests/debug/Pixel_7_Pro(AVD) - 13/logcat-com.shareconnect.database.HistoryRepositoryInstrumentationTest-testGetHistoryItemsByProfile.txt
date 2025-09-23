@@ -1,0 +1,2 @@
+09-23 20:34:47.313 14451 14529 I TestRunner: started: testGetHistoryItemsByProfile(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 20:34:47.338 14451 14529 I TestRunner: finished: testGetHistoryItemsByProfile(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

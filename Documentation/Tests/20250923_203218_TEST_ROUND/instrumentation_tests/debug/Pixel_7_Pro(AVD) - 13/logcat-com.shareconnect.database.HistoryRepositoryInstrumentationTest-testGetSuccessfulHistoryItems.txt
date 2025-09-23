@@ -1,0 +1,4 @@
+09-23 20:34:47.345 14451 14529 I TestRunner: started: testGetSuccessfulHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 20:34:47.351 14451 14451 I om.shareconnect: Explicit concurrent copying GC freed 13083(735KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 7066KB/13MB, paused 1.388ms,114us total 59.388ms
+09-23 20:34:47.376   488   591 W InputManager-JNI: Input channel object '2636bdf com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+09-23 20:34:47.388 14451 14529 I TestRunner: finished: testGetSuccessfulHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

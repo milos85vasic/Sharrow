@@ -1,0 +1,180 @@
+09-23 20:34:14.220 14451 14529 I TestRunner: started: testServerProfilesPreferenceExists(com.shareconnect.activities.SettingsActivityInstrumentationTest)
+09-23 20:34:14.230 14451 14529 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 20:34:14.251 14451 14451 I om.shareconnect: Explicit concurrent copying GC freed 46766(2793KB) AllocSpace objects, 24(1248KB) LOS objects, 49% free, 7340KB/14MB, paused 103us,128us total 58.451ms
+09-23 20:34:14.297 14451 14451 I om.shareconnect: Explicit concurrent copying GC freed 11875(634KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 6738KB/13MB, paused 69us,95us total 30.771ms
+09-23 20:34:14.307   488  3569 W InputManager-JNI: Input channel object '2589c35 com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+09-23 20:34:14.333   779   868 W Parcel  : Expecting binder but got null!
+09-23 20:34:14.394 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@342d1b8 in: PRE_ON_CREATE
+09-23 20:34:14.395 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 20:34:14.397   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:34:14.398 14451 14451 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:34:14.398 14451 14451 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:34:14.398 14451 14451 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 20:34:14.403 14451 14451 D Console : Activity SettingsActivity usesToolbar: true
+09-23 20:34:14.430 14451 14451 D Console : Setting night mode to NO
+09-23 20:34:14.453  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 20:34:14.455  1581  2233 I HwDetectorWithState: (REDACTED) a: %d
+09-23 20:34:14.472 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@342d1b8 in: CREATED
+09-23 20:34:14.472 14451 14451 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.SettingsActivity@342d1b8
+09-23 20:34:14.505   998  1661 D EGL_emulation: app_time_stats: avg=14.25ms min=3.37ms max=245.02ms count=43
+09-23 20:34:14.508 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@342d1b8 in: STARTED
+09-23 20:34:14.508 14451 14451 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.SettingsActivity@342d1b8
+09-23 20:34:14.519 14451 14451 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:34:14.532 14451 14451 V Console : Activity lifecycle :: RESUMED :: SettingsActivity
+09-23 20:34:14.533 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:34:14.533 14451 14451 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:34:14.533 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:34:14.534 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@342d1b8 in: RESUMED
+09-23 20:34:14.534 14451 14451 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.SettingsActivity@342d1b8
+09-23 20:34:14.536 14451 14451 V Console : Activity lifecycle :: POST-RESUMED :: SettingsActivity
+09-23 20:34:14.550 14451 14544 W Parcel  : Expecting binder but got null!
+09-23 20:34:14.619 14451 14544 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:34:14.627   779   868 D EGL_emulation: app_time_stats: avg=380.65ms min=6.95ms max=4653.74ms count=13
+09-23 20:34:14.766   779   868 D EGL_emulation: app_time_stats: avg=256.55ms min=25.38ms max=3148.78ms count=15
+09-23 20:34:14.783   488   503 W ziparchive: Unable to open '/data/app/~~oupOlfVo85VjjJjgKudTNQ==/com.shareconnect-EH_RpdXvH7n6ovraMpysgA==/base.dm': No such file or directory
+09-23 20:34:14.790   488   503 I ActivityTaskManager: Displayed com.shareconnect/.SettingsActivity: +465ms
+09-23 20:34:14.846 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:34:14.850 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:34:14.850 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=2131231190 fieldName=null extras=null}, false)
+09-23 20:34:14.850 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:34:14.851 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:34:14.968   998  1945 D OneSearchSuggestProvider: Shut down the binder channel
+09-23 20:34:14.969   998 17829 I s.nexuslauncher: oneway function results for code 2 on binder at 0xb400007a39478480 will be dropped but finished with status UNKNOWN_TRANSACTION
+09-23 20:34:14.981  1581  2228 I AssistantForeground: (REDACTED) Get launcher package: %s
+09-23 20:34:15.109   488  2562 W InputManager-JNI: Input channel object 'b3c7bef Splash Screen com.shareconnect (client)' was disposed without first being removed with the input manager!
+09-23 20:34:15.777   779   868 D EGL_emulation: app_time_stats: avg=9.17ms min=1.51ms max=61.04ms count=50
+09-23 20:34:16.185 14451 14544 D EGL_emulation: app_time_stats: avg=123.30ms min=2.51ms max=1200.30ms count=11
+09-23 20:34:18.006 14451 14451 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.008 14451 14451 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.009 14451 14451 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.011 14451 14451 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.036  1551  1882 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+09-23 20:34:18.045  1581  2149 I A11yListener: (REDACTED) #onAccessibilityStateChanged enabled: %s
+09-23 20:34:18.048 11699 11854 I A       : NGA enabled in interactor.
+09-23 20:34:18.048  1581  2228 I A11yListener: #onChange
+09-23 20:34:18.051  1551  1815 I AiAiEcho: Predicting[0]:
+09-23 20:34:18.053  1581  2228 E TraceManager: Duplicate trace
+09-23 20:34:18.053  1581  2228 E TraceManager: com.google.apps.tiktok.tracing.w: Starting new trace A11yEventListener_onChange when already associated with a trace: . For more help, see http://go/tiktok-tracing#fixing-duplicate-trace-issues
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.apps.tiktok.tracing.el.f(PG:6)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.apps.tiktok.tracing.el.g(PG:2)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.apps.tiktok.tracing.dv.d(PG:1)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.android.libraries.search.assistant.a.g.a(PG:7)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.android.libraries.search.assistant.a.b.b(PG:2)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at i.c.b.a.a.h(PG:4)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at kotlinx.coroutines.bk.run(PG:14)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.apps.tiktok.coroutines.g.run(PG:1)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.android.libraries.i.z.run(PG:1)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.android.libraries.i.h.run(PG:2)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	at com.google.android.libraries.i.ai.run(PG:5)
+09-23 20:34:18.053  1581  2228 E TraceManager: 	Suppressed: com.google.apps.tiktok.tracing.fv:
+09-23 20:34:18.053  1581  2228 E TraceManager: 		at tk_trace.(Unknown Source:0)
+09-23 20:34:18.053  1581  2228 E TraceManager: 		at tk_trace.Missing root trace(Unknown Source:0)
+09-23 20:34:18.053  1581  2228 E TraceManager: Caused by: com.google.apps.tiktok.tracing.aa
+09-23 20:34:18.051  1551  1815 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+09-23 20:34:18.054  1581  2228 I Ma-Fcf-A11yChangeNotifier: #FCF: onChange
+09-23 20:34:18.061  1581  2227 I A       : (REDACTED) #FCF: Assistant primary locale : %s
+09-23 20:34:18.061  1581  2227 I A       : (REDACTED) #FCF: Assistant Primary locale check status : %s
+09-23 20:34:18.061  1581  2227 I A       : FCF A11y Checker - readyForTngMa
+09-23 20:34:18.064  1551  1815 I AiAiEcho: Predicting[0]:
+09-23 20:34:18.064  1551  1815 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+09-23 20:34:18.064  1581  2228 I A       : (REDACTED) #FCF: Continued Conversation Mode Enabled: %s
+09-23 20:34:18.065  1581  2228 I A       : (REDACTED) #FCF: Headset Connected Status: %s
+09-23 20:34:18.065  1551  1815 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+09-23 20:34:18.067  1581  2228 W A       : Unable to check for productivity accounts. Assuming there are none.
+09-23 20:34:18.067  1581  2228 W A       : com.google.android.libraries.geller.portable.GellerException: Code: INVALID_ARGUMENT, Message: Account name is null.
+09-23 20:34:18.067  1581  2228 W A       : 	at com.google.android.libraries.search.h.k.a(PG:6)
+09-23 20:34:18.067  1581  2228 W A       : 	at com.google.apps.tiktok.tracing.es.a(PG:3)
+09-23 20:34:18.067  1581  2228 W A       : 	at com.google.common.w.a.bc.a(PG:1)
+09-23 20:34:18.067  1581  2228 W A       : 	at com.google.common.w.a.cw.run(PG:4)
+09-23 20:34:18.067  1581  2228 W A       : 	at com.google.android.libraries.i.z.run(PG:1)
+09-23 20:34:18.067  1581  2228 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+09-23 20:34:18.067  1581  2228 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+09-23 20:34:18.067  1581  2228 W A       : 	at com.google.android.libraries.i.h.run(PG:2)
+09-23 20:34:18.067  1581  2228 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+09-23 20:34:18.067  1581  2228 W A       : 	at com.google.android.libraries.i.ai.run(PG:5)
+09-23 20:34:18.072  1551  1815 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+09-23 20:34:18.080  1551  1815 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+09-23 20:34:18.086  1551  1815 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+09-23 20:34:18.087  1581  2227 I A       : (REDACTED) #FCF evaluate: %s
+09-23 20:34:18.087  1581  2227 I A       : (REDACTED) TngMaStatusChecker#evaluateInternal completed in %s millis
+09-23 20:34:18.088  1581  2227 I Ma-Entry-Triggering: (REDACTED) TNG:MA status updated: %s
+09-23 20:34:18.088  1581  2227 I Ma-Entry-Triggering: TNG:MA became ineligible, client should disconnect
+09-23 20:34:18.090  1581  2227 I Ma-Entry-Triggering: #disconnectAndStop - preventing double stop
+09-23 20:34:18.090  1581  2227 I A       : #invalidationSource: adding headset checker
+09-23 20:34:18.090  1581  2227 I A       : #invalidationSource : adding a11y checker
+09-23 20:34:18.095 11699 11853 I A       : NGA enabled in interactor.
+09-23 20:34:18.103 14451 14451 D DeviceCapture: Found 1 global views to redraw
+09-23 20:34:18.127 14451 14544 D EGL_emulation: app_time_stats: avg=108.34ms min=1.89ms max=1661.82ms count=17
+09-23 20:34:18.128 14451 14451 I forceRedraw: FrameCommitCallback complete
+09-23 20:34:18.159   147   147 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+09-23 20:34:18.160 14437 14449 I Gralloc4: mapper 4.x is not supported
+09-23 20:34:18.181 14437 14449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+09-23 20:34:18.195 14437 14895 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+09-23 20:34:18.198 14437 14895 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+09-23 20:34:18.202 14437 14895 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+09-23 20:34:18.262 14437 14895 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+09-23 20:34:18.269 14437 14895 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+09-23 20:34:18.269 14437 14895 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+09-23 20:34:18.271 14437 14895 D EGL_emulation: eglCreateContext: 0xb400007ceadd1910: maj 3 min 0 rcv 3
+09-23 20:34:18.275 14437 14895 D EGL_emulation: eglMakeCurrent: 0xb400007ceadd1910: ver 3 0 (tinfo 0x7f0a9c4080) (first time)
+09-23 20:34:18.373 11307 11307 W ThreadPoolForeg: type=1400 audit(0.0:2035): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=647 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+09-23 20:34:18.390 14451 14451 I DeviceCapture: got bitmap, returning
+09-23 20:34:18.392 14451 14529 D FileTestStorage: openOutputFile from /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-1.png
+09-23 20:34:18.420  1552 24122 W MediaProvider: isAppCloneUserPair for user 0: false
+09-23 20:34:18.424  1552 24122 W MediaProvider: isAppCloneUserPair for user 0: false
+09-23 20:34:18.502 12330 14252 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+09-23 20:34:18.506 12330 13838 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+09-23 20:34:18.863 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.865 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.867 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.870 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.873 14451 14529 D FileTestStorage: openOutputFile from /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-1.txt
+09-23 20:34:18.880  1552 24121 W MediaProvider: isAppCloneUserPair for user 0: false
+09-23 20:34:18.888 14451 14529 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-1.txt'.
+09-23 20:34:18.893 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.893 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.895 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.896 14451 14529 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:34:18.899 14451 14451 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getId() is <2131231228/com.shareconnect:id/settings>
+09-23 20:34:18.916 14451 14451 V Console : Activity lifecycle :: PRE-PAUSED :: SettingsActivity
+09-23 20:34:18.917 14451 14451 D Console : Activity lifecycle :: Top activity: SettingsActivity
+09-23 20:34:18.917 14451 14451 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 20:34:18.928 14451 14451 V Console : Activity lifecycle :: PAUSED :: SettingsActivity
+09-23 20:34:18.932 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 20:34:18.932 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@342d1b8 in: PAUSED
+09-23 20:34:18.933 14451 14451 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.SettingsActivity@342d1b8
+09-23 20:34:18.940 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8 in: PRE_ON_CREATE
+09-23 20:34:18.941 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.SettingsActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8
+09-23 20:34:18.948 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8 in: CREATED
+09-23 20:34:18.948 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.SettingsActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8
+09-23 20:34:18.950 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8 in: STARTED
+09-23 20:34:18.950 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.SettingsActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8
+09-23 20:34:18.954 14451 14451 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:34:18.958 14451 14451 V Console : Activity lifecycle :: RESUMED :: EmptyActivity
+09-23 20:34:18.959 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:34:18.959 14451 14451 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:34:18.960 14451 14451 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:34:18.961 14451 14451 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8 in: RESUMED
+09-23 20:34:18.961 14451 14451 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.SettingsActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@2e97ff8
+09-23 20:34:18.962 14451 14451 V Console : Activity lifecycle :: POST-RESUMED :: EmptyActivity
+09-23 20:34:18.967 14451 14544 W Parcel  : Expecting binder but got null!
+09-23 20:34:18.970 11307 14538 D AdvertisingIdClient: AdvertisingIdClient already created.
+09-23 20:34:18.974 11307 14538 I AdvertisingIdClient: shouldSendLog 10569668
+09-23 20:34:18.974 11307 14538 I AdvertisingIdClient: GetInfoInternal elapse 4ms
+09-23 20:34:19.014 14451 14544 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:34:19.032   488   503 I ActivityTaskManager: Displayed com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +122ms
+09-23 20:34:19.046 14451 14451 V Console : Activity lifecycle :: PRE-STOPPED :: SettingsActivity
+09-23 20:34:19.049 14451 14451 V Console : Activity lifecycle :: STOPPED :: SettingsActivity
+09-23 20:34:19.049 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@342d1b8 in: STOPPED
+09-23 20:34:19.049 14451 14451 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.SettingsActivity@342d1b8
+09-23 20:34:19.050 14451 14451 V Console : Activity lifecycle :: POST-STOPPED :: SettingsActivity
+09-23 20:34:19.050 14451 14451 V Console : Activity lifecycle :: PRE-DESTROYED :: SettingsActivity
+09-23 20:34:19.051 14451 14451 V Console : Activity lifecycle :: DESTROYED :: SettingsActivity
+09-23 20:34:19.053 14451 14451 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@342d1b8 in: DESTROYED
+09-23 20:34:19.053 14451 14451 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+09-23 20:34:19.060   488  1752 W InputManager-JNI: Input channel object '1a005f5 com.shareconnect/com.shareconnect.SettingsActivity (client)' was disposed without first being removed with the input manager!
+09-23 20:34:19.068 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:34:19.070 14451 14529 I TestRunner: finished: testServerProfilesPreferenceExists(com.shareconnect.activities.SettingsActivityInstrumentationTest)

@@ -5,6 +5,7 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isClickable
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
@@ -72,15 +73,19 @@ class MainActivityInstrumentationTest {
         Thread.sleep(2000)
 
         onView(withId(R.id.buttonSettings))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
 
         onView(withId(R.id.buttonOpenMeTube))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
 
         onView(withId(R.id.buttonHistory))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
 
         onView(withId(R.id.fabAdd))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
     }
 
@@ -89,6 +94,7 @@ class MainActivityInstrumentationTest {
         Thread.sleep(2000)
 
         onView(withId(R.id.buttonSettings))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
             .check(matches(isClickable()))
     }
@@ -98,6 +104,7 @@ class MainActivityInstrumentationTest {
         Thread.sleep(2000)
 
         onView(withId(R.id.buttonOpenMeTube))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
             .check(matches(isClickable()))
     }
@@ -107,6 +114,7 @@ class MainActivityInstrumentationTest {
         Thread.sleep(2000)
 
         onView(withId(R.id.buttonHistory))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
             .check(matches(isClickable()))
     }
@@ -116,6 +124,7 @@ class MainActivityInstrumentationTest {
         Thread.sleep(2000)
 
         onView(withId(R.id.fabAdd))
+            .perform(scrollTo())
             .check(matches(isDisplayed()))
             .check(matches(isClickable()))
     }
@@ -151,15 +160,19 @@ class MainActivityInstrumentationTest {
         Thread.sleep(2000)
 
         onView(withId(R.id.buttonSettings))
+            .perform(scrollTo())
             .check(matches(withText("Settings")))
 
         onView(withId(R.id.buttonOpenMeTube))
+            .perform(scrollTo())
             .check(matches(withText("Open MeTube Interface")))
 
         onView(withId(R.id.buttonHistory))
+            .perform(scrollTo())
             .check(matches(withText("View Share History")))
 
         onView(withId(R.id.fabAdd))
+            .perform(scrollTo())
             .check(matches(withText("Add from Clipboard")))
     }
 

@@ -10,11 +10,28 @@
   - Report problem
   - Request a feature
   - Misc
+- Publishing
+  - Google Play Store
+  - RuStore
+  - AppGallery
+  - Samsung Store
+  - Xiaomi
+  - RuMarket
+  - F-Droid
+  - APKPure
 
 ## For 1.0.1
 
 - Connect with auto-discovery profiles systems (integrate on the back side as well)
 - Sync the user data (WebDAV)
+- Premium features
+  - Extra theme packs
+  - Additional Providers support
+  - Tbd
+
+# For 1.0.2
+
+- Tbd
 
 ## FIXME
 

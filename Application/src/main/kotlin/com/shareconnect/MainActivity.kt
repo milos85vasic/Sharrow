@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     private var buttonSettings: MaterialButton? = null
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         buttonSettings = findViewById(R.id.buttonSettings)
         buttonOpenMeTube = findViewById(R.id.buttonOpenMeTube)
         val buttonHistory = findViewById<MaterialButton>(R.id.buttonHistory)
-        val fabAdd = findViewById<FloatingActionButton>(R.id.fabAdd)
+        val fabAdd = findViewById<ExtendedFloatingActionButton>(R.id.fabAdd)
 
         buttonSettings!!.setOnClickListener {
             openSettings()

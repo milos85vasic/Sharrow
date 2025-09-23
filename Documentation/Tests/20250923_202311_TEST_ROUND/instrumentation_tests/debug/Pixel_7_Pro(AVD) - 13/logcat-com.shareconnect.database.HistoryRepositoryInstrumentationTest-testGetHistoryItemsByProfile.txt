@@ -1,0 +1,4 @@
+09-23 20:25:36.367 12245 12346 I TestRunner: started: testGetHistoryItemsByProfile(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 20:25:36.383 12245 12245 I om.shareconnect: Explicit concurrent copying GC freed 67952(4269KB) AllocSpace objects, 45(1884KB) LOS objects, 49% free, 7587KB/14MB, paused 199us,117us total 91.389ms
+09-23 20:25:36.383 12245 12254 I om.shareconnect: WaitForGcToComplete blocked Background on Explicit for 63.606ms
+09-23 20:25:36.403 12245 12346 I TestRunner: finished: testGetHistoryItemsByProfile(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

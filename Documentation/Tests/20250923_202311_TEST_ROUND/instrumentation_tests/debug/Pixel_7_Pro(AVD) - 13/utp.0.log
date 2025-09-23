@@ -1,0 +1,82 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.shareconnect"
+    test_package: "com.shareconnect.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.shareconnect/additional_test_output"
+    }
+    args_map {
+      key: "package"
+      value: "com.shareconnect.database,com.shareconnect.activities"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/debug/Application-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/androidTest/debug/Application-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+instrumentation_target_package_id: "com.shareconnect"
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/debug/Application-debug.apk] on device emulator-5554.
+INFO: Installing [/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/androidTest/debug/Application-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/com.shareconnect/additional_test_output to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-1.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-1.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-2.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-2.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-1.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-1.png
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-2.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-2.png
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.shareconnect for device emulator-5554.
+INFO: Uninstalling com.shareconnect.test for device emulator-5554.
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testSettingsButtonClick: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testOpenMeTubeButtonClick: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testMainActivityLaunches: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testFabAddButtonClick: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testActivityLifecycle: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testMainContentIsScrollable: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testAppNameIsDisplayed: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testHistoryButtonClick: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testToolbarIsDisplayed: PASSED
+INFO: Execute com.shareconnect.activities.MainActivityInstrumentationTest.testButtonTexts: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testBackButtonNavigatesUp: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceIcons: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceClickable: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceClickable: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testServerProfilesPreferenceExists: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsActivityLaunches: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testSettingsFragmentIsLoaded: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testActivityTitle: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testToolbarIsDisplayed: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testPreferenceCategories: PASSED
+INFO: Execute com.shareconnect.activities.SettingsActivityInstrumentationTest.testThemeSelectionPreferenceExists: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testDeleteAllHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testDeleteHistoryItem: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetHistoryItemsByProfile: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetSuccessfulHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testInsertAndRetrieveHistoryItem: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetAllHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testGetFailedHistoryItems: PASSED
+INFO: Execute com.shareconnect.database.HistoryRepositoryInstrumentationTest.testUpdateHistoryItem: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testInsertAndRetrieveTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testDeleteTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testUpdateTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testGetAllThemes: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testGetDefaultTheme: PASSED
+INFO: Execute com.shareconnect.database.ThemeRepositoryInstrumentationTest.testSetDefaultTheme: PASSED

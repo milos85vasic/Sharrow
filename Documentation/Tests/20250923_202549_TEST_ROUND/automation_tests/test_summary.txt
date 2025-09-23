@@ -1,0 +1,61 @@
+ShareConnect Full Automation Tests Execution Summary
+===================================================
+
+Execution Date: Tue Sep 23 20:28:37 MSK 2025
+Test Type: Full Automation UI/UX Tests
+Test Suite: com.shareconnect.suites.FullAutomationTestSuite
+Status: FAILED
+
+Device Information:
+- Model: sdk_gphone64_arm64
+- API Level: 33
+- ADB Device: emulator-5554	device
+
+Test Classes Executed:
+- FullAppFlowAutomationTest
+  * testCompleteFirstRunFlow
+  * testCompleteThemeChangeFlow
+  * testCompleteProfileManagementFlow
+  * testCompleteHistoryFlow
+  * testCompleteShareIntentFlow
+  * testCompleteAppNavigationFlow
+  * testAppStressTest
+
+- AccessibilityAutomationTest
+  * testAccessibilityLabels
+  * testMinimumTouchTargetSize
+  * testTextContrast
+  * testKeyboardNavigation
+  * testScreenReaderSupport
+  * testContentLabeling
+  * testStateDescriptions
+
+Test Coverage:
+- Complete user workflows end-to-end
+- UI/UX interaction testing
+- Accessibility compliance verification
+- Application navigation flows
+- Theme management functionality
+- Profile management operations
+- History viewing capabilities
+- Share intent handling
+- Stress testing with rapid navigation
+
+Report Location: Documentation/Tests/20250923_202549_TEST_ROUND/automation_tests
+
+Files Generated:
+- automation_test_execution.log: Full execution log
+- test_summary.txt: This summary file
+- index.html: HTML test report (if available)
+- TEST-*.xml: JUnit XML results (if available)
+- device_final_state.png: Final device screenshot
+
+Command Used:
+./gradlew connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.shareconnect.suites.FullAutomationTestSuite --info --stacktrace
+
+Requirements:
+- Connected Android device or emulator
+- USB debugging enabled
+- Application installed and permissions granted
+- Device unlocked during test execution
+

@@ -1,0 +1,5 @@
+09-23 20:20:26.977 11079 11160 I TestRunner: started: testInsertAndRetrieveTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)
+09-23 20:20:27.025 11563 11579 I Finsky  : [42] Package com.google.android.gms is verified.
+09-23 20:20:27.032 11307 10558 W FA-SVC  : Service response is missing Install Referrer install timestamp
+09-23 20:20:27.080   488  1752 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=9832475 mSleepTimeMs=0 mIdleTimeMs=8674283 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=0}]}
+09-23 20:20:27.080 11079 11160 I TestRunner: finished: testInsertAndRetrieveTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)

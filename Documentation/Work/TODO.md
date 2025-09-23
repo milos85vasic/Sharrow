@@ -1,6 +1,7 @@
 # TODO
 
-- None
+- Code coverage reports
+  - If low create generic task and send it to AI agent to extend the tests
 
 ## MVP
 

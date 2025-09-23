@@ -1,0 +1,2 @@
+09-23 20:20:27.252 11079 11160 I TestRunner: started: testGetSuccessfulHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 20:20:27.261 11079 11160 I TestRunner: finished: testGetSuccessfulHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

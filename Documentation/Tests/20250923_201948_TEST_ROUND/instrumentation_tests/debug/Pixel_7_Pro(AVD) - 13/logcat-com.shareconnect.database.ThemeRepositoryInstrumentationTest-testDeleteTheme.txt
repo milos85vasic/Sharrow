@@ -1,0 +1,2 @@
+09-23 20:20:27.088 11079 11160 I TestRunner: started: testDeleteTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)
+09-23 20:20:27.112 11079 11160 I TestRunner: finished: testDeleteTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)

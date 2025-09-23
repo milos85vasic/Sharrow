@@ -5,8 +5,12 @@
 
 set -e
 
-# Set Android SDK paths
-export ANDROID_HOME="/Volumes/T7/Android/SDK"
+if [ -z "$ANDROID_HOME" ]; then
+
+  echo "ERROR: ANDROID_HOME is not defined"
+  exit 1
+fi
+
 export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
 
 # Colors for output
@@ -133,23 +137,20 @@ sleep 2
 # Run instrumentation tests with detailed output (abort on first failure)
 echo -e "${BLUE}Running Instrumentation Test Suite...${NC}"
 ./gradlew :Application:connectedAndroidTest \
+    -Pandroid.testInstrumentationRunnerArguments.package=com.shareconnect.database,com.shareconnect.activities \
     --info \
     --stacktrace \
     2>&1 | tee "${REPORT_DIR}/instrumentation_test_execution.log"
 
-# Exit immediately if any tests failed
-if [ ${PIPESTATUS[0]} -ne 0 ]; then
-    echo -e "${RED}✗ Tests failed! Aborting execution.${NC}"
-    exit 1
-fi
-
 # Check if tests passed
-if [ ${PIPESTATUS[0]} -eq 0 ]; then
+GRADLE_EXIT_CODE=${PIPESTATUS[0]}
+if [ $GRADLE_EXIT_CODE -eq 0 ]; then
     echo -e "${GREEN}✓ Instrumentation tests completed successfully!${NC}"
     TEST_STATUS="PASSED"
 else
     echo -e "${RED}✗ Instrumentation tests failed!${NC}"
     TEST_STATUS="FAILED"
+    exit 1
 fi
 
 # Copy test reports
@@ -196,7 +197,7 @@ Files Generated:
 - TEST-*.xml: JUnit XML results (if available)
 
 Command Used:
-./gradlew connectedAndroidTest --tests "com.shareconnect.suites.InstrumentationTestSuite" --info --stacktrace
+./gradlew connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.shareconnect.suites.InstrumentationTestSuite --info --stacktrace
 
 Requirements:
 - Connected Android device or emulator

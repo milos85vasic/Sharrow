@@ -1,0 +1,1981 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2025-09-23T17:22:31.677793Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 35
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "ThemeRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testInsertAndRetrieveTheme"
+    start_time {
+      seconds: 1758648027
+      nanos: 553000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 645000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.ThemeRepositoryInstrumentationTest-testInsertAndRetrieveTheme.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ThemeRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testDeleteTheme"
+    start_time {
+      seconds: 1758648027
+      nanos: 659000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 695000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.ThemeRepositoryInstrumentationTest-testDeleteTheme.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ThemeRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testUpdateTheme"
+    start_time {
+      seconds: 1758648027
+      nanos: 697000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 701000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.ThemeRepositoryInstrumentationTest-testUpdateTheme.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ThemeRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testGetAllThemes"
+    start_time {
+      seconds: 1758648027
+      nanos: 703000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 707000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.ThemeRepositoryInstrumentationTest-testGetAllThemes.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ThemeRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testGetDefaultTheme"
+    start_time {
+      seconds: 1758648027
+      nanos: 709000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 744000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.ThemeRepositoryInstrumentationTest-testGetDefaultTheme.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ThemeRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testSetDefaultTheme"
+    start_time {
+      seconds: 1758648027
+      nanos: 746000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 781000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.ThemeRepositoryInstrumentationTest-testSetDefaultTheme.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testDeleteAllHistoryItems"
+    start_time {
+      seconds: 1758648027
+      nanos: 783000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 789000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testDeleteAllHistoryItems.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testDeleteHistoryItem"
+    start_time {
+      seconds: 1758648027
+      nanos: 791000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 794000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testDeleteHistoryItem.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testGetHistoryItemsByProfile"
+    start_time {
+      seconds: 1758648027
+      nanos: 795000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 825000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testGetHistoryItemsByProfile.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testGetSuccessfulHistoryItems"
+    start_time {
+      seconds: 1758648027
+      nanos: 826000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 830000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testGetSuccessfulHistoryItems.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testInsertAndRetrieveHistoryItem"
+    start_time {
+      seconds: 1758648027
+      nanos: 831000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 835000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testInsertAndRetrieveHistoryItem.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testGetAllHistoryItems"
+    start_time {
+      seconds: 1758648027
+      nanos: 836000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 870000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testGetAllHistoryItems.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testGetFailedHistoryItems"
+    start_time {
+      seconds: 1758648027
+      nanos: 871000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 876000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testGetFailedHistoryItems.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HistoryRepositoryInstrumentationTest"
+    test_package: "com.shareconnect.database"
+    test_method: "testUpdateHistoryItem"
+    start_time {
+      seconds: 1758648027
+      nanos: 878000000
+    }
+    end_time {
+      seconds: 1758648027
+      nanos: 882000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.database.HistoryRepositoryInstrumentationTest-testUpdateHistoryItem.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testSettingsButtonClick"
+    start_time {
+      seconds: 1758648027
+      nanos: 884000000
+    }
+    end_time {
+      seconds: 1758648034
+      nanos: 958000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testSettingsButtonClick.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testOpenMeTubeButtonClick"
+    start_time {
+      seconds: 1758648035
+      nanos: 908000000
+    }
+    end_time {
+      seconds: 1758648041
+      nanos: 950000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testOpenMeTubeButtonClick.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testMainActivityLaunches"
+    start_time {
+      seconds: 1758648042
+      nanos: 846000000
+    }
+    end_time {
+      seconds: 1758648048
+      nanos: 875000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testMainActivityLaunches.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testFabAddButtonClick"
+    start_time {
+      seconds: 1758648049
+      nanos: 824000000
+    }
+    end_time {
+      seconds: 1758648055
+      nanos: 765000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testFabAddButtonClick.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testActivityLifecycle"
+    start_time {
+      seconds: 1758648056
+      nanos: 773000000
+    }
+    end_time {
+      seconds: 1758648063
+      nanos: 603000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testActivityLifecycle.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testMainContentIsScrollable"
+    start_time {
+      seconds: 1758648064
+      nanos: 580000000
+    }
+    end_time {
+      seconds: 1758648071
+      nanos: 414000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testMainContentIsScrollable.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testAppNameIsDisplayed"
+    start_time {
+      seconds: 1758648072
+      nanos: 400000000
+    }
+    end_time {
+      seconds: 1758648078
+      nanos: 312000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testAppNameIsDisplayed.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testHistoryButtonClick"
+    start_time {
+      seconds: 1758648079
+      nanos: 278000000
+    }
+    end_time {
+      seconds: 1758648085
+      nanos: 164000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testHistoryButtonClick.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testToolbarIsDisplayed"
+    start_time {
+      seconds: 1758648086
+      nanos: 153000000
+    }
+    end_time {
+      seconds: 1758648091
+      nanos: 996000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testToolbarIsDisplayed.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MainActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testButtonTexts"
+    start_time {
+      seconds: 1758648092
+      nanos: 872000000
+    }
+    end_time {
+      seconds: 1758648098
+      nanos: 779000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.MainActivityInstrumentationTest-testButtonTexts.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testBackButtonNavigatesUp"
+    start_time {
+      seconds: 1758648099
+      nanos: 691000000
+    }
+    end_time {
+      seconds: 1758648103
+      nanos: 632000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testBackButtonNavigatesUp.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testPreferenceIcons"
+    start_time {
+      seconds: 1758648104
+      nanos: 554000000
+    }
+    end_time {
+      seconds: 1758648108
+      nanos: 359000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testPreferenceIcons.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testThemeSelectionPreferenceClickable"
+    start_time {
+      seconds: 1758648109
+      nanos: 236000000
+    }
+    end_time {
+      seconds: 1758648112
+      nanos: 889000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testThemeSelectionPreferenceClickable.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testServerProfilesPreferenceClickable"
+    start_time {
+      seconds: 1758648113
+      nanos: 854000000
+    }
+    end_time {
+      seconds: 1758648117
+      nanos: 553000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testServerProfilesPreferenceClickable.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testServerProfilesPreferenceExists"
+    start_time {
+      seconds: 1758648118
+      nanos: 384000000
+    }
+    end_time {
+      seconds: 1758648122
+      nanos: 876000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testServerProfilesPreferenceExists.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testSettingsActivityLaunches"
+    start_time {
+      seconds: 1758648123
+      nanos: 763000000
+    }
+    end_time {
+      seconds: 1758648126
+      nanos: 514000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testSettingsActivityLaunches.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testSettingsFragmentIsLoaded"
+    start_time {
+      seconds: 1758648127
+      nanos: 471000000
+    }
+    end_time {
+      seconds: 1758648131
+      nanos: 350000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testSettingsFragmentIsLoaded.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testActivityTitle"
+    start_time {
+      seconds: 1758648132
+      nanos: 250000000
+    }
+    end_time {
+      seconds: 1758648135
+      nanos: 15000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testActivityTitle.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testToolbarIsDisplayed"
+    start_time {
+      seconds: 1758648135
+      nanos: 955000000
+    }
+    end_time {
+      seconds: 1758648138
+      nanos: 735000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testToolbarIsDisplayed.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testPreferenceCategories"
+    start_time {
+      seconds: 1758648139
+      nanos: 655000000
+    }
+    end_time {
+      seconds: 1758648143
+      nanos: 440000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testPreferenceCategories.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsActivityInstrumentationTest"
+    test_package: "com.shareconnect.activities"
+    test_method: "testThemeSelectionPreferenceExists"
+    start_time {
+      seconds: 1758648144
+      nanos: 368000000
+    }
+    end_time {
+      seconds: 1758648148
+      nanos: 986000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/logcat-com.shareconnect.activities.SettingsActivityInstrumentationTest-testThemeSelectionPreferenceExists.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/androidTest-results/connected/debug/Pixel_7_Pro(AVD) - 13/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

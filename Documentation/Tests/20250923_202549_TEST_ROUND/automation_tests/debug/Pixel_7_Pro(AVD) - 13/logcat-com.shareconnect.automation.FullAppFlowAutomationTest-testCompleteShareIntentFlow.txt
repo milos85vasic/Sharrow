@@ -1,0 +1,403 @@
+09-23 20:28:07.063 13343 13461 I TestRunner: started: testCompleteShareIntentFlow(com.shareconnect.automation.FullAppFlowAutomationTest)
+09-23 20:28:07.066 13343 13461 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 20:28:07.070   779   868 W Parcel  : Expecting binder but got null!
+09-23 20:28:07.078 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@f343ed5 in: PRE_ON_CREATE
+09-23 20:28:07.078 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 20:28:07.078 13343 13343 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:28:07.078 13343 13343 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:28:07.078 13343 13343 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 20:28:07.078 13343 13343 D Console : Activity MainActivity usesToolbar: true
+09-23 20:28:07.080 13343 13343 D Console : Setting night mode to NO
+09-23 20:28:07.082   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:28:07.103 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@f343ed5 in: CREATED
+09-23 20:28:07.103 13343 13343 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.MainActivity@f343ed5
+09-23 20:28:07.104 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@f343ed5 in: STARTED
+09-23 20:28:07.104 13343 13343 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@f343ed5
+09-23 20:28:07.104 13343 13343 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:28:07.107 13343 13343 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 20:28:07.107 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:28:07.107 13343 13343 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:28:07.108 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:28:07.108 13343 13343 D Console : hasThemeChanged() returned: false
+09-23 20:28:07.108 13343 13343 D Console : onResume() called, themeChanged: false
+09-23 20:28:07.108 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@f343ed5 in: RESUMED
+09-23 20:28:07.108 13343 13343 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@f343ed5
+09-23 20:28:07.109 13343 13343 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 20:28:07.113 13343 13476 W Parcel  : Expecting binder but got null!
+09-23 20:28:07.130 13343 13476 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:28:07.138   488   503 W ziparchive: Unable to open '/data/app/~~sMIfh0iwP5kltL3ByvNJgg==/com.shareconnect-cqLsEYnaW4Guduem5k2TaA==/base.dm': No such file or directory
+09-23 20:28:07.138   488   503 I ActivityTaskManager: Displayed com.shareconnect/.MainActivity: +70ms
+09-23 20:28:07.145 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:28:07.146 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:28:07.146 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 20:28:07.146 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:28:07.146 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:28:07.147   779   868 D EGL_emulation: app_time_stats: avg=7129.05ms min=7129.05ms max=7129.05ms count=1
+09-23 20:28:07.171  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 20:28:07.171  1581  2154 I HwDetectorWithState: (REDACTED) a: %d
+09-23 20:28:07.327   779   868 D EGL_emulation: app_time_stats: avg=3013.21ms min=48.70ms max=14668.68ms count=5
+09-23 20:28:07.382  1581  2228 I AssistantForeground: (REDACTED) Get launcher package: %s
+09-23 20:28:07.396   998  1945 D OneSearchSuggestProvider: Shut down the binder channel
+09-23 20:28:07.397   998  1038 I s.nexuslauncher: oneway function results for code 2 on binder at 0xb400007a3948d1b0 will be dropped but finished with status UNKNOWN_TRANSACTION
+09-23 20:28:07.410   488  2445 W InputManager-JNI: Input channel object '22ef9ab Splash Screen com.shareconnect (client)' was disposed without first being removed with the input manager!
+09-23 20:28:08.357   779   868 D EGL_emulation: app_time_stats: avg=37.66ms min=12.95ms max=113.51ms count=27
+09-23 20:28:12.399 13343 13343 I ViewInteraction: Performing 'scroll to' action on view view.getId() is <2131230970/com.shareconnect:id/fabAdd>
+09-23 20:28:12.412 13343 13343 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230970/com.shareconnect:id/fabAdd>
+09-23 20:28:12.461 13343 13476 D EGL_emulation: app_time_stats: avg=591.64ms min=9.47ms max=5202.27ms count=9
+09-23 20:28:12.492 13343 13343 D CompatibilityChangeReporter: Compat change id reported: 147798919; UID 10208; state: ENABLED
+09-23 20:28:12.531   334   452 D AudioFlinger: mixer(0xb400007c8943e9a0) throttle end: throttle time(39)
+09-23 20:28:12.545   779   868 W Parcel  : Expecting binder but got null!
+09-23 20:28:12.565   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:28:13.781 13343 13343 I ViewInteraction: Performing 'scroll to' action on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:28:13.782 13343 13343 I ScrollToAction: View is already displayed. Returning.
+09-23 20:28:13.783 13343 13343 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:28:13.792 13343 13343 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 20:28:13.792 13343 13343 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 20:28:13.792 13343 13343 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 20:28:13.794 13343 13343 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 20:28:13.794 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 20:28:13.794 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@f343ed5 in: PAUSED
+09-23 20:28:13.794 13343 13343 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@f343ed5
+09-23 20:28:13.799 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8 in: PRE_ON_CREATE
+09-23 20:28:13.799 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8
+09-23 20:28:13.802 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8 in: CREATED
+09-23 20:28:13.802 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8
+09-23 20:28:13.803 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8 in: STARTED
+09-23 20:28:13.803 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8
+09-23 20:28:13.804 13343 13343 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:28:13.805 13343 13343 V Console : Activity lifecycle :: RESUMED :: EmptyActivity
+09-23 20:28:13.805 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:28:13.808 13343 13343 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:28:13.808 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:28:13.809 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8 in: RESUMED
+09-23 20:28:13.809 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8ef75e8
+09-23 20:28:13.809 13343 13343 V Console : Activity lifecycle :: POST-RESUMED :: EmptyActivity
+09-23 20:28:13.810 13343 13476 W Parcel  : Expecting binder but got null!
+09-23 20:28:13.828 13343 13476 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:28:13.835   488   503 I ActivityTaskManager: Displayed com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +48ms
+09-23 20:28:13.843 13343 13343 V Console : Activity lifecycle :: PRE-STOPPED :: MainActivity
+09-23 20:28:13.844 13343 13343 V Console : Activity lifecycle :: STOPPED :: MainActivity
+09-23 20:28:13.844 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@f343ed5 in: STOPPED
+09-23 20:28:13.844 13343 13343 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.MainActivity@f343ed5
+09-23 20:28:13.844 13343 13343 V Console : Activity lifecycle :: POST-STOPPED :: MainActivity
+09-23 20:28:13.845 11307 13471 D AdvertisingIdClient: AdvertisingIdClient already created.
+09-23 20:28:13.846 11307 13471 I AdvertisingIdClient: shouldSendLog 8709359
+09-23 20:28:13.846 11307 13471 I AdvertisingIdClient: GetInfoInternal elapse 1ms
+09-23 20:28:13.848 13343 13343 V Console : Activity lifecycle :: PRE-DESTROYED :: MainActivity
+09-23 20:28:13.849 13343 13343 V Console : Activity lifecycle :: DESTROYED :: MainActivity
+09-23 20:28:13.849 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@f343ed5 in: DESTROYED
+09-23 20:28:13.849 13343 13343 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+09-23 20:28:13.869 13343 13343 I om.shareconnect: Explicit concurrent copying GC freed 83461(3768KB) AllocSpace objects, 21(1060KB) LOS objects, 49% free, 8765KB/17MB, paused 40us,17us total 19.648ms
+09-23 20:28:13.875 13343 13358 D StrictMode: StrictMode policy violation: android.os.strictmode.LeakedClosableViolation: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.StrictMode$AndroidCloseGuardReporter.report(StrictMode.java:1986)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.warnIfOpen(CloseGuard.java:336)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnectionPool.dispose(SQLiteConnectionPool.java:242)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnectionPool.finalize(SQLiteConnectionPool.java:181)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:319)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:306)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Daemons$Daemon.run(Daemons.java:140)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 20:28:13.875 13343 13358 D StrictMode: Caused by: java.lang.Throwable: Explicit termination method 'SQLiteConnectionPool.close' not called
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java:221)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java:202)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openInner(SQLiteDatabase.java:1085)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.open(SQLiteDatabase.java:1065)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:929)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:918)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:373)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:316)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:167)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:57)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:33)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.connection$lambda$0(PassthroughConnectionPool.kt:47)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.$r8$lambda$5PfN97KPsXXXOapSC9IzcedL70w(Unknown Source:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:86)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.useConnection(PassthroughConnectionPool.kt:58)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:136)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.RoomDatabase.useConnection(RoomDatabase.android.kt:619)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invokeSuspend(DBUtil.android.kt:260)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invoke(Unknown Source:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invoke(Unknown Source:4)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:157)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invokeSuspend(DBUtil.android.kt:72)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invoke(Unknown Source:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invoke(Unknown Source:4)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invokeSuspend(RunBlockingUninterruptible.android.kt:52)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:4)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:20)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:360)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:134)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:53)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1.invokeSuspend(RunBlockingUninterruptible.android.kt:51)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt.runBlockingUninterruptible(RunBlockingUninterruptible.android.kt:45)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt.performBlocking(DBUtil.android.kt:71)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil.performBlocking(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.database.HistoryItemDao_Impl.getAllHistoryItems(HistoryItemDao_Impl.kt:174)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.database.HistoryRepository.getAllHistoryItems(HistoryRepository.kt:29)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.HistoryActivity.loadHistoryItems(HistoryActivity.kt:86)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.HistoryActivity.onCreate(HistoryActivity.kt:50)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8342)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8321)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1417)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3626)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3782)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:101)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:138)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2307)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.injectMotionEvent(UiControllerImpl.java:5)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:7)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:5)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap.-$$Nest$smsendSingleTap(Unknown Source:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:3)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:6)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:2)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:25)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction.-$$Nest$mdoPerform(Unknown Source:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:7)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:942)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:201)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Looper.loop(Looper.java:288)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:7924)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+09-23 20:28:13.875 13343 13358 W SQLiteConnectionPool: A SQLiteConnection object for database '/data/user/0/com.shareconnect/databases/history_database' was leaked!  Please fix your application to end transactions in progress properly and to close the database when it is no longer needed.
+09-23 20:28:13.875 13343 13358 D StrictMode: StrictMode policy violation: android.os.strictmode.LeakedClosableViolation: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.StrictMode$AndroidCloseGuardReporter.report(StrictMode.java:1986)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.warnIfOpen(CloseGuard.java:336)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnection.dispose(SQLiteConnection.java:280)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnection.finalize(SQLiteConnection.java:192)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:319)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:306)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Daemons$Daemon.run(Daemons.java:140)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 20:28:13.875 13343 13358 D StrictMode: Caused by: java.lang.Throwable: Explicit termination method 'SQLiteConnection.close' not called
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnection.<init>(SQLiteConnection.java:182)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnection.open(SQLiteConnection.java:202)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnectionPool.openConnectionLocked(SQLiteConnectionPool.java:512)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java:210)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java:202)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openInner(SQLiteDatabase.java:1085)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.open(SQLiteDatabase.java:1065)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:929)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:918)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:373)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:316)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:167)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:57)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.sqlite.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:33)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.connection$lambda$0(PassthroughConnectionPool.kt:47)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.$r8$lambda$5PfN97KPsXXXOapSC9IzcedL70w(Unknown Source:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:86)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.useConnection(PassthroughConnectionPool.kt:58)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:136)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.RoomDatabase.useConnection(RoomDatabase.android.kt:619)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invokeSuspend(DBUtil.android.kt:260)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invoke(Unknown Source:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invoke(Unknown Source:4)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:157)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invokeSuspend(DBUtil.android.kt:72)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invoke(Unknown Source:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invoke(Unknown Source:4)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invokeSuspend(RunBlockingUninterruptible.android.kt:52)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:4)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:20)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:360)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:134)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:53)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1.invokeSuspend(RunBlockingUninterruptible.android.kt:51)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt.runBlockingUninterruptible(RunBlockingUninterruptible.android.kt:45)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt.performBlocking(DBUtil.android.kt:71)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil.performBlocking(Unknown Source:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.database.HistoryItemDao_Impl.getAllHistoryItems(HistoryItemDao_Impl.kt:174)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.database.HistoryRepository.getAllHistoryItems(HistoryRepository.kt:29)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.HistoryActivity.loadHistoryItems(HistoryActivity.kt:86)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.shareconnect.HistoryActivity.onCreate(HistoryActivity.kt:50)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8342)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8321)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1417)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3626)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3782)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:101)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:138)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2307)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:8)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.injectMotionEvent(UiControllerImpl.java:5)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:7)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:5)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap.-$$Nest$smsendSingleTap(Unknown Source:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:3)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:6)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:2)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:25)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction.-$$Nest$mdoPerform(Unknown Source:0)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:7)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:942)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:201)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.os.Looper.loop(Looper.java:288)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:7924)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+09-23 20:28:13.875 13343 13358 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+09-23 20:28:13.876 13343 13358 W SQLiteConnectionPool: A SQLiteConnection object for database '/data/user/0/com.shareconnect/databases/history_database' was leaked!  Please fix your application to end transactions in progress properly and to close the database when it is no longer needed.
+09-23 20:28:13.877 13343 13358 D StrictMode: StrictMode policy violation: android.os.strictmode.LeakedClosableViolation: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.os.StrictMode$AndroidCloseGuardReporter.report(StrictMode.java:1986)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.warnIfOpen(CloseGuard.java:336)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.dispose(SQLiteDatabase.java:511)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.finalize(SQLiteDatabase.java:495)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:319)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:306)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at java.lang.Daemons$Daemon.run(Daemons.java:140)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+09-23 20:28:13.877 13343 13358 D StrictMode: Caused by: java.lang.Throwable: Explicit termination method 'close' not called
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openInner(SQLiteDatabase.java:1086)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.open(SQLiteDatabase.java:1065)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:929)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:918)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:373)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:316)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:167)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.sqlite.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:57)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.sqlite.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:33)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.connection$lambda$0(PassthroughConnectionPool.kt:47)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.$r8$lambda$5PfN97KPsXXXOapSC9IzcedL70w(Unknown Source:0)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:86)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.PassthroughConnectionPool.useConnection(PassthroughConnectionPool.kt:58)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:136)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.RoomDatabase.useConnection(RoomDatabase.android.kt:619)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invokeSuspend(DBUtil.android.kt:260)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invoke(Unknown Source:8)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1$1.invoke(Unknown Source:4)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:157)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invokeSuspend(DBUtil.android.kt:72)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invoke(Unknown Source:8)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt$performBlocking$1.invoke(Unknown Source:4)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invokeSuspend(RunBlockingUninterruptible.android.kt:52)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:8)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:4)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:20)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:360)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:134)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:53)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1.invokeSuspend(RunBlockingUninterruptible.android.kt:51)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt.runBlockingUninterruptible(RunBlockingUninterruptible.android.kt:45)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil__DBUtil_androidKt.performBlocking(DBUtil.android.kt:71)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.room.util.DBUtil.performBlocking(Unknown Source:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at com.shareconnect.database.HistoryItemDao_Impl.getAllHistoryItems(HistoryItemDao_Impl.kt:174)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at com.shareconnect.database.HistoryRepository.getAllHistoryItems(HistoryRepository.kt:29)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at com.shareconnect.HistoryActivity.loadHistoryItems(HistoryActivity.kt:86)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at com.shareconnect.HistoryActivity.onCreate(HistoryActivity.kt:50)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8342)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8321)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1417)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3626)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3782)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:101)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:138)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2307)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:8)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.injectMotionEvent(UiControllerImpl.java:5)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:7)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:5)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap.-$$Nest$smsendSingleTap(Unknown Source:0)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:3)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:6)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:2)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:25)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction.-$$Nest$mdoPerform(Unknown Source:0)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:7)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:942)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:201)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.os.Looper.loop(Looper.java:288)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:7924)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+09-23 20:28:13.877 13343 13358 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+09-23 20:28:13.889 13343 13343 I om.shareconnect: Explicit concurrent copying GC freed 35963(1745KB) AllocSpace objects, 12(252KB) LOS objects, 49% free, 7452KB/14MB, paused 11us,17us total 11.145ms
+09-23 20:28:13.898   488  4082 W InputManager-JNI: Input channel object '88b9e7f com.shareconnect/com.shareconnect.MainActivity (client)' was disposed without first being removed with the input manager!
+09-23 20:28:13.901 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:28:13.902 13343 13461 I TestRunner: finished: testCompleteShareIntentFlow(com.shareconnect.automation.FullAppFlowAutomationTest)

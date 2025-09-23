@@ -5,8 +5,12 @@
 
 set -e
 
-# Set Android SDK paths
-export ANDROID_HOME="/Volumes/T7/Android/SDK"
+if [ -z "$ANDROID_HOME" ]; then
+
+  echo "ERROR: ANDROID_HOME is not defined"
+  exit 1
+fi
+
 export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
 
 # Colors for output

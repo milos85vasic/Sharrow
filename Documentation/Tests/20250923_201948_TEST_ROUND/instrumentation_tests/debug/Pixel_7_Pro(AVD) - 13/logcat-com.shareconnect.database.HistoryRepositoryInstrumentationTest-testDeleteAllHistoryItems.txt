@@ -1,0 +1,2 @@
+09-23 20:20:27.200 11079 11160 I TestRunner: started: testDeleteAllHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 20:20:27.215 11079 11160 I TestRunner: finished: testDeleteAllHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

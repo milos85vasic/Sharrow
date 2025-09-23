@@ -1,0 +1,238 @@
+09-23 20:27:50.971 13343 13461 I TestRunner: started: testCompleteThemeChangeFlow(com.shareconnect.automation.FullAppFlowAutomationTest)
+09-23 20:27:50.974 13343 13461 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 20:27:50.978   779   868 W Parcel  : Expecting binder but got null!
+09-23 20:27:50.982 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: PRE_ON_CREATE
+09-23 20:27:50.982 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 20:27:50.983 13343 13343 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:27:50.983 13343 13343 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:27:50.983 13343 13343 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 20:27:50.983 13343 13343 D Console : Activity MainActivity usesToolbar: true
+09-23 20:27:50.983 13343 13343 D Console : Setting night mode to NO
+09-23 20:27:50.993   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:27:50.996 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: CREATED
+09-23 20:27:50.996 13343 13343 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:50.997 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: STARTED
+09-23 20:27:50.997 13343 13343 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:50.997 13343 13343 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:27:50.999 13343 13343 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 20:27:50.999 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:27:50.999 13343 13343 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:27:50.999 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:27:51.000 13343 13343 D Console : hasThemeChanged() returned: false
+09-23 20:27:51.000 13343 13343 D Console : onResume() called, themeChanged: false
+09-23 20:27:51.000 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: RESUMED
+09-23 20:27:51.000 13343 13343 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:51.001 13343 13343 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 20:27:51.002 13343 13476 W Parcel  : Expecting binder but got null!
+09-23 20:27:51.014 13343 13476 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:27:51.026   998  1661 D EGL_emulation: app_time_stats: avg=57.51ms min=13.67ms max=1667.44ms count=40
+09-23 20:27:51.027   779   868 D EGL_emulation: app_time_stats: avg=902.89ms min=11.67ms max=9766.53ms count=11
+09-23 20:27:51.030   488   503 W ziparchive: Unable to open '/data/app/~~sMIfh0iwP5kltL3ByvNJgg==/com.shareconnect-cqLsEYnaW4Guduem5k2TaA==/base.dm': No such file or directory
+09-23 20:27:51.031   488   503 I ActivityTaskManager: Displayed com.shareconnect/.MainActivity: +53ms
+09-23 20:27:51.044 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:27:51.044 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:27:51.044 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 20:27:51.044 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:27:51.044 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:27:51.079  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 20:27:51.079  1581  2154 I HwDetectorWithState: (REDACTED) a: %d
+09-23 20:27:51.223   779   868 D EGL_emulation: app_time_stats: avg=1778.97ms min=48.29ms max=8495.96ms count=5
+09-23 20:27:51.278  1581  2227 I AssistantForeground: (REDACTED) Get launcher package: %s
+09-23 20:27:51.295   998  1945 D OneSearchSuggestProvider: Shut down the binder channel
+09-23 20:27:51.296   998 24438 I s.nexuslauncher: oneway function results for code 2 on binder at 0xb400007a3948f6a0 will be dropped but finished with status UNKNOWN_TRANSACTION
+09-23 20:27:51.310   488  4082 W InputManager-JNI: Input channel object 'a1d53a0 Splash Screen com.shareconnect (client)' was disposed without first being removed with the input manager!
+09-23 20:27:51.617 12330 12330 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.presencemanager.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+09-23 20:27:51.618 12330 12330 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.presencemanager.service.INTERNAL_IDENTITY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+09-23 20:27:52.061 12330 12330 W ThreadPoolForeg: type=1400 audit(0.0:1948): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=647 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+09-23 20:27:52.261   779   868 D EGL_emulation: app_time_stats: avg=36.77ms min=14.20ms max=113.88ms count=28
+09-23 20:27:56.293 13343 13343 I ViewInteraction: Performing 'scroll to' action on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:27:56.294 13343 13343 I ScrollToAction: View is already displayed. Returning.
+09-23 20:27:56.297 13343 13343 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:27:56.404   334   452 D AudioFlinger: mixer(0xb400007c8943e9a0) throttle end: throttle time(36)
+09-23 20:27:56.414 13343 13476 D EGL_emulation: app_time_stats: avg=538.89ms min=8.49ms max=5252.94ms count=10
+09-23 20:27:56.416 13343 13343 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 20:27:56.417 13343 13343 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 20:27:56.417 13343 13343 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 20:27:56.421 13343 13343 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 20:27:56.422 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 20:27:56.422 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: PAUSED
+09-23 20:27:56.423 13343 13343 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:56.436 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@98f9f61 in: PRE_ON_CREATE
+09-23 20:27:56.436 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity }, activity=com.shareconnect.SettingsActivity@98f9f61
+09-23 20:27:56.436 13343 13343 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:27:56.436 13343 13343 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 20:27:56.436 13343 13343 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 20:27:56.436 13343 13343 D Console : Activity SettingsActivity usesToolbar: true
+09-23 20:27:56.437 13343 13343 D Console : Setting night mode to NO
+09-23 20:27:56.440 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@98f9f61 in: CREATED
+09-23 20:27:56.440 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity }, activity=com.shareconnect.SettingsActivity@98f9f61
+09-23 20:27:56.443 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@98f9f61 in: STARTED
+09-23 20:27:56.443 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity }, activity=com.shareconnect.SettingsActivity@98f9f61
+09-23 20:27:56.444 13343 13343 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:27:56.445 13343 13343 V Console : Activity lifecycle :: RESUMED :: SettingsActivity
+09-23 20:27:56.445 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:27:56.445 13343 13343 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:27:56.446 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:27:56.446 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@98f9f61 in: RESUMED
+09-23 20:27:56.446 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity }, activity=com.shareconnect.SettingsActivity@98f9f61
+09-23 20:27:56.446 13343 13343 V Console : Activity lifecycle :: POST-RESUMED :: SettingsActivity
+09-23 20:27:56.448 13343 13476 W Parcel  : Expecting binder but got null!
+09-23 20:27:56.461 13343 13476 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:27:56.482   488   503 I ActivityTaskManager: Displayed com.shareconnect/.SettingsActivity: +117ms
+09-23 20:27:56.495   488 13626 W Parcel  : Expecting binder but got null!
+09-23 20:27:56.499   488 13626 W Parcel  : Expecting binder but got null!
+09-23 20:27:56.561   779   868 D EGL_emulation: app_time_stats: avg=502.84ms min=10.74ms max=5367.31ms count=11
+09-23 20:27:56.577 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:27:56.578 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:27:56.578 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 20:27:56.578 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:27:56.578 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:27:56.759 13343 13343 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.760 13343 13343 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.760 13343 13343 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.760 13343 13343 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.762 13343 13343 D DeviceCapture: Found 2 global views to redraw
+09-23 20:27:56.774 13343 13343 I forceRedraw: FrameCommitCallback complete
+09-23 20:27:56.792 13343 13343 I forceRedraw: FrameCommitCallback complete
+09-23 20:27:56.815 13312 13339 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+09-23 20:27:56.816 13312 13339 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+09-23 20:27:56.816 13312 13339 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+09-23 20:27:56.816 13312 13339 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+09-23 20:27:56.816 13312 13339 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:272)
+09-23 20:27:56.816 13312 13339 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+09-23 20:27:56.816 13312 13339 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+09-23 20:27:56.816 13312 13339 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+09-23 20:27:56.816 13312 13339 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+09-23 20:27:56.816 13312 13339 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:272)
+09-23 20:27:56.838 13343 13343 I DeviceCapture: got bitmap, returning
+09-23 20:27:56.839 13343 13461 D FileTestStorage: openOutputFile from /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-6.png
+09-23 20:27:56.842  1552  5211 W MediaProvider: isAppCloneUserPair for user 0: false
+09-23 20:27:56.922 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.922 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.923 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.923 13343 13900 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 1
+09-23 20:27:56.923 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.924 13343 13461 D FileTestStorage: openOutputFile from /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-6.txt
+09-23 20:27:56.925  1552 24121 W MediaProvider: isAppCloneUserPair for user 0: false
+09-23 20:27:56.928 13343 13461 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-6.txt'.
+09-23 20:27:56.928 12330 12373 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+09-23 20:27:56.929 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.930 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.930 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.930 13343 13461 E om.shareconnect: Invalid ID 0x00000000.
+09-23 20:27:56.975 13343 13476 D OpenGLRenderer: endAllActiveAnimators on 0xb400007b294deb40 (RippleDrawable) with handle 0xb400007a394a6470
+09-23 20:27:56.977 13343 13343 V Console : Activity lifecycle :: PRE-STOPPED :: MainActivity
+09-23 20:27:56.978 13343 13343 V Console : Activity lifecycle :: STOPPED :: MainActivity
+09-23 20:27:56.978 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: STOPPED
+09-23 20:27:56.978 13343 13343 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:56.978 13343 13343 V Console : Activity lifecycle :: POST-STOPPED :: MainActivity
+09-23 20:27:57.013 12330 13629 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+09-23 20:27:57.015 12330 13838 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+09-23 20:27:57.053 27599 13913 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+09-23 20:27:57.504 13343 13343 V Console : Activity lifecycle :: PRE-PAUSED :: SettingsActivity
+09-23 20:27:57.504 13343 13343 D Console : Activity lifecycle :: Top activity: SettingsActivity
+09-23 20:27:57.504 13343 13343 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 20:27:57.514 13343 13343 V Console : Activity lifecycle :: PAUSED :: SettingsActivity
+09-23 20:27:57.515 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 20:27:57.515 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@98f9f61 in: PAUSED
+09-23 20:27:57.515 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity }, activity=com.shareconnect.SettingsActivity@98f9f61
+09-23 20:27:57.519 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: RESTARTED
+09-23 20:27:57.519 13343 13343 V ActivityScenario: Update currentActivityStage to RESTARTED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:57.519 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: STARTED
+09-23 20:27:57.520 13343 13343 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:57.520 13343 13343 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:27:57.522 13343 13343 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 20:27:57.522 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:27:57.522 13343 13343 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:27:57.522 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:27:57.522 13343 13343 D Console : hasThemeChanged() returned: false
+09-23 20:27:57.522 13343 13343 D Console : onResume() called, themeChanged: false
+09-23 20:27:57.522 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: RESUMED
+09-23 20:27:57.522 13343 13343 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:57.523 13343 13343 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 20:27:57.529 13343 13476 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:27:57.530   998  1019 W System  : A resource failed to call release.
+09-23 20:27:57.530   998  1019 W System  : A resource failed to call release.
+09-23 20:27:57.530   998  1019 W System  : A resource failed to call release.
+09-23 20:27:57.530   998  1019 W System  : A resource failed to call release.
+09-23 20:27:57.530   998  1019 W System  : A resource failed to call release.
+09-23 20:27:57.530   998  1019 W System  : A resource failed to call release.
+09-23 20:27:57.558 13343 13476 D EGL_emulation: app_time_stats: avg=77.04ms min=14.87ms max=765.90ms count=14
+09-23 20:27:57.561   488 13626 W Parcel  : Expecting binder but got null!
+09-23 20:27:57.565   488 13626 W Parcel  : Expecting binder but got null!
+09-23 20:27:57.575 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:27:57.576 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:27:57.576 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 20:27:57.576 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:27:57.576 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:27:57.592   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.592   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.593   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.593   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.594   488   499 W System  : A resource failed to call release.
+09-23 20:27:57.594   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.595   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.595   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.596   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.596   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.596   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.597   488   499 W System  : A resource failed to call release.
+09-23 20:27:57.597   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:57.597   488   499 W System  : A resource failed to call HardwareBuffer.close.
+09-23 20:27:58.018 13343 13917 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 1
+09-23 20:27:58.028 13343 13343 V Console : Activity lifecycle :: PRE-STOPPED :: SettingsActivity
+09-23 20:27:58.029 13343 13343 V Console : Activity lifecycle :: STOPPED :: SettingsActivity
+09-23 20:27:58.029 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@98f9f61 in: STOPPED
+09-23 20:27:58.030 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity }, activity=com.shareconnect.SettingsActivity@98f9f61
+09-23 20:27:58.030 13343 13343 V Console : Activity lifecycle :: POST-STOPPED :: SettingsActivity
+09-23 20:27:58.030 13343 13343 V Console : Activity lifecycle :: PRE-DESTROYED :: SettingsActivity
+09-23 20:27:58.030 13343 13343 V Console : Activity lifecycle :: DESTROYED :: SettingsActivity
+09-23 20:27:58.032 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@98f9f61 in: DESTROYED
+09-23 20:27:58.032 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity }, activity=com.shareconnect.SettingsActivity@98f9f61
+09-23 20:27:58.033   488  4082 W InputManager-JNI: Input channel object '3820ee1 com.shareconnect/com.shareconnect.SettingsActivity (client)' was disposed without first being removed with the input manager!
+09-23 20:27:58.058 13343 13343 I ViewInteraction: Performing 'scroll to' action on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:27:58.059 13343 13343 I ScrollToAction: View is already displayed. Returning.
+09-23 20:27:58.059 13343 13343 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getId() is <2131230859/com.shareconnect:id/buttonSettings>
+09-23 20:27:58.065 13343 13343 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 20:27:58.065 13343 13343 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 20:27:58.065 13343 13343 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 20:27:58.066 13343 13343 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 20:27:58.067 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 20:27:58.067 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: PAUSED
+09-23 20:27:58.067 13343 13343 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:58.070 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae in: PRE_ON_CREATE
+09-23 20:27:58.071 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae
+09-23 20:27:58.074 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae in: CREATED
+09-23 20:27:58.074 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae
+09-23 20:27:58.074 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae in: STARTED
+09-23 20:27:58.074 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae
+09-23 20:27:58.075 13343 13343 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 20:27:58.078 13343 13343 V Console : Activity lifecycle :: RESUMED :: EmptyActivity
+09-23 20:27:58.078 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 20:27:58.078 13343 13343 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 20:27:58.078 13343 13343 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 20:27:58.078 13343 13343 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae in: RESUMED
+09-23 20:27:58.078 13343 13343 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@6d06eae
+09-23 20:27:58.079 13343 13343 V Console : Activity lifecycle :: POST-RESUMED :: EmptyActivity
+09-23 20:27:58.080 13343 13476 W Parcel  : Expecting binder but got null!
+09-23 20:27:58.087 11307 13471 D AdvertisingIdClient: AdvertisingIdClient already created.
+09-23 20:27:58.088 11307 13471 I AdvertisingIdClient: shouldSendLog 8709359
+09-23 20:27:58.088 11307 13471 I AdvertisingIdClient: GetInfoInternal elapse 2ms
+09-23 20:27:58.096 13343 13476 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 20:27:58.102   488   503 I ActivityTaskManager: Displayed com.shareconnect/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +40ms
+09-23 20:27:58.109 13343 13343 V Console : Activity lifecycle :: PRE-STOPPED :: MainActivity
+09-23 20:27:58.111 13343 13343 V Console : Activity lifecycle :: STOPPED :: MainActivity
+09-23 20:27:58.111 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: STOPPED
+09-23 20:27:58.111 13343 13343 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.shareconnect.MainActivity@9d44e27
+09-23 20:27:58.111 13343 13343 V Console : Activity lifecycle :: POST-STOPPED :: MainActivity
+09-23 20:27:58.114 13343 13343 V Console : Activity lifecycle :: PRE-DESTROYED :: MainActivity
+09-23 20:27:58.114 13343 13343 V Console : Activity lifecycle :: DESTROYED :: MainActivity
+09-23 20:27:58.115 13343 13343 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@9d44e27 in: DESTROYED
+09-23 20:27:58.115 13343 13343 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+09-23 20:27:58.116   488  2288 W InputManager-JNI: Input channel object '1d7c664 com.shareconnect/com.shareconnect.MainActivity (client)' was disposed without first being removed with the input manager!
+09-23 20:27:58.119 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+09-23 20:27:58.119 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+09-23 20:27:58.119 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.shareconnect fieldId=-1 fieldName=null extras=null}, false)
+09-23 20:27:58.119 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+09-23 20:27:58.119 11811 11811 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+09-23 20:27:58.120 13343 13461 I TestRunner: finished: testCompleteThemeChangeFlow(com.shareconnect.automation.FullAppFlowAutomationTest)

@@ -1,0 +1,69 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.shareconnect"
+    test_package: "com.shareconnect.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.shareconnect/additional_test_output"
+    }
+    args_map {
+      key: "package"
+      value: "com.shareconnect.automation"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/debug/Application-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/androidTest/debug/Application-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+instrumentation_target_package_id: "com.shareconnect"
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/debug/Application-debug.apk] on device emulator-5554.
+INFO: Installing [/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/apk/androidTest/debug/Application-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/com.shareconnect/additional_test_output to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-1.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-1.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-3.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-3.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-4.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-4.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-6.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-6.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-7.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-7.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-hierarchy-8.txt to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-hierarchy-8.txt
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-1.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-1.png
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-2.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-2.png
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-3.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-3.png
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-4.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-4.png
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-5.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-5.png
+INFO: Copying /sdcard/Android/media/com.shareconnect/additional_test_output/view-op-error-6.png to /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/Pixel_7_Pro(AVD) - 13/view-op-error-6.png
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.shareconnect for device emulator-5554.
+INFO: Uninstalling com.shareconnect.test for device emulator-5554.
+INFO: Execute com.shareconnect.automation.AccessibilityAutomationTest.testAccessibilityLabels: PASSED
+INFO: Execute com.shareconnect.automation.AccessibilityAutomationTest.testStateDescriptions: PASSED
+INFO: Execute com.shareconnect.automation.AccessibilityAutomationTest.testTextContrast: PASSED
+INFO: Execute com.shareconnect.automation.AccessibilityAutomationTest.testContentLabeling: PASSED
+INFO: Execute com.shareconnect.automation.AccessibilityAutomationTest.testKeyboardNavigation: PASSED
+INFO: Execute com.shareconnect.automation.AccessibilityAutomationTest.testMinimumTouchTargetSize: PASSED
+INFO: Execute com.shareconnect.automation.AccessibilityAutomationTest.testScreenReaderSupport: PASSED
+INFO: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testAppStressTest: PASSED
+INFO: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteProfileManagementFlow: PASSED
+INFO: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteFirstRunFlow: PASSED
+INFO: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteThemeChangeFlow: PASSED
+INFO: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteHistoryFlow: PASSED
+INFO: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteShareIntentFlow: PASSED
+INFO: Execute com.shareconnect.automation.FullAppFlowAutomationTest.testCompleteAppNavigationFlow: PASSED

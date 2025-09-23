@@ -1,0 +1,31 @@
+ShareConnect Instrumentation Tests Execution Summary
+===================================================
+
+Execution Date: Tue Sep 23 20:25:40 MSK 2025
+Test Type: Instrumentation Tests
+Test Suite: com.shareconnect.suites.InstrumentationTestSuite
+Status: FAILED
+Device Information: emulator-5554	device
+
+Test Classes Executed:
+- ThemeRepositoryInstrumentationTest
+- HistoryRepositoryInstrumentationTest
+- MainActivityInstrumentationTest
+- SettingsActivityInstrumentationTest
+
+Report Location: Documentation/Tests/20250923_202311_TEST_ROUND/instrumentation_tests
+
+Files Generated:
+- instrumentation_test_execution.log: Full execution log
+- test_summary.txt: This summary file
+- index.html: HTML test report (if available)
+- TEST-*.xml: JUnit XML results (if available)
+
+Command Used:
+./gradlew connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.shareconnect.suites.InstrumentationTestSuite --info --stacktrace
+
+Requirements:
+- Connected Android device or emulator
+- USB debugging enabled
+- Application debug build
+

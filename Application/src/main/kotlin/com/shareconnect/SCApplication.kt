@@ -4,8 +4,8 @@ import com.redelf.commons.application.BaseApplication
 
 class SCApplication : BaseApplication() {
 
-    override val firebaseEnabled = isProduction()
-    override val firebaseAnalyticsEnabled = isProduction()
+    override fun firebaseEnabled() = isProduction()
+    override fun firebaseAnalyticsEnabled() = isProduction()
 
     override fun isProduction(): Boolean {
 

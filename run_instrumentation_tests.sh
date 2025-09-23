@@ -119,12 +119,18 @@ echo ""
 echo -e "${BLUE}Building application...${NC}"
 ./gradlew :Application:assembleDebug :Application:assembleDebugAndroidTest
 
-# Run instrumentation tests with detailed output
+# Run instrumentation tests with detailed output (abort on first failure)
 echo -e "${BLUE}Running Instrumentation Test Suite...${NC}"
 ./gradlew :Application:connectedAndroidTest \
     --info \
     --stacktrace \
     2>&1 | tee "${REPORT_DIR}/instrumentation_test_execution.log"
+
+# Exit immediately if any tests failed
+if [ ${PIPESTATUS[0]} -ne 0 ]; then
+    echo -e "${RED}✗ Tests failed! Aborting execution.${NC}"
+    exit 1
+fi
 
 # Check if tests passed
 if [ ${PIPESTATUS[0]} -eq 0 ]; then

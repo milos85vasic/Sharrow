@@ -1,0 +1,57 @@
+09-23 18:35:14.561 21173 21248 I TestRunner: started: testMainContentIsScrollable(com.shareconnect.activities.MainActivityInstrumentationTest)
+09-23 18:35:14.564 21173 21248 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+09-23 18:35:14.586 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@4091b51 in: PRE_ON_CREATE
+09-23 18:35:14.586 21173 21173 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+09-23 18:35:14.587 21173 21173 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:35:14.587 21173 21173 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:35:14.587 21173 21173 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:35:14.587 21173 21173 D Console : Activity MainActivity usesToolbar: true
+09-23 18:35:14.587   779   868 W Parcel  : Expecting binder but got null!
+09-23 18:35:14.588 21173 21173 D Console : Setting night mode to NO
+09-23 18:35:14.596 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@4091b51 in: CREATED
+09-23 18:35:14.596 21173 21173 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.shareconnect.MainActivity@4091b51
+09-23 18:35:14.597 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@4091b51 in: STARTED
+09-23 18:35:14.597 21173 21173 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.shareconnect.MainActivity@4091b51
+09-23 18:35:14.598 21173 21173 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:35:14.601 21173 21173 V Console : Activity lifecycle :: RESUMED :: MainActivity
+09-23 18:35:14.601 21173 21173 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:35:14.601 21173 21173 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:35:14.601 21173 21173 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:35:14.601 21173 21173 D Console : hasThemeChanged() returned: false
+09-23 18:35:14.601 21173 21173 D Console : onResume() called, themeChanged: false
+09-23 18:35:14.601 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@4091b51 in: RESUMED
+09-23 18:35:14.601 21173 21173 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.shareconnect.MainActivity@4091b51
+09-23 18:35:14.601 21173 21173 V Console : Activity lifecycle :: POST-RESUMED :: MainActivity
+09-23 18:35:14.602   779   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:35:14.604 21173 21267 W Parcel  : Expecting binder but got null!
+09-23 18:35:14.612 21173 21173 V Console : Activity lifecycle :: PRE-PAUSED :: MainActivity
+09-23 18:35:14.612 21173 21173 D Console : Activity lifecycle :: Top activity: MainActivity
+09-23 18:35:14.613 21173 21173 D FirebaseSessions: App backgrounded on com.shareconnect
+09-23 18:35:14.616 21173 21173 V Console : Activity lifecycle :: PAUSED :: MainActivity
+09-23 18:35:14.617 21173 21173 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Decremented to: 0
+09-23 18:35:14.617 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.MainActivity@4091b51 in: PAUSED
+09-23 18:35:14.617 21173 21173 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.shareconnect.MainActivity@4091b51
+09-23 18:35:14.648 21173 21267 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-23 18:35:14.663 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@7c3ba20 in: PRE_ON_CREATE
+09-23 18:35:14.663 21173 21173 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@7c3ba20
+09-23 18:35:14.664 21173 21173 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:35:14.664 21173 21173 D Console : getDefaultTheme() returned: Warm Orange Light (ID: 1, isDefault: true)
+09-23 18:35:14.664 21173 21173 D Console : Applying theme: Warm Orange Light, colorScheme: warm_orange, isDarkMode: false, currentTheme: WARM_ORANGE_LIGHT
+09-23 18:35:14.664 21173 21173 D Console : Activity SettingsActivity usesToolbar: true
+09-23 18:35:14.666 21173 21173 D Console : Setting night mode to NO
+09-23 18:35:14.672 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@7c3ba20 in: CREATED
+09-23 18:35:14.672 21173 21173 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@7c3ba20
+09-23 18:35:14.675  1581  1581 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+09-23 18:35:14.676  1581  2232 I HwDetectorWithState: (REDACTED) a: %d
+09-23 18:35:14.680 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@7c3ba20 in: STARTED
+09-23 18:35:14.680 21173 21173 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@7c3ba20
+09-23 18:35:14.681 21173 21173 D FirebaseSessions: App foregrounded on com.shareconnect
+09-23 18:35:14.686 21173 21173 V Console : Activity lifecycle :: RESUMED :: SettingsActivity
+09-23 18:35:14.686 21173 21173 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:35:14.686 21173 21173 I Console : Activity lifecycle :: Main state :: Foreground
+09-23 18:35:14.686 21173 21173 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Incremented to: 1
+09-23 18:35:14.687 21173 21173 D LifecycleMonitor: Lifecycle status change: com.shareconnect.SettingsActivity@7c3ba20 in: RESUMED
+09-23 18:35:14.687 21173 21173 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.shareconnect/.MainActivity }, activity.getIntent()=Intent { cmp=com.shareconnect/.SettingsActivity (has extras) }, activity=com.shareconnect.SettingsActivity@7c3ba20
+09-23 18:35:14.688 21173 21173 V Console : Activity lifecycle :: POST-RESUMED :: SettingsActivity
+09-23 18:35:14.694 21173 21267 W Parcel  : Expecting binder but got null!
+09-23 18:35:14.717 21173 21267 E OpenGLRenderer: Unable to match the desired swap behavior.

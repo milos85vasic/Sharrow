@@ -128,12 +128,18 @@ echo -e "${BLUE}Building application...${NC}"
 echo -e "${BLUE}Installing application...${NC}"
 ./gradlew :Application:installDebug
 
-# Run automation tests with detailed output
+# Run automation tests with detailed output (abort on first failure)
 echo -e "${BLUE}Running Full Automation Test Suite...${NC}"
 ./gradlew :Application:connectedAndroidTest \
     --info \
     --stacktrace \
     2>&1 | tee "${REPORT_DIR}/automation_test_execution.log"
+
+# Exit immediately if any tests failed
+if [ ${PIPESTATUS[0]} -ne 0 ]; then
+    echo -e "${RED}✗ Tests failed! Aborting execution.${NC}"
+    exit 1
+fi
 
 # Check if tests passed
 if [ ${PIPESTATUS[0]} -eq 0 ]; then

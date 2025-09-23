@@ -1,0 +1,2 @@
+09-23 18:05:09.930 13465 13542 I TestRunner: started: testGetDefaultTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)
+09-23 18:05:09.933 13465 13542 I TestRunner: finished: testGetDefaultTheme(com.shareconnect.database.ThemeRepositoryInstrumentationTest)

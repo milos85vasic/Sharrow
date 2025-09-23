@@ -131,7 +131,6 @@ echo -e "${BLUE}Installing application...${NC}"
 # Run automation tests with detailed output
 echo -e "${BLUE}Running Full Automation Test Suite...${NC}"
 ./gradlew :Application:connectedAndroidTest \
-    --tests "com.shareconnect.suites.FullAutomationTestSuite" \
     --info \
     --stacktrace \
     2>&1 | tee "${REPORT_DIR}/automation_test_execution.log"

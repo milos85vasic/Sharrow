@@ -1,0 +1,4 @@
+09-23 18:05:09.952 13465 13542 I TestRunner: started: testGetSuccessfulHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)
+09-23 18:05:09.954 13465 13845 V Console : Foreground activity counter :: AtomicIntWrapper :: 12312792 :: 227589169 :: Value of: 0
+09-23 18:05:09.954 13465 13845 I Console : Activity lifecycle :: Main state :: Background
+09-23 18:05:09.955 13465 13542 I TestRunner: finished: testGetSuccessfulHistoryItems(com.shareconnect.database.HistoryRepositoryInstrumentationTest)

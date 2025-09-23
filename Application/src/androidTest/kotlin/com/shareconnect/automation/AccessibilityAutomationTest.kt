@@ -7,7 +7,7 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.shareconnect.MainActivity
 import com.shareconnect.R
-import org.hamcrest.Matchers.not
+import org.hamcrest.CoreMatchers.not
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -35,22 +35,22 @@ class AccessibilityAutomationTest {
         // Settings button
         onView(withId(R.id.buttonSettings))
             .check(matches(isDisplayed()))
-            .check(matches(not(hasContentDescription(""))))
+            .check(matches(not(hasContentDescription())))
 
         // Open MeTube button
         onView(withId(R.id.buttonOpenMeTube))
             .check(matches(isDisplayed()))
-            .check(matches(not(hasContentDescription(""))))
+            .check(matches(not(hasContentDescription())))
 
         // History button
         onView(withId(R.id.buttonHistory))
             .check(matches(isDisplayed()))
-            .check(matches(not(hasContentDescription(""))))
+            .check(matches(not(hasContentDescription())))
 
         // FAB Add button
         onView(withId(R.id.fabAdd))
             .check(matches(isDisplayed()))
-            .check(matches(not(hasContentDescription(""))))
+            .check(matches(not(hasContentDescription())))
     }
 
     @Test

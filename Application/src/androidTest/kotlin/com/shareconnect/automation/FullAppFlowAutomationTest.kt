@@ -55,7 +55,7 @@ class FullAppFlowAutomationTest {
         // Step 4: Create a new profile (if in ProfilesActivity)
         try {
             // Look for Add Profile button or FAB
-            onView(withId(com.google.android.material.R.id.design_fab))
+            onView(withId(R.id.fabAdd))
                 .perform(click())
         } catch (e: Exception) {
             // FAB might not be present, try other add buttons
@@ -124,7 +124,7 @@ class FullAppFlowAutomationTest {
 
             // Step 3: Create new profile
             try {
-                onView(withId(com.google.android.material.R.id.design_fab))
+                onView(withId(R.id.fabAdd))
                     .perform(click())
 
                 // Step 4: Fill profile details

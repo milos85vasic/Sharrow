@@ -122,7 +122,6 @@ echo -e "${BLUE}Building application...${NC}"
 # Run instrumentation tests with detailed output
 echo -e "${BLUE}Running Instrumentation Test Suite...${NC}"
 ./gradlew :Application:connectedAndroidTest \
-    --tests "com.shareconnect.suites.InstrumentationTestSuite" \
     --info \
     --stacktrace \
     2>&1 | tee "${REPORT_DIR}/instrumentation_test_execution.log"

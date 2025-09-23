@@ -3,7 +3,10 @@
 - Onboarding flow
 - Regular HTTP downloads/urls support
 - Sync the user data (WebDAV)
-- Report the problem flow
+- Contacts flow
+  - Report problem
+  - Request a feature
+  - Misc
 
 ## FIXME
 

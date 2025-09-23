@@ -23,7 +23,7 @@ class HistoryRepositoryInstrumentationTest {
             HistoryDatabase::class.java
         ).allowMainThreadQueries().build()
 
-        historyDao = database.historyDao()
+        historyDao = database.historyItemDao()
         historyRepository = HistoryRepository(ApplicationProvider.getApplicationContext())
     }
 
@@ -87,13 +87,13 @@ class HistoryRepositoryInstrumentationTest {
 
     @Test
     fun testGetHistoryItemsByProfile() {
-        val profileId = "test-profile"
+        val testProfileId = "test-profile"
 
         val items = listOf(
             HistoryItem().apply {
                 url = "https://www.youtube.com/watch?v=test1"
                 title = "Test Video 1"
-                profileId = profileId
+                profileId = testProfileId
                 profileName = "Test Profile"
                 timestamp = System.currentTimeMillis()
             },
@@ -108,10 +108,10 @@ class HistoryRepositoryInstrumentationTest {
 
         items.forEach { historyDao.insertHistoryItem(it) }
 
-        val profileItems = historyDao.getHistoryItemsByProfile(profileId)
+        val profileItems = historyDao.getHistoryItemsByProfile(testProfileId)
         assertEquals(1, profileItems.size)
         assertEquals("Test Video 1", profileItems[0].title)
-        assertEquals(profileId, profileItems[0].profileId)
+        assertEquals(testProfileId, profileItems[0].profileId)
     }
 
     @Test

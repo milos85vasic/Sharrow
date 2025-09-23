@@ -11,6 +11,18 @@ interface HistoryItemDao {
     @Query("SELECT * FROM history_items ORDER BY timestamp DESC")
     fun getAllHistoryItems(): List<HistoryItem>
 
+    @Query("SELECT * FROM history_items WHERE id = :id")
+    fun getHistoryItemById(id: Int): HistoryItem?
+
+    @Query("SELECT * FROM history_items WHERE profileId = :profileId ORDER BY timestamp DESC")
+    fun getHistoryItemsByProfile(profileId: String): List<HistoryItem>
+
+    @Query("SELECT * FROM history_items WHERE isSentSuccessfully = 1 ORDER BY timestamp DESC")
+    fun getSuccessfulHistoryItems(): List<HistoryItem>
+
+    @Query("SELECT * FROM history_items WHERE isSentSuccessfully = 0 ORDER BY timestamp DESC")
+    fun getFailedHistoryItems(): List<HistoryItem>
+
     @Query("SELECT * FROM history_items WHERE serviceProvider = :serviceProvider ORDER BY timestamp DESC")
     fun getHistoryItemsByServiceProvider(serviceProvider: String): List<HistoryItem>
 
@@ -33,16 +45,28 @@ interface HistoryItemDao {
     fun getAllServiceTypes(): List<String>
 
     @Insert
-    fun insert(historyItem: HistoryItem)
+    fun insert(historyItem: HistoryItem): Long
+
+    @Insert
+    fun insertHistoryItem(historyItem: HistoryItem): Long
 
     @Update
     fun update(historyItem: HistoryItem)
 
+    @Update
+    fun updateHistoryItem(historyItem: HistoryItem)
+
     @Delete
     fun delete(historyItem: HistoryItem)
 
+    @Delete
+    fun deleteHistoryItem(historyItem: HistoryItem)
+
     @Query("DELETE FROM history_items")
     fun deleteAll()
+
+    @Query("DELETE FROM history_items")
+    fun deleteAllHistoryItems()
 
     @Query("DELETE FROM history_items WHERE serviceProvider = :serviceProvider")
     fun deleteByServiceProvider(serviceProvider: String)

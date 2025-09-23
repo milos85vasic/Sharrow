@@ -1,0 +1,2 @@
+09-23 18:01:15.790 13465 13542 I TestRunner: started: testInsertAndRetrieve(com.metubeshare.database.HistoryDatabaseTest)
+09-23 18:01:15.802 13465 13542 I TestRunner: finished: testInsertAndRetrieve(com.metubeshare.database.HistoryDatabaseTest)

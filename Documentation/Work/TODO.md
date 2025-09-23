@@ -15,6 +15,7 @@
 
 - Tests
 - Distribution
+- Enable RAG for AIs
 
 ## Completed
 

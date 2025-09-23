@@ -31,9 +31,7 @@ echo ""
 # Run unit tests with detailed output
 echo -e "${BLUE}Running Unit Test Suite...${NC}"
 ./gradlew :Application:test \
-    --tests "com.shareconnect.suites.UnitTestSuite" \
-    --info \
-    --stacktrace \
+    --continue \
     2>&1 | tee "${REPORT_DIR}/unit_test_execution.log"
 
 # Check if tests passed

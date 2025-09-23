@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shareconnect.api.ServiceApiClientTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2025-09-23T13:50:13.310Z" hostname="Mistborn.local" time="0.492">
+  <properties/>
+  <testcase name="testProfileTypes" classname="com.shareconnect.api.ServiceApiClientTest" time="0.134"/>
+  <testcase name="testMeTubeProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.004"/>
+  <testcase name="testTorrentProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testSendUrlToServiceCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.024"/>
+  <testcase name="testJDownloaderProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.005"/>
+  <testcase name="testYtdlProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.007"/>
+  <testcase name="testServiceApiCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.004"/>
+  <testcase name="testServiceApiClientInitialization" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testUnsupportedServiceType" classname="com.shareconnect.api.ServiceApiClientTest" time="0.005"/>
+  <testcase name="testServiceApiClientCreation" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testProfileTypes" classname="com.shareconnect.api.ServiceApiClientTest" time="0.004"/>
+  <testcase name="testMeTubeProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.002"/>
+  <testcase name="testTorrentProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.004"/>
+  <testcase name="testSendUrlToServiceCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.004"/>
+  <testcase name="testJDownloaderProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testYtdlProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.002"/>
+  <testcase name="testServiceApiCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testServiceApiClientInitialization" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testUnsupportedServiceType" classname="com.shareconnect.api.ServiceApiClientTest" time="0.002"/>
+  <testcase name="testServiceApiClientCreation" classname="com.shareconnect.api.ServiceApiClientTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -18,7 +18,6 @@
 
 ## Completed
 
-- None
 - https://android-developers.googleblog.com/2025/05/prepare-play-apps-for-devices-with-16kb-page-size.html
 - All screens have to be presented between the title bar area and navigation bar
 - Prod signing

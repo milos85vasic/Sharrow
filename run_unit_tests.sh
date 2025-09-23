@@ -28,6 +28,10 @@ echo -e "${YELLOW}Starting Unit Tests...${NC}"
 echo "Report will be saved to: $REPORT_DIR"
 echo ""
 
+# Ensure clean state for consistent results
+echo -e "${BLUE}Cleaning project for unit tests...${NC}"
+./gradlew clean > /dev/null 2>&1
+
 # Run unit tests with detailed output
 echo -e "${BLUE}Running Unit Test Suite...${NC}"
 ./gradlew :Application:test \

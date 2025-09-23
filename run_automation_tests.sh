@@ -124,9 +124,20 @@ echo ""
 echo -e "${BLUE}Building application...${NC}"
 ./gradlew :Application:assembleDebug :Application:assembleDebugAndroidTest
 
+# Clean up any previous test data to ensure test isolation
+echo -e "${BLUE}Cleaning up previous test data...${NC}"
+adb shell pm clear com.shareconnect 2>/dev/null || true
+adb shell pm clear com.shareconnect.test 2>/dev/null || true
+
 # Install the app to ensure fresh state
 echo -e "${BLUE}Installing application...${NC}"
 ./gradlew :Application:installDebug
+
+# Ensure emulator is in a clean state
+echo -e "${BLUE}Preparing emulator for testing...${NC}"
+adb shell input keyevent KEYCODE_HOME
+adb shell am force-stop com.shareconnect 2>/dev/null || true
+sleep 2
 
 # Run automation tests with detailed output (abort on first failure)
 echo -e "${BLUE}Running Full Automation Test Suite...${NC}"

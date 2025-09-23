@@ -1,13 +1,20 @@
 # TODO
 
+- None
+
+## MVP
+
 - [Onboarding flow](./Tasks/002%20Onboarding/TASK.md)
 - Regular HTTP downloads/urls support
-- Sync the user data (WebDAV)
 - Contacts flow
   - Report problem
   - Request a feature
   - Misc
+
+## For 1.0.1
+
 - Connect with auto-discovery profiles systems (integrate on the back side as well)
+- Sync the user data (WebDAV)
 
 ## FIXME
 
@@ -16,6 +23,7 @@
 ## In progress
 
 - [Enable RAG for AIs and fine tuning](./Tasks/002%20Onboarding/TASK.md)
+- Upstreams
 
 ## Completed
 

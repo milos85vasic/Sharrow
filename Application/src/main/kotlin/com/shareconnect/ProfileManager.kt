@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import java.util.*
+import java.util.UUID
 
 class ProfileManager(context: Context) {
     private val sharedPreferences: SharedPreferences

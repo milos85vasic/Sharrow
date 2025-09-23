@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.redelf.commons.logging.Console
 import com.shareconnect.database.Theme
 
 class ThemeSelectionActivity : AppCompatActivity(), ThemeAdapter.OnThemeSelectListener {
@@ -54,13 +55,11 @@ class ThemeSelectionActivity : AppCompatActivity(), ThemeAdapter.OnThemeSelectLi
 
     override fun onThemeSelected(theme: Theme) {
         // Set this theme as default
-        android.util.Log.d(
-            "ThemeSelection", "onThemeSelected() called with theme: " + theme.name + " (ID: " + theme.id + ", isDefault: " + theme.isDefault + ")"
-        )
+        Console.debug("onThemeSelected() called with theme: " + theme.name + " (ID: " + theme.id + ", isDefault: " + theme.isDefault + ")")
         themeRepository!!.setDefaultTheme(theme.id)
 
         // Debug: Log the selected theme
-        android.util.Log.d("ThemeSelection", "Selected theme: " + theme.name + " (ID: " + theme.id + ")")
+        Console.debug("Selected theme: " + theme.name + " (ID: " + theme.id + ")")
 
         // Set result to indicate theme was changed
         setResult(RESULT_OK)

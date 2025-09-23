@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
+import com.redelf.commons.logging.Console
 import com.shareconnect.database.Theme
 import com.shareconnect.database.ThemeRepository
 
@@ -19,12 +20,12 @@ class ThemeManager private constructor(context: Context) {
 
     fun applyTheme(activity: Activity) {
         val defaultTheme = themeRepository.defaultTheme
-        android.util.Log.d("ThemeManager", "getDefaultTheme() returned: " + if (defaultTheme != null) defaultTheme.name + " (ID: " + defaultTheme.id + ", isDefault: " + defaultTheme.isDefault + ")" else "null")
+        Console.debug("getDefaultTheme() returned: " + if (defaultTheme != null) defaultTheme.name + " (ID: " + defaultTheme.id + ", isDefault: " + defaultTheme.isDefault + ")" else "null")
         if (defaultTheme != null) {
             applyTheme(activity, defaultTheme)
         } else {
             // Apply default material theme
-            android.util.Log.d("ThemeManager", "Applying default material theme")
+            Console.debug("Applying default material theme")
             activity.setTheme(R.style.Theme_ShareConnect_Material_Light)
         }
     }
@@ -35,12 +36,12 @@ class ThemeManager private constructor(context: Context) {
 
         val currentTheme = (colorScheme ?: "").uppercase() + if (isDarkMode) "_DARK" else "_LIGHT"
 
-        android.util.Log.d("ThemeManager", "Applying theme: " + theme.name + ", colorScheme: " + colorScheme + ", isDarkMode: " + isDarkMode + ", currentTheme: " + currentTheme)
+        Console.debug("Applying theme: " + theme.name + ", colorScheme: " + colorScheme + ", isDarkMode: " + isDarkMode + ", currentTheme: " + currentTheme)
 
         // Check if activity uses Toolbar (requires NoActionBar theme)
         val usesToolbar = activity is MainActivity || activity is ThemeSelectionActivity || activity is SettingsActivity || activity is SplashActivity || activity is ProfilesActivity || activity is ShareActivity || activity is EditProfileActivity || activity is HistoryActivity
 
-        android.util.Log.d("ThemeManager", "Activity " + activity.javaClass.simpleName + " usesToolbar: " + usesToolbar)
+        Console.debug("Activity " + activity.javaClass.simpleName + " usesToolbar: " + usesToolbar)
 
         when (currentTheme) {
             "WARM_ORANGE_DARK" -> activity.setTheme(
@@ -125,10 +126,10 @@ class ThemeManager private constructor(context: Context) {
 
         // Apply day/night mode
         if (isDarkMode) {
-            android.util.Log.d("ThemeManager", "Setting night mode to YES")
+            Console.debug("Setting night mode to YES")
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else {
-            android.util.Log.d("ThemeManager", "Setting night mode to NO")
+            Console.debug("Setting night mode to NO")
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
@@ -138,26 +139,26 @@ class ThemeManager private constructor(context: Context) {
 
     // Method to notify that theme has changed
     fun notifyThemeChanged() {
-        android.util.Log.d("ThemeManager", "notifyThemeChanged() called")
+        Console.debug("notifyThemeChanged() called")
         val editor = sharedPreferences.edit()
         editor.putBoolean(KEY_THEME_CHANGED, true)
         editor.commit()
-        android.util.Log.d("ThemeManager", "notifyThemeChanged() completed, SharedPreferences updated")
+        Console.debug("notifyThemeChanged() completed, SharedPreferences updated")
     }
 
     // Method to reset theme changed flag
     fun resetThemeChangedFlag() {
-        android.util.Log.d("ThemeManager", "resetThemeChangedFlag() called")
+        Console.debug("resetThemeChangedFlag() called")
         val editor = sharedPreferences.edit()
         editor.putBoolean(KEY_THEME_CHANGED, false)
         editor.commit()
-        android.util.Log.d("ThemeManager", "resetThemeChangedFlag() completed, SharedPreferences updated")
+        Console.debug("resetThemeChangedFlag() completed, SharedPreferences updated")
     }
 
     // Method to check if theme has changed
     fun hasThemeChanged(): Boolean {
         val changed = sharedPreferences.getBoolean(KEY_THEME_CHANGED, false)
-        android.util.Log.d("ThemeManager", "hasThemeChanged() returned: $changed")
+        Console.debug("hasThemeChanged() returned: $changed")
         return changed
     }
 

@@ -1,10 +1,11 @@
 package com.shareconnect.api
 
-import com.shareconnect.ServiceApiClient
 import com.shareconnect.ServerProfile
-import org.junit.Assert.*
-import org.junit.Test
+import com.shareconnect.ServiceApiClient
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
+import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner

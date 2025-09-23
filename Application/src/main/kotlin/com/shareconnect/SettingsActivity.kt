@@ -3,10 +3,10 @@ package com.shareconnect
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.redelf.commons.logging.Console
 
 class SettingsActivity : AppCompatActivity() {
     private var themeManager: ThemeManager? = null
@@ -41,7 +41,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         // If theme was changed, restart this activity to apply the new theme
         if (requestCode == THEME_SELECTION_REQUEST && resultCode == RESULT_OK) {
-            android.util.Log.d("SettingsActivity", "Theme change detected, restarting activity")
+            Console.debug("Theme change detected, restarting activity")
             // Create a new intent for this activity
             val intent = Intent(this, SettingsActivity::class.java)
             // Clear the current activity from the stack and start fresh

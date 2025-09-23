@@ -1,6 +1,7 @@
 package com.shareconnect.database
 
 import android.content.Context
+import com.redelf.commons.logging.Console
 
 class ThemeRepository(context: Context) {
     private val database: HistoryDatabase
@@ -25,8 +26,8 @@ class ThemeRepository(context: Context) {
     val defaultTheme: Theme?
         get() {
             val theme = themeDao.getDefaultTheme()
-            android.util.Log.d(
-                "ThemeRepository", "getDefaultTheme() returned: " + if (theme != null) theme.name + " (ID: " + theme.id + ", isDefault: " + theme.isDefault + ")" else "null"
+            Console.debug(
+                "getDefaultTheme() returned: " + if (theme != null) theme.name + " (ID: " + theme.id + ", isDefault: " + theme.isDefault + ")" else "null"
             )
             return theme
         }
@@ -48,27 +49,27 @@ class ThemeRepository(context: Context) {
 
     // Set default theme
     fun setDefaultTheme(themeId: Int) {
-        android.util.Log.d("ThemeRepository", "setDefaultTheme() called with themeId: $themeId")
+        Console.debug("setDefaultTheme() called with themeId: $themeId")
         themeDao.clearDefaultThemes()
         themeDao.setDefaultTheme(themeId)
-        android.util.Log.d("ThemeRepository", "setDefaultTheme() completed")
+        Console.debug("setDefaultTheme() completed")
 
         // Verify the theme was set correctly
         val newDefaultTheme = defaultTheme
         if (newDefaultTheme != null) {
-            android.util.Log.d(
-                "ThemeRepository", "Verified new default theme: " + newDefaultTheme.name + " (ID: " + newDefaultTheme.id + ", isDefault: " + newDefaultTheme.isDefault + ")"
+            Console.debug(
+                "Verified new default theme: " + newDefaultTheme.name + " (ID: " + newDefaultTheme.id + ", isDefault: " + newDefaultTheme.isDefault + ")"
             )
         } else {
-            android.util.Log.d("ThemeRepository", "Failed to verify new default theme - getDefaultTheme() returned null")
+            Console.debug("Failed to verify new default theme - getDefaultTheme() returned null")
         }
     }
 
     // Initialize default themes if none exist
     fun initializeDefaultThemes() {
-        android.util.Log.d("ThemeRepository", "initializeDefaultThemes() called")
+        Console.debug("initializeDefaultThemes() called")
         if (allThemes.isEmpty()) {
-            android.util.Log.d("ThemeRepository", "No existing themes found, creating default themes")
+            Console.debug("No existing themes found, creating default themes")
             // Warm Orange theme
             themeDao.insert(Theme(1, "Warm Orange Light", "warm_orange", false, true))
             themeDao.insert(Theme(2, "Warm Orange Dark", "warm_orange", true, false))
@@ -92,13 +93,13 @@ class ThemeRepository(context: Context) {
             // Default Material theme
             themeDao.insert(Theme(11, "Material Light", "material", false, false))
             themeDao.insert(Theme(12, "Material Dark", "material", true, false))
-            android.util.Log.d("ThemeRepository", "Default themes created")
+            Console.debug("Default themes created")
         } else {
-            android.util.Log.d("ThemeRepository", "Themes already exist, not creating defaults")
+            Console.debug("Themes already exist, not creating defaults")
             val themes = allThemes
             for (theme in themes) {
-                android.util.Log.d(
-                    "ThemeRepository", "Existing theme: " + theme.name + " (ID: " + theme.id + ", isDefault: " + theme.isDefault + ")"
+                Console.debug(
+                    "Existing theme: " + theme.name + " (ID: " + theme.id + ", isDefault: " + theme.isDefault + ")"
                 )
             }
         }

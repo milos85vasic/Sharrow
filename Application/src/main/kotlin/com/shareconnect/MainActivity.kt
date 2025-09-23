@@ -1,6 +1,5 @@
 package com.shareconnect
 
-import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
@@ -13,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.redelf.commons.logging.Console
 
 class MainActivity : AppCompatActivity() {
     private var buttonSettings: MaterialButton? = null
@@ -220,10 +220,10 @@ class MainActivity : AppCompatActivity() {
         // Check if theme has changed and recreate activity if needed
         themeManager = ThemeManager.getInstance(this)
         val themeChanged = themeManager!!.hasThemeChanged()
-        android.util.Log.d("MainActivity", "onResume() called, themeChanged: $themeChanged")
+        Console.debug("onResume() called, themeChanged: $themeChanged")
         if (themeChanged) {
             themeManager!!.resetThemeChangedFlag()
-            android.util.Log.d("MainActivity", "Recreating activity due to theme change")
+            Console.debug("Recreating activity due to theme change")
             recreate()
         }
     }

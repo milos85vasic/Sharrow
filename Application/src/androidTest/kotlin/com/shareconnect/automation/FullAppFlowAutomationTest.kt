@@ -8,8 +8,6 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
-import androidx.test.uiautomator.UiObjectNotFoundException
-import androidx.test.uiautomator.UiSelector
 import com.shareconnect.MainActivity
 import com.shareconnect.R
 import org.junit.After

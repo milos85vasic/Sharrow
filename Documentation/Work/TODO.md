@@ -4,7 +4,6 @@
 - Onboarding flow
 - Regular HTTP downloads/urls support
 - Sync the user data (WebDAV)
-- Replace use of Android Log with Toolkit Console equivalent
 - Report the problem flow
 
 ## FIXME
@@ -24,3 +23,4 @@
 - Crashlytics and general Firebase support
 - Tests
 - Distribution
+- Replace use of Android Log with Toolkit Console equivalent

@@ -1,9 +1,16 @@
 package com.shareconnect
 
-import android.util.Log
-import okhttp3.*
+import com.redelf.commons.logging.Console
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MultipartBody
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.Response
 import org.json.JSONObject
 import java.io.IOException
 
@@ -53,7 +60,7 @@ class ServiceApiClient {
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    Log.e(TAG, "Failed to send URL to MeTube", e)
+                    Console.error(e, "Failed to send URL to MeTube")
                     callback.onError(e.message)
                 }
 
@@ -64,7 +71,7 @@ class ServiceApiClient {
                             callback.onSuccess()
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
-                            Log.e(TAG, "MeTube API error: $errorBody")
+                            Console.error("MeTube API error: $errorBody")
                             callback.onError("API Error: " + response.code + " - $errorBody")
                         }
                     } finally {
@@ -73,7 +80,7 @@ class ServiceApiClient {
                 }
             })
         } catch (e: Exception) {
-            Log.e(TAG, "Error preparing MeTube API request", e)
+            Console.error(e, "Error preparing MeTube API request")
             callback.onError(e.message)
         }
     }
@@ -99,7 +106,7 @@ class ServiceApiClient {
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    Log.e(TAG, "Failed to send URL to YT-DLP", e)
+                    Console.error(e, "Failed to send URL to YT-DLP")
                     callback.onError(e.message)
                 }
 
@@ -110,7 +117,7 @@ class ServiceApiClient {
                             callback.onSuccess()
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
-                            Log.e(TAG, "YT-DLP API error: $errorBody")
+                            Console.error("YT-DLP API error: $errorBody")
                             callback.onError("API Error: " + response.code + " - $errorBody")
                         }
                     } finally {
@@ -119,7 +126,7 @@ class ServiceApiClient {
                 }
             })
         } catch (e: Exception) {
-            Log.e(TAG, "Error preparing YT-DLP API request", e)
+            Console.error(e, "Error preparing YT-DLP API request")
             callback.onError(e.message)
         }
     }
@@ -140,7 +147,7 @@ class ServiceApiClient {
                 sendRegularUrlToTorrentClient(profile, url, callback)
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Error preparing torrent client request", e)
+            Console.error(e, "Error preparing torrent client request")
             callback.onError(e.message)
         }
     }
@@ -173,7 +180,7 @@ class ServiceApiClient {
                 else -> callback.onError("Unsupported torrent client: " + profile.torrentClientType)
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Error sending URL to torrent client", e)
+            Console.error(e, "Error sending URL to torrent client")
             callback.onError(e.message)
         }
     }
@@ -206,7 +213,7 @@ class ServiceApiClient {
                 else -> callback.onError("Unsupported torrent client: " + profile.torrentClientType)
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Error sending magnet to torrent client", e)
+            Console.error(e, "Error sending magnet to torrent client")
             callback.onError(e.message)
         }
     }
@@ -229,7 +236,7 @@ class ServiceApiClient {
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    Log.e(TAG, "Failed to send to qBittorrent", e)
+                    Console.error(e, "Failed to send to qBittorrent")
                     callback.onError(e.message)
                 }
 
@@ -240,7 +247,7 @@ class ServiceApiClient {
                             callback.onSuccess()
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
-                            Log.e(TAG, "qBittorrent API error: $errorBody")
+                            Console.error("qBittorrent API error: $errorBody")
                             callback.onError("API Error: " + response.code + " - $errorBody")
                         }
                     } finally {
@@ -249,7 +256,7 @@ class ServiceApiClient {
                 }
             })
         } catch (e: Exception) {
-            Log.e(TAG, "Error preparing qBittorrent request", e)
+            Console.error(e, "Error preparing qBittorrent request")
             callback.onError(e.message)
         }
     }
@@ -278,7 +285,7 @@ class ServiceApiClient {
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    Log.e(TAG, "Failed to send to Transmission", e)
+                    Console.error(e, "Failed to send to Transmission")
                     callback.onError(e.message)
                 }
 
@@ -289,7 +296,7 @@ class ServiceApiClient {
                             callback.onSuccess()
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
-                            Log.e(TAG, "Transmission API error: $errorBody")
+                            Console.error("Transmission API error: $errorBody")
                             callback.onError("API Error: " + response.code + " - $errorBody")
                         }
                     } finally {
@@ -298,7 +305,7 @@ class ServiceApiClient {
                 }
             })
         } catch (e: Exception) {
-            Log.e(TAG, "Error preparing Transmission request", e)
+            Console.error(e, "Error preparing Transmission request")
             callback.onError(e.message)
         }
     }
@@ -318,7 +325,7 @@ class ServiceApiClient {
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    Log.e(TAG, "Failed to send to uTorrent", e)
+                    Console.error(e, "Failed to send to uTorrent")
                     callback.onError(e.message)
                 }
 
@@ -329,7 +336,7 @@ class ServiceApiClient {
                             callback.onSuccess()
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
-                            Log.e(TAG, "uTorrent API error: $errorBody")
+                            Console.error("uTorrent API error: $errorBody")
                             callback.onError("API Error: " + response.code + " - $errorBody")
                         }
                     } finally {
@@ -338,7 +345,7 @@ class ServiceApiClient {
                 }
             })
         } catch (e: Exception) {
-            Log.e(TAG, "Error preparing uTorrent request", e)
+            Console.error(e, "Error preparing uTorrent request")
             callback.onError(e.message)
         }
     }
@@ -362,7 +369,7 @@ class ServiceApiClient {
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    Log.e(TAG, "Failed to send to jDownloader", e)
+                    Console.error(e, "Failed to send to jDownloader")
                     callback.onError(e.message)
                 }
 
@@ -373,7 +380,7 @@ class ServiceApiClient {
                             callback.onSuccess()
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
-                            Log.e(TAG, "jDownloader API error: $errorBody")
+                            Console.error("jDownloader API error: $errorBody")
                             callback.onError("API Error: " + response.code + " - $errorBody")
                         }
                     } finally {
@@ -382,7 +389,7 @@ class ServiceApiClient {
                 }
             })
         } catch (e: Exception) {
-            Log.e(TAG, "Error preparing jDownloader request", e)
+            Console.error(e, "Error preparing jDownloader request")
             callback.onError(e.message)
         }
     }

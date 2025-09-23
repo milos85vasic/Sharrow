@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.shareconnect.database.HistoryItem
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 class HistoryAdapter(private val listener: OnHistoryItemClickListener) :
     RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() {

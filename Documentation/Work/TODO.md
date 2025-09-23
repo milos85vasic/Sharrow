@@ -11,7 +11,7 @@
 
 ## In progress
 
-- Enable RAG for AIs
+- Enable RAG for AIs and fine tuning
 
 ## Completed
 

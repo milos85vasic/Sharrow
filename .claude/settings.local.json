@@ -7,7 +7,9 @@
       "Bash(./run_unit_tests.sh:*)",
       "Bash(adb:*)",
       "Bash(./run_instrumentation_tests.sh)",
-      "Bash(./run_automation_tests.sh:*)"
+      "Bash(./run_automation_tests.sh:*)",
+      "Read(//Volumes/T7/Android/SDK/**)",
+      "Bash(./test_emulator_functionality.sh:*)"
     ],
     "deny": [],
     "ask": []

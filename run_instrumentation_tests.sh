@@ -5,6 +5,10 @@
 
 set -e
 
+# Set Android SDK paths
+export ANDROID_HOME="/Volumes/T7/Android/SDK"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -27,8 +31,77 @@ adb devices -l
 
 DEVICE_COUNT=$(adb devices | grep -v "List of devices" | grep -c "device$" || true)
 if [ "$DEVICE_COUNT" -eq 0 ]; then
-    echo -e "${RED}✗ No Android devices/emulators found!${NC}"
-    echo "Please connect a device or start an emulator before running instrumentation tests."
+    echo -e "${YELLOW}No devices found. Attempting to start emulator...${NC}"
+
+    # Check for available emulators
+    AVAILABLE_EMULATORS=$(emulator -list-avds 2>/dev/null || true)
+
+    if [ -z "$AVAILABLE_EMULATORS" ]; then
+        echo -e "${YELLOW}No emulators found. Creating a new emulator...${NC}"
+
+        # Check if Android SDK is available
+        if ! command -v avdmanager &> /dev/null; then
+            echo -e "${RED}✗ Android SDK tools not found! Please install Android SDK.${NC}"
+            exit 1
+        fi
+
+        # List available system images
+        echo -e "${BLUE}Available system images:${NC}"
+        avdmanager list target
+
+        # Create a basic emulator with API 30 (common target)
+        AVD_NAME="ShareConnect_Test_Emulator"
+        echo -e "${YELLOW}Creating emulator: $AVD_NAME${NC}"
+        echo "no" | avdmanager create avd -n "$AVD_NAME" -k "system-images;android-30;google_apis;x86_64" --force || {
+            echo -e "${RED}✗ Failed to create emulator. Please check your Android SDK installation.${NC}"
+            exit 1
+        }
+    else
+        # Get the first available emulator
+        AVD_NAME=$(echo "$AVAILABLE_EMULATORS" | head -1)
+        echo -e "${GREEN}Found emulator: $AVD_NAME${NC}"
+    fi
+
+    # Start the emulator
+    echo -e "${YELLOW}Starting emulator: $AVD_NAME${NC}"
+    emulator -avd "$AVD_NAME" -no-snapshot-save -wipe-data > /dev/null 2>&1 &
+    EMULATOR_PID=$!
+
+    # Wait for emulator to boot
+    echo -e "${YELLOW}Waiting for emulator to boot...${NC}"
+    timeout=300  # 5 minutes timeout
+    counter=0
+
+    while [ $counter -lt $timeout ]; do
+        if adb shell getprop sys.boot_completed 2>/dev/null | grep -q "1"; then
+            echo -e "${GREEN}✓ Emulator booted successfully!${NC}"
+            break
+        fi
+
+        if [ $((counter % 10)) -eq 0 ]; then
+            echo -e "${BLUE}Still waiting... (${counter}s/${timeout}s)${NC}"
+        fi
+
+        sleep 1
+        counter=$((counter + 1))
+    done
+
+    if [ $counter -ge $timeout ]; then
+        echo -e "${RED}✗ Emulator failed to boot within $timeout seconds!${NC}"
+        kill $EMULATOR_PID 2>/dev/null || true
+        exit 1
+    fi
+
+    # Wait a bit more for the emulator to be fully ready
+    echo -e "${YELLOW}Waiting for emulator to be ready...${NC}"
+    sleep 10
+
+    # Check again for connected devices
+    DEVICE_COUNT=$(adb devices | grep -v "List of devices" | grep -c "device$" || true)
+fi
+
+if [ "$DEVICE_COUNT" -eq 0 ]; then
+    echo -e "${RED}✗ No Android devices/emulators available after startup attempt!${NC}"
     exit 1
 fi
 
@@ -38,24 +111,21 @@ echo ""
 # Create report directory
 mkdir -p "$REPORT_DIR"
 
-# Change to Application directory
-cd Application
-
 echo -e "${YELLOW}Starting Instrumentation Tests...${NC}"
 echo "Report will be saved to: $REPORT_DIR"
 echo ""
 
 # Build the app first
 echo -e "${BLUE}Building application...${NC}"
-./gradlew assembleDebug assembleDebugAndroidTest
+./gradlew :Application:assembleDebug :Application:assembleDebugAndroidTest
 
 # Run instrumentation tests with detailed output
 echo -e "${BLUE}Running Instrumentation Test Suite...${NC}"
-./gradlew connectedAndroidTest \
+./gradlew :Application:connectedAndroidTest \
     --tests "com.shareconnect.suites.InstrumentationTestSuite" \
     --info \
     --stacktrace \
-    2>&1 | tee "../${REPORT_DIR}/instrumentation_test_execution.log"
+    2>&1 | tee "${REPORT_DIR}/instrumentation_test_execution.log"
 
 # Check if tests passed
 if [ ${PIPESTATUS[0]} -eq 0 ]; then
@@ -68,24 +138,23 @@ fi
 
 # Copy test reports
 echo -e "${BLUE}Copying test reports...${NC}"
-if [ -d "build/reports/androidTests/connected" ]; then
-    cp -r build/reports/androidTests/connected/* "../${REPORT_DIR}/"
+if [ -d "Application/build/reports/androidTests/connected" ]; then
+    cp -r Application/build/reports/androidTests/connected/* "${REPORT_DIR}/"
     echo -e "${GREEN}✓ HTML test reports copied${NC}"
 fi
 
-if [ -d "build/outputs/androidTest-results/connected" ]; then
-    cp -r build/outputs/androidTest-results/connected/* "../${REPORT_DIR}/"
+if [ -d "Application/build/outputs/androidTest-results/connected" ]; then
+    cp -r Application/build/outputs/androidTest-results/connected/* "${REPORT_DIR}/"
     echo -e "${GREEN}✓ XML test results copied${NC}"
 fi
 
 # Copy any screenshots or additional artifacts
-if [ -d "build/outputs/connected_android_test_additional_output" ]; then
-    cp -r build/outputs/connected_android_test_additional_output/* "../${REPORT_DIR}/"
+if [ -d "Application/build/outputs/connected_android_test_additional_output" ]; then
+    cp -r Application/build/outputs/connected_android_test_additional_output/* "${REPORT_DIR}/"
     echo -e "${GREEN}✓ Additional test artifacts copied${NC}"
 fi
 
 # Generate summary report
-cd ..
 cat > "${REPORT_DIR}/test_summary.txt" << EOF
 ShareConnect Instrumentation Tests Execution Summary
 ===================================================

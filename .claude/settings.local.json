@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(./gradlew:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(chmod:*)",
+      "Bash(./run_unit_tests.sh:*)",
+      "Bash(adb:*)"
     ],
     "deny": [],
     "ask": []

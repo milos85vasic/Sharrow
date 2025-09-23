@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shareconnect.api.ServiceApiClientTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2025-09-23T13:47:18.968Z" hostname="Mistborn.local" time="36.208">
+  <properties/>
+  <testcase name="testProfileTypes" classname="com.shareconnect.api.ServiceApiClientTest" time="35.656"/>
+  <testcase name="testMeTubeProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.008"/>
+  <testcase name="testTorrentProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.005"/>
+  <testcase name="testSendUrlToServiceCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.029"/>
+  <testcase name="testJDownloaderProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.008"/>
+  <testcase name="testYtdlProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.011"/>
+  <testcase name="testServiceApiCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.006"/>
+  <testcase name="testServiceApiClientInitialization" classname="com.shareconnect.api.ServiceApiClientTest" time="0.005"/>
+  <testcase name="testUnsupportedServiceType" classname="com.shareconnect.api.ServiceApiClientTest" time="0.006"/>
+  <testcase name="testServiceApiClientCreation" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testProfileTypes" classname="com.shareconnect.api.ServiceApiClientTest" time="0.002"/>
+  <testcase name="testMeTubeProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testTorrentProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.001"/>
+  <testcase name="testSendUrlToServiceCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testJDownloaderProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testYtdlProfile" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testServiceApiCallback" classname="com.shareconnect.api.ServiceApiClientTest" time="0.002"/>
+  <testcase name="testServiceApiClientInitialization" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testUnsupportedServiceType" classname="com.shareconnect.api.ServiceApiClientTest" time="0.003"/>
+  <testcase name="testServiceApiClientCreation" classname="com.shareconnect.api.ServiceApiClientTest" time="0.002"/>
+  <system-out><![CDATA[WARNING: No manifest file found at ./AndroidManifest.xml.
+Falling back to the Android OS resources only.
+To remove this warning, annotate your test class with @Config(manifest=Config.NONE).
+]]></system-out>
+  <system-err><![CDATA[No such manifest file: ./AndroidManifest.xml
+]]></system-err>
+</testsuite>

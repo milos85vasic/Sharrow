@@ -5,6 +5,56 @@ plugins {
     id("com.google.devtools.ksp") version "2.2.20-2.0.2"
 }
 
+// Load signing configuration from .env or .env.properties file if they exist
+def envProperties = new Properties()
+def envFile = rootProject.file('.env')
+def envPropertiesFile = rootProject.file('.env.properties')
+
+// Try .env first, then .env.properties
+if (envFile.exists()) {
+
+    envFile.eachLine { line ->
+        if (!line.startsWith('#') && line.contains('=')) {
+            def parts = line.split('=', 2)
+            if (parts.length == 2) {
+                def key = parts[0].trim()
+                def value = parts[1].trim()
+                // Remove surrounding quotes if present
+                if ((value.startsWith('"') && value.endsWith('"')) ||
+                    (value.startsWith("'") && value.endsWith("'"))) {
+                    value = value.substring(1, value.length() - 1)
+                }
+                envProperties.setProperty(key, value)
+            }
+        }
+    }
+
+} else if (envPropertiesFile.exists()) {
+
+    envPropertiesFile.withInputStream { envProperties.load(it) }
+}
+
+// Process variable substitutions (e.g., $VAR_NAME)
+envProperties.each { key, value ->
+
+    if (value.startsWith('$')) {
+
+        def refKey = value.substring(1)
+        def refValue = envProperties.getProperty(refKey)
+
+        if (refValue != null) {
+
+            envProperties.setProperty(key, refValue)
+        }
+    }
+}
+
+// Helper function to get property from env file or system environment
+def getEnvProperty = { String key ->
+
+    return envProperties.getProperty(key) ?: System.getenv(key) ?: ""
+}
+
 android {
 
     compileSdk 36
@@ -26,18 +76,28 @@ android {
 
         DEVELOPMENT {
 
-            keyAlias ""
-            keyPassword ""
-            storePassword ""
-            storeFile file("Signing/.jks")
+            def devKeystorePath = getEnvProperty("SHARECONNECT_DEV_KEYSTORE_PATH")
+            def devKeystoreFile = file(devKeystorePath.isEmpty() ? "Signing/dev.jks" : devKeystorePath)
+
+            if (devKeystoreFile.exists()) {
+                keyAlias getEnvProperty("SHARECONNECT_DEV_KEY_ALIAS")
+                keyPassword getEnvProperty("SHARECONNECT_DEV_KEY_PASSWORD")
+                storePassword getEnvProperty("SHARECONNECT_DEV_STORE_PASSWORD")
+                storeFile devKeystoreFile
+            }
         }
 
         CLOUD {
 
-            keyAlias ""
-            keyPassword ""
-            storePassword ""
-            storeFile file("Signing/.jks")
+            def cloudKeystorePath = getEnvProperty("SHARECONNECT_CLOUD_KEYSTORE_PATH")
+            def cloudKeystoreFile = file(cloudKeystorePath.isEmpty() ? "Signing/cloud.jks" : cloudKeystorePath)
+
+            if (cloudKeystoreFile.exists()) {
+                keyAlias getEnvProperty("SHARECONNECT_CLOUD_KEY_ALIAS")
+                keyPassword getEnvProperty("SHARECONNECT_CLOUD_KEY_PASSWORD")
+                storePassword getEnvProperty("SHARECONNECT_CLOUD_STORE_PASSWORD")
+                storeFile cloudKeystoreFile
+            }
         }
     }
 
@@ -47,7 +107,12 @@ android {
 
             minifyEnabled true
             shrinkResources false
-            signingConfig signingConfigs.CLOUD
+            // Only use signing config if keystore exists
+            def cloudKeystorePath = getEnvProperty("SHARECONNECT_CLOUD_KEYSTORE_PATH")
+            def cloudKeystoreFile = file(cloudKeystorePath.isEmpty() ? "Signing/cloud.jks" : cloudKeystorePath)
+            if (cloudKeystoreFile.exists()) {
+                signingConfig signingConfigs.CLOUD
+            }
             manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'missing_rules.txt'
         }
@@ -56,7 +121,12 @@ android {
 
             minifyEnabled false
             shrinkResources false
-            signingConfig signingConfigs.DEVELOPMENT
+            // Only use signing config if keystore exists
+            def devKeystorePath = getEnvProperty("SHARECONNECT_DEV_KEYSTORE_PATH")
+            def devKeystoreFile = file(devKeystorePath.isEmpty() ? "Signing/dev.jks" : devKeystorePath)
+            if (devKeystoreFile.exists()) {
+                signingConfig signingConfigs.DEVELOPMENT
+            }
             manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -89,10 +159,10 @@ android {
     }
 
     sourceSets {
-
-        main {
-
+        debug {
             java.srcDirs += "build/generated/ksp/debug/kotlin"
+        }
+        release {
             java.srcDirs += "build/generated/ksp/release/kotlin"
         }
     }

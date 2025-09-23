@@ -48,6 +48,10 @@ render.experimental.xml
 #*.jks
 #*.keystore
 
+# Environment configuration files
+.env.properties
+.env
+
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 .cxx/
@@ -75,3 +79,5 @@ salt.txt
 .kotlin
 .kotlin/*
 .kotlin/*.*
+
+.env

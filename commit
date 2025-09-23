@@ -1,0 +1,33 @@
+#!/bin/sh
+
+if test -e ".env"; then
+
+  . .env
+fi
+
+if [ -z "$1" ]; then
+
+  if [ -z "$DEFAULT_COMMIT_MESSAGE" ]; then
+
+    MESSAGE="Auto-commit."
+
+  else
+
+    MESSAGE="$DEFAULT_COMMIT_MESSAGE"
+  fi
+
+else
+
+  if [ -z "$PROJECT_NAME" ]; then
+
+      MESSAGE="$1"
+
+  else
+
+    MESSAGE="$PROJECT_NAME - $1"
+  fi
+fi
+
+echo "Pushing: '$MESSAGE'" && \
+  commit "$MESSAGE" && \
+  echo "Push with message '$MESSAGE' completed"

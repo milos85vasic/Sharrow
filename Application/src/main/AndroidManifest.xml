@@ -190,6 +190,19 @@
             android:name=".ThemeSelectionActivity"
             android:exported="false" />
 
+        <!-- Disable WorkManager default initialization -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <!-- Remove WorkManagerInitializer -->
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
 </application>
 
 </manifest>

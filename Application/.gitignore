@@ -7,3 +7,4 @@ release/*
 release/*.*
 
 google-services.json
+shareconnect-firebase-adminsdk.json

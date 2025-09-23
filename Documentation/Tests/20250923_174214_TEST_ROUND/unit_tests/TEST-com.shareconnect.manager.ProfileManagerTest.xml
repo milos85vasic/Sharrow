@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shareconnect.manager.ProfileManagerTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-09-23T14:30:36.432Z" hostname="Mistborn.local" time="2.025">
+  <properties/>
+  <testcase name="testHasProfilesWithEmptyProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="1.775"/>
+  <testcase name="testHasProfilesWithExistingProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.011"/>
+  <testcase name="testProfileManagerInitialization" classname="com.shareconnect.manager.ProfileManagerTest" time="0.008"/>
+  <testcase name="testGetProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.005"/>
+  <testcase name="testDefaultProfile" classname="com.shareconnect.manager.ProfileManagerTest" time="0.005"/>
+  <testcase name="testGetProfilesByServiceType" classname="com.shareconnect.manager.ProfileManagerTest" time="0.004"/>
+  <testcase name="testGetProfilesEmpty" classname="com.shareconnect.manager.ProfileManagerTest" time="0.005"/>
+  <testcase name="testHasProfilesWithEmptyProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.003"/>
+  <testcase name="testHasProfilesWithExistingProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <testcase name="testProfileManagerInitialization" classname="com.shareconnect.manager.ProfileManagerTest" time="0.003"/>
+  <testcase name="testGetProfiles" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <testcase name="testDefaultProfile" classname="com.shareconnect.manager.ProfileManagerTest" time="0.003"/>
+  <testcase name="testGetProfilesByServiceType" classname="com.shareconnect.manager.ProfileManagerTest" time="0.002"/>
+  <testcase name="testGetProfilesEmpty" classname="com.shareconnect.manager.ProfileManagerTest" time="0.003"/>
+  <system-out><![CDATA[WARNING: No manifest file found at ./AndroidManifest.xml.
+Falling back to the Android OS resources only.
+To remove this warning, annotate your test class with @Config(manifest=Config.NONE).
+]]></system-out>
+  <system-err><![CDATA[No such manifest file: ./AndroidManifest.xml
+]]></system-err>
+</testsuite>

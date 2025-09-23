@@ -239,8 +239,11 @@ class EditProfileActivity : AppCompatActivity() {
             else -> serviceType = ServerProfile.TYPE_METUBE // Default fallback
         }
 
+        // Check if we're creating a new profile or updating an existing one
+        val isNewProfile = existingProfile == null
+
         // Create or update the profile
-        if (existingProfile == null) {
+        if (isNewProfile) {
             existingProfile = ServerProfile()
             existingProfile!!.id = java.util.UUID.randomUUID().toString()
         }
@@ -252,7 +255,7 @@ class EditProfileActivity : AppCompatActivity() {
         existingProfile!!.torrentClientType = torrentClientType
 
         // Save the profile
-        if (existingProfile!!.id.isNullOrEmpty()) {
+        if (isNewProfile) {
             profileManager!!.addProfile(existingProfile!!)
         } else {
             profileManager!!.updateProfile(existingProfile!!)

@@ -71,3 +71,7 @@ fastlane/readme.md
 .vagrant/
 
 salt.txt
+
+.kotlin
+.kotlin/*
+.kotlin/*.*

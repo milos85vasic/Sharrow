@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
     private var profileManager: ProfileManager? = null
     private var themeManager: ThemeManager? = null
 
+    companion object {
+        private const val SETUP_WIZARD_REQUEST_CODE = 1001
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         // Apply theme before setting content and calling super.onCreate()
         themeManager = ThemeManager.getInstance(this)
@@ -33,9 +37,15 @@ class MainActivity : AppCompatActivity() {
         if (!profileManager!!.hasProfiles()) {
             // Show setup wizard
             showSetupWizard()
-            return
+            // Don't return here - let the activity finish its onCreate
+            // The activity will be finished after settings if still no profiles
+        } else {
+            // Only set content view if we have profiles
+            setupMainView()
         }
+    }
 
+    private fun setupMainView() {
         setContentView(R.layout.activity_main)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -67,8 +77,24 @@ class MainActivity : AppCompatActivity() {
         // For now, we'll just redirect to settings
         // In a more complete implementation, we could show a guided setup wizard
         val intent = Intent(this@MainActivity, SettingsActivity::class.java)
-        startActivity(intent)
-        finish()
+        intent.putExtra("first_run", true)
+        startActivityForResult(intent, SETUP_WIZARD_REQUEST_CODE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == SETUP_WIZARD_REQUEST_CODE) {
+            // Check if profiles were created
+            if (!profileManager!!.hasProfiles()) {
+                // Still no profiles, finish the activity
+                Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_LONG).show()
+                finish()
+            } else {
+                // Profiles created, set up the main view
+                setupMainView()
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

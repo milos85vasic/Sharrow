@@ -13,7 +13,6 @@
 
 ## In progress
 
-- Distribution
 - Enable RAG for AIs
 
 ## Completed
@@ -24,3 +23,4 @@
 - Debug build app name suffix
 - Crashlytics and general Firebase support
 - Tests
+- Distribution

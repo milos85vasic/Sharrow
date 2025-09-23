@@ -61,7 +61,8 @@ android {
 
         main {
 
-            java.srcDirs += "build/generated/ksp"
+            java.srcDirs += "build/generated/ksp/debug/kotlin"
+            java.srcDirs += "build/generated/ksp/release/kotlin"
         }
     }
 }
@@ -77,4 +78,7 @@ dependencies {
 
     androidTestImplementation project("${toolkit_context}:Main")
     androidTestImplementation project("${toolkit_context}:Test")
+
+    // Room KSP compiler for database code generation
+    ksp "androidx.room:room-compiler:2.8.0"
 }

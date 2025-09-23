@@ -1,0 +1,372 @@
+Initialized native services in: /Volumes/T7/Gradle/native
+Initialized jansi services in: /Volumes/T7/Gradle/native
+The client will now receive all logging from the daemon (pid: 4014). The daemon log file: /Volumes/T7/Gradle/daemon/8.14/daemon-4014.out.log
+Starting 38th build in daemon [uptime: 3 hrs 53 mins 33.882 secs, performance: 94%, GC rate: 0.00/s, heap usage: 68% of 2 GiB]
+Using 11 worker leases.
+Now considering [/Volumes/T7/Projects/milos85vasic/ShareConnect] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Volumes/T7/Projects/milos85vasic/ShareConnect/settings.gradle'.
+Projects loaded. Root project using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/build.gradle'.
+Included projects: [root project 'ShareConnect', project ':Application', project ':Toolkit', project ':Toolkit:Analytics', project ':Toolkit:JCommons', project ':Toolkit:Main', project ':Toolkit:Test']
+
+> Configure project :
+Evaluating root project 'ShareConnect' using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/build.gradle'.
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven7' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven8' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven7' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven8' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven7' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven8' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven7' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven8' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven7' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven8' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven7' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven8' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven7' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven8' was added by build file 'build.gradle'
+
+> Configure project :Application
+Evaluating project ':Application' using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/Application/build.gradle'.
+Resolved plugin [id: 'com.android.application']
+Resolved plugin [id: 'kotlin-android']
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.2.20-2.0.2']
+Resolved plugin [id: 'com.google.gms.google-services']
+Resolved plugin [id: 'com.google.firebase.crashlytics']
+Resolved plugin [id: 'com.google.firebase.appdistribution']
+Using default execution profile
+Build 146fe81b-1f3e-4b71-9c93-9c36765ce300 is started
+Using Kotlin Gradle Plugin gradle813 variant
+
+> Configure project :Toolkit
+Evaluating project ':Toolkit' using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/Toolkit/build.gradle'.
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven9' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven10' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven11' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven12' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven13' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven14' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven15' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven16' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven9' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven10' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven11' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven12' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven13' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven14' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven15' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven16' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven9' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven10' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven11' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven12' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven13' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven14' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven15' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven16' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven9' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven10' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven11' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven12' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven13' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven14' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven15' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven16' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven9' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven10' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven11' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven12' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven13' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven14' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven15' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'Toolkit/build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven16' was added by build file 'Toolkit/build.gradle'
+toolkit_obfuscator_jar = 'JCommons/jar/toolkit-jcommons-2.0.3.jar'
+Hello from Common JObfuscator class :: 48656c6c6f6275696c642e677261646c65
+
+> Configure project :Toolkit:Analytics
+Evaluating project ':Toolkit:Analytics' using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/Toolkit/Analytics/build.gradle'.
+Resolved plugin [id: 'com.android.library']
+Resolved plugin [id: 'kotlin-android']
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.2.20-2.0.2']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle813 variant
+Facebook :: The 'ANALYTICS_FACEBOOK_APP_ID' env. variable is available :: Hash = -839676062
+Facebook :: The 'FACEBOOK_CLIENT_TOKEN' env. variable is available :: Hash = 1673479682
+Facebook :: The 'FB_LOGIN_PROTOCOL_SCHEME' env. variable is available :: Hash = 1266217766
+
+> Configure project :Toolkit:JCommons
+Evaluating project ':Toolkit:JCommons' using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/Toolkit/JCommons/build.gradle'.
+Resolved plugin [id: 'java']
+Creating the JCommons JAR archive
+
+> Configure project :Toolkit:Main
+Evaluating project ':Toolkit:Main' using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/Toolkit/Main/build.gradle'.
+Resolved plugin [id: 'com.android.library']
+Resolved plugin [id: 'kotlin-android']
+Resolved plugin [id: 'kotlin-parcelize']
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.2.20-2.0.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.2.20']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle813 variant
+The 'toolkit_project_name' is: 'ShareConnect'
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+
+> Configure project :Toolkit:Test
+Evaluating project ':Toolkit:Test' using build file '/Volumes/T7/Projects/milos85vasic/ShareConnect/Toolkit/Test/build.gradle'.
+Using default execution profile
+Using Kotlin Gradle Plugin gradle813 variant
+All projects evaluated.
+Task path ':Application:test' matched project ':Application'
+Task name matched 'test'
+Build 146fe81b-1f3e-4b71-9c93-9c36765ce300 is closed
+
+[Incubating] Problems report is available at: file:///Volumes/T7/Projects/milos85vasic/ShareConnect/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Problem configuring task :Application:test from command line.
+> Unknown command-line option '--tests'.
+
+* Try:
+> Run gradlew help --task :Application:test to get task usage details.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.execution.commandline.TaskConfigurationException: Problem configuring task :Application:test from command line.
+	at org.gradle.execution.commandline.CommandLineTaskConfigurer.configureTasksNow(CommandLineTaskConfigurer.java:67)
+	at org.gradle.execution.commandline.CommandLineTaskConfigurer.configureTasks(CommandLineTaskConfigurer.java:45)
+	at org.gradle.execution.commandline.CommandLineTaskParser.parseTasks(CommandLineTaskParser.java:51)
+	at org.gradle.execution.TaskNameResolvingBuildTaskScheduler.scheduleRequestedTasks(TaskNameResolvingBuildTaskScheduler.java:58)
+	at org.gradle.execution.DefaultTasksBuildTaskScheduler.scheduleRequestedTasks(DefaultTasksBuildTaskScheduler.java:72)
+	at org.gradle.initialization.DefaultTaskExecutionPreparer.lambda$scheduleRequestedTasks$0(DefaultTaskExecutionPreparer.java:48)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:359)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:239)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:232)
+	at org.gradle.initialization.DefaultTaskExecutionPreparer.scheduleRequestedTasks(DefaultTaskExecutionPreparer.java:47)
+	at org.gradle.initialization.VintageBuildModelController.lambda$scheduleRequestedTasks$0(VintageBuildModelController.java:76)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$1(StateTransitionController.java:99)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$2(StateTransitionController.java:114)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:110)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:98)
+	at org.gradle.initialization.VintageBuildModelController.scheduleRequestedTasks(VintageBuildModelController.java:76)
+	at org.gradle.internal.build.DefaultBuildLifecycleController$DefaultWorkGraphBuilder.addRequestedTasks(DefaultBuildLifecycleController.java:404)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.lambda$scheduleRequestedTasks$0(DefaultBuildTreeWorkPreparer.java:41)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$populateWorkGraph$7(DefaultBuildLifecycleController.java:189)
+	at org.gradle.internal.build.DefaultBuildWorkPreparer.populateWorkGraph(DefaultBuildWorkPreparer.java:42)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer$PopulateWorkGraph.populateTaskGraph(BuildOperationFiringBuildWorkPreparer.java:106)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer$PopulateWorkGraph.run(BuildOperationFiringBuildWorkPreparer.java:92)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:30)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:27)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:48)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer.populateWorkGraph(BuildOperationFiringBuildWorkPreparer.java:67)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$populateWorkGraph$8(DefaultBuildLifecycleController.java:189)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$1(StateTransitionController.java:99)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$2(StateTransitionController.java:114)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:110)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:98)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.populateWorkGraph(DefaultBuildLifecycleController.java:189)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.populateWorkGraph(DefaultBuildWorkGraphController.java:169)
+	at org.gradle.composite.internal.DefaultBuildController.populateWorkGraph(DefaultBuildController.java:76)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraphBuilder.withWorkGraph(DefaultIncludedBuildTaskGraph.java:153)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.lambda$scheduleRequestedTasks$1(DefaultBuildTreeWorkPreparer.java:41)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph$1.run(DefaultIncludedBuildTaskGraph.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:30)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:27)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:48)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph.scheduleWork(DefaultIncludedBuildTaskGraph.java:204)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:37)
+	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:36)
+	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:112)
+	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController.scheduleAndRunRequestedTasks(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:77)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:120)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:169)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$7(StateTransitionController.java:169)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:169)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:117)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:77)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:72)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:71)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:135)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:54)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:130)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:54)
+	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:62)
+	at org.gradle.internal.buildtree.InitProblems.execute(InitProblems.java:36)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:71)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:60)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:71)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$2.call(RunAsBuildOperationBuildActionExecutor.java:67)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$2.call(RunAsBuildOperationBuildActionExecutor.java:63)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:63)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor$ActionImpl.apply(BuildSessionLifecycleBuildActionExecutor.java:92)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor$ActionImpl.apply(BuildSessionLifecycleBuildActionExecutor.java:80)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:73)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor.execute(BuildSessionLifecycleBuildActionExecutor.java:62)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor.execute(BuildSessionLifecycleBuildActionExecutor.java:41)
+	at org.gradle.internal.buildprocess.execution.StartParamsValidatingActionExecutor.execute(StartParamsValidatingActionExecutor.java:64)
+	at org.gradle.internal.buildprocess.execution.StartParamsValidatingActionExecutor.execute(StartParamsValidatingActionExecutor.java:32)
+	at org.gradle.internal.buildprocess.execution.SessionFailureReportingActionExecutor.execute(SessionFailureReportingActionExecutor.java:51)
+	at org.gradle.internal.buildprocess.execution.SessionFailureReportingActionExecutor.execute(SessionFailureReportingActionExecutor.java:39)
+	at org.gradle.internal.buildprocess.execution.SetupLoggingActionExecutor.execute(SetupLoggingActionExecutor.java:47)
+	at org.gradle.internal.buildprocess.execution.SetupLoggingActionExecutor.execute(SetupLoggingActionExecutor.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:70)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.lambda$execute$0(ForwardClientInput.java:40)
+	at org.gradle.internal.daemon.clientinput.ClientInputForwarder.forwardInput(ClientInputForwarder.java:80)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:64)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.lambda$runCommand$0(DaemonStateCoordinator.java:321)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.cli.CommandLineArgumentException: Unknown command-line option '--tests'.
+	at org.gradle.cli.CommandLineParser$BeforeFirstSubCommand.onStartOption(CommandLineParser.java:336)
+	at org.gradle.cli.CommandLineParser.parse(CommandLineParser.java:102)
+	at org.gradle.execution.commandline.CommandLineTaskConfigurer.configureTasksNow(CommandLineTaskConfigurer.java:64)
+	... 134 more
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 894ms
+Watched directory hierarchies: [/Volumes/T7/Projects/milos85vasic/ShareConnect]

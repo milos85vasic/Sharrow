@@ -1,0 +1,27 @@
+ShareConnect Unit Tests Execution Summary
+=========================================
+
+Execution Date: Wed Sep 24 19:55:34 MSK 2025
+Test Type: Unit Tests
+Test Suite: com.shareconnect.suites.UnitTestSuite
+Status: FAILED
+
+Test Classes Executed:
+- ServerProfileTest
+- ProfileManagerTest
+- ThemeTest
+- HistoryItemTest
+- DialogUtilsTest
+- ServiceApiClientTest
+
+Report Location: Documentation/Tests/20250924_195517_TEST_ROUND/unit_tests
+
+Files Generated:
+- unit_test_execution.log: Full execution log
+- test_summary.txt: This summary file
+- index.html: HTML test report (if available)
+- TEST-*.xml: JUnit XML results (if available)
+
+Command Used:
+./gradlew test --tests "com.shareconnect.suites.UnitTestSuite" --info --stacktrace
+

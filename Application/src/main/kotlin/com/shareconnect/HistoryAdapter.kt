@@ -43,6 +43,7 @@ class HistoryAdapter(private val listener: OnHistoryItemClickListener) :
 
     inner class HistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textViewTitle: TextView = itemView.findViewById(R.id.textViewTitle)
+        private val textViewDescription: TextView = itemView.findViewById(R.id.textViewDescription)
         private val textViewUrl: TextView = itemView.findViewById(R.id.textViewUrl)
         private val textViewServiceProvider: TextView = itemView.findViewById(R.id.textViewServiceProvider)
         private val textViewType: TextView = itemView.findViewById(R.id.textViewType)
@@ -55,6 +56,7 @@ class HistoryAdapter(private val listener: OnHistoryItemClickListener) :
 
         fun bind(item: HistoryItem) {
             textViewTitle.text = item.title ?: "Unknown Title"
+            textViewDescription.text = item.description ?: ""
             textViewUrl.text = item.url
             textViewServiceProvider.text = item.serviceProvider
             textViewType.text = item.type
@@ -83,6 +85,9 @@ class HistoryAdapter(private val listener: OnHistoryItemClickListener) :
                     textViewStatus.setBackgroundResource(R.drawable.tag_background)
                 }
             }
+
+            // Show/hide description based on whether it's available
+            textViewDescription.visibility = if (item.description.isNullOrEmpty()) View.GONE else View.VISIBLE
 
             // Set button listeners
             buttonResend.setOnClickListener {

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp"
+    android:minWidth="80dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:layout_width="56dp"
+        android:layout_height="56dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="?attr/colorSurfaceVariant">
+
+                <ImageView
+                    android:id="@+id/profileIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_share"
+                    android:tint="?attr/colorOnSurfaceVariant" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Default indicator star -->
+        <ImageView
+            android:id="@+id/defaultIndicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|end"
+            android:src="@android:drawable/btn_star_big_on"
+            android:tint="@color/design_default_color_primary"
+            android:visibility="gone" />
+
+        <!-- Lock indicator for authenticated profiles -->
+        <ImageView
+            android:id="@+id/lockIndicator"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_lock_lock"
+            android:tint="?attr/colorOnSurfaceVariant"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Profile"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxWidth="80dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/profileType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MeTube"
+        android:textSize="10sp"
+        android:alpha="0.7"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxWidth="80dp"
+        android:textAlignment="center" />
+
+</LinearLayout>

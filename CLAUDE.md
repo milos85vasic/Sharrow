@@ -42,21 +42,28 @@ The project follows a modular architecture with two main components:
 ### Data Architecture
 
 **Database Layer (SQLCipher + Room):**
-- `HistoryDatabase`: Main database class with version 2 schema
-- `HistoryItem`: Entity for tracking shared links with metadata
+- `HistoryDatabase`: Main database class with version 3 schema
+- `HistoryItem`: Entity for tracking shared links with rich metadata (title, description, thumbnail)
 - `Theme`: Entity for theme preferences storage
-- `HistoryItemDao` & `ThemeDao`: Data access objects
-- `HistoryRepository` & `ThemeRepository`: Repository pattern implementations
+- `ServerProfileEntity`: Entity for service profiles with authentication
+- `HistoryItemDao`, `ThemeDao`, `ServerProfileDao`: Data access objects
+- `HistoryRepository`, `ThemeRepository`, `ServerProfileRepository`: Repository pattern implementations
 
 **Key Data Models:**
-- `ServerProfile`: Service configuration (MeTube, YT-DLP, Torrent clients, jDownloader)
-- `HistoryItem`: Shared content tracking with timestamps and service info
+- `ServerProfile`: Service configuration with authentication support (username/password)
+- `HistoryItem`: Shared content tracking with rich metadata (title, description, thumbnail URL)
 - `Theme`: UI theme configuration with color schemes and dark/light modes
+- `UrlMetadata`: Fetched metadata for shared URLs
 
 ### Security & Encryption
 
 - **SQLCipher**: All local data encrypted at rest using SQLCipher 4.10.0+
+- **Room Database**: Profiles migrated from SharedPreferences to encrypted Room database
 - **Salt Management**: Application-specific salt for encryption keys
+- **Authentication**: Secure storage of credentials with proper API implementations:
+  - qBittorrent: Cookie-based authentication
+  - Transmission: Session ID handling
+  - jDownloader: My.JDownloader API support
 - **No External Data**: All data remains on device unless explicitly shared by user
 
 ## Build System & Configuration

@@ -9,7 +9,10 @@
       "Bash(./run_instrumentation_tests.sh)",
       "Bash(./run_automation_tests.sh:*)",
       "Read(//Volumes/T7/Android/SDK/**)",
-      "Bash(./test_emulator_functionality.sh:*)"
+      "Bash(./test_emulator_functionality.sh:*)",
+      "Bash(for f in /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/src/main/res/layout/activity_*.xml)",
+      "Bash(grep:*)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

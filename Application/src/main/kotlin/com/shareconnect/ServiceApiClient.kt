@@ -11,11 +11,17 @@ import okhttp3.Request
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
+import okhttp3.Cookie
+import okhttp3.CookieJar
+import okhttp3.HttpUrl
+import okhttp3.FormBody
 import org.json.JSONObject
 import java.io.IOException
+import java.util.concurrent.ConcurrentHashMap
 
 class ServiceApiClient {
     private val client: OkHttpClient
+    private val cookieStore = ConcurrentHashMap<String, List<Cookie>>()
 
     interface ServiceApiCallback {
         fun onSuccess()
@@ -25,7 +31,15 @@ class ServiceApiClient {
     init {
         // Initialize client with cookie support for proper authentication handling
         client = OkHttpClient.Builder()
-            .cookieJar(okhttp3.CookieJar.NO_COOKIES) // We'll handle authentication manually
+            .cookieJar(object : CookieJar {
+                override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
+                    cookieStore[url.host] = cookies
+                }
+
+                override fun loadForRequest(url: HttpUrl): List<Cookie> {
+                    return cookieStore[url.host] ?: ArrayList()
+                }
+            })
             .build()
     }
 
@@ -229,19 +243,99 @@ class ServiceApiClient {
      * Send to qBittorrent
      */
     private fun sendToQBittorrent(profile: ServerProfile, apiUrl: String, url: String, callback: ServiceApiCallback) {
+        // qBittorrent requires login first to get a cookie
+        if (!profile.username.isNullOrEmpty() && !profile.password.isNullOrEmpty()) {
+            loginToQBittorrent(profile, object : ServiceApiCallback {
+                override fun onSuccess() {
+                    // Now send the actual torrent/magnet URL
+                    sendToQBittorrentAuthenticated(profile, apiUrl, url, callback)
+                }
+
+                override fun onError(error: String?) {
+                    callback.onError("qBittorrent authentication failed: $error")
+                }
+            })
+        } else {
+            // No authentication needed, send directly
+            sendToQBittorrentAuthenticated(profile, apiUrl, url, callback)
+        }
+    }
+
+    /**
+     * Login to qBittorrent to get authentication cookie
+     */
+    private fun loginToQBittorrent(profile: ServerProfile, callback: ServiceApiCallback) {
+        try {
+            val loginUrl = "${profile.url}:${profile.port}/api/v2/auth/login"
+
+            val formBody = FormBody.Builder()
+                .add("username", profile.username!!)
+                .add("password", profile.password!!)
+                .build()
+
+            val request = Request.Builder()
+                .url(loginUrl)
+                .post(formBody)
+                .build()
+
+            client.newCall(request).enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+                    Console.error(e, "Failed to login to qBittorrent")
+                    callback.onError(e.message)
+                }
+
+                @Throws(IOException::class)
+                override fun onResponse(call: Call, response: Response) {
+                    try {
+                        if (response.isSuccessful) {
+                            val responseBody = response.body?.string() ?: ""
+                            if (responseBody.contains("Ok.") || responseBody.contains("ok", true)) {
+                                callback.onSuccess()
+                            } else if (responseBody.contains("Fails.", true)) {
+                                callback.onError("Invalid username or password")
+                            } else {
+                                // Some versions just return 200 with empty body on success
+                                callback.onSuccess()
+                            }
+                        } else {
+                            val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
+                            Console.error("qBittorrent login error: $errorBody")
+                            callback.onError("Login failed: " + response.code + " - $errorBody")
+                        }
+                    } finally {
+                        response.body?.close()
+                    }
+                }
+            })
+        } catch (e: Exception) {
+            Console.error(e, "Error logging into qBittorrent")
+            callback.onError(e.message)
+        }
+    }
+
+    /**
+     * Send to qBittorrent after authentication
+     */
+    private fun sendToQBittorrentAuthenticated(profile: ServerProfile, apiUrl: String, url: String, callback: ServiceApiCallback) {
         try {
             // qBittorrent expects form data
             val formBody: RequestBody = MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
                 .addFormDataPart("urls", url)
+                .addFormDataPart("autoTMM", "false")
+                .addFormDataPart("savepath", "")
+                .addFormDataPart("cookie", "")
+                .addFormDataPart("category", "")
+                .addFormDataPart("tags", "")
+                .addFormDataPart("skip_checking", "false")
+                .addFormDataPart("paused", "false")
+                .addFormDataPart("root_folder", "true")
                 .build()
 
-            val requestBuilder = Request.Builder().url(apiUrl).post(formBody)
-            
-            // Add authentication if provided
-            addAuthentication(requestBuilder, profile)
-            
-            val request = requestBuilder.build()
+            val request = Request.Builder()
+                .url(apiUrl)
+                .post(formBody)
+                .build()
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
@@ -274,6 +368,19 @@ class ServiceApiClient {
      * Send to Transmission
      */
     private fun sendToTransmission(profile: ServerProfile, apiUrl: String, url: String, callback: ServiceApiCallback) {
+        sendToTransmissionWithSessionId(profile, apiUrl, url, null, callback)
+    }
+
+    /**
+     * Send to Transmission with session ID handling
+     */
+    private fun sendToTransmissionWithSessionId(
+        profile: ServerProfile,
+        apiUrl: String,
+        url: String,
+        sessionId: String?,
+        callback: ServiceApiCallback
+    ) {
         try {
             // Transmission expects JSON-RPC
             val json = JSONObject()
@@ -287,10 +394,15 @@ class ServiceApiClient {
 
             val body: RequestBody = json.toString().toRequestBody(JSON)
             val requestBuilder = Request.Builder().url(apiUrl).post(body)
-            
+
+            // Add session ID if provided (required by Transmission)
+            if (sessionId != null) {
+                requestBuilder.addHeader("X-Transmission-Session-Id", sessionId)
+            }
+
             // Add authentication if provided
             addAuthentication(requestBuilder, profile)
-            
+
             val request = requestBuilder.build()
 
             client.newCall(request).enqueue(object : Callback {
@@ -302,8 +414,24 @@ class ServiceApiClient {
                 @Throws(IOException::class)
                 override fun onResponse(call: Call, response: Response) {
                     try {
-                        if (response.isSuccessful) {
-                            callback.onSuccess()
+                        if (response.code == 409) {
+                            // Need to get session ID and retry
+                            val newSessionId = response.header("X-Transmission-Session-Id")
+                            if (newSessionId != null) {
+                                // Retry with the session ID
+                                sendToTransmissionWithSessionId(profile, apiUrl, url, newSessionId, callback)
+                            } else {
+                                callback.onError("Failed to get Transmission session ID")
+                            }
+                        } else if (response.isSuccessful) {
+                            val responseBody = response.body?.string() ?: ""
+                            val responseJson = JSONObject(responseBody)
+                            val result = responseJson.optString("result", "")
+                            if (result == "success") {
+                                callback.onSuccess()
+                            } else {
+                                callback.onError("Transmission error: $result")
+                            }
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
                             Console.error("Transmission API error: $errorBody")
@@ -453,21 +581,30 @@ class ServiceApiClient {
         try {
             val baseUrl = "${profile.url}:${profile.port}"
             // My.JDownloader API endpoint for adding links
-            val apiUrl = "$baseUrl/flash/add"
+            val apiUrl = "$baseUrl/api/linkgrabberv2/addLinks"
 
             // Prepare JSON payload for My.JDownloader
             val json = JSONObject()
-            json.put("urls", arrayOf(url))
-            json.put("packageName", "") // Optional package name
-            json.put("destinationFolder", "") // Optional destination folder
-            
+            val links = JSONObject()
+            links.put("autostart", true)
+            links.put("links", url)
+            links.put("packageName", "ShareConnect")
+            links.put("extractPassword", "")
+            links.put("priority", "DEFAULT")
+            links.put("downloadPassword", "")
+            links.put("destinationFolder", "")
+            links.put("overwritePackagizerRules", false)
+            json.put("params", links)
+            json.put("apiVer", 1)
+
             val body: RequestBody = json.toString().toRequestBody(JSON)
-            
+
             val requestBuilder = Request.Builder().url(apiUrl).post(body)
-            
+            requestBuilder.addHeader("Content-Type", "application/json")
+
             // Add authentication if provided
             addAuthentication(requestBuilder, profile)
-            
+
             val request = requestBuilder.build()
 
             client.newCall(request).enqueue(object : Callback {
@@ -480,7 +617,13 @@ class ServiceApiClient {
                 override fun onResponse(call: Call, response: Response) {
                     try {
                         if (response.isSuccessful) {
-                            callback.onSuccess()
+                            val responseBody = response.body?.string() ?: ""
+                            // Check if the response indicates success
+                            if (responseBody.contains("\"id\":") || responseBody.isEmpty()) {
+                                callback.onSuccess()
+                            } else {
+                                callback.onError("JDownloader response: $responseBody")
+                            }
                         } else {
                             val errorBody = if (response.body != null) response.body!!.string() else "Unknown error"
                             Console.error("My.JDownloader API error: $errorBody")

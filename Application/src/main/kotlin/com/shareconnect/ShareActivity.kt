@@ -16,6 +16,10 @@ import androidx.appcompat.widget.Toolbar
 import com.google.android.material.button.MaterialButton
 import com.shareconnect.database.HistoryItem
 import com.shareconnect.database.HistoryRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class ShareActivity : AppCompatActivity() {
     private var textViewMediaLink: TextView? = null
@@ -28,6 +32,8 @@ class ShareActivity : AppCompatActivity() {
     private var serviceApiClient: ServiceApiClient? = null
     private var profileManager: ProfileManager? = null
     private var themeManager: ThemeManager? = null
+    private var metadataFetcher: MetadataFetcher? = null
+    private var urlMetadata: UrlMetadata? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Apply theme before setting content
@@ -50,6 +56,8 @@ class ShareActivity : AppCompatActivity() {
         loadProfiles()
         setupListeners()
         serviceApiClient = ServiceApiClient()
+        metadataFetcher = MetadataFetcher()
+        fetchMetadataForUrl()
     }
 
     override fun onResume() {
@@ -90,6 +98,40 @@ class ShareActivity : AppCompatActivity() {
             // No valid link received
             mediaLink = null
             textViewMediaLink!!.setText(R.string.no_media_link_received)
+        }
+    }
+
+    private fun fetchMetadataForUrl() {
+        if (mediaLink.isNullOrEmpty()) return
+
+        // Show progress while fetching metadata
+        progressBar?.visibility = View.VISIBLE
+
+        CoroutineScope(Dispatchers.Main).launch {
+            try {
+                urlMetadata = metadataFetcher?.fetchMetadata(mediaLink!!)
+
+                // Update UI with fetched metadata
+                urlMetadata?.let { metadata ->
+                    // Update the display with title if available
+                    if (!metadata.title.isNullOrEmpty()) {
+                        textViewMediaLink?.text = buildString {
+                            append(metadata.title)
+                            if (!metadata.siteName.isNullOrEmpty()) {
+                                append(" - ")
+                                append(metadata.siteName)
+                            }
+                            append("\n")
+                            append(mediaLink)
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                // Failed to fetch metadata, use simple extraction
+                e.printStackTrace()
+            } finally {
+                progressBar?.visibility = View.GONE
+            }
         }
     }
 
@@ -330,16 +372,26 @@ class ShareActivity : AppCompatActivity() {
         // Create history item
         val historyItem = HistoryItem()
         historyItem.url = url
-        historyItem.title = extractTitleFromUrl(url) // Simple title extraction
-        historyItem.description = extractDescriptionFromUrl(url) // Extract description
-        historyItem.thumbnailUrl = extractThumbnailFromUrl(url) // Extract thumbnail URL
-        historyItem.serviceProvider = extractServiceProviderFromUrl(url)
+
+        // Use fetched metadata if available, otherwise fall back to simple extraction
+        if (urlMetadata != null) {
+            historyItem.title = urlMetadata?.title ?: extractTitleFromUrl(url)
+            historyItem.description = urlMetadata?.description
+            historyItem.thumbnailUrl = urlMetadata?.thumbnailUrl
+            historyItem.serviceProvider = urlMetadata?.siteName ?: extractServiceProviderFromUrl(url)
+        } else {
+            historyItem.title = extractTitleFromUrl(url)
+            historyItem.description = null
+            historyItem.thumbnailUrl = null
+            historyItem.serviceProvider = extractServiceProviderFromUrl(url)
+        }
+
         historyItem.type = determineMediaType(url)
         historyItem.timestamp = System.currentTimeMillis()
         historyItem.profileId = profileId
         historyItem.profileName = profileName
         historyItem.isSentSuccessfully = success
-        historyItem.serviceType = serviceType // Add service type to history
+        historyItem.serviceType = serviceType
 
         // Save to database
         val repository = HistoryRepository(this)
@@ -351,7 +403,22 @@ class ShareActivity : AppCompatActivity() {
         return url.replace("https://", "").replace("http://", "").replace("www.", "")
     }
 
-    private fun extractServiceProviderFromUrl(url: String): String {\n        return when {\n            url.contains(\"youtube.com\") || url.contains(\"youtu.be\") -> \"YouTube\"\n            url.contains(\"vimeo.com\") -> \"Vimeo\"\n            url.contains(\"twitch.tv\") -> \"Twitch\"\n            url.contains(\"reddit.com\") -> \"Reddit\"\n            url.contains(\"twitter.com\") || url.contains(\"x.com\") -> \"Twitter\"\n            url.contains(\"instagram.com\") -> \"Instagram\"\n            url.contains(\"facebook.com\") -> \"Facebook\"\n            url.contains(\"soundcloud.com\") -> \"SoundCloud\"\n            url.contains(\"dailymotion.com\") -> \"Dailymotion\"\n            url.contains(\"bandcamp.com\") -> \"Bandcamp\"\n            url.startsWith(\"magnet:\") -> \"Magnet Link\"\n            else -> \"Unknown\"\n        }\n    }\n\n    private fun extractDescriptionFromUrl(url: String): String {\n        // For now, return a generic description\n        // In a real implementation, this would fetch actual metadata from the service\n        return when {\n            url.contains(\"youtube.com\") || url.contains(\"youtu.be\") -> \"YouTube video\"\n            url.contains(\"vimeo.com\") -> \"Vimeo video\"\n            url.contains(\"twitch.tv\") -> \"Twitch stream\"\n            url.contains(\"reddit.com\") -> \"Reddit post\"\n            url.contains(\"twitter.com\") || url.contains(\"x.com\") -> \"Twitter/X post\"\n            url.contains(\"instagram.com\") -> \"Instagram post\"\n            url.contains(\"facebook.com\") -> \"Facebook post\"\n            url.contains(\"soundcloud.com\") -> \"SoundCloud audio\"\n            url.contains(\"dailymotion.com\") -> \"Dailymotion video\"\n            url.contains(\"bandcamp.com\") -> \"Bandcamp audio\"\n            url.startsWith(\"magnet:\") -> \"Magnet link for torrent\"\n            else -> \"Media content\"\n        }\n    }\n\n    private fun extractThumbnailFromUrl(url: String): String {\n        // Return a placeholder thumbnail URL\n        // In a real implementation, this would fetch actual thumbnails from the service\n        return when {\n            url.contains(\"youtube.com\") || url.contains(\"youtu.be\") -> \"https://img.youtube.com/vi/${extractVideoIdFromYouTubeUrl(url)}/mqdefault.jpg\"\n            url.contains(\"vimeo.com\") -> \"https://vumbnail.com/${extractVideoIdFromVimeoUrl(url)}.jpg\"\n            url.contains(\"twitch.tv\") -> \"https://static-cdn.jtvnw.net/previews-ttv/live_user_${extractChannelFromTwitchUrl(url)}.jpg\"\n            // For other services, return a generic placeholder\n            else -> \"\" // Empty string means no thumbnail\n        }\n    }\n\n    private fun extractVideoIdFromYouTubeUrl(url: String): String {\n        // Extract YouTube video ID from URL\n        val patterns = listOf(\n            \"v=([^&#]*)\".toRegex(),\n            \"youtu\\\\.be/([^&#]*)\".toRegex(),\n            \"embed/([^&#]*)\".toRegex()\n        )\n        \n        for (pattern in patterns) {\n            val match = pattern.find(url)\n            if (match != null) {\n                return match.groupValues[1]\n            }\n        }\n        \n        return \"\" // Return empty if no ID found\n    }\n\n    private fun extractVideoIdFromVimeoUrl(url: String): String {\n        // Extract Vimeo video ID from URL\n        val pattern = \"vimeo\\\\.com/(?:video/)?(\\\\d+)\".toRegex()\n        val match = pattern.find(url)\n        return match?.groupValues?.getOrNull(1) ?: \"\"\n    }\n\n    private fun extractChannelFromTwitchUrl(url: String): String {\n        // Extract Twitch channel name from URL\n        val pattern = \"twitch\\\\.tv/([^/?#]+)\".toRegex()\n        val match = pattern.find(url)\n        return match?.groupValues?.getOrNull(1) ?: \"\"\n    }
+    private fun extractServiceProviderFromUrl(url: String): String {
+        return when {
+            url.contains("youtube.com") || url.contains("youtu.be") -> "YouTube"
+            url.contains("vimeo.com") -> "Vimeo"
+            url.contains("twitch.tv") -> "Twitch"
+            url.contains("reddit.com") -> "Reddit"
+            url.contains("twitter.com") || url.contains("x.com") -> "Twitter"
+            url.contains("instagram.com") -> "Instagram"
+            url.contains("facebook.com") -> "Facebook"
+            url.contains("soundcloud.com") -> "SoundCloud"
+            url.contains("dailymotion.com") -> "Dailymotion"
+            url.contains("bandcamp.com") -> "Bandcamp"
+            url.startsWith("magnet:") -> "Magnet Link"
+            else -> "Unknown"
+        }
+    }
 
     private fun determineMediaType(url: String): String {
         // Simple media type determination

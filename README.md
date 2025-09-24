@@ -16,12 +16,37 @@ ShareConnect combines the words "share" and "connect" to represent the core func
 - **Clipboard URL Sharing**: Share URLs directly from clipboard
 - **System App Integration**: Share links to compatible installed applications
 - **Customizable Themes**: 6 color schemes with light/dark variants (Warm Orange, Crimson, Light Blue, Purple, Green, Material)
-- **Encrypted Storage**: All data including history and profiles stored with SQLCipher encryption
-- **Comprehensive History**: Detailed sharing history with filtering by service, type, and profile
-- **Modern Material Design**: Beautiful UI following Material Design 3 guidelines
-- **Connection Testing**: Built-in service connection testing
+- **Encrypted Storage**: All data stored with Room database and SQLCipher encryption
+- **Rich Media Metadata**: Automatic fetching of titles, descriptions, and thumbnails for shared URLs
+- **Visual Profile Management**: Modern grid layout with profile icons, default indicators, and lock badges for authenticated profiles
+- **Comprehensive History**: Detailed sharing history with media metadata, filtering by service, type, and profile
+- **Modern Material Design**: Beautiful UI following Material Design 3 guidelines with proper layout behaviors
+- **Connection Testing**: Built-in service connection testing with enhanced authentication support
 - **Quick Access**: Direct access to service interfaces from multiple locations
 - **Bulk Cleanup**: Flexible history cleanup options (individual items, by service, by type, or all)
+
+## What's New
+
+### Version 1.0.0
+- **Profile Database Migration**: Profiles now stored in encrypted Room database alongside history
+- **Enhanced Main Screen**:
+  - Grid layout showing all configured profiles with icons
+  - Quick access to system apps that can handle media links
+  - Visual indicators for default profiles and authenticated services
+  - Long-press context menu for profile management
+- **Improved Authentication**:
+  - Fixed qBittorrent 403 errors with proper cookie-based authentication
+  - Enhanced Transmission support with session ID handling
+  - Better jDownloader API implementation
+- **Rich Media Metadata**:
+  - Automatic fetching of titles, descriptions, and thumbnails
+  - Support for all major streaming platforms
+  - Fallback extraction for unsupported sites
+- **UI/UX Improvements**:
+  - Fixed layout spacing between title and navigation bars
+  - Modern Material Design 3 components throughout
+  - Smooth animations and transitions
+- **Better Testing**: Comprehensive test suite with unit, instrumentation, and automation tests
 
 ## Supported Services
 
@@ -31,8 +56,13 @@ ShareConnect works with all streaming services and download sources supported by
 
 For services that require authentication, ShareConnect supports optional username and password configuration:
 - Configure username and password in each service profile
-- Credentials are stored securely with the same SQLCipher encryption as other data
-- Authentication is applied automatically when sending requests to protected services
+- Credentials are stored securely in Room database with SQLCipher encryption
+- Enhanced authentication support:
+  - **qBittorrent**: Cookie-based authentication with automatic login
+  - **Transmission**: Session ID handling with automatic retry
+  - **jDownloader**: My.JDownloader API with fallback to legacy API
+  - **Basic Auth**: Standard HTTP basic authentication for other services
+- Visual lock indicator on profiles with credentials
 - All authentication data follows the same privacy policies (no data leaves the device without user action)
 
 ### For MeTube and YT-DLP

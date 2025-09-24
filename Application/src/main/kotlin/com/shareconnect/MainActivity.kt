@@ -3,26 +3,43 @@ package com.shareconnect
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.LinearLayout
+import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.redelf.commons.logging.Console
 
 class MainActivity : AppCompatActivity() {
     private var buttonSettings: MaterialButton? = null
+    private var buttonHistory: MaterialButton? = null
     private var buttonOpenMeTube: MaterialButton? = null
+    private var buttonManageProfiles: MaterialButton? = null
+    private var buttonAddFirstProfile: MaterialButton? = null
+    private var recyclerViewProfiles: RecyclerView? = null
+    private var recyclerViewSystemApps: RecyclerView? = null
+    private var emptyProfilesLayout: LinearLayout? = null
+
     private var profileManager: ProfileManager? = null
     private var themeManager: ThemeManager? = null
+    private var profileAdapter: ProfileIconAdapter? = null
+    private var systemAppAdapter: SystemAppAdapter? = null
     private var isContentViewSet = false
 
     companion object {
         private const val SETUP_WIZARD_REQUEST_CODE = 1001
+        private const val EDIT_PROFILE_REQUEST_CODE = 1002
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,8 +55,6 @@ class MainActivity : AppCompatActivity() {
         if (!profileManager!!.hasProfiles()) {
             // Show setup wizard
             showSetupWizard()
-            // Don't return here - let the activity finish its onCreate
-            // The activity will be finished after settings if still no profiles
         } else {
             // Only set content view if we have profiles
             setupMainView()
@@ -53,36 +68,212 @@ class MainActivity : AppCompatActivity() {
         }
         isContentViewSet = true
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_new)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
+        // Initialize views
         buttonSettings = findViewById(R.id.buttonSettings)
+        buttonHistory = findViewById(R.id.buttonHistory)
         buttonOpenMeTube = findViewById(R.id.buttonOpenMeTube)
-        val buttonHistory = findViewById<MaterialButton>(R.id.buttonHistory)
+        buttonManageProfiles = findViewById(R.id.buttonManageProfiles)
+        buttonAddFirstProfile = findViewById(R.id.buttonAddFirstProfile)
+        recyclerViewProfiles = findViewById(R.id.recyclerViewProfiles)
+        recyclerViewSystemApps = findViewById(R.id.recyclerViewSystemApps)
+        emptyProfilesLayout = findViewById(R.id.emptyProfilesLayout)
+
         val fabAdd = findViewById<ExtendedFloatingActionButton>(R.id.fabAdd)
 
-        buttonSettings!!.setOnClickListener {
+        // Set up button listeners
+        buttonSettings?.setOnClickListener {
             openSettings()
         }
 
-        buttonOpenMeTube!!.setOnClickListener {
-            openMeTubeInterface()
+        buttonHistory?.setOnClickListener {
+            openHistory()
         }
 
-        buttonHistory.setOnClickListener {
-            openHistory()
+        buttonOpenMeTube?.setOnClickListener {
+            openDefaultService()
+        }
+
+        buttonManageProfiles?.setOnClickListener {
+            openProfiles()
+        }
+
+        buttonAddFirstProfile?.setOnClickListener {
+            addNewProfile()
         }
 
         fabAdd.setOnClickListener {
             handleAddFromClipboard()
         }
+
+        // Set up profiles recycler view
+        setupProfilesRecyclerView()
+
+        // Set up system apps recycler view
+        setupSystemAppsRecyclerView()
+
+        // Load data
+        loadProfiles()
+        loadSystemApps()
+    }
+
+    private fun setupProfilesRecyclerView() {
+        recyclerViewProfiles?.layoutManager = GridLayoutManager(this, 4)
+    }
+
+    private fun setupSystemAppsRecyclerView() {
+        recyclerViewSystemApps?.layoutManager = GridLayoutManager(this, 4)
+    }
+
+    private fun loadProfiles() {
+        val profiles = profileManager?.profiles ?: emptyList()
+
+        if (profiles.isEmpty()) {
+            recyclerViewProfiles?.visibility = View.GONE
+            emptyProfilesLayout?.visibility = View.VISIBLE
+        } else {
+            recyclerViewProfiles?.visibility = View.VISIBLE
+            emptyProfilesLayout?.visibility = View.GONE
+
+            profileAdapter = ProfileIconAdapter(
+                this,
+                profiles,
+                onProfileClick = { profile ->
+                    openProfile(profile)
+                },
+                onProfileLongClick = { profile ->
+                    showProfileContextMenu(profile)
+                    true
+                }
+            )
+            recyclerViewProfiles?.adapter = profileAdapter
+        }
+
+        // Update default service button text
+        updateDefaultServiceButton()
+    }
+
+    private fun updateDefaultServiceButton() {
+        val defaultProfile = profileManager?.defaultProfile()
+        if (defaultProfile != null) {
+            buttonOpenMeTube?.text = "Open ${defaultProfile.name}"
+        } else {
+            buttonOpenMeTube?.text = "Open Default Service"
+            buttonOpenMeTube?.isEnabled = false
+        }
+    }
+
+    private fun loadSystemApps() {
+        // Find apps that can handle various media types
+        val mediaApps = mutableListOf<ResolveInfo>()
+        val pm = packageManager
+
+        // Check for YouTube links
+        val youtubeIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"))
+        mediaApps.addAll(pm.queryIntentActivities(youtubeIntent, 0))
+
+        // Check for torrent files
+        val torrentIntent = Intent(Intent.ACTION_VIEW)
+        torrentIntent.setDataAndType(Uri.parse("file://test.torrent"), "application/x-bittorrent")
+        mediaApps.addAll(pm.queryIntentActivities(torrentIntent, 0))
+
+        // Check for magnet links
+        val magnetIntent = Intent(Intent.ACTION_VIEW, Uri.parse("magnet:?xt=urn:btih:test"))
+        mediaApps.addAll(pm.queryIntentActivities(magnetIntent, 0))
+
+        // Remove duplicates and our own app
+        val uniqueApps = mediaApps.distinctBy { it.activityInfo.packageName }
+            .filter { it.activityInfo.packageName != packageName }
+
+        systemAppAdapter = SystemAppAdapter(
+            this,
+            uniqueApps.take(8), // Limit to 8 apps for better UI
+            onAppClick = { app ->
+                openSystemApp(app)
+            }
+        )
+        recyclerViewSystemApps?.adapter = systemAppAdapter
+    }
+
+    private fun openProfile(profile: ServerProfile) {
+        val url = "${profile.url}:${profile.port}"
+        try {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(browserIntent)
+        } catch (e: Exception) {
+            Toast.makeText(this, "Could not open ${profile.name}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showProfileContextMenu(profile: ServerProfile) {
+        val popupMenu = PopupMenu(this, recyclerViewProfiles!!)
+        popupMenu.menu.add(0, 0, 0, "Edit")
+        popupMenu.menu.add(0, 1, 1, "Set as Default")
+        popupMenu.menu.add(0, 2, 2, "Delete")
+
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                0 -> editProfile(profile)
+                1 -> setAsDefault(profile)
+                2 -> deleteProfile(profile)
+            }
+            true
+        }
+
+        popupMenu.show()
+    }
+
+    private fun editProfile(profile: ServerProfile) {
+        val intent = Intent(this, EditProfileActivity::class.java)
+        intent.putExtra("profile_id", profile.id)
+        startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE)
+    }
+
+    private fun setAsDefault(profile: ServerProfile) {
+        profile.isDefault = true
+        profileManager?.setDefaultProfile(profile)
+        profileManager?.updateProfile(profile)
+        loadProfiles()
+        Toast.makeText(this, "${profile.name} set as default", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun deleteProfile(profile: ServerProfile) {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Delete Profile")
+            .setMessage("Are you sure you want to delete ${profile.name}?")
+            .setPositiveButton("Delete") { _, _ ->
+                profileManager?.deleteProfile(profile)
+                loadProfiles()
+                Toast.makeText(this, "Profile deleted", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+
+    private fun openSystemApp(app: ResolveInfo) {
+        try {
+            val launchIntent = packageManager.getLaunchIntentForPackage(app.activityInfo.packageName)
+            if (launchIntent != null) {
+                startActivity(launchIntent)
+            } else {
+                Toast.makeText(this, "Could not open app", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            Toast.makeText(this, "Could not open app", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun addNewProfile() {
+        val intent = Intent(this, EditProfileActivity::class.java)
+        startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE)
     }
 
     private fun showSetupWizard() {
         // For now, we'll just redirect to settings
-        // In a more complete implementation, we could show a guided setup wizard
         val intent = Intent(this@MainActivity, SettingsActivity::class.java)
         intent.putExtra("first_run", true)
         startActivityForResult(intent, SETUP_WIZARD_REQUEST_CODE)
@@ -91,16 +282,38 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == SETUP_WIZARD_REQUEST_CODE) {
-            // Check if profiles were created
-            if (!profileManager!!.hasProfiles()) {
-                // Still no profiles, finish the activity
-                Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_LONG).show()
-                finish()
-            } else {
-                // Profiles created, set up the main view
-                setupMainView()
+        when (requestCode) {
+            SETUP_WIZARD_REQUEST_CODE -> {
+                // Check if profiles were created
+                if (!profileManager!!.hasProfiles()) {
+                    // Still no profiles, finish the activity
+                    Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_LONG).show()
+                    finish()
+                } else {
+                    // Profiles created, set up the main view
+                    setupMainView()
+                }
             }
+            EDIT_PROFILE_REQUEST_CODE -> {
+                // Refresh profiles after editing
+                loadProfiles()
+            }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Check if theme has changed and recreate activity if needed
+        themeManager = ThemeManager.getInstance(this)
+        if (themeManager!!.hasThemeChanged()) {
+            themeManager!!.resetThemeChangedFlag()
+            recreate()
+        }
+
+        // Refresh data
+        if (isContentViewSet) {
+            loadProfiles()
+            loadSystemApps()
         }
     }
 
@@ -118,7 +331,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_open_metube -> {
-                openMeTubeInterface()
+                openDefaultService()
                 true
             }
             R.id.action_history -> {
@@ -139,7 +352,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun openMeTubeInterface() {
+    private fun openProfiles() {
+        val intent = Intent(this, ProfilesActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openDefaultService() {
         val defaultProfile = profileManager!!.defaultProfile()
 
         if (defaultProfile == null) {
@@ -197,34 +415,13 @@ class MainActivity : AppCompatActivity() {
      * Simple URL validation
      */
     private fun isValidUrl(url: String?): Boolean {
-        if (url.isNullOrEmpty()) {
-            return false
-        }
-
-        // Check if it starts with http:// or https://
-        if (!url.startsWith("http://") && !url.startsWith("https://")) {
-            return false
-        }
-
-        // Basic validation - check if it contains a domain
+        if (url == null) return false
         return try {
             val uri = Uri.parse(url)
-            uri.host != null && uri.host!!.isNotEmpty()
+            uri.scheme != null && (uri.scheme == "http" || uri.scheme == "https" ||
+                uri.scheme == "magnet" || url.endsWith(".torrent"))
         } catch (e: Exception) {
             false
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        // Check if theme has changed and recreate activity if needed
-        themeManager = ThemeManager.getInstance(this)
-        val themeChanged = themeManager!!.hasThemeChanged()
-        Console.debug("onResume() called, themeChanged: $themeChanged")
-        if (themeChanged) {
-            themeManager!!.resetThemeChangedFlag()
-            Console.debug("Recreating activity due to theme change")
-            recreate()
         }
     }
 }

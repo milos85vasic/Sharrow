@@ -195,6 +195,9 @@ dependencies {
     // Room KSP compiler for database code generation
     ksp "androidx.room:room-compiler:2.8.0"
 
+    // JSoup for HTML parsing and metadata extraction
+    implementation 'org.jsoup:jsoup:1.16.1'
+
     // Unit Testing Dependencies
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito:mockito-core:4.6.1'

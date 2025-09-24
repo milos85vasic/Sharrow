@@ -66,3 +66,34 @@
 - Main screen layout - Presenting all available profiles
   - Display in separate section shortcuts for all applications that support our profile schemes
 - FIXME: Make sure that all screens fit vertically properly
+
+## Tmp - Backup
+
+Currently we support several types of profiles. However, we have forgotten that for them we may have to define username and password that will be used to authenticate user when communicating with remote endpoint. Please extend profiles which may need username and        │
+│   password with this support, make usre that they are optional, and persist them along with other data in Google Room encrypted like we do now. Please extend UI/UX according to the most modern standards for username/password management.
+
+Once you are done please update all of our tests - extend the according to the changes and update all relevant markdown documents in the project.
+
+I am getting error 403 when trying to access the qBitTorrent instance with provided username and password as the defined Profile properties. You MUST check and fix this. Credentials were valid and work with othe application for remote accessing.
+
+Once you are done please check every single supported profile type and if its API is implemented properly. You MUST fix if API communication is not properly implemented or if it is broken. Once done extend and update the tests. Make sure that all tests pass after        │
+│   changes. For tests we have run scripts in the root of the project.
+
+After you have done this, update the main screen which is scrollable to have icon of each created profile with possibility of opening it like we can now with the default one. Default item can have the golden start as indicator. Add lock indicator for the profiles        │
+│   with assigned credentials used for access. On long press add options - for now we need edit option exposed. Design must be like so far modern and smooth! Make sure that everything works nicely and after you are done check and update tests and markdowns if needed.        │
+│                                                                                                                                                                                                                                                                                  │
+│   And finally once main screen is uodated, after all profiles present another set of icons with similar approach - present one after another shortcuts for opening all system applications that can handle data types that our profiles can handle: youtube and other            │
+│   streaming services links, torrent files and magnet links, jdownloader compatible urls, etc. Add proper header so user understands taht these applications are part of the system, not the remote endpoints that our Profiles are covering.                                      │
+│                                                                                                                                                                                                                                                                                  │
+│   Next, we have situtation that not all activites fir between the title bar and navigation bar (if any). We MUST fix this! All screens must satisfy proper display! Once fix is applied extend all automation tests to verify this case! Note: There are already some            │
+│   screens where we have fixed/applied this. However, as I have already explained, not all screens follow this.
+
+Please extend the implementation with this point as well:                                                                                                                                                                                                                      │
+│                                                                                                                                                                                                                                                                                  │
+│   - Add title and description for history list items                                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                                                                  │
+│   So basically for shared item to particular Profile obtain title and description if possible. Thumbnail would be great too and use it in shared item presentation. So basically we would not have just the URL.                                                                 │
+│                                                                                                                                                                                                                                                                                  │
+│   Extend tests to test this changes too and make sure that we are passing them by running our run tests scipts.                                                                                                                                                                  │
+│                                                                                                                                                                                                                                                                                  │
+│   At the end update all markdowns where it is needed (if anywhere)    

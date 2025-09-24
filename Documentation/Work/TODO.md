@@ -19,7 +19,7 @@
 
 ## For 1.0.1
 
-- Connect with auto-discovery profiles systems (integrate on the back side as well)
+- [Connect with auto-discovery profiles systems (integrate on the back side as well)](./Tasks/004%20Auto-discovery%20profiles%20systems/TASK.md) 
 - Sync the user data (WebDAV)
 - Premium features
   - Extra theme packs

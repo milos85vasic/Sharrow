@@ -80,7 +80,7 @@ class ProfileManagerTest {
 
     @Test
     fun testGetProfiles() {
-        val profilesJson = """[{"id":"test-id","name":"Test Profile","url":"http://example.com","port":8080,"serviceType":"metube"}]"""
+        val profilesJson = """[{"id":"test-id","name":"Test Profile","url":"http://example.com","port":8080,"serviceType":"metube","username":null,"password":null}]"""
         `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(profilesJson)
 
         val profiles = profileManager.profiles
@@ -88,6 +88,8 @@ class ProfileManagerTest {
         assertEquals(1, profiles.size)
         assertEquals("test-id", profiles[0].id)
         assertEquals("Test Profile", profiles[0].name)
+        assertEquals(null, profiles[0].username)
+        assertEquals(null, profiles[0].password)
     }
 
     @Test
@@ -102,12 +104,20 @@ class ProfileManagerTest {
 
     @Test
     fun testGetProfilesByServiceType() {
-        val profilesJson = """[{"id":"test-id-1","name":"Profile 1","url":"http://example1.com","port":8080,"serviceType":"metube"},{"id":"test-id-2","name":"Profile 2","url":"http://example2.com","port":9090,"serviceType":"ytdl"}]"""
+        val profilesJson = """[{"id":"test-id-1","name":"Profile 1","url":"http://example1.com","port":8080,"serviceType":"metube","username":"user1","password":"pass1"},{"id":"test-id-2","name":"Profile 2","url":"http://example2.com","port":9090,"serviceType":"ytdl","username":null,"password":null}]"""
         `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(profilesJson)
 
         val metubeProfiles = profileManager.getProfilesByServiceType(ServerProfile.TYPE_METUBE)
 
         assertEquals(1, metubeProfiles.size)
         assertEquals("Profile 1", metubeProfiles[0].name)
+        assertEquals("user1", metubeProfiles[0].username)
+        assertEquals("pass1", metubeProfiles[0].password)
+        
+        val ytdlProfiles = profileManager.getProfilesByServiceType(ServerProfile.TYPE_YTDL)
+        assertEquals(1, ytdlProfiles.size)
+        assertEquals("Profile 2", ytdlProfiles[0].name)
+        assertEquals(null, ytdlProfiles[0].username)
+        assertEquals(null, ytdlProfiles[0].password)
     }
 }

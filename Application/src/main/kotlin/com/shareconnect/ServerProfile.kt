@@ -10,6 +10,8 @@ class ServerProfile {
     var isDefault: Boolean = false
     var serviceType: String? = TYPE_METUBE // metube, ytdl, torrent, jdownloader
     var torrentClientType: String? = null // qbittorrent, transmission, utorrent (only for torrent type)
+    var username: String? = null // Optional authentication field
+    var password: String? = null // Optional authentication field
 
     constructor() {
         // Default constructor required for serialization
@@ -41,6 +43,28 @@ class ServerProfile {
         this.isDefault = isDefault
         this.serviceType = serviceType
         this.torrentClientType = torrentClientType
+    }
+    
+    constructor(
+        id: String?,
+        name: String?,
+        url: String?,
+        port: Int,
+        isDefault: Boolean,
+        serviceType: String?,
+        torrentClientType: String?,
+        username: String?,
+        password: String?
+    ) {
+        this.id = id
+        this.name = name
+        this.url = url
+        this.port = port
+        this.isDefault = isDefault
+        this.serviceType = serviceType
+        this.torrentClientType = torrentClientType
+        this.username = username
+        this.password = password
     }
 
     fun isMeTube(): Boolean {
@@ -117,7 +141,9 @@ class ServerProfile {
                 name == that.name &&
                 url == that.url &&
                 serviceType == that.serviceType &&
-                torrentClientType == that.torrentClientType
+                torrentClientType == that.torrentClientType &&
+                username == that.username &&
+                password == that.password
     }
 
     override fun hashCode(): Int {
@@ -128,6 +154,8 @@ class ServerProfile {
         result = 31 * result + if (isDefault) 1 else 0
         result = 31 * result + (serviceType?.hashCode() ?: 0)
         result = 31 * result + (torrentClientType?.hashCode() ?: 0)
+        result = 31 * result + (username?.hashCode() ?: 0)
+        result = 31 * result + (password?.hashCode() ?: 0)
         return result
     }
 

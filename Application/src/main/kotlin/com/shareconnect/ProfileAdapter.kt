@@ -38,7 +38,8 @@ class ProfileAdapter(
     inner class ProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textViewProfileName: TextView = itemView.findViewById(R.id.textViewProfileName)
         private val textViewProfileUrl: TextView = itemView.findViewById(R.id.textViewProfileUrl)
-        private val textViewDefault: TextView = itemView.findViewById(R.id.textViewDefault)
+        private val imageViewDefault: ImageView = itemView.findViewById(R.id.imageViewDefault)
+        private val imageViewAuthenticated: ImageView = itemView.findViewById(R.id.imageViewAuthenticated)
         private val imageViewServiceType: ImageView = itemView.findViewById(R.id.imageViewServiceType)
         private val textViewServiceType: TextView = itemView.findViewById(R.id.textViewServiceType)
         private val buttonSetDefault: MaterialButton = itemView.findViewById(R.id.buttonSetDefault)
@@ -55,7 +56,11 @@ class ProfileAdapter(
             // Check if this is the default profile
             val defaultProfile = profileManager.defaultProfile()
             val isDefault = defaultProfile != null && defaultProfile.id == profile.id
-            textViewDefault.visibility = if (isDefault) View.VISIBLE else View.GONE
+            imageViewDefault.visibility = if (isDefault) View.VISIBLE else View.GONE
+
+            // Check if this profile has authentication
+            val hasAuth = !profile.username.isNullOrEmpty() && !profile.password.isNullOrEmpty()
+            imageViewAuthenticated.visibility = if (hasAuth) View.VISIBLE else View.GONE
 
             itemView.setOnClickListener {
                 listener.onProfileClick(profile)

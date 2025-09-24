@@ -21,6 +21,7 @@ ShareConnect is an Android application that serves as a media sharing hub, allow
 - System app integration for direct sharing
 - Clipboard URL sharing
 - Connection testing capabilities
+- Optional username and password authentication for protected services
 
 ## Project Architecture
 
@@ -155,17 +156,24 @@ Application/src/main/kotlin/com/shareconnect/
 ├── Database (HistoryDatabase, DAOs, Entities, Repositories)
 ├── Managers (ProfileManager, ThemeManager)
 ├── Models (ServerProfile)
+│   └── ServerProfile: Contains id, name, url, port, serviceType, torrentClientType, username, password (optional fields for authentication)
 ├── Utils (DialogUtils, ServiceApiClient)
 └── SCApplication (Application class extending BaseApplication)
 ```
 
 ## Integration Points
 
-### External Services
+### 3. New Services
 - MeTube: Self-hosted YouTube downloader integration
 - YT-DLP: Direct integration for media downloading
 - Torrent Clients: qBittorrent, Transmission, uTorrent web UI support
 - jDownloader: Web interface integration
+
+### Authentication Support
+- Username and Password: Optional authentication fields in ServerProfile
+- ServiceApiClient: Updated to include basic authentication in API requests
+- Security: Credentials stored with same SQLCipher encryption as other data
+- Implementation: Basic authentication added for all service types (MeTube, YT-DLP, Torrent clients, jDownloader)
 
 ### Android System Integration
 - Share intent filters for supported media platforms

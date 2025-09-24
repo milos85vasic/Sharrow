@@ -12,6 +12,7 @@ ShareConnect combines the words "share" and "connect" to represent the core func
 - **Universal Media Sharing**: Share content from YouTube, Vimeo, Twitch, Reddit, Twitter, Instagram, Facebook, SoundCloud and more
 - **Magnet Link Support**: Directly add magnet links to torrent clients
 - **Multiple Service Profiles**: Support for multiple service profiles with default profile selection
+- **Authentication Support**: Optional username and password authentication for protected services
 - **Clipboard URL Sharing**: Share URLs directly from clipboard
 - **System App Integration**: Share links to compatible installed applications
 - **Customizable Themes**: 6 color schemes with light/dark variants (Warm Orange, Crimson, Light Blue, Purple, Green, Material)
@@ -25,6 +26,14 @@ ShareConnect combines the words "share" and "connect" to represent the core func
 ## Supported Services
 
 ShareConnect works with all streaming services and download sources supported by your target services:
+
+### Authentication Support
+
+For services that require authentication, ShareConnect supports optional username and password configuration:
+- Configure username and password in each service profile
+- Credentials are stored securely with the same SQLCipher encryption as other data
+- Authentication is applied automatically when sending requests to protected services
+- All authentication data follows the same privacy policies (no data leaves the device without user action)
 
 ### For MeTube and YT-DLP
 
@@ -60,6 +69,7 @@ ShareConnect works with all streaming services and download sources supported by
    - Add new profiles for each service you want to use
    - Select the appropriate service type (MeTube, YT-DLP, Torrent Client, jDownloader)
    - For Torrent Clients, specify which client you're using
+   - If your service requires authentication, enter your username and password (optional)
    - Set one profile as default for quick sharing
 3. Test your connections to ensure services are reachable
 4. (Optional) Customize the app theme in Settings > Theme

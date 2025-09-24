@@ -12,6 +12,8 @@ class HistoryItem {
 
     var url: String? = null
     var title: String? = null
+    var description: String? = null
+    var thumbnailUrl: String? = null
     var serviceProvider: String? = null
     var type: String? = null // single_video, playlist, channel
     var timestamp: Long = 0
@@ -22,6 +24,33 @@ class HistoryItem {
 
     constructor()
 
+    @androidx.room.Ignore
+    constructor(
+        url: String?,
+        title: String?,
+        description: String?,
+        thumbnailUrl: String?,
+        serviceProvider: String?,
+        type: String?,
+        timestamp: Long,
+        profileId: String?,
+        profileName: String?,
+        isSentSuccessfully: Boolean,
+        serviceType: String?
+    ) {
+        this.url = url
+        this.title = title
+        this.description = description
+        this.thumbnailUrl = thumbnailUrl
+        this.serviceProvider = serviceProvider
+        this.type = type
+        this.timestamp = timestamp
+        this.profileId = profileId
+        this.profileName = profileName
+        this.isSentSuccessfully = isSentSuccessfully
+        this.serviceType = serviceType
+    }
+    
     @androidx.room.Ignore
     constructor(
         url: String?,

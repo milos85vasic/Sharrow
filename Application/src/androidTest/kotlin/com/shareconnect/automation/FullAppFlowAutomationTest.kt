@@ -45,6 +45,8 @@ class FullAppFlowAutomationTest {
         testProfile.url = "http://test.example.com"
         testProfile.port = 8080
         testProfile.serviceType = "metube"
+        testProfile.username = null
+        testProfile.password = null
         profileManager.addProfile(testProfile)
         profileManager.setDefaultProfile(testProfile)
 
@@ -361,6 +363,14 @@ class FullAppFlowAutomationTest {
             // Fill port
             onView(withId(R.id.editTextServerPort))
                 .perform(clearText(), typeText("8080"))
+
+            // Fill username (optional)
+            onView(withId(R.id.editTextUsername))
+                .perform(clearText(), typeText("testuser"))
+
+            // Fill password (optional)
+            onView(withId(R.id.editTextPassword))
+                .perform(clearText(), typeText("testpass"))
 
             // Close keyboard
             closeSoftKeyboard()

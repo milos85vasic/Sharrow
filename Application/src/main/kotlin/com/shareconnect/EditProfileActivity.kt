@@ -20,6 +20,8 @@ class EditProfileActivity : AppCompatActivity() {
     private var autoCompleteServiceType: MaterialAutoCompleteTextView? = null
     private var autoCompleteTorrentClient: MaterialAutoCompleteTextView? = null
     private var layoutTorrentClient: com.google.android.material.textfield.TextInputLayout? = null
+    private var editTextUsername: TextInputEditText? = null
+    private var editTextPassword: TextInputEditText? = null
     private var buttonCancel: MaterialButton? = null
     private var buttonSave: MaterialButton? = null
     private var buttonTestConnection: MaterialButton? = null
@@ -77,6 +79,8 @@ class EditProfileActivity : AppCompatActivity() {
         autoCompleteServiceType = findViewById(R.id.autoCompleteServiceType)
         autoCompleteTorrentClient = findViewById(R.id.autoCompleteTorrentClient)
         layoutTorrentClient = findViewById(R.id.layoutTorrentClient)
+        editTextUsername = findViewById(R.id.editTextUsername)
+        editTextPassword = findViewById(R.id.editTextPassword)
         buttonCancel = findViewById(R.id.buttonCancel)
         buttonSave = findViewById(R.id.buttonSave)
         buttonTestConnection = findViewById(R.id.buttonTestConnection)
@@ -147,6 +151,8 @@ class EditProfileActivity : AppCompatActivity() {
             editTextProfileName!!.setText(existingProfile!!.name)
             editTextServerUrl!!.setText(existingProfile!!.url)
             editTextServerPort!!.setText(existingProfile!!.port.toString())
+            editTextUsername!!.setText(existingProfile!!.username)
+            editTextPassword!!.setText(existingProfile!!.password)
 
             // Set service type
             when (existingProfile!!.serviceType) {
@@ -181,6 +187,8 @@ class EditProfileActivity : AppCompatActivity() {
         val name = editTextProfileName!!.text.toString().trim { it <= ' ' }
         val url = editTextServerUrl!!.text.toString().trim { it <= ' ' }
         val portStr = editTextServerPort!!.text.toString().trim { it <= ' ' }
+        val username = editTextUsername!!.text.toString().trim { it <= ' ' }
+        val password = editTextPassword!!.text.toString()
         val serviceTypeStr = autoCompleteServiceType!!.text.toString()
         val torrentClientStr = autoCompleteTorrentClient!!.text.toString()
 
@@ -231,7 +239,7 @@ class EditProfileActivity : AppCompatActivity() {
                 when (torrentClientStr) {
                     getString(R.string.torrent_client_qbittorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
                     getString(R.string.torrent_client_transmission) -> torrentClientType = ServerProfile.TORRENT_CLIENT_TRANSMISSION
-                    getString(R.string.torrent_client_utorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
+                    ServerProfile.TORRENT_CLIENTUTORRENT -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
                     else -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT // Default
                 }
             }
@@ -253,6 +261,8 @@ class EditProfileActivity : AppCompatActivity() {
         existingProfile!!.port = port
         existingProfile!!.serviceType = serviceType
         existingProfile!!.torrentClientType = torrentClientType
+        existingProfile!!.username = if (username.isNotEmpty()) username else null
+        existingProfile!!.password = if (password.isNotEmpty()) password else null
 
         // Save the profile
         if (isNewProfile) {
@@ -268,6 +278,8 @@ class EditProfileActivity : AppCompatActivity() {
     private fun testConnection() {
         val url = editTextServerUrl!!.text.toString().trim { it <= ' ' }
         val portStr = editTextServerPort!!.text.toString().trim { it <= ' ' }
+        val username = editTextUsername!!.text.toString().trim { it <= ' ' }
+        val password = editTextPassword!!.text.toString()
         val serviceTypeStr = autoCompleteServiceType!!.text.toString()
         val torrentClientStr = autoCompleteTorrentClient!!.text.toString()
 
@@ -307,7 +319,7 @@ class EditProfileActivity : AppCompatActivity() {
                 when (torrentClientStr) {
                     getString(R.string.torrent_client_qbittorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
                     getString(R.string.torrent_client_transmission) -> torrentClientType = ServerProfile.TORRENT_CLIENT_TRANSMISSION
-                    getString(R.string.torrent_client_utorrent) -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
+                    ServerProfile.TORRENT_CLIENTUTORRENT -> torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
                     else -> torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT // Default
                 }
             }
@@ -321,6 +333,8 @@ class EditProfileActivity : AppCompatActivity() {
         testProfile.port = port
         testProfile.serviceType = serviceType
         testProfile.torrentClientType = torrentClientType
+        testProfile.username = if (username.isNotEmpty()) username else null
+        testProfile.password = if (password.isNotEmpty()) password else null
 
         // Show progress
         buttonTestConnection!!.text = getString(R.string.testing)

@@ -116,4 +116,104 @@ class ServiceApiClientTest {
 
         serviceApiClient.sendUrlToService(unsupportedProfile, "https://test.com", callback)
     }
+
+    @Test
+    fun testTorrentClientTypes() {
+        assertEquals("qbittorrent", ServerProfile.TORRENT_CLIENT_QBITTORRENT)
+        assertEquals("transmission", ServerProfile.TORRENT_CLIENT_TRANSMISSION)
+        assertEquals("utorrent", ServerProfile.TORRENT_CLIENTUTORRENT)
+    }
+
+    @Test
+    fun testQBittorrentProfile() {
+        val qbittorrentProfile = ServerProfile().apply {
+            id = "qbittorrent-test"
+            name = "qBittorrent Test"
+            url = "http://localhost"
+            port = 8080
+            serviceType = ServerProfile.TYPE_TORRENT
+            torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
+        }
+
+        assertEquals(ServerProfile.TYPE_TORRENT, qbittorrentProfile.serviceType)
+        assertEquals(ServerProfile.TORRENT_CLIENT_QBITTORRENT, qbittorrentProfile.torrentClientType)
+    }
+
+    @Test
+    fun testTransmissionProfile() {
+        val transmissionProfile = ServerProfile().apply {
+            id = "transmission-test"
+            name = "Transmission Test"
+            url = "http://localhost"
+            port = 9091
+            serviceType = ServerProfile.TYPE_TORRENT
+            torrentClientType = ServerProfile.TORRENT_CLIENT_TRANSMISSION
+        }
+
+        assertEquals(ServerProfile.TYPE_TORRENT, transmissionProfile.serviceType)
+        assertEquals(ServerProfile.TORRENT_CLIENT_TRANSMISSION, transmissionProfile.torrentClientType)
+    }
+
+    @Test
+    fun testUTorrentProfile() {
+        val utorrentProfile = ServerProfile().apply {
+            id = "utorrent-test"
+            name = "uTorrent Test"
+            url = "http://localhost"
+            port = 8080
+            serviceType = ServerProfile.TYPE_TORRENT
+            torrentClientType = ServerProfile.TORRENT_CLIENTUTORRENT
+        }
+
+        assertEquals(ServerProfile.TYPE_TORRENT, utorrentProfile.serviceType)
+        assertEquals(ServerProfile.TORRENT_CLIENTUTORRENT, utorrentProfile.torrentClientType)
+    }
+
+    @Test
+    fun testProfileWithAuthentication() {
+        val authProfile = ServerProfile().apply {
+            id = "auth-test"
+            name = "Auth Test"
+            url = "http://localhost"
+            port = 8080
+            serviceType = ServerProfile.TYPE_METUBE
+            username = "testuser"
+            password = "testpass"
+        }
+
+        assertEquals("testuser", authProfile.username)
+        assertEquals("testpass", authProfile.password)
+    }
+
+    @Test
+    fun testProfileWithoutAuthentication() {
+        val noAuthProfile = ServerProfile().apply {
+            id = "no-auth-test"
+            name = "No Auth Test"
+            url = "http://localhost"
+            port = 8080
+            serviceType = ServerProfile.TYPE_METUBE
+            username = null
+            password = null
+        }
+
+        assertEquals(null, noAuthProfile.username)
+        assertEquals(null, noAuthProfile.password)
+    }
+
+    @Test
+    fun testProfileWithEmptyAuthentication() {
+        val emptyAuthProfile = ServerProfile().apply {
+            id = "empty-auth-test"
+            name = "Empty Auth Test"
+            url = "http://localhost"
+            port = 8080
+            serviceType = ServerProfile.TYPE_METUBE
+            username = ""
+            password = ""
+        }
+
+        assertEquals("", emptyAuthProfile.username)
+        assertEquals("", emptyAuthProfile.password)
+    }
 }

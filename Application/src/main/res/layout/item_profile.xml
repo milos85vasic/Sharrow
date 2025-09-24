@@ -27,13 +27,20 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewDefault"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/default_profile"
-                android:textColor="@color/orange_500"
-                android:textStyle="italic"
+            <ImageView
+                android:id="@+id/imageViewDefault"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_star"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAuthenticated"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_lock"
                 android:visibility="gone" />
 
         </LinearLayout>

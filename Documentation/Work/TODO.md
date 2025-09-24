@@ -42,8 +42,10 @@
 
 ## In progress
 
-- [Enable RAG for AIs and fine tuning](./Tasks/002%20Onboarding/TASK.md)
+- [Add new automation tests cases into the automation tests](./Tasks/003%20New%20automation%20tests%20to%20add/TASK.md)
+- [Enable RAG for AIs and fine tuning](./Tasks/001%20RAG%20and%20MCP%20integration/TASK.md)
   - Move RAG materials into separate Git submodule
+    - Submodule Upstreams
   - Obtain Android development documentation with wget mirroring
 - Upstreams
 - Exclude form the IDE indexing Tests directory and RAG materials
@@ -59,3 +61,7 @@
 - Distribution
 - Connect the Toolkit
 - Replace use of Android Log with Toolkit Console equivalent
+- FIXME: Credentials for Profiles
+- Main screen layout - Presenting all available profiles
+  - Display in separate section shortcuts for all applications that support our profile schemes
+- FIXME: Make sure that all screens fit vertically properly

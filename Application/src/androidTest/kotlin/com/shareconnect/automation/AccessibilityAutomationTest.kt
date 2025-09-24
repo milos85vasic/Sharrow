@@ -40,6 +40,8 @@ class AccessibilityAutomationTest {
         testProfile.url = "http://test.example.com"
         testProfile.port = 8080
         testProfile.serviceType = "metube"
+        testProfile.username = null
+        testProfile.password = null
         profileManager.addProfile(testProfile)
         profileManager.setDefaultProfile(testProfile)
 

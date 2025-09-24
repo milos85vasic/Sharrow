@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shareconnect.model.ServerProfileTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-09-24T10:34:00.625Z" hostname="Mistborn.local" time="0.039">
+  <properties/>
+  <testcase name="testServerProfileSettersAndGetters" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testProfileTypeChecking" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testServerProfileConstants" classname="com.shareconnect.model.ServerProfileTest" time="0.001"/>
+  <testcase name="testTorrentClientName" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testServiceTypeName" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testEquality" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testServerProfileInitialization" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testServerProfileSettersAndGetters" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testProfileTypeChecking" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testServerProfileConstants" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testTorrentClientName" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testServiceTypeName" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testEquality" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <testcase name="testServerProfileInitialization" classname="com.shareconnect.model.ServerProfileTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

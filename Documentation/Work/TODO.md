@@ -46,6 +46,7 @@
 - [Enable RAG for AIs and fine tuning](./Tasks/001%20RAG%20and%20MCP%20integration/TASK.md)
   - Move RAG materials into separate Git submodule
     - Submodule Upstreams
+    - Private RAG
   - Obtain Android development documentation with wget mirroring
 - Upstreams
 - Exclude form the IDE indexing Tests directory and RAG materials

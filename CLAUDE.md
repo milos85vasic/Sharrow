@@ -88,6 +88,7 @@ The project follows a modular architecture with two main components:
 - Obfuscation support via JCommons
 - Proxy server configuration for development/testing
 - Extensive dependency management (Retrofit, Room, Compose, Firebase)
+- SQLCipher 4.10.0+ with 16KB page size support
 ```
 
 ## Development Commands
@@ -103,18 +104,34 @@ The project follows a modular architecture with two main components:
 ./gradlew assembleRelease
 ```
 
-### Testing Infrastructure
+### Testing
 ```bash
 # Run all tests (unit + instrumentation + automation)
 ./run_all_tests.sh
 
 # Individual test types
-./run_unit_tests.sh           # Business logic tests
+./run_unit_tests.sh             # Business logic tests
 ./run_instrumentation_tests.sh  # Android component tests
-./run_automation_tests.sh       # E2E workflow tests
+./run_automation_tests.sh        # E2E workflow tests
 
 # Emulator functionality testing
 ./test_emulator_functionality.sh
+
+# Run single test class or method
+./gradlew test --tests "com.shareconnect.ProfileManagerTest"
+./gradlew connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.shareconnect.DatabaseMigrationTest
+```
+
+### Linting & Code Quality
+```bash
+# Run lint checks
+./gradlew lint
+
+# Run detekt for Kotlin code analysis
+./gradlew detekt
+
+# Check dependencies
+./gradlew dependencies
 ```
 
 ### Other Utilities

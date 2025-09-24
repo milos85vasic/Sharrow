@@ -331,6 +331,8 @@ class ShareActivity : AppCompatActivity() {
         val historyItem = HistoryItem()
         historyItem.url = url
         historyItem.title = extractTitleFromUrl(url) // Simple title extraction
+        historyItem.description = extractDescriptionFromUrl(url) // Extract description
+        historyItem.thumbnailUrl = extractThumbnailFromUrl(url) // Extract thumbnail URL
         historyItem.serviceProvider = extractServiceProviderFromUrl(url)
         historyItem.type = determineMediaType(url)
         historyItem.timestamp = System.currentTimeMillis()

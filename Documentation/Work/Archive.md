@@ -17,5 +17,5 @@
 - FIXME: Back-Stack navigation problem
 - Upstreams
 - Test results badges and connection with the reports
-
+- Add from clipboard allows picking of one of the recent clipboard items, not just the last one
 

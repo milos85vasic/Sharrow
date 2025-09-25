@@ -3,9 +3,12 @@ package com.shareconnect
 import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.KeyEvent
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -104,6 +107,65 @@ class EditProfileActivity : AppCompatActivity() {
                 val selectedService = autoCompleteServiceType!!.adapter.getItem(position) as String
                 handleServiceTypeChange(selectedService)
             }
+
+        // Setup IME navigation between fields
+        setupIMENavigation()
+    }
+
+    private fun setupIMENavigation() {
+        editTextProfileName!!.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                editTextServerUrl!!.requestFocus()
+                true
+            } else false
+        }
+
+        editTextServerUrl!!.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                editTextServerPort!!.requestFocus()
+                true
+            } else false
+        }
+
+        editTextServerPort!!.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                autoCompleteServiceType!!.requestFocus()
+                true
+            } else false
+        }
+
+        autoCompleteServiceType!!.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                if (layoutTorrentClient!!.visibility == View.VISIBLE) {
+                    autoCompleteTorrentClient!!.requestFocus()
+                } else {
+                    editTextUsername!!.requestFocus()
+                }
+                true
+            } else false
+        }
+
+        autoCompleteTorrentClient!!.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                editTextUsername!!.requestFocus()
+                true
+            } else false
+        }
+
+        editTextUsername!!.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                editTextPassword!!.requestFocus()
+                true
+            } else false
+        }
+
+        editTextPassword!!.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                // Hide keyboard and optionally save or test connection
+                editTextPassword!!.clearFocus()
+                true
+            } else false
+        }
     }
 
     private fun setupSpinners() {

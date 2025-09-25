@@ -378,40 +378,71 @@ class MainActivity : AppCompatActivity() {
      * Handle adding a URL from clipboard
      */
     private fun handleAddFromClipboard() {
-        // Get clipboard manager
-        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        showClipboardSelectionDialog()
+    }
 
-        // Check if clipboard has primary clip
-        if (clipboard.hasPrimaryClip()) {
-            val clipData = clipboard.primaryClip
+    private fun showClipboardSelectionDialog() {
+        val clipboardHistoryManager = com.shareconnect.utils.ClipboardHistoryManager.getInstance(this)
+        val urlItems = clipboardHistoryManager.getUrlItems()
 
-            // Check if clip data is not null and has at least one item
-            if (clipData != null && clipData.itemCount > 0) {
-                // Get the text from the first item
-                val clipboardText = clipData.getItemAt(0).text
-
-                if (clipboardText != null) {
-                    val url = clipboardText.toString().trim { it <= ' ' }
-
-                    // Validate URL
-                    if (isValidUrl(url)) {
-                        // Open ShareActivity with the URL from clipboard
-                        val intent = Intent(this, ShareActivity::class.java)
-                        intent.action = Intent.ACTION_SEND
-                        intent.type = "text/plain"
-                        intent.putExtra(Intent.EXTRA_TEXT, url)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this, "Invalid URL in clipboard", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    Toast.makeText(this, "No text found in clipboard", Toast.LENGTH_SHORT).show()
-                }
+        if (urlItems.isEmpty()) {
+            // Fallback to current clipboard behavior
+            val currentText = clipboardHistoryManager.getCurrentClipboardText()
+            if (currentText != null && isValidUrl(currentText)) {
+                processClipboardUrl(currentText)
             } else {
-                Toast.makeText(this, "Clipboard is empty", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "No valid URLs found in clipboard history", Toast.LENGTH_SHORT).show()
+            }
+            return
+        }
+
+        // Show dialog with clipboard history
+        val dialogView = layoutInflater.inflate(R.layout.dialog_clipboard_selection, null)
+        val recyclerView = dialogView.findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.recyclerViewClipboardItems)
+        val emptyState = dialogView.findViewById<LinearLayout>(R.id.emptyClipboardState)
+        val buttonClearHistory = dialogView.findViewById<com.google.android.material.button.MaterialButton>(R.id.buttonClearHistory)
+        val buttonCancel = dialogView.findViewById<com.google.android.material.button.MaterialButton>(R.id.buttonCancel)
+
+        val dialog = androidx.appcompat.app.AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        if (urlItems.isNotEmpty()) {
+            recyclerView.visibility = android.view.View.VISIBLE
+            emptyState.visibility = android.view.View.GONE
+
+            recyclerView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
+            recyclerView.adapter = ClipboardAdapter(urlItems) { clipboardItem ->
+                dialog.dismiss()
+                processClipboardUrl(clipboardItem.text)
             }
         } else {
-            Toast.makeText(this, "Clipboard is empty", Toast.LENGTH_SHORT).show()
+            recyclerView.visibility = android.view.View.GONE
+            emptyState.visibility = android.view.View.VISIBLE
+        }
+
+        buttonClearHistory.setOnClickListener {
+            clipboardHistoryManager.clearHistory()
+            dialog.dismiss()
+            Toast.makeText(this, "Clipboard history cleared", Toast.LENGTH_SHORT).show()
+        }
+
+        buttonCancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    private fun processClipboardUrl(url: String) {
+        if (isValidUrl(url)) {
+            val intent = Intent(this, ShareActivity::class.java)
+            intent.action = Intent.ACTION_SEND
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT, url)
+            startActivity(intent)
+        } else {
+            Toast.makeText(this, "Invalid URL: $url", Toast.LENGTH_SHORT).show()
         }
     }
 

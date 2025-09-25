@@ -40,6 +40,7 @@
 ## In progress
 
 - [Onboarding flow](./Tasks/002%20Onboarding/TASK.md)
+- Invite beta testers
 - Firebase configuration for the DEV variant
 - Code coverage reports
   - If low create generic task and send it to AI agent to extend the tests
@@ -51,6 +52,7 @@
       - Submodule/Repo Upstreams
   - Obtain Android development documentation with wget mirroring
 - Internal test release [1.0.0 @ 003](./Changes/1.0.0/003.md)
+- Welcome tutorial/wizard
 
 ## Completed
 

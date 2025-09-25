@@ -40,11 +40,11 @@ class ProfileIconAdapter(
 
             // Set appropriate icon based on service type
             val iconRes = when (profile.serviceType) {
-                ServerProfile.TYPE_METUBE -> R.drawable.ic_foreground
-                ServerProfile.TYPE_YTDL -> android.R.drawable.ic_media_play
-                ServerProfile.TYPE_TORRENT -> android.R.drawable.ic_menu_upload
-                ServerProfile.TYPE_JDOWNLOADER -> android.R.drawable.ic_menu_save
-                else -> android.R.drawable.ic_menu_share
+                ServerProfile.TYPE_METUBE -> R.drawable.ic_service_metube
+                ServerProfile.TYPE_YTDL -> R.drawable.ic_service_metube // YT-DLP uses same icon as MeTube for now
+                ServerProfile.TYPE_TORRENT -> R.drawable.ic_service_torrent
+                ServerProfile.TYPE_JDOWNLOADER -> R.drawable.ic_service_jdownloader
+                else -> R.drawable.ic_service_metube // Default to MeTube icon
             }
             profileIcon.setImageResource(iconRes)
 

@@ -10,6 +10,7 @@ import com.redelf.commons.logging.Console
 
 class SettingsActivity : AppCompatActivity() {
     private var themeManager: ThemeManager? = null
+    private var isFirstRun = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Apply current theme before calling super.onCreate()
@@ -17,6 +18,9 @@ class SettingsActivity : AppCompatActivity() {
         themeManager!!.applyTheme(this)
 
         super.onCreate(savedInstanceState)
+
+        // Check if this is the first run
+        isFirstRun = intent.getBooleanExtra("first_run", false)
 
         setContentView(R.layout.settings_activity)
         supportFragmentManager
@@ -37,20 +41,33 @@ class SettingsActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onBackPressed() {
+        if (isFirstRun) {
+            // If this is the first run, we need to check if profiles were created
+            val profileManager = ProfileManager(this)
+            if (profileManager.hasProfiles()) {
+                // Profiles were created, start MainActivity
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                startActivity(intent)
+                finish()
+            } else {
+                // No profiles created, just finish and let the app close
+                finishAffinity() // This will finish all activities and properly close the app
+            }
+        } else {
+            // Normal back behavior
+            super.onBackPressed()
+        }
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        // If theme was changed, restart this activity to apply the new theme
+        // If theme was changed, recreate this activity to apply the new theme
         if (requestCode == THEME_SELECTION_REQUEST && resultCode == RESULT_OK) {
-            Console.debug("Theme change detected, restarting activity")
-            // Create a new intent for this activity
-            val intent = Intent(this, SettingsActivity::class.java)
-            // Clear the current activity from the stack and start fresh
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            // Finish the current instance
-            finish()
-            // Override the transition to make it seamless
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            Console.debug("Theme change detected, recreating activity")
+            // Simply recreate the current activity instead of starting a new one
+            recreate()
         }
     }
 

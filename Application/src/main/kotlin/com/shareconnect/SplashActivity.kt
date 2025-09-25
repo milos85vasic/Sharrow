@@ -25,6 +25,8 @@ class SplashActivity : AppCompatActivity() {
         // Wait for 2 seconds then start main activity
         Handler().postDelayed({
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            // Clear the task to ensure clean navigation
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
             finish()
         }, 2000)

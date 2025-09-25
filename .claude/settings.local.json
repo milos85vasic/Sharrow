@@ -12,7 +12,9 @@
       "Bash(./test_emulator_functionality.sh:*)",
       "Bash(for f in /Volumes/T7/Projects/milos85vasic/ShareConnect/Application/src/main/res/layout/activity_*.xml)",
       "Bash(grep:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(./build_app.sh:*)",
+      "Bash(./run_all_tests.sh)"
     ],
     "deny": [],
     "ask": []

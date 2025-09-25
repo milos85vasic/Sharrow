@@ -276,7 +276,11 @@ class MainActivity : AppCompatActivity() {
         // For now, we'll just redirect to settings
         val intent = Intent(this@MainActivity, SettingsActivity::class.java)
         intent.putExtra("first_run", true)
-        startActivityForResult(intent, SETUP_WIZARD_REQUEST_CODE)
+        // Use clear top to ensure clean stack
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+        // Finish MainActivity so there's no duplicate in the stack
+        finish()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

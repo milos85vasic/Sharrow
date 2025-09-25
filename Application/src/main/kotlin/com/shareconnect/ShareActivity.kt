@@ -251,6 +251,17 @@ class ShareActivity : AppCompatActivity() {
         val profileNameFinal = selectedProfile.name
         val serviceTypeName = selectedProfile.getServiceTypeName(this)
 
+        // Check if this is a torrent client or jDownloader that should use WebUI
+        if (selectedProfile.isTorrent() || selectedProfile.isJDownloader()) {
+            // Use WebUIActivity for torrent clients and jDownloader with automatic authentication and URL passing
+            WebUIActivity.startWebUI(this, selectedProfile, mediaLink!!)
+
+            // Save to history immediately as successful (WebUI will handle the actual sending)
+            saveToHistory(mediaLink!!, profileId!!, profileNameFinal!!, serviceTypeName, true)
+            return
+        }
+
+        // For MeTube and YT-DLP, use the existing API approach
         // Show progress
         progressBar!!.visibility = View.VISIBLE
         buttonSendToService!!.isEnabled = false

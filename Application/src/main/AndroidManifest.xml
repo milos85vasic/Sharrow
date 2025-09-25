@@ -182,6 +182,12 @@
             android:name=".EditProfileActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".WebUIActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
             
         <activity
             android:name=".HistoryActivity"

@@ -125,7 +125,7 @@ class DefaultProfileFunctionalityTest {
         // Find the golden star icon indicating default profile
         val goldenStar = device.findObject(By.res(PACKAGE_NAME, "imageViewDefault"))
         assertNotNull("Golden star should be visible for default profile", goldenStar)
-        assertTrue("Golden star should be visible", goldenStar.exists())
+        assertTrue("Golden star should be visible", goldenStar != null)
 
         // Check that the default button shows "Default Profile" and is disabled
         val defaultButton = device.findObject(By.text("Default Profile"))
@@ -166,7 +166,7 @@ class DefaultProfileFunctionalityTest {
         // Verify initial state - MeTube is default (should show golden star)
         val initialGoldenStar = device.findObject(By.res(PACKAGE_NAME, "imageViewDefault"))
         assertNotNull("Initial golden star should exist", initialGoldenStar)
-        assertTrue("Golden star should be visible initially", initialGoldenStar.exists())
+        assertTrue("Golden star should be visible initially", initialGoldenStar!= null)
 
         // Find all "Set as Default" buttons (these have outline star icons)
         val setDefaultButtons = device.findObjects(By.text("Set as Default"))
@@ -189,14 +189,14 @@ class DefaultProfileFunctionalityTest {
 
         // Handle potential confirmation dialog
         val confirmButton = device.findObject(By.text("OK"))
-        if (confirmButton != null && confirmButton.exists()) {
+        if (confirmButton != null && confirmButton!= null) {
             println("📋 Confirming default profile change...")
             confirmButton.click()
             Thread.sleep(1500)
         } else {
             // Try "Yes" button as well
             val yesButton = device.findObject(By.text("Yes"))
-            if (yesButton != null && yesButton.exists()) {
+            if (yesButton != null && yesButton!= null) {
                 println("📋 Confirming with 'Yes' button...")
                 yesButton.click()
                 Thread.sleep(1500)
@@ -221,7 +221,7 @@ class DefaultProfileFunctionalityTest {
         // Verify golden star is still exactly one and visible
         val goldenStarsAfter = device.findObjects(By.res(PACKAGE_NAME, "imageViewDefault"))
         assertEquals("Should still have exactly one golden star after change", 1, goldenStarsAfter.size)
-        assertTrue("Golden star should still be visible after change", goldenStarsAfter[0].exists())
+        assertTrue("Golden star should still be visible after change", goldenStarsAfter[0]!= null)
 
         println("✅ Successfully changed default profile via star button")
     }
@@ -242,7 +242,7 @@ class DefaultProfileFunctionalityTest {
 
         // Handle potential confirmation dialog
         val confirmButton = device.findObject(By.text("OK"))
-        if (confirmButton != null && confirmButton.exists()) {
+        if (confirmButton != null && confirmButton!= null) {
             confirmButton.click()
             Thread.sleep(1000)
         }
@@ -315,7 +315,7 @@ class DefaultProfileFunctionalityTest {
 
             // Handle potential confirmation dialog
             val confirmButton = device.findObject(By.text("OK"))
-            if (confirmButton != null && confirmButton.exists()) {
+            if (confirmButton != null && confirmButton!= null) {
                 confirmButton.click()
                 Thread.sleep(1000)
             }

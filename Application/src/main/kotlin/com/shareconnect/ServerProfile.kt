@@ -1,8 +1,10 @@
 package com.shareconnect
 
 import android.content.Context
+import android.os.Parcel
+import android.os.Parcelable
 
-class ServerProfile {
+class ServerProfile : Parcelable {
     var id: String? = null
     var name: String? = null
     var url: String? = null
@@ -18,7 +20,7 @@ class ServerProfile {
         this.serviceType = TYPE_METUBE // Default to MeTube for backward compatibility
     }
 
-    constructor(id: String?, name: String?, url: String?, port: Int, isDefault: Boolean) {
+    constructor(id: String?, name: String?, url: String?, port: Int, isDefault: Boolean) : this() {
         this.id = id
         this.name = name
         this.url = url
@@ -35,7 +37,7 @@ class ServerProfile {
         isDefault: Boolean,
         serviceType: String?,
         torrentClientType: String?
-    ) {
+    ) : this() {
         this.id = id
         this.name = name
         this.url = url
@@ -55,7 +57,7 @@ class ServerProfile {
         torrentClientType: String?,
         username: String?,
         password: String?
-    ) {
+    ) : this() {
         this.id = id
         this.name = name
         this.url = url
@@ -159,6 +161,35 @@ class ServerProfile {
         return result
     }
 
+    // Parcelable implementation
+    constructor(parcel: Parcel) : this() {
+        id = parcel.readString()
+        name = parcel.readString()
+        url = parcel.readString()
+        port = parcel.readInt()
+        isDefault = parcel.readByte() != 0.toByte()
+        serviceType = parcel.readString()
+        torrentClientType = parcel.readString()
+        username = parcel.readString()
+        password = parcel.readString()
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(id)
+        parcel.writeString(name)
+        parcel.writeString(url)
+        parcel.writeInt(port)
+        parcel.writeByte(if (isDefault) 1 else 0)
+        parcel.writeString(serviceType)
+        parcel.writeString(torrentClientType)
+        parcel.writeString(username)
+        parcel.writeString(password)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
     companion object {
         const val TYPE_METUBE = "metube"
         const val TYPE_YTDL = "ytdl"
@@ -168,5 +199,16 @@ class ServerProfile {
         const val TORRENT_CLIENT_QBITTORRENT = "qbittorrent"
         const val TORRENT_CLIENT_TRANSMISSION = "transmission"
         const val TORRENT_CLIENTUTORRENT = "utorrent"
+
+        @JvmField
+        val CREATOR = object : Parcelable.Creator<ServerProfile> {
+            override fun createFromParcel(parcel: Parcel): ServerProfile {
+                return ServerProfile(parcel)
+            }
+
+            override fun newArray(size: Int): Array<ServerProfile?> {
+                return arrayOfNulls(size)
+            }
+        }
     }
 }

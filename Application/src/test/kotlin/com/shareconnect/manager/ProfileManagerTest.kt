@@ -1,123 +1,100 @@
 package com.shareconnect.manager
 
-import android.content.Context
-import android.content.SharedPreferences
-import com.shareconnect.ProfileManager
 import com.shareconnect.ServerProfile
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
-import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.Mock
-import org.mockito.Mockito.anyString
-import org.mockito.Mockito.anyInt
-import org.mockito.Mockito.verify
-import org.mockito.Mockito.`when`
-import org.mockito.MockitoAnnotations
-import org.robolectric.RobolectricTestRunner
-import org.robolectric.annotation.Config
 
-@RunWith(RobolectricTestRunner::class)
-@Config(sdk = [28])
+/**
+ * Simple unit tests for ServerProfile data class functionality.
+ * ProfileManager integration tests are in ProfileManagerInstrumentationTest.
+ */
 class ProfileManagerTest {
 
-    @Mock
-    private lateinit var mockContext: Context
-
-    @Mock
-    private lateinit var mockSharedPreferences: SharedPreferences
-
-    @Mock
-    private lateinit var mockEditor: SharedPreferences.Editor
-
-    private lateinit var profileManager: ProfileManager
-
-    @Before
-    fun setUp() {
-        MockitoAnnotations.openMocks(this)
-
-        `when`(mockContext.getSharedPreferences(anyString(), anyInt())).thenReturn(mockSharedPreferences)
-        `when`(mockSharedPreferences.edit()).thenReturn(mockEditor)
-        `when`(mockEditor.putString(anyString(), anyString())).thenReturn(mockEditor)
-        `when`(mockEditor.remove(anyString())).thenReturn(mockEditor)
-        `when`(mockEditor.apply()).then { }
-
-        profileManager = ProfileManager(mockContext)
+    @Test
+    fun testServerProfileCreation() {
+        val profile = ServerProfile()
+        assertNotNull(profile)
     }
 
     @Test
-    fun testProfileManagerInitialization() {
-        assertNotNull(profileManager)
-        verify(mockContext).getSharedPreferences("MeTubeSharePrefs", Context.MODE_PRIVATE)
+    fun testServerProfileWithValues() {
+        val profile = ServerProfile()
+        profile.id = "test-id"
+        profile.name = "Test Profile"
+        profile.url = "http://example.com"
+        profile.port = 8080
+        profile.serviceType = ServerProfile.TYPE_METUBE
+        profile.username = "testuser"
+        profile.password = "testpass"
+
+        assertEquals("test-id", profile.id)
+        assertEquals("Test Profile", profile.name)
+        assertEquals("http://example.com", profile.url)
+        assertEquals(8080, profile.port)
+        assertEquals(ServerProfile.TYPE_METUBE, profile.serviceType)
+        assertEquals("testuser", profile.username)
+        assertEquals("testpass", profile.password)
     }
 
     @Test
-    fun testHasProfilesWithEmptyProfiles() {
-        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(null)
+    fun testServiceTypeChecks() {
+        val metubeProfile = ServerProfile()
+        metubeProfile.serviceType = ServerProfile.TYPE_METUBE
+        assertTrue(metubeProfile.isMeTube())
+        assertFalse(metubeProfile.isYtDl())
+        assertFalse(metubeProfile.isTorrent())
+        assertFalse(metubeProfile.isJDownloader())
 
-        assertFalse(profileManager.hasProfiles())
+        val torrentProfile = ServerProfile()
+        torrentProfile.serviceType = ServerProfile.TYPE_TORRENT
+        assertFalse(torrentProfile.isMeTube())
+        assertFalse(torrentProfile.isYtDl())
+        assertTrue(torrentProfile.isTorrent())
+        assertFalse(torrentProfile.isJDownloader())
+
+        val ytdlProfile = ServerProfile()
+        ytdlProfile.serviceType = ServerProfile.TYPE_YTDL
+        assertFalse(ytdlProfile.isMeTube())
+        assertTrue(ytdlProfile.isYtDl())
+        assertFalse(ytdlProfile.isTorrent())
+        assertFalse(ytdlProfile.isJDownloader())
+
+        val jdownloaderProfile = ServerProfile()
+        jdownloaderProfile.serviceType = ServerProfile.TYPE_JDOWNLOADER
+        assertFalse(jdownloaderProfile.isMeTube())
+        assertFalse(jdownloaderProfile.isYtDl())
+        assertFalse(jdownloaderProfile.isTorrent())
+        assertTrue(jdownloaderProfile.isJDownloader())
     }
 
     @Test
-    fun testHasProfilesWithExistingProfiles() {
-        val profilesJson = """[{"id":"test-id","name":"Test Profile","url":"http://example.com","port":8080,"serviceType":"metube"}]"""
-        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(profilesJson)
+    fun testTorrentClientTypes() {
+        val profile = ServerProfile()
+        profile.serviceType = ServerProfile.TYPE_TORRENT
+        profile.torrentClientType = ServerProfile.TORRENT_CLIENT_QBITTORRENT
 
-        assertTrue(profileManager.hasProfiles())
+        assertEquals(ServerProfile.TORRENT_CLIENT_QBITTORRENT, profile.torrentClientType)
+        assertEquals("qBittorrent", profile.getTorrentClientName())
     }
 
     @Test
-    fun testGetProfilesEmpty() {
-        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(null)
+    fun testEqualsAndHashCode() {
+        val profile1 = ServerProfile()
+        profile1.id = "test-id"
+        profile1.name = "Test Profile"
+        profile1.url = "http://example.com"
+        profile1.port = 8080
 
-        val profiles = profileManager.profiles
+        val profile2 = ServerProfile()
+        profile2.id = "test-id"
+        profile2.name = "Test Profile"
+        profile2.url = "http://example.com"
+        profile2.port = 8080
 
-        assertTrue(profiles.isEmpty())
-    }
-
-    @Test
-    fun testGetProfiles() {
-        val profilesJson = """[{"id":"test-id","name":"Test Profile","url":"http://example.com","port":8080,"serviceType":"metube","username":null,"password":null}]"""
-        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(profilesJson)
-
-        val profiles = profileManager.profiles
-
-        assertEquals(1, profiles.size)
-        assertEquals("test-id", profiles[0].id)
-        assertEquals("Test Profile", profiles[0].name)
-        assertEquals(null, profiles[0].username)
-        assertEquals(null, profiles[0].password)
-    }
-
-    @Test
-    fun testDefaultProfile() {
-        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(null)
-        `when`(mockSharedPreferences.getString("default_profile", null)).thenReturn(null)
-
-        val profile = profileManager.defaultProfile()
-
-        assertTrue(profile == null)
-    }
-
-    @Test
-    fun testGetProfilesByServiceType() {
-        val profilesJson = """[{"id":"test-id-1","name":"Profile 1","url":"http://example1.com","port":8080,"serviceType":"metube","username":"user1","password":"pass1"},{"id":"test-id-2","name":"Profile 2","url":"http://example2.com","port":9090,"serviceType":"ytdl","username":null,"password":null}]"""
-        `when`(mockSharedPreferences.getString("profiles", null)).thenReturn(profilesJson)
-
-        val metubeProfiles = profileManager.getProfilesByServiceType(ServerProfile.TYPE_METUBE)
-
-        assertEquals(1, metubeProfiles.size)
-        assertEquals("Profile 1", metubeProfiles[0].name)
-        assertEquals("user1", metubeProfiles[0].username)
-        assertEquals("pass1", metubeProfiles[0].password)
-        
-        val ytdlProfiles = profileManager.getProfilesByServiceType(ServerProfile.TYPE_YTDL)
-        assertEquals(1, ytdlProfiles.size)
-        assertEquals("Profile 2", ytdlProfiles[0].name)
-        assertEquals(null, ytdlProfiles[0].username)
-        assertEquals(null, ytdlProfiles[0].password)
+        assertEquals(profile1, profile2)
+        assertEquals(profile1.hashCode(), profile2.hashCode())
     }
 }

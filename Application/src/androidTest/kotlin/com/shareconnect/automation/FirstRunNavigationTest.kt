@@ -14,7 +14,7 @@ import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import kotlin.test.fail
+import org.junit.Assert.fail
 
 @RunWith(AndroidJUnit4::class)
 class FirstRunNavigationTest {

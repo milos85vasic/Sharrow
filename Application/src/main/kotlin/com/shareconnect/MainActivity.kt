@@ -200,12 +200,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openProfile(profile: ServerProfile) {
-        val url = "${profile.url}:${profile.port}"
-        try {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-            startActivity(browserIntent)
-        } catch (e: Exception) {
-            Toast.makeText(this, "Could not open ${profile.name}", Toast.LENGTH_SHORT).show()
+        // Check if this is a torrent client or service that supports web UI with authentication
+        if (profile.isTorrent() || profile.isJDownloader()) {
+            // Use WebUIActivity for enhanced authentication and URL passing
+            WebUIActivity.startWebUI(this, profile)
+        } else {
+            // For MeTube and YT-DLP, open directly in browser since they typically don't need complex auth
+            val url = "${profile.url}:${profile.port}"
+            try {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(browserIntent)
+            } catch (e: Exception) {
+                Toast.makeText(this, "Could not open ${profile.name}", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

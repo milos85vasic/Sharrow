@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shareconnect.database.ThemeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-09-25T13:06:46.042Z" hostname="Mistborn.local" time="0.022">
+  <properties/>
+  <testcase name="testThemeWithDifferentValues" classname="com.shareconnect.database.ThemeTest" time="0.001"/>
+  <testcase name="testThemeSettersAndGetters" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeEquality" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeInitialization" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeDefaultValues" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeWithDifferentValues" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeSettersAndGetters" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeEquality" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeInitialization" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <testcase name="testThemeDefaultValues" classname="com.shareconnect.database.ThemeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

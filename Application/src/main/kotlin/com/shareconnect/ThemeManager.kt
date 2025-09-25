@@ -39,7 +39,7 @@ class ThemeManager private constructor(context: Context) {
         Console.debug("Applying theme: " + theme.name + ", colorScheme: " + colorScheme + ", isDarkMode: " + isDarkMode + ", currentTheme: " + currentTheme)
 
         // Check if activity uses Toolbar (requires NoActionBar theme)
-        val usesToolbar = activity is MainActivity || activity is ThemeSelectionActivity || activity is SettingsActivity || activity is SplashActivity || activity is ProfilesActivity || activity is ShareActivity || activity is EditProfileActivity || activity is HistoryActivity
+        val usesToolbar = activity is MainActivity || activity is ThemeSelectionActivity || activity is SettingsActivity || activity is SplashActivity || activity is ProfilesActivity || activity is ShareActivity || activity is EditProfileActivity || activity is HistoryActivity || activity is WebUIActivity
 
         Console.debug("Activity " + activity.javaClass.simpleName + " usesToolbar: " + usesToolbar)
 

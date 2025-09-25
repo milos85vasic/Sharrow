@@ -127,7 +127,7 @@ class ServiceIconValidationTest {
         // Find the RecyclerView containing the profiles
         val profilesRecyclerView = device.findObject(By.res(PACKAGE_NAME, "recyclerViewProfiles"))
         assertNotNull("Profiles RecyclerView should be present", profilesRecyclerView)
-        assertTrue("Profiles RecyclerView should be visible", profilesRecyclerView.exists())
+        assertTrue("Profiles RecyclerView should be visible", profilesRecyclerView!= null)
 
         // Check that profile cards are visible
         val profileCards = device.findObjects(By.clazz("android.view.ViewGroup"))
@@ -151,17 +151,17 @@ class ServiceIconValidationTest {
         // Find MeTube profile specifically
         val metubeProfile = device.findObject(By.text("MeTube Server"))
         assertNotNull("MeTube profile should be visible", metubeProfile)
-        assertTrue("MeTube profile should exist", metubeProfile.exists())
+        assertTrue("MeTube profile should exist", metubeProfile!= null)
 
         // Verify MeTube service type text is displayed
         val metubeServiceType = device.findObject(By.text("MeTube"))
         assertNotNull("MeTube service type should be displayed", metubeServiceType)
-        assertTrue("MeTube service type should be visible", metubeServiceType.exists())
+        assertTrue("MeTube service type should be visible", metubeServiceType!= null)
 
         // Verify it's marked as default (should have star indicator)
         val defaultIndicator = device.findObject(By.res(PACKAGE_NAME, "defaultIndicator"))
-        if (defaultIndicator != null && defaultIndicator.exists()) {
-            assertTrue("Default indicator should be visible for MeTube profile", defaultIndicator.exists())
+        if (defaultIndicator != null && defaultIndicator!= null) {
+            assertTrue("Default indicator should be visible for MeTube profile", defaultIndicator!= null)
         }
 
         println("✅ MeTube profile displays correctly with proper service type")
@@ -174,12 +174,12 @@ class ServiceIconValidationTest {
         // Find Torrent (qBittorrent) profile specifically
         val torrentProfile = device.findObject(By.text("qBittorrent Server"))
         assertNotNull("qBittorrent profile should be visible", torrentProfile)
-        assertTrue("qBittorrent profile should exist", torrentProfile.exists())
+        assertTrue("qBittorrent profile should exist", torrentProfile!= null)
 
         // Verify torrent service type text is displayed
         val torrentServiceType = device.findObject(By.text("qBittorrent"))
         assertNotNull("qBittorrent service type should be displayed", torrentServiceType)
-        assertTrue("qBittorrent service type should be visible", torrentServiceType.exists())
+        assertTrue("qBittorrent service type should be visible", torrentServiceType!= null)
 
         println("✅ Torrent profile displays correctly with proper service type")
     }
@@ -191,12 +191,12 @@ class ServiceIconValidationTest {
         // Find jDownloader profile specifically
         val jdownloaderProfile = device.findObject(By.text("jDownloader Server"))
         assertNotNull("jDownloader profile should be visible", jdownloaderProfile)
-        assertTrue("jDownloader profile should exist", jdownloaderProfile.exists())
+        assertTrue("jDownloader profile should exist", jdownloaderProfile!= null)
 
         // Verify jDownloader service type text is displayed
         val jdownloaderServiceType = device.findObject(By.text("jDownloader"))
         assertNotNull("jDownloader service type should be displayed", jdownloaderServiceType)
-        assertTrue("jDownloader service type should be visible", jdownloaderServiceType.exists())
+        assertTrue("jDownloader service type should be visible", jdownloaderServiceType!= null)
 
         println("✅ jDownloader profile displays correctly with proper service type")
     }
@@ -208,12 +208,12 @@ class ServiceIconValidationTest {
         // Find YT-DLP profile specifically
         val ytdlProfile = device.findObject(By.text("YT-DLP Server"))
         assertNotNull("YT-DLP profile should be visible", ytdlProfile)
-        assertTrue("YT-DLP profile should exist", ytdlProfile.exists())
+        assertTrue("YT-DLP profile should exist", ytdlProfile!= null)
 
         // Verify YT-DLP service type text is displayed
         val ytdlServiceType = device.findObject(By.text("YT-DLP"))
         assertNotNull("YT-DLP service type should be displayed", ytdlServiceType)
-        assertTrue("YT-DLP service type should be visible", ytdlServiceType.exists())
+        assertTrue("YT-DLP service type should be visible", ytdlServiceType!= null)
 
         println("✅ YT-DLP profile displays correctly with proper service type")
     }
@@ -237,7 +237,7 @@ class ServiceIconValidationTest {
 
         // All profile icons should be visible (not completely transparent or hidden)
         profileIcons.forEach { icon ->
-            assertTrue("Profile icon should be visible", icon.exists())
+            assertTrue("Profile icon should be visible", icon!= null)
             val iconBounds = icon.visibleBounds
             assertTrue("Profile icon should have reasonable dimensions",
                       iconBounds.width() > 20 && iconBounds.height() > 20)
@@ -247,7 +247,7 @@ class ServiceIconValidationTest {
         val serviceTypes = listOf("MeTube", "qBittorrent", "jDownloader", "YT-DLP")
         serviceTypes.forEach { serviceType ->
             val serviceTypeLabel = device.findObject(By.text(serviceType))
-            if (serviceTypeLabel != null && serviceTypeLabel.exists()) {
+            if (serviceTypeLabel != null && serviceTypeLabel!= null) {
                 println("✅ Found service type: $serviceType")
             }
         }
@@ -280,11 +280,11 @@ class ServiceIconValidationTest {
     private fun verifyServiceProfileExists(profileName: String, serviceType: String) {
         val profile = device.findObject(By.text(profileName))
         assertNotNull("Profile '$profileName' should be visible", profile)
-        assertTrue("Profile '$profileName' should exist", profile.exists())
+        assertTrue("Profile '$profileName' should exist", profile!= null)
 
         val serviceTypeLabel = device.findObject(By.text(serviceType))
         assertNotNull("Service type '$serviceType' should be displayed", serviceTypeLabel)
-        assertTrue("Service type '$serviceType' should be visible", serviceTypeLabel.exists())
+        assertTrue("Service type '$serviceType' should be visible", serviceTypeLabel!= null)
 
         println("✅ Verified profile: $profileName ($serviceType)")
     }

@@ -9,6 +9,8 @@ import com.shareconnect.automation.SystemAppDetectionAutomationTest
 import com.shareconnect.automation.QBittorrentCompleteFlowAutomationTest
 import com.shareconnect.automation.SmartProfileSelectionAutomationTest
 import com.shareconnect.automation.MagnetMetadataAutomationTest
+import com.shareconnect.automation.ProfilesListScrollingAutomationTest
+import com.shareconnect.automation.WebUITorrentApplicationTest
 import org.junit.runner.RunWith
 import org.junit.runners.Suite
 
@@ -17,7 +19,8 @@ import org.junit.runners.Suite
  *
  * This suite runs comprehensive end-to-end tests that cover
  * complete user workflows, accessibility, stress testing, WebUI functionality,
- * intelligent profile filtering, and magnet link metadata extraction.
+ * intelligent profile filtering, magnet link metadata extraction, profiles list UI,
+ * and WebUI torrent application workflows.
  */
 @RunWith(Suite::class)
 @Suite.SuiteClasses(
@@ -29,6 +32,8 @@ import org.junit.runners.Suite
     SystemAppDetectionAutomationTest::class,
     QBittorrentCompleteFlowAutomationTest::class,
     SmartProfileSelectionAutomationTest::class,
-    MagnetMetadataAutomationTest::class
+    MagnetMetadataAutomationTest::class,
+    ProfilesListScrollingAutomationTest::class,
+    WebUITorrentApplicationTest::class
 )
 class FullAutomationTestSuite

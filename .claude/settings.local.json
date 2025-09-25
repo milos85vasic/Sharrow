@@ -18,7 +18,8 @@
       "Bash(./update_badges.sh)",
       "Bash(ANDROID_SERIAL=emulator-5554 ./run_automation_tests.sh)",
       "Bash(ANDROID_SERIAL=emulator-5554 ./gradlew :Application:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.shareconnect.automation.SmartProfileSelectionAutomationTest)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(ANDROID_SERIAL=emulator-5554 ./gradlew :Application:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.shareconnect.automation.ProfilesListScrollingAutomationTest -Pandroid.testInstrumentationRunnerArguments.method=testAllProfilesVisibleWithScrolling)"
     ],
     "deny": [],
     "ask": []

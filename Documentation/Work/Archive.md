@@ -19,3 +19,4 @@
 - Test results badges and connection with the reports
 - Add from clipboard allows picking of one of the recent clipboard items, not just the last one
 - FIXME: Edit Profile screen to be pushed by the keyboard so all form fields are accessible
+- Various fixes and improvements

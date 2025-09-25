@@ -39,6 +39,7 @@
 
 ## In progress
 
+- Add record exception on all critical error catch sports
 - [Onboarding flow](./Tasks/002%20Onboarding/TASK.md)
 - Invite beta testers
 - Firebase configuration for the DEV variant

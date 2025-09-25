@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shareconnect.manager.ProfileManagerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-09-25T14:28:43.374Z" hostname="Mistborn.local" time="0.02">
+  <properties/>
+  <testcase name="testTorrentClientTypes" classname="com.shareconnect.manager.ProfileManagerTest" time="0.001"/>
+  <testcase name="testServerProfileCreation" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <testcase name="testServerProfileWithValues" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <testcase name="testEqualsAndHashCode" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <testcase name="testServiceTypeChecks" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <testcase name="testTorrentClientTypes" classname="com.shareconnect.manager.ProfileManagerTest" time="0.001"/>
+  <testcase name="testServerProfileCreation" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <testcase name="testServerProfileWithValues" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <testcase name="testEqualsAndHashCode" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <testcase name="testServiceTypeChecks" classname="com.shareconnect.manager.ProfileManagerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

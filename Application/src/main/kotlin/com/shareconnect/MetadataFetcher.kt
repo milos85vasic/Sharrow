@@ -140,14 +140,7 @@ class MetadataFetcher {
 
     private fun handleTorrentMetadata(url: String): UrlMetadata {
         return if (url.startsWith("magnet:")) {
-            // Extract name from magnet link
-            val name = extractNameFromMagnet(url)
-            UrlMetadata(
-                title = name ?: "Magnet Link",
-                description = "Torrent magnet link",
-                thumbnailUrl = null,
-                siteName = "BitTorrent"
-            )
+            extractMagnetMetadata(url)
         } else {
             // For torrent files, just use the filename
             val filename = url.substringAfterLast("/").substringBeforeLast(".")
@@ -157,6 +150,147 @@ class MetadataFetcher {
                 thumbnailUrl = null,
                 siteName = "BitTorrent"
             )
+        }
+    }
+
+    private fun extractMagnetMetadata(magnetUrl: String): UrlMetadata {
+        try {
+            // Parse magnet URI to extract all available metadata
+            val params = parseMagnetParams(magnetUrl)
+
+            // Extract display name (dn parameter)
+            val displayName = params["dn"]?.let { decodeMagnetParam(it) }
+
+            // Extract exact length (xl parameter) for size information
+            val exactLength = params["xl"]?.toLongOrNull()
+
+            // Extract info hash for identification
+            val infoHash = params["xt"]?.let { xt ->
+                if (xt.startsWith("urn:btih:")) {
+                    xt.removePrefix("urn:btih:")
+                } else xt
+            }
+
+            // Extract trackers for additional context
+            val trackers = params.values.filter { it.startsWith("http") || it.startsWith("udp") }
+
+            // Build description with available information
+            val description = buildMagnetDescription(exactLength, infoHash, trackers.size)
+
+            // Try to infer content type from name
+            val contentType = inferContentTypeFromName(displayName)
+
+            return UrlMetadata(
+                title = displayName ?: "Magnet Link",
+                description = description,
+                thumbnailUrl = null, // Could potentially be enhanced with tracker API calls
+                siteName = contentType
+            )
+        } catch (e: Exception) {
+            Console.error(e, "Error parsing magnet link: $magnetUrl")
+            return UrlMetadata(
+                title = "Magnet Link",
+                description = "BitTorrent magnet link",
+                thumbnailUrl = null,
+                siteName = "BitTorrent"
+            )
+        }
+    }
+
+    private fun parseMagnetParams(magnetUrl: String): Map<String, String> {
+        val params = mutableMapOf<String, String>()
+
+        // Remove magnet: prefix and split by &
+        val paramString = magnetUrl.removePrefix("magnet:?")
+        val pairs = paramString.split("&")
+
+        for (pair in pairs) {
+            val keyValue = pair.split("=", limit = 2)
+            if (keyValue.size == 2) {
+                val key = keyValue[0]
+                val value = keyValue[1]
+
+                // Handle multiple values for same key (like tr for trackers)
+                if (params.containsKey(key)) {
+                    params[key + "_" + System.currentTimeMillis()] = value
+                } else {
+                    params[key] = value
+                }
+            }
+        }
+
+        return params
+    }
+
+    private fun decodeMagnetParam(param: String): String {
+        return try {
+            java.net.URLDecoder.decode(param.replace("+", " "), "UTF-8")
+        } catch (e: Exception) {
+            param.replace("+", " ")
+        }
+    }
+
+    private fun buildMagnetDescription(exactLength: Long?, infoHash: String?, trackerCount: Int): String {
+        val parts = mutableListOf<String>()
+
+        parts.add("BitTorrent magnet link")
+
+        exactLength?.let { size ->
+            parts.add("Size: ${formatBytes(size)}")
+        }
+
+        infoHash?.let { hash ->
+            parts.add("Hash: ${hash.take(8)}...")
+        }
+
+        if (trackerCount > 0) {
+            parts.add("$trackerCount tracker(s)")
+        }
+
+        return parts.joinToString(" • ")
+    }
+
+    private fun formatBytes(bytes: Long): String {
+        val units = arrayOf("B", "KB", "MB", "GB", "TB")
+        var size = bytes.toDouble()
+        var unitIndex = 0
+
+        while (size >= 1024 && unitIndex < units.size - 1) {
+            size /= 1024
+            unitIndex++
+        }
+
+        return String.format("%.1f %s", size, units[unitIndex])
+    }
+
+    private fun inferContentTypeFromName(name: String?): String {
+        if (name == null) return "BitTorrent"
+
+        val lowercaseName = name.lowercase()
+
+        return when {
+            lowercaseName.contains("movie") ||
+            lowercaseName.contains("film") ||
+            lowercaseName.matches(Regex(".*\\.(mp4|mkv|avi|mov|wmv|flv|webm|m4v).*", RegexOption.IGNORE_CASE)) -> "Movie"
+
+            lowercaseName.contains("tv") ||
+            lowercaseName.contains("season") ||
+            lowercaseName.contains("episode") ||
+            lowercaseName.matches(Regex(".*s\\d+e\\d+.*", RegexOption.IGNORE_CASE)) -> "TV Show"
+
+            lowercaseName.contains("music") ||
+            lowercaseName.contains("album") ||
+            lowercaseName.matches(Regex(".*\\.(mp3|flac|wav|ogg|aac|m4a).*", RegexOption.IGNORE_CASE)) -> "Music"
+
+            lowercaseName.contains("game") ||
+            lowercaseName.contains("pc") ||
+            lowercaseName.matches(Regex(".*\\.(exe|msi|iso|dmg|pkg).*", RegexOption.IGNORE_CASE)) -> "Software/Game"
+
+            lowercaseName.contains("book") ||
+            lowercaseName.contains("pdf") ||
+            lowercaseName.matches(Regex(".*\\.(pdf|epub|mobi|txt|doc|docx).*", RegexOption.IGNORE_CASE)) -> "Book/Document"
+
+            else -> "BitTorrent"
         }
     }
 

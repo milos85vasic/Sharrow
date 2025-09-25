@@ -277,6 +277,9 @@ class ShareActivity : AppCompatActivity() {
 
             // Save to history immediately as successful (WebUI will handle the actual sending)
             saveToHistory(mediaLink!!, profileId!!, profileNameFinal!!, serviceTypeName, true)
+
+            // Dismiss the activity after launching WebUI
+            finish()
             return
         }
 
@@ -307,6 +310,9 @@ class ShareActivity : AppCompatActivity() {
 
                         // Open browser with the service instance
                         openServiceInBrowser(profileUrl!!, profilePort)
+
+                        // Dismiss the activity after successful sharing
+                        finish()
                     }
                 }
 
@@ -351,6 +357,9 @@ class ShareActivity : AppCompatActivity() {
 
         // Save to history as shared to apps
         saveToHistory(mediaLink!!, "apps", "Other Apps", "Apps", true)
+
+        // Dismiss the activity after sharing to apps
+        finish()
     }
 
     private fun openServiceInterface() {

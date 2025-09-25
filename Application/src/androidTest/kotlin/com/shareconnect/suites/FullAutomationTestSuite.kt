@@ -4,6 +4,7 @@ import com.shareconnect.automation.AccessibilityAutomationTest
 import com.shareconnect.automation.FullAppFlowAutomationTest
 import com.shareconnect.automation.WebUIAutomationTest
 import com.shareconnect.automation.ProfileFilteringAutomationTest
+import com.shareconnect.automation.ShareActivityLayoutAndFlowTest
 import org.junit.runner.RunWith
 import org.junit.runners.Suite
 
@@ -19,6 +20,7 @@ import org.junit.runners.Suite
     FullAppFlowAutomationTest::class,
     AccessibilityAutomationTest::class,
     WebUIAutomationTest::class,
-    ProfileFilteringAutomationTest::class
+    ProfileFilteringAutomationTest::class,
+    ShareActivityLayoutAndFlowTest::class
 )
 class FullAutomationTestSuite

@@ -6,7 +6,7 @@ buildscript {
         common_obfuscator_version = '1.0.0'
 
         shareconnect_version = '1.0.0'
-        shareconnect_version_code = 2
+        shareconnect_version_code = 3
         shareconnect_application_name = "com.shareconnect"
 
         toolkit_version = '2.0.3'

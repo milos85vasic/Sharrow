@@ -1,3 +1,8 @@
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-100%25-brightgreen?style=flat-square&logo=android)](Documentation/Tests/latest/unit_test_report.html)
+[![Instrumentation Tests](https://img.shields.io/badge/Instrumentation%20Tests-100%25-brightgreen?style=flat-square&logo=android)](Documentation/Tests/latest/instrumentation_test_report.html)
+[![Automation Tests](https://img.shields.io/badge/Automation%20Tests-100%25-brightgreen?style=flat-square&logo=android)](Documentation/Tests/latest/automation_test_report.html)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square&logo=gradle)](Documentation/Tests/latest/build_report.html)
+
 ![ShareConnect](Assets/Dark_Banner.jpg)
 
 # ShareConnect

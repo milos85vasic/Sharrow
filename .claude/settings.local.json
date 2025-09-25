@@ -14,7 +14,8 @@
       "Bash(grep:*)",
       "Bash(done)",
       "Bash(./build_app.sh:*)",
-      "Bash(./run_all_tests.sh)"
+      "Bash(./run_all_tests.sh)",
+      "Bash(./update_badges.sh)"
     ],
     "deny": [],
     "ask": []

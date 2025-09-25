@@ -228,6 +228,16 @@ echo ""
 echo -e "${BLUE}Report Directory:    ${MASTER_REPORT_DIR}${NC}"
 echo ""
 
+# Update README badges with test results
+echo -e "${CYAN}Updating README test badges...${NC}"
+if [ -f "./update_badges.sh" ]; then
+    ./update_badges.sh
+    echo -e "${GREEN}✓ Badges updated${NC}"
+else
+    echo -e "${YELLOW}⚠ Badge update script not found${NC}"
+fi
+echo ""
+
 if [ "$OVERALL_STATUS" = "PASSED" ]; then
     echo -e "${BOLD}${GREEN}🎉 ALL TESTS PASSED! 🎉${NC}"
     echo -e "${GREEN}ShareConnect application has been thoroughly tested and verified.${NC}"

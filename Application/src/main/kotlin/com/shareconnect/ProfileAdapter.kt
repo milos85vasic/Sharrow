@@ -58,6 +58,17 @@ class ProfileAdapter(
             val isDefault = defaultProfile != null && defaultProfile.id == profile.id
             imageViewDefault.visibility = if (isDefault) View.VISIBLE else View.GONE
 
+            // Update the set default button appearance
+            if (isDefault) {
+                buttonSetDefault.icon = itemView.context.getDrawable(R.drawable.ic_star)
+                buttonSetDefault.text = itemView.context.getString(R.string.default_profile)
+                buttonSetDefault.isEnabled = false
+            } else {
+                buttonSetDefault.icon = itemView.context.getDrawable(R.drawable.ic_star_outline)
+                buttonSetDefault.text = itemView.context.getString(R.string.set_default)
+                buttonSetDefault.isEnabled = true
+            }
+
             // Check if this profile has authentication
             val hasAuth = !profile.username.isNullOrEmpty() && !profile.password.isNullOrEmpty()
             imageViewAuthenticated.visibility = if (hasAuth) View.VISIBLE else View.GONE

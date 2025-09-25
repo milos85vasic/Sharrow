@@ -86,13 +86,15 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonSetDefault"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
                 android:text="@string/set_default"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                app:icon="@drawable/ic_star_outline"
+                app:iconSize="16dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonDelete"

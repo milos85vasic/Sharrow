@@ -1,10 +1,4 @@
-# 1.0.0
-
-## In progress
-
-- Initial version - the MVP
-
-## Completed
+# Archive of the completed TODO items
 
 - https://android-developers.googleblog.com/2025/05/prepare-play-apps-for-devices-with-16kb-page-size.html
 - All screens have to be presented between the title bar area and navigation bar
@@ -24,24 +18,4 @@
 - Upstreams
 - Test results badges and connection with the reports
 
-## Git submodules settings
-
-### Toolkit
-
-- Branch: `main`
-- Head position: `0c2ad0f68100ffe7b0868e51acad0faa1badaf53`
-
-### RAG Open material
-
-- Branch: `main`
-- Head position: `81f150adb71e8b284bb2563caaffeaa0ddef57d1`
-
-### GitHub Pages website
-
-- Branch: `main`
-- Head position: `8310a646c77c164b3b92a12207d09604b367557d`
-
-## Notes
-
-- None
 

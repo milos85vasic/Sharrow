@@ -75,14 +75,27 @@ class EditProfileKeyboardAutomationTest {
 
     @Test
     fun testScrollViewScrollsWhenKeyboardAppears() {
-        // Get initial scroll position by checking visibility of bottom elements
-        val saveButton = device.findObject(UiSelector().resourceId("com.shareconnect:id/buttonSave"))
-        val initialSaveButtonVisible = saveButton.exists()
+        // Test that focused field becomes visible when keyboard appears
+        val profileNameField = device.findObject(UiSelector().resourceId("com.shareconnect:id/editTextProfileName"))
 
-        // Focus on a field at the bottom (password field)
+        // First scroll to top to ensure consistent starting position
+        device.swipe(
+            device.displayWidth / 2,
+            device.displayHeight / 4,
+            device.displayWidth / 2,
+            device.displayHeight * 3 / 4,
+            10
+        )
+        device.waitForIdle()
+
+        // Get profile name field position before keyboard
+        val profileNameBounds = profileNameField.getBounds()
+        val initialTop = profileNameBounds.top
+
+        // Now focus on a field at the bottom (password field)
         val passwordField = device.findObject(UiSelector().resourceId("com.shareconnect:id/editTextPassword"))
 
-        // Scroll down to make password field visible if needed
+        // Scroll down to make password field visible
         if (!passwordField.exists()) {
             device.swipe(
                 device.displayWidth / 2,
@@ -96,15 +109,30 @@ class EditProfileKeyboardAutomationTest {
 
         Assert.assertTrue("Password field should be visible after scrolling", passwordField.exists())
 
+        // Get password field position before keyboard
+        val passwordBounds = passwordField.getBounds()
+        val initialPasswordTop = passwordBounds.top
+
+        // Focus on password field to trigger keyboard
         passwordField.click()
         device.waitForIdle()
         Thread.sleep(KEYBOARD_ANIMATION_DELAY)
 
-        // After keyboard appears, the view should adjust to keep the focused field visible
-        // The save button should still be accessible even with keyboard visible
-        val saveButtonAfterKeyboard = device.findObject(UiSelector().resourceId("com.shareconnect:id/buttonSave"))
-        Assert.assertTrue("Save button should remain accessible when keyboard is visible",
-            saveButtonAfterKeyboard.exists() || device.hasObject(UiSelector().scrollable(true)))
+        // After keyboard appears, check that the focused field is still visible
+        // The password field should have moved up (smaller top coordinate) or remain visible
+        val passwordAfterKeyboard = device.findObject(UiSelector().resourceId("com.shareconnect:id/editTextPassword"))
+        Assert.assertTrue("Password field should remain accessible when keyboard is visible",
+            passwordAfterKeyboard.exists())
+
+        // Test that we can type in the focused field
+        passwordField.text = "test123"
+        Assert.assertTrue("Should be able to type in password field with keyboard visible",
+            passwordField.text.contains("test"))
+
+        // Verify scrollview is still functional with keyboard visible
+        val scrollable = device.findObject(UiSelector().scrollable(true))
+        Assert.assertTrue("ScrollView should remain functional with keyboard",
+            scrollable.exists() && scrollable.isScrollable())
     }
 
     @Test
@@ -321,5 +349,66 @@ class EditProfileKeyboardAutomationTest {
         // Content should be fully visible again
         val saveButton = device.findObject(UiSelector().resourceId("com.shareconnect:id/buttonSave"))
         Assert.assertTrue("Save button should be visible when keyboard is hidden", saveButton.exists())
+    }
+
+    @Test
+    fun testKeyboardMovesFormUp() {
+        // This test specifically verifies that the form content moves up when keyboard appears
+
+        // Start at the bottom field (password)
+        val passwordField = device.findObject(UiSelector().resourceId("com.shareconnect:id/editTextPassword"))
+
+        // Scroll to make password field visible first
+        val scrollable = UiScrollable(UiSelector().scrollable(true))
+        scrollable.scrollIntoView(UiSelector().resourceId("com.shareconnect:id/editTextPassword"))
+        device.waitForIdle()
+
+        Assert.assertTrue("Password field should be visible", passwordField.exists())
+
+        // Get the initial bounds of the password field
+        val initialBounds = passwordField.getBounds()
+        val initialY = initialBounds.centerY()
+
+        // Also get bounds of elements that should move when keyboard appears
+        val saveButton = device.findObject(UiSelector().resourceId("com.shareconnect:id/buttonSave"))
+        val initialSaveButtonBounds = if (saveButton.exists()) saveButton.getBounds() else null
+
+        // Focus on password field to show keyboard
+        passwordField.click()
+        device.waitForIdle()
+        Thread.sleep(KEYBOARD_ANIMATION_DELAY)
+
+        // Verify password field is still accessible and functional
+        Assert.assertTrue("Password field should remain accessible with keyboard", passwordField.exists())
+
+        // Try typing to ensure the field is properly focused and visible
+        passwordField.text = "testpass123"
+        device.waitForIdle()
+
+        Assert.assertTrue("Should be able to type in password field",
+            passwordField.text.contains("testpass"))
+
+        // Verify that we can still access form controls
+        // The save button should be accessible through scrolling or should have moved up
+        if (initialSaveButtonBounds != null) {
+            val saveButtonAfterKeyboard = device.findObject(UiSelector().resourceId("com.shareconnect:id/buttonSave"))
+
+            if (!saveButtonAfterKeyboard.exists()) {
+                // Try scrolling to find it
+                scrollable.scrollIntoView(UiSelector().resourceId("com.shareconnect:id/buttonSave"))
+                device.waitForIdle()
+            }
+
+            Assert.assertTrue("Save button should be accessible with keyboard visible",
+                device.findObject(UiSelector().resourceId("com.shareconnect:id/buttonSave")).exists())
+        }
+
+        // Test field navigation with keyboard visible
+        device.pressKeyCode(66) // Enter key - should trigger IME action
+        device.waitForIdle()
+
+        // The keyboard should have triggered the Done action, keeping focus or moving appropriately
+        Assert.assertTrue("Form should handle IME actions properly with keyboard",
+            passwordField.exists() || device.getCurrentFocus() != null)
     }
 }

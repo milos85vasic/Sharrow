@@ -1,13 +1,16 @@
 package com.shareconnect
 
+import android.graphics.Rect
 import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.KeyEvent
 import android.view.View
+import android.view.ViewTreeObserver
 import android.view.inputmethod.EditorInfo
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -32,6 +35,8 @@ class EditProfileActivity : AppCompatActivity() {
     private var existingProfile: ServerProfile? = null
     private var serviceApiClient: ServiceApiClient? = null
     private var themeManager: ThemeManager? = null
+    private var scrollView: ScrollView? = null
+    private var rootView: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Apply theme before setting content
@@ -58,6 +63,7 @@ class EditProfileActivity : AppCompatActivity() {
         initViews()
         setupListeners()
         setupSpinners()
+        setupKeyboardHandling()
 
         // Check if we're editing an existing profile
         val profileId = intent.getStringExtra("profile_id")
@@ -81,6 +87,10 @@ class EditProfileActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        // Find ScrollView in the layout directly
+        rootView = findViewById<View>(android.R.id.content)
+        scrollView = findScrollView(rootView!!)
+
         editTextProfileName = findViewById(R.id.editTextProfileName)
         editTextServerUrl = findViewById(R.id.editTextServerUrl)
         editTextServerPort = findViewById(R.id.editTextServerPort)
@@ -92,6 +102,21 @@ class EditProfileActivity : AppCompatActivity() {
         buttonCancel = findViewById(R.id.buttonCancel)
         buttonSave = findViewById(R.id.buttonSave)
         buttonTestConnection = findViewById(R.id.buttonTestConnection)
+    }
+
+    private fun findScrollView(view: View): ScrollView? {
+        if (view is ScrollView) {
+            return view
+        }
+        if (view is android.view.ViewGroup) {
+            for (i in 0 until view.childCount) {
+                val scrollView = findScrollView(view.getChildAt(i))
+                if (scrollView != null) {
+                    return scrollView
+                }
+            }
+        }
+        return null
     }
 
     private fun setupListeners() {
@@ -116,6 +141,7 @@ class EditProfileActivity : AppCompatActivity() {
         editTextProfileName!!.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 editTextServerUrl!!.requestFocus()
+                scrollToView(editTextServerUrl!!)
                 true
             } else false
         }
@@ -123,6 +149,7 @@ class EditProfileActivity : AppCompatActivity() {
         editTextServerUrl!!.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 editTextServerPort!!.requestFocus()
+                scrollToView(editTextServerPort!!)
                 true
             } else false
         }
@@ -130,6 +157,7 @@ class EditProfileActivity : AppCompatActivity() {
         editTextServerPort!!.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 autoCompleteServiceType!!.requestFocus()
+                scrollToView(autoCompleteServiceType!!)
                 true
             } else false
         }
@@ -138,8 +166,10 @@ class EditProfileActivity : AppCompatActivity() {
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 if (layoutTorrentClient!!.visibility == View.VISIBLE) {
                     autoCompleteTorrentClient!!.requestFocus()
+                    scrollToView(autoCompleteTorrentClient!!)
                 } else {
                     editTextUsername!!.requestFocus()
+                    scrollToView(editTextUsername!!)
                 }
                 true
             } else false
@@ -148,6 +178,7 @@ class EditProfileActivity : AppCompatActivity() {
         autoCompleteTorrentClient!!.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 editTextUsername!!.requestFocus()
+                scrollToView(editTextUsername!!)
                 true
             } else false
         }
@@ -155,6 +186,7 @@ class EditProfileActivity : AppCompatActivity() {
         editTextUsername!!.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 editTextPassword!!.requestFocus()
+                scrollToView(editTextPassword!!)
                 true
             } else false
         }
@@ -166,6 +198,56 @@ class EditProfileActivity : AppCompatActivity() {
                 true
             } else false
         }
+    }
+
+    private fun scrollToView(view: View) {
+        if (scrollView != null) {
+            scrollView!!.post {
+                val location = IntArray(2)
+                view.getLocationInWindow(location)
+                val y = maxOf(0, location[1] - 200) // Add some padding above the field, ensure non-negative
+                scrollView!!.smoothScrollTo(0, y)
+            }
+        }
+    }
+
+    private fun setupKeyboardHandling() {
+        rootView?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            private var wasOpened = false
+
+            override fun onGlobalLayout() {
+                val rect = Rect()
+                rootView?.getWindowVisibleDisplayFrame(rect)
+                val screenHeight = rootView?.rootView?.height ?: 0
+                val keypadHeight = screenHeight - rect.bottom
+
+                if (keypadHeight > screenHeight * 0.15) { // Keyboard is opened
+                    if (!wasOpened) {
+                        wasOpened = true
+                        onKeyboardOpened()
+                    }
+                } else { // Keyboard is closed
+                    if (wasOpened) {
+                        wasOpened = false
+                        onKeyboardClosed()
+                    }
+                }
+            }
+        })
+    }
+
+    private fun onKeyboardOpened() {
+        // Scroll to focused view when keyboard opens
+        val focusedView = currentFocus
+        if (focusedView != null && scrollView != null) {
+            scrollView!!.post {
+                scrollView!!.smoothScrollTo(0, focusedView.bottom + 100)
+            }
+        }
+    }
+
+    private fun onKeyboardClosed() {
+        // Optional: Handle keyboard closed event
     }
 
     private fun setupSpinners() {

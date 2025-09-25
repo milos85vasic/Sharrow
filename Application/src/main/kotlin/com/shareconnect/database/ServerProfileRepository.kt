@@ -64,6 +64,12 @@ class ServerProfileRepository(context: Context) {
         }
     }
 
+    fun clearDefaultProfile() = runBlocking {
+        withContext(Dispatchers.IO) {
+            serverProfileDao.clearAllDefaults()
+        }
+    }
+
     fun hasProfiles(): Boolean = runBlocking {
         withContext(Dispatchers.IO) {
             serverProfileDao.getAllProfiles().isNotEmpty()

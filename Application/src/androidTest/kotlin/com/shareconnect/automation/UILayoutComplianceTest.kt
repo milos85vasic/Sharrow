@@ -14,7 +14,7 @@ import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import kotlin.test.fail
+import org.junit.Assert.fail
 
 @RunWith(AndroidJUnit4::class)
 class UILayoutComplianceTest {
@@ -76,7 +76,7 @@ class UILayoutComplianceTest {
 
     private fun checkLayoutCompliance(activityName: String) {
         // Get screen dimensions in pixels
-        val displayMetrics = device.displayMetrics
+        val displayMetrics = InstrumentationRegistry.getInstrumentation().targetContext.resources.displayMetrics
         val screenWidth = displayMetrics.widthPixels
         val screenHeight = displayMetrics.heightPixels
 
@@ -102,7 +102,7 @@ class UILayoutComplianceTest {
 
         // Check for toolbar presence and positioning
         val toolbar = device.findObject(By.res(PACKAGE_NAME, "toolbar"))
-        if (toolbar != null && toolbar.exists()) {
+        if (toolbar != null) {
             val toolbarBounds = toolbar.visibleBounds
             println("   Toolbar bounds: ${toolbarBounds}")
 
@@ -121,13 +121,13 @@ class UILayoutComplianceTest {
         }
 
         // Check content positioning relative to toolbar
-        if (toolbar != null && toolbar.exists()) {
+        if (toolbar != null) {
             val toolbarBounds = toolbar.visibleBounds
             val contentArea = device.findObject(By.clazz("android.widget.ScrollView")
                 .clazz("androidx.recyclerview.widget.RecyclerView")
                 .clazz("android.widget.LinearLayout"))
 
-            if (contentArea != null && contentArea.exists()) {
+            if (contentArea != null) {
                 val contentAreaBounds = contentArea.visibleBounds
                 if (contentAreaBounds.top <= toolbarBounds.bottom + 10) {
                     fail("$activityName: Content area overlapping with toolbar. Content top: ${contentAreaBounds.top}, Toolbar bottom: ${toolbarBounds.bottom}")
@@ -140,7 +140,7 @@ class UILayoutComplianceTest {
         val maxContentBottom = screenHeight - navigationBarHeight
 
         val scrollView = device.findObject(By.clazz("android.widget.ScrollView"))
-        if (scrollView != null && scrollView.exists()) {
+        if (scrollView != null) {
             val scrollBounds = scrollView.visibleBounds
             println("   ScrollView bounds: ${scrollBounds}")
 
@@ -150,7 +150,7 @@ class UILayoutComplianceTest {
         }
 
         val recyclerView = device.findObject(By.clazz("androidx.recyclerview.widget.RecyclerView"))
-        if (recyclerView != null && recyclerView.exists()) {
+        if (recyclerView != null) {
             val recyclerBounds = recyclerView.visibleBounds
             println("   RecyclerView bounds: ${recyclerBounds}")
 
@@ -161,7 +161,7 @@ class UILayoutComplianceTest {
 
         // Check for FloatingActionButton positioning
         val fab = device.findObject(By.clazz("com.google.android.material.floatingactionbutton.FloatingActionButton"))
-        if (fab != null && fab.exists()) {
+        if (fab != null) {
             val fabBounds = fab.visibleBounds
             println("   FAB bounds: ${fabBounds}")
 
@@ -207,7 +207,7 @@ class UILayoutComplianceTest {
 
         // Navigate to Settings
         val settingsButton = device.findObject(By.res(PACKAGE_NAME, "buttonSettings"))
-        if (settingsButton != null && settingsButton.exists()) {
+        if (settingsButton != null) {
             settingsButton.click()
             Thread.sleep(1000)
         }
@@ -228,7 +228,7 @@ class UILayoutComplianceTest {
 
         // Navigate to Profiles
         val profilesButton = device.findObject(By.res(PACKAGE_NAME, "buttonManageProfiles"))
-        if (profilesButton != null && profilesButton.exists()) {
+        if (profilesButton != null) {
             profilesButton.click()
             Thread.sleep(1000)
         }
@@ -249,7 +249,7 @@ class UILayoutComplianceTest {
 
         // Navigate to Profiles
         val profilesButton = device.findObject(By.res(PACKAGE_NAME, "buttonManageProfiles"))
-        if (profilesButton != null && profilesButton.exists()) {
+        if (profilesButton != null) {
             profilesButton.click()
             Thread.sleep(1000)
         }
@@ -259,7 +259,7 @@ class UILayoutComplianceTest {
             Until.findObject(By.res(PACKAGE_NAME, "fab")),
             TIMEOUT
         )
-        if (fab != null && fab.exists()) {
+        if (fab != null) {
             fab.click()
             Thread.sleep(1000)
         }
@@ -280,7 +280,7 @@ class UILayoutComplianceTest {
 
         // Navigate to History
         val historyButton = device.findObject(By.res(PACKAGE_NAME, "buttonHistory"))
-        if (historyButton != null && historyButton.exists()) {
+        if (historyButton != null) {
             historyButton.click()
             Thread.sleep(1000)
         }
@@ -301,14 +301,14 @@ class UILayoutComplianceTest {
 
         // Navigate to Settings
         val settingsButton = device.findObject(By.res(PACKAGE_NAME, "buttonSettings"))
-        if (settingsButton != null && settingsButton.exists()) {
+        if (settingsButton != null) {
             settingsButton.click()
             Thread.sleep(1000)
         }
 
         // Navigate to Theme selection
         val themeOption = device.findObject(By.text("Theme"))
-        if (themeOption != null && themeOption.exists()) {
+        if (themeOption != null) {
             themeOption.click()
             Thread.sleep(1000)
         }
@@ -362,7 +362,7 @@ class UILayoutComplianceTest {
 
             // Check for toolbar
             val toolbar = device.findObject(By.res(PACKAGE_NAME, "toolbar"))
-            assertTrue("$activityName should have a toolbar", toolbar != null && toolbar.exists())
+            assertTrue("$activityName should have a toolbar", toolbar != null)
 
             // Check toolbar positioning
             if (toolbar != null) {

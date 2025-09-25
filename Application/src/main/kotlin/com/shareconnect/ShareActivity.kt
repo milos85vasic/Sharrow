@@ -196,16 +196,8 @@ class ShareActivity : AppCompatActivity() {
         )
         autoCompleteProfiles!!.setAdapter(adapter)
 
-        // Set default selection if there's a default profile
-        val defaultProfile = profileManager!!.defaultProfile()
-        if (defaultProfile != null) {
-            autoCompleteProfiles!!.setText(
-                defaultProfile.name + " (" + defaultProfile.getServiceTypeName(this) + ")", false
-            )
-        } else if (profileNames.isNotEmpty()) {
-            // If no default, select the first one
-            autoCompleteProfiles!!.setText(profileNames[0], false)
-        }
+        // Smart profile selection: prioritize compatible profiles
+        selectBestCompatibleProfile()
     }
 
     private fun setupListeners() {
@@ -564,6 +556,49 @@ class ShareActivity : AppCompatActivity() {
             finish()
         } else {
             Toast.makeText(this, "Failed to open ${appInfo.appName}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Select the best compatible profile for the current URL
+     * Priority: 1) Default profile if compatible, 2) First compatible profile, 3) First profile
+     */
+    private fun selectBestCompatibleProfile() {
+        if (profiles.isEmpty()) return
+
+        val profileNames = profiles.map { profile ->
+            profile.name + " (" + profile.getServiceTypeName(this) + ")"
+        }
+
+        // Get the default profile
+        val defaultProfile = profileManager!!.defaultProfile()
+
+        // Check if default profile is in the compatible list
+        val defaultProfileName = if (defaultProfile != null) {
+            val isDefaultCompatible = profiles.any { it.id == defaultProfile.id }
+            if (isDefaultCompatible) {
+                defaultProfile.name + " (" + defaultProfile.getServiceTypeName(this) + ")"
+            } else {
+                null
+            }
+        } else {
+            null
+        }
+
+        // Select profile based on priority
+        val selectedProfileName = when {
+            // Priority 1: Default profile if it's compatible
+            defaultProfileName != null -> defaultProfileName
+
+            // Priority 2: First compatible profile (which is the first in the filtered list)
+            profileNames.isNotEmpty() -> profileNames[0]
+
+            // Priority 3: Should not happen as we already check profiles.isEmpty()
+            else -> null
+        }
+
+        selectedProfileName?.let { name ->
+            autoCompleteProfiles!!.setText(name, false)
         }
     }
 

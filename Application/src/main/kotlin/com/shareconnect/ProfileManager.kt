@@ -95,6 +95,10 @@ class ProfileManager(private val context: Context) {
         profile.id?.let { repository.setDefaultProfile(it) }
     }
 
+    fun clearDefaultProfile() {
+        repository.clearDefaultProfile()
+    }
+
     fun addProfile(profile: ServerProfile) {
         if (profile.id.isNullOrEmpty()) {
             profile.id = UUID.randomUUID().toString()

@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar
 import com.google.android.material.button.MaterialButton
 import com.shareconnect.database.HistoryItem
 import com.shareconnect.database.HistoryRepository
+import com.shareconnect.utils.UrlCompatibilityUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -136,11 +137,29 @@ class ShareActivity : AppCompatActivity() {
     }
 
     private fun loadProfiles() {
-        profiles = profileManager!!.profiles
+        val allProfiles = profileManager!!.profiles
 
-        if (profiles.isEmpty()) {
+        if (allProfiles.isEmpty()) {
             // Show a message and redirect to settings
             Toast.makeText(this, R.string.please_configure_profile_custom, Toast.LENGTH_LONG).show()
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+
+        // Filter profiles based on URL compatibility
+        profiles = UrlCompatibilityUtils.filterCompatibleProfiles(allProfiles, mediaLink)
+
+        if (profiles.isEmpty()) {
+            // No compatible profiles found
+            val urlType = UrlCompatibilityUtils.detectUrlType(mediaLink)
+            val urlTypeDescription = urlType?.let { UrlCompatibilityUtils.getUrlTypeDescription(it) } ?: "this content type"
+
+            Toast.makeText(this,
+                "No profiles support $urlTypeDescription. Please configure a compatible profile in Settings.",
+                Toast.LENGTH_LONG).show()
+
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
             finish()

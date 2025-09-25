@@ -208,36 +208,64 @@ class WebUIActivity : AppCompatActivity() {
             return
         }
 
-        // JavaScript to auto-fill and submit login form
+        // Enhanced JavaScript to auto-fill and submit login form with better error handling
         val loginScript = """
             (function() {
+                var attempts = 0;
+                var maxAttempts = 10;
+
                 // Wait for login form to be available
                 function waitForLogin() {
-                    var usernameField = document.querySelector('input[name="username"], input[id="username"], input[type="text"]');
-                    var passwordField = document.querySelector('input[name="password"], input[id="password"], input[type="password"]');
-                    var loginButton = document.querySelector('input[type="submit"], button[type="submit"], button:contains("Login"), input[value*="Login"]');
+                    attempts++;
+                    console.log('qBittorrent authentication attempt: ' + attempts);
+
+                    var usernameField = document.querySelector('input[name="username"], input[id="username"], input[type="text"], #username');
+                    var passwordField = document.querySelector('input[name="password"], input[id="password"], input[type="password"], #password');
+                    var loginButton = document.querySelector('input[type="submit"], button[type="submit"], #login, .login-button, input[value*="Login"], button[onclick*="login"]');
 
                     if (usernameField && passwordField) {
-                        usernameField.value = '${profile?.username}';
-                        passwordField.value = '${profile?.password}';
+                        console.log('Found login fields, filling credentials');
+                        usernameField.value = '${profile?.username?.replace("'", "\\'")}';
+                        passwordField.value = '${profile?.password?.replace("'", "\\'")}';
 
+                        // Trigger input events
+                        usernameField.dispatchEvent(new Event('input', { bubbles: true }));
+                        passwordField.dispatchEvent(new Event('input', { bubbles: true }));
+
+                        // Try multiple ways to submit
                         if (loginButton) {
+                            console.log('Clicking login button');
                             loginButton.click();
                         } else {
                             // Try to submit the form
-                            var form = usernameField.closest('form');
+                            var form = usernameField.closest('form') || passwordField.closest('form');
                             if (form) {
+                                console.log('Submitting login form');
                                 form.submit();
+                            } else {
+                                // Try pressing enter on password field
+                                var enterEvent = new KeyboardEvent('keydown', { key: 'Enter', keyCode: 13 });
+                                passwordField.dispatchEvent(enterEvent);
                             }
                         }
                         return true;
                     }
+
+                    // Check if already logged in (no login form visible)
+                    if (document.querySelector('.mainmenu, #desktop, .toolbar, #torrentsTable, .torrentTable')) {
+                        console.log('Already logged in or login form not needed');
+                        return true;
+                    }
+
+                    if (attempts < maxAttempts) {
+                        setTimeout(waitForLogin, 1000);
+                    } else {
+                        console.log('Max authentication attempts reached');
+                    }
                     return false;
                 }
 
-                if (!waitForLogin()) {
-                    setTimeout(waitForLogin, 1000);
-                }
+                waitForLogin();
             })();
         """.trimIndent()
 
@@ -245,10 +273,10 @@ class WebUIActivity : AppCompatActivity() {
             Console.log("qBittorrent authentication script executed: $result")
             isAuthenticated = true
 
-            // Wait a bit for authentication to complete, then pass URL
+            // Wait for authentication to complete, then pass URL
             webView?.postDelayed({
                 passUrlToWebUI()
-            }, 3000)
+            }, 4000) // Increased wait time for authentication
         }
     }
 
@@ -339,44 +367,131 @@ class WebUIActivity : AppCompatActivity() {
     private fun passUrlToQBittorrent() {
         val addTorrentScript = """
             (function() {
-                var url = '${urlToShare?.replace("'", "\\'")}';
+                var url = '${urlToShare?.replace("'", "\\'")?.replace("\n", "\\n")}';
+                var attempts = 0;
+                var maxAttempts = 15;
 
-                // Try to find and fill the add torrent URL field
-                function fillAddTorrentField() {
-                    // Common selectors for qBittorrent add torrent dialog
-                    var urlField = document.querySelector('input[name="urls"], textarea[name="urls"], input[placeholder*="URL"], textarea[placeholder*="URL"]');
+                console.log('Attempting to add URL to qBittorrent: ' + url);
+
+                // Enhanced function to find and fill the add torrent URL field
+                function addTorrentUrl() {
+                    attempts++;
+                    console.log('qBittorrent add torrent attempt: ' + attempts);
+
+                    // First check if add torrent dialog is already open
+                    var urlField = document.querySelector([
+                        'input[name="urls"]',
+                        'textarea[name="urls"]',
+                        'input[placeholder*="URL"]',
+                        'input[placeholder*="url"]',
+                        'textarea[placeholder*="URL"]',
+                        'textarea[placeholder*="url"]',
+                        'input[id*="url"]',
+                        'textarea[id*="url"]',
+                        '#urls',
+                        '.torrent-url',
+                        'input[type="url"]'
+                    ].join(', '));
 
                     if (urlField) {
+                        console.log('Found URL field, filling with torrent URL');
                         urlField.value = url;
                         urlField.focus();
 
-                        // Trigger change event
-                        var event = new Event('change', { bubbles: true });
-                        urlField.dispatchEvent(event);
+                        // Trigger multiple events to ensure the field is properly updated
+                        ['input', 'change', 'blur', 'paste'].forEach(function(eventType) {
+                            var event = new Event(eventType, { bubbles: true });
+                            urlField.dispatchEvent(event);
+                        });
+
+                        // Look for download/add button to submit
+                        var submitButton = document.querySelector([
+                            'input[type="submit"]',
+                            'button[type="submit"]',
+                            'input[value*="Download"]',
+                            'button:contains("Download")',
+                            'input[value*="Add"]',
+                            'button:contains("Add")',
+                            '.btn-primary',
+                            '#downloadButton'
+                        ].join(', '));
+
+                        if (submitButton) {
+                            console.log('Found submit button, clicking to add torrent');
+                            setTimeout(function() {
+                                submitButton.click();
+                            }, 500);
+                        }
 
                         return true;
                     }
 
-                    // If no field found, try to click Add Torrent button first
-                    var addButton = document.querySelector('a:contains("Add Torrent"), button:contains("Add"), input[value*="Add"]');
-                    if (addButton) {
-                        addButton.click();
-                        setTimeout(fillAddTorrentField, 1000);
-                        return true;
+                    // Try to find and click the "Add Torrent" button or similar
+                    var addButtons = document.querySelectorAll([
+                        'a[title*="Add"]',
+                        'button[title*="Add"]',
+                        'a:contains("Add")',
+                        'button:contains("Add")',
+                        '.toolbar-add',
+                        '#addTorrent',
+                        '.add-torrent',
+                        'a[href*="add"]',
+                        'button[onclick*="add"]',
+                        '.fa-plus'
+                    ].join(', '));
+
+                    for (var i = 0; i < addButtons.length; i++) {
+                        var button = addButtons[i];
+                        if (button.offsetWidth > 0 && button.offsetHeight > 0) { // Check if visible
+                            console.log('Clicking add torrent button: ' + button.outerHTML.substring(0, 100));
+                            button.click();
+                            setTimeout(addTorrentUrl, 1500); // Wait for dialog to appear
+                            return true;
+                        }
                     }
 
+                    // Look for menu items or dropdowns
+                    var menuItems = document.querySelectorAll([
+                        '.menu-item',
+                        '.dropdown-item',
+                        'li a'
+                    ].join(', '));
+
+                    for (var i = 0; i < menuItems.length; i++) {
+                        var item = menuItems[i];
+                        if (item.textContent.toLowerCase().includes('add') &&
+                            item.textContent.toLowerCase().includes('torrent')) {
+                            console.log('Clicking menu item: ' + item.textContent);
+                            item.click();
+                            setTimeout(addTorrentUrl, 1500);
+                            return true;
+                        }
+                    }
+
+                    if (attempts < maxAttempts) {
+                        setTimeout(addTorrentUrl, 1000);
+                    } else {
+                        console.log('Max attempts reached, showing URL in alert');
+                        alert('Please manually add this torrent URL to qBittorrent: ' + url);
+                    }
                     return false;
                 }
 
-                if (!fillAddTorrentField()) {
-                    setTimeout(fillAddTorrentField, 1000);
-                }
+                // Start the process
+                addTorrentUrl();
             })();
         """.trimIndent()
 
         webView?.evaluateJavascript(addTorrentScript) { result ->
             Console.log("qBittorrent URL passing script executed: $result")
-            Toast.makeText(this, "URL passed to qBittorrent: $urlToShare", Toast.LENGTH_SHORT).show()
+
+            // Show success message with the URL
+            val message = if (urlToShare!!.startsWith("magnet:")) {
+                "Magnet link added to qBittorrent"
+            } else {
+                "Torrent file added to qBittorrent"
+            }
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
         }
     }
 

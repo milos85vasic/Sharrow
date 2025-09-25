@@ -13,9 +13,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
+import com.shareconnect.adapter.SystemAppAdapter
 import com.shareconnect.database.HistoryItem
 import com.shareconnect.database.HistoryRepository
+import com.shareconnect.utils.SystemAppDetector
 import com.shareconnect.utils.UrlCompatibilityUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -28,6 +32,11 @@ class ShareActivity : AppCompatActivity() {
     private var buttonSendToService: MaterialButton? = null
     private var buttonShareToApps: MaterialButton? = null
     private var progressBar: ProgressBar? = null
+    private var textViewCompatibleAppsTitle: TextView? = null
+    private var textViewCompatibleAppsDescription: TextView? = null
+    private var recyclerViewSystemApps: RecyclerView? = null
+    private var textViewNoCompatibleApps: TextView? = null
+    private var systemAppAdapter: SystemAppAdapter? = null
     private var profiles: List<ServerProfile> = ArrayList()
     private var mediaLink: String? = null
     private var serviceApiClient: ServiceApiClient? = null
@@ -59,6 +68,7 @@ class ShareActivity : AppCompatActivity() {
         serviceApiClient = ServiceApiClient()
         metadataFetcher = MetadataFetcher()
         fetchMetadataForUrl()
+        loadSystemApps()
     }
 
     override fun onResume() {
@@ -77,6 +87,15 @@ class ShareActivity : AppCompatActivity() {
         buttonSendToService = findViewById(R.id.buttonSendToMeTube)
         buttonShareToApps = findViewById(R.id.buttonShareToApps)
         progressBar = findViewById(R.id.progressBar)
+
+        // Initialize system apps UI components
+        textViewCompatibleAppsTitle = findViewById(R.id.textViewCompatibleAppsTitle)
+        textViewCompatibleAppsDescription = findViewById(R.id.textViewCompatibleAppsDescription)
+        recyclerViewSystemApps = findViewById(R.id.recyclerViewSystemApps)
+        textViewNoCompatibleApps = findViewById(R.id.textViewNoCompatibleApps)
+
+        // Setup RecyclerView for system apps
+        setupSystemAppsRecyclerView()
     }
 
     private fun handleIntent() {
@@ -473,6 +492,79 @@ class ShareActivity : AppCompatActivity() {
         val fullUrl = "$url:$port"
         val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullUrl))
         startActivity(browserIntent)
+    }
+
+    /**
+     * Setup RecyclerView for system apps
+     */
+    private fun setupSystemAppsRecyclerView() {
+        systemAppAdapter = SystemAppAdapter { appInfo ->
+            launchSystemApp(appInfo)
+        }
+        recyclerViewSystemApps?.apply {
+            layoutManager = LinearLayoutManager(this@ShareActivity)
+            adapter = systemAppAdapter
+        }
+    }
+
+    /**
+     * Load and display compatible system apps
+     */
+    private fun loadSystemApps() {
+        CoroutineScope(Dispatchers.Main).launch {
+            try {
+                val compatibleApps = withContext(Dispatchers.IO) {
+                    SystemAppDetector.getCompatibleApps(this@ShareActivity, mediaLink)
+                }
+
+                if (compatibleApps.isNotEmpty()) {
+                    // Show system apps section
+                    textViewCompatibleAppsTitle?.visibility = View.VISIBLE
+                    textViewCompatibleAppsDescription?.visibility = View.VISIBLE
+                    recyclerViewSystemApps?.visibility = View.VISIBLE
+                    textViewNoCompatibleApps?.visibility = View.GONE
+
+                    // Update adapter with compatible apps
+                    systemAppAdapter?.submitList(compatibleApps)
+                } else {
+                    // Show no compatible apps message
+                    textViewCompatibleAppsTitle?.visibility = View.VISIBLE
+                    textViewCompatibleAppsDescription?.visibility = View.GONE
+                    recyclerViewSystemApps?.visibility = View.GONE
+                    textViewNoCompatibleApps?.visibility = View.VISIBLE
+                }
+            } catch (e: Exception) {
+                // Hide system apps section on error
+                textViewCompatibleAppsTitle?.visibility = View.GONE
+                textViewCompatibleAppsDescription?.visibility = View.GONE
+                recyclerViewSystemApps?.visibility = View.GONE
+                textViewNoCompatibleApps?.visibility = View.GONE
+            }
+        }
+    }
+
+    /**
+     * Launch a system app with the current media link
+     */
+    private fun launchSystemApp(appInfo: SystemAppDetector.AppInfo) {
+        if (mediaLink.isNullOrEmpty()) {
+            Toast.makeText(this, R.string.no_youtube_link, Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val success = SystemAppDetector.launchApp(this, appInfo, mediaLink!!)
+
+        if (success) {
+            // Save to history
+            saveToHistory(mediaLink!!, appInfo.packageName, appInfo.appName, "System App", true)
+
+            Toast.makeText(this, "Opened with ${appInfo.appName}", Toast.LENGTH_SHORT).show()
+
+            // Dismiss the activity after launching system app
+            finish()
+        } else {
+            Toast.makeText(this, "Failed to open ${appInfo.appName}", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

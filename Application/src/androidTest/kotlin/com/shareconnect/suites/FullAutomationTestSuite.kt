@@ -5,6 +5,8 @@ import com.shareconnect.automation.FullAppFlowAutomationTest
 import com.shareconnect.automation.WebUIAutomationTest
 import com.shareconnect.automation.ProfileFilteringAutomationTest
 import com.shareconnect.automation.ShareActivityLayoutAndFlowTest
+import com.shareconnect.automation.SystemAppDetectionAutomationTest
+import com.shareconnect.automation.QBittorrentCompleteFlowAutomationTest
 import org.junit.runner.RunWith
 import org.junit.runners.Suite
 
@@ -21,6 +23,8 @@ import org.junit.runners.Suite
     AccessibilityAutomationTest::class,
     WebUIAutomationTest::class,
     ProfileFilteringAutomationTest::class,
-    ShareActivityLayoutAndFlowTest::class
+    ShareActivityLayoutAndFlowTest::class,
+    SystemAppDetectionAutomationTest::class,
+    QBittorrentCompleteFlowAutomationTest::class
 )
 class FullAutomationTestSuite

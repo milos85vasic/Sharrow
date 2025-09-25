@@ -75,11 +75,15 @@ class UILayoutComplianceTest {
     }
 
     private fun checkLayoutCompliance(activityName: String) {
-        // Get screen dimensions
-        val displaySize = device.displaySizeDp
-        val screenBounds = Rect(0, 0, displaySize.x, displaySize.y)
+        // Get screen dimensions in pixels
+        val displayMetrics = device.displayMetrics
+        val screenWidth = displayMetrics.widthPixels
+        val screenHeight = displayMetrics.heightPixels
 
-        // Find the main content area (should not overlap with system bars)
+        println("🔍 Checking layout compliance for $activityName")
+        println("   Screen size: ${screenWidth}x${screenHeight}")
+
+        // Find the main content area
         val mainContent = device.findObject(By.pkg(PACKAGE_NAME))
         if (mainContent == null) {
             fail("No main content found for $activityName")
@@ -87,47 +91,100 @@ class UILayoutComplianceTest {
         }
 
         val contentBounds = mainContent.visibleBounds
+        println("   Content bounds: ${contentBounds}")
 
-        // Check if content fits properly between system bars
-        // The content should not be at the very top (0) or very bottom of screen
-        if (contentBounds.top <= 50) { // Allowing small margin for status bar
-            fail("$activityName: Content appears to be overlapping with status bar. Top: ${contentBounds.top}")
+        // More strict status bar overlap check
+        // Status bar is typically 24-48dp (72-144px at 3x density)
+        val statusBarHeight = 144 // Conservative estimate for high-density displays
+        if (contentBounds.top < statusBarHeight) {
+            fail("$activityName: Content overlapping with status bar. Top: ${contentBounds.top}, Expected minimum: $statusBarHeight")
         }
 
-        // Check for toolbar presence
+        // Check for toolbar presence and positioning
         val toolbar = device.findObject(By.res(PACKAGE_NAME, "toolbar"))
         if (toolbar != null && toolbar.exists()) {
             val toolbarBounds = toolbar.visibleBounds
+            println("   Toolbar bounds: ${toolbarBounds}")
 
-            // Ensure toolbar is not overlapping with system bars
-            if (toolbarBounds.top <= 50) {
-                fail("$activityName: Toolbar appears to be overlapping with status bar. Top: ${toolbarBounds.top}")
+            // Toolbar should be positioned below status bar
+            if (toolbarBounds.top < statusBarHeight) {
+                fail("$activityName: Toolbar overlapping with status bar. Top: ${toolbarBounds.top}, Expected minimum: $statusBarHeight")
+            }
+
+            // Toolbar should have reasonable height (typically 56dp = 168px at 3x)
+            val toolbarHeight = toolbarBounds.bottom - toolbarBounds.top
+            if (toolbarHeight < 120 || toolbarHeight > 200) {
+                fail("$activityName: Toolbar has unusual height: ${toolbarHeight}px. Expected: 120-200px")
+            }
+        } else {
+            println("   ⚠️  No toolbar found in $activityName")
+        }
+
+        // Check content positioning relative to toolbar
+        if (toolbar != null && toolbar.exists()) {
+            val toolbarBounds = toolbar.visibleBounds
+            val contentArea = device.findObject(By.clazz("android.widget.ScrollView")
+                .clazz("androidx.recyclerview.widget.RecyclerView")
+                .clazz("android.widget.LinearLayout"))
+
+            if (contentArea != null && contentArea.exists()) {
+                val contentAreaBounds = contentArea.visibleBounds
+                if (contentAreaBounds.top <= toolbarBounds.bottom + 10) {
+                    fail("$activityName: Content area overlapping with toolbar. Content top: ${contentAreaBounds.top}, Toolbar bottom: ${toolbarBounds.bottom}")
+                }
             }
         }
 
-        // Check for RecyclerView if present
-        val recyclerView = device.findObject(By.clazz("androidx.recyclerview.widget.RecyclerView"))
-        if (recyclerView != null && recyclerView.exists()) {
-            val recyclerBounds = recyclerView.visibleBounds
+        // Check for navigation bar overlap (bottom)
+        val navigationBarHeight = 126 // Conservative estimate (42dp at 3x density)
+        val maxContentBottom = screenHeight - navigationBarHeight
 
-            // RecyclerView should have proper padding and not extend to screen edges
-            if (recyclerBounds.bottom >= screenBounds.bottom - 50) { // Allow margin for navigation
-                fail("$activityName: RecyclerView extends too close to navigation bar. Bottom: ${recyclerBounds.bottom}, Screen: ${screenBounds.bottom}")
-            }
-        }
-
-        // Check for ScrollView if present
         val scrollView = device.findObject(By.clazz("android.widget.ScrollView"))
         if (scrollView != null && scrollView.exists()) {
             val scrollBounds = scrollView.visibleBounds
+            println("   ScrollView bounds: ${scrollBounds}")
 
-            // ScrollView should have proper padding
-            if (scrollBounds.bottom >= screenBounds.bottom - 50) {
-                fail("$activityName: ScrollView extends too close to navigation bar. Bottom: ${scrollBounds.bottom}, Screen: ${screenBounds.bottom}")
+            if (scrollBounds.bottom > maxContentBottom) {
+                fail("$activityName: ScrollView overlapping with navigation bar. Bottom: ${scrollBounds.bottom}, Max allowed: $maxContentBottom")
             }
         }
 
-        println("✓ $activityName: Layout compliance check passed")
+        val recyclerView = device.findObject(By.clazz("androidx.recyclerview.widget.RecyclerView"))
+        if (recyclerView != null && recyclerView.exists()) {
+            val recyclerBounds = recyclerView.visibleBounds
+            println("   RecyclerView bounds: ${recyclerBounds}")
+
+            if (recyclerBounds.bottom > maxContentBottom) {
+                fail("$activityName: RecyclerView overlapping with navigation bar. Bottom: ${recyclerBounds.bottom}, Max allowed: $maxContentBottom")
+            }
+        }
+
+        // Check for FloatingActionButton positioning
+        val fab = device.findObject(By.clazz("com.google.android.material.floatingactionbutton.FloatingActionButton"))
+        if (fab != null && fab.exists()) {
+            val fabBounds = fab.visibleBounds
+            println("   FAB bounds: ${fabBounds}")
+
+            if (fabBounds.bottom > maxContentBottom) {
+                fail("$activityName: FloatingActionButton overlapping with navigation bar. Bottom: ${fabBounds.bottom}, Max allowed: $maxContentBottom")
+            }
+        }
+
+        // Verify fitsSystemWindows is working by checking reasonable margins
+        val reasonableTopMargin = statusBarHeight - 20 // Allow some tolerance
+        val reasonableBottomMargin = screenHeight - navigationBarHeight + 20
+
+        if (contentBounds.top < reasonableTopMargin) {
+            fail("$activityName: Content too close to status bar, fitsSystemWindows may not be working properly")
+        }
+
+        if (contentBounds.bottom > reasonableBottomMargin) {
+            fail("$activityName: Content too close to navigation bar, fitsSystemWindows may not be working properly")
+        }
+
+        println("✅ $activityName: Layout compliance check PASSED")
+        println("   Status bar clearance: ${contentBounds.top}px")
+        println("   Navigation bar clearance: ${screenHeight - contentBounds.bottom}px")
     }
 
     @Test

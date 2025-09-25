@@ -20,6 +20,10 @@ class ThemeSelectionActivity : AppCompatActivity(), ThemeAdapter.OnThemeSelectLi
 
         super.onCreate(savedInstanceState)
 
+        // Enable edge-to-edge display
+        window.statusBarColor = android.graphics.Color.TRANSPARENT
+        window.navigationBarColor = android.graphics.Color.TRANSPARENT
+
         setContentView(R.layout.activity_theme_selection)
 
         initViews()

@@ -19,6 +19,10 @@ class SettingsActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
+        // Enable edge-to-edge display
+        window.statusBarColor = android.graphics.Color.TRANSPARENT
+        window.navigationBarColor = android.graphics.Color.TRANSPARENT
+
         // Check if this is the first run
         isFirstRun = intent.getBooleanExtra("first_run", false)
 

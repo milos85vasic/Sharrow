@@ -39,6 +39,11 @@ class HistoryActivity : AppCompatActivity(), HistoryAdapter.OnHistoryItemClickLi
         themeManager!!.applyTheme(this)
 
         super.onCreate(savedInstanceState)
+
+        // Enable edge-to-edge display
+        window.statusBarColor = android.graphics.Color.TRANSPARENT
+        window.navigationBarColor = android.graphics.Color.TRANSPARENT
+
         setContentView(R.layout.activity_history)
 
         initViews()

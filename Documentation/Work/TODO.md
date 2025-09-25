@@ -1,8 +1,5 @@
 # TODO
 
-- Code coverage reports
-  - If low create generic task and send it to AI agent to extend the tests
-
 ## MVP
 
 - [Add new automation tests cases into the automation tests](./Tasks/003%20New%20automation%20tests%20to%20add/TASK.md)
@@ -43,12 +40,17 @@
 ## In progress
 
 - [Onboarding flow](./Tasks/002%20Onboarding/TASK.md)
+- Firebase configuration for the DEV variant
+- Code coverage reports
+  - If low create generic task and send it to AI agent to extend the tests
+  - Code coverage badges
 - [Enable RAG for AIs and fine tuning](./Tasks/001%20RAG%20and%20MCP%20integration/TASK.md)
   - Move RAG materials into separate Git submodule
     - Submodule Upstreams
     - Private RAG
       - Submodule/Repo Upstreams
   - Obtain Android development documentation with wget mirroring
+- Internal test release [1.0.0 @ 003](./Changes/1.0.0/003.md)
 
 ## Completed
 

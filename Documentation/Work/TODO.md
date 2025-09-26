@@ -28,6 +28,9 @@
   - F-Droid
   - APKPure
   - https://apt.izzysoft.de
+  - https://www.openapk.net/libretorrent/org.proninyaroslav.libretorrent/
+  - https://www.apkmirror.com/apk/proninyaroslav/libretorrent
+  - https://libretorrent.en.aptoide.com/app
 - Support the project / Donations
 
 # For 1.0.2
@@ -46,6 +49,7 @@
 - Add record exception on all critical error catch sports
 - Optimization for small screens and tablets
 - FIXME: Not all strings are localized yet
+- https://deepwiki.com/ support
 - [Onboarding flow](./Tasks/002%20Onboarding/TASK.md)
 - Invite beta testers
 - Firebase configuration for the DEV variant

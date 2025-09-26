@@ -27,6 +27,7 @@
   - Xiaomi
   - F-Droid
   - APKPure
+  - https://apt.izzysoft.de
 - Support the project / Donations
 
 # For 1.0.2
@@ -41,6 +42,7 @@
 
 - FIXME: Open shared magnet link on remote endpoint after signing in
   - Make sure that shared magnet link is added into the clipboard
+  - Connect our torrent controller as an option
 - Add record exception on all critical error catch sports
 - Optimization for small screens and tablets
 - FIXME: Not all strings are localized yet

@@ -119,6 +119,15 @@ android {
             }
             manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'missing_rules.txt'
+
+            firebaseAppDistribution {
+
+                releaseNotes="ShareConnect internal testing release"
+                groups="${getEnvProperty("FIREBASE_DISTRIBUTION_PROD_GROUP")}"
+                appId="${getEnvProperty("FIREBASE_DISTRIBUTION_PROD_APP_ID")}"
+                artifactType="${getEnvProperty("FIREBASE_DISTRIBUTION_PROD_ARTIFACT_TYPE")}"
+                serviceCredentialsFile="${getEnvProperty("FIREBASE_DISTRIBUTION_PROD_APP_CREDENTIALS_FILE")}"
+            }
         }
 
         debug {

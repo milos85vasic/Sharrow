@@ -39,7 +39,6 @@
 
 ## In progress
 
-- Distribution list
 - FIXME: Open shared magnet link on remote endpoint after signing in
   - Make sure that shared magnet link is added into the clipboard
 - Add record exception on all critical error catch sports
